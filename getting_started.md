@@ -47,7 +47,7 @@ The image below shows the Firebug icon in the toolbar, with configuration option
 
 The Firebug display is shown below. The 'Net' tab shows the network requests and responses; make sure that the 'Persist' and 'All' options are selected.
 
-<span align="center">
+<span>
 <figure>
   <img alt="" src="images/image53.png" width="446.50" height="207.94" title="">
     <br>
@@ -55,13 +55,13 @@ The Firebug display is shown below. The 'Net' tab shows the network requests and
 </figure>
 </span>
 
-<div align="center">
+<span>
 <figure>
   <img alt="" src="images/image46.png" width="624.00" height="185.33" title="">
     <br>
   <figcaption>Image Caption:</figcaption>
 </figure>
-</div>
+</span>
 
 The 'Persist' option prevents the display from being cleared on each new page load. However, Firebug will collapse prior pages in its display, and the tester may need to expand them back out to view the relevant transactions.
 
