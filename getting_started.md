@@ -36,9 +36,9 @@ This rest of this section describes setting up the proxy and related testing too
 To install Firebug, go to Tools -->Add ons, search for 'Firebug' and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
 
 <figure>
-<img alt="Firebug Add On" src="images/image57.png" width="624" height="56" title="Firebug Add On">
-<br>
-<figcaption>Firebug Add On</figcaption>
+  <img alt="" src="images/image57.png" width="624.00" height="56.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 
 As mentioned above, Firebug is a good choice for tests that don't require the advanced functionality of an external proxy such as OWASP ZAP. After Firebug has been installed, it can be viewed by clicking its icon in the Firefox toolbar. In this setup tutorial, we explain how to use some of the tools that come with Firebug, along with screenshots that show them in action.
@@ -47,51 +47,51 @@ The image below shows the Firebug icon in the toolbar, with configuration option
 
 The Firebug display is shown below. The 'Net' tab shows the network requests and responses; make sure that the 'Persist' and 'All' options are selected.
 
-<figure><span style="width: 446.50px; height: 207.94px;">![](images/image53.png)
+<figure>
+  <img alt="" src="images/image53.png" width="446.50" height="207.94" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
-
-<figure><span style="width: 624.00px; height: 185.33px;">![](images/image46.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image46.png" width="624.00" height="185.33" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The 'Persist' option prevents the display from being cleared on each new page load. However, Firebug will collapse prior pages in its display, and the tester may need to expand them back out to view the relevant transactions.
 
 In the example below, the user has logged out of a service, and the browsing session prior to the logout has been collapsed.
 
-<figure><span style="width: 624.00px; height: 205.33px;">![](images/image08.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image08.png" width="624.00" height="205.33" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Clicking the highlighted triangle for that portion of the session will expand the display for this part of the session.
 
-<figure><span style="width: 624.00px; height: 225.33px;">![](images/image65.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image65.png" width="624.00" height="225.33" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Hovering the mouse over the transaction's entry will show the full URL, enabling a check for https on the request.
 
-<figure><span style="width: 624.00px; height: 52.00px;">![](images/image27.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image27.png" width="624.00" height="52.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The transaction's entry can also be expanded by clicking the triangle next to the transaction's entry.
 
-<figure><span style="width: 624.00px; height: 180.00px;">![](images/image25.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image25.png" width="624.00" height="180.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The descriptions of individual tests later in this document give more details of how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP, described below).
 
@@ -105,17 +105,17 @@ Many cookie managers are available as browser plugins. The examples in this docu
 
 Once installed, the cookie manager can be opened by clicking its icon in the browser add-ins toolbar or from the add-ins menu. An annotated view of the Advanced Cookie Manager panel is shown below
 
-<figure><span style="width: 624.00px; height: 164.00px;">![](images/image26.png)
+<figure>
+  <img alt="" src="images/image26.png" width="624.00" height="164.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
-
-<figure><span style="width: 624.00px; height: 362.67px;">![](images/image112.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image112.png" width="624.00" height="362.67" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 During several of the tests outlined below in Section F, the Cookie Manager will be used to view cookies and their flags, delete cookies, save cookies to file and restore cookies from file. Inspecting cookies is also helpful to
 
@@ -127,11 +127,11 @@ As the name implies, an intercepting proxy intercepts and logs the requests and 
 
 Setting up a proxy on your computer allows the user to review all network traffic on that computer in greater detail. While Firebug allows the user to see some transactions, an intercepting proxy provides a more comprehensive picture. For example, a portion of a proxy log from loading "graphite.org" in a browser is shown below:
 
-<figure><span style="width: 624.00px; height: 113.33px;">![](images/image50.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image50.png" width="624.00" height="113.33" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Once a browser or mobile device has been configured to send traffic to a proxy, the proxy can observe and capture HTTP (non-encrypted) traffic without additional setup. However, capturing https traffic requires additional steps. A detailed technical description of https (SSL) and [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) are beyond the scope of this document, however a general description of how a proxy can observe https traffic, along with basic setup steps, is included below.
 
@@ -139,11 +139,11 @@ The normal operation of https creates an encrypted connection between the web br
 
 The instructions included here are broken into five distinct sections:
 
-<figure><span style="width: 578.00px; height: 184.00px;">![](images/image106.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image106.png" width="578.00" height="184.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 *   C4.1 Installation
 *   C4.2 Basic setup, browser and proxy on same computer
@@ -169,11 +169,11 @@ The download packages and installation instructions are platform-specific for Wi
 
 After installation, modify the 'Display' settings to enable 'process images in HTTP requests/responses'. This configuration causes image loads that may be of interest during testing to be displayed in the history log, and is recommended for all of the test setups described in the remainder of this section. In ZAP this setting is managed in the Tools -->Options -->Display menu.
 
-<figure><span style="width: 527.50px; height: 410.00px;">![](images/image89.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image89.png" width="527.50" height="410.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select the checkbox for "Process images in HTTP requests/responses." Then, click the "OK" button.
 
@@ -185,11 +185,11 @@ The most straightforward setup is when the browser and proxy are on the same com
 
 Within ZAP, the local proxy address should be set up as 'localhost', and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the Tools -->Options -->Local proxy menu.
 
-<figure><span style="width: 569.50px; height: 419.82px;">![](images/image10.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image10.png" width="569.50" height="419.82" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.2.2 Browser
 
@@ -197,11 +197,11 @@ The browser should be set up to use a proxy at 'localhost' and port 8080.
 
 Firefox manages this in Preferences -> Advanced -> Network -> Connection, as shown below.
 
-<figure><span style="width: 605.50px; height: 305.66px;">![](images/image41.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image41.png" width="605.50" height="305.66" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 *   Select "Manual proxy configuration."
 *   Set "HTTP Proxy" to localhost, and "Port" to 8080.
@@ -232,59 +232,51 @@ Control Panel->Network and Internet->Network and Sharing Center
 
 From this dialog, select the active network, which will bring up a status menu to select "Details."
 
-<figure><span style="width: 338.50px; height: 368.34px;">![](images/image52.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image52.png" width="338.50" height="368.34" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The "Details" dialog will display the network address of the computer. In almost all cases, the IPv4 address (not the IPv6 address) is the one that should be used as the proxy's network address, as shown below.
 
-<figure><span style="width: 312.50px; height: 364.58px;">![](images/image87.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image87.png" width="312.50" height="364.58" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 ##### C4.3.1.2 Apple OSX:
 
 The network address can be found in System Preferences->Network, as shown below.
 
-<figure><span style="width: 624.00px; height: 190.67px;">![](images/image24.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image24.png" width="624.00" height="190.67" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 ##### C4.3.1.3 Linux/Unix:
 
 Many distributions include a System Preferences utility that can be used to find the computer's network address. Another option is to use the 'ip address' command from the shell and look for the 'inet' entry on the appropriate interface, as shown below.
 
+<pre>
+<code>
 $ ip address
-
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default
-
-link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-
-inet 127.0.0.1/8 scope host lo
-
-valid_lft forever preferred_lft forever
-
-inet6 ::1/128 scope host
-
-valid_lft forever preferred_lft forever
-
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
-
-link/ether 00:0c:29:20:f6:c1 brd ff:ff:ff:ff:ff:ff
-
-inet 192.168.251.211/24 brd 192.168.251.255 scope global eth0
-
-valid_lft forever preferred_lft forever
-
-inet6 fe80::20c:29ff:fe20:f6c1/64 scope link
-
-valid_lft forever preferred_lft forever
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:20:f6:c1 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.251.211/24 brd 192.168.251.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:fe20:f6c1/64 scope link 
+       valid_lft forever preferred_lft forever
+</code>
+</pre>
 
 #### C4.3.2 In ZAP Proxy: Change "Local proxy" address
 
@@ -294,11 +286,11 @@ The proxy setup procedure is the same as covered in "C4.2 Proxy and Browser on S
 
 #### 
 
-<figure><span style="width: 523.50px; height: 338.93px;">![](images/image118.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image118.png" width="523.50" height="338.93" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.3.3 In Firefox: Change the "Manual proxy configuration" address
 
@@ -306,11 +298,11 @@ In Firefox, under Preferences->Advanced->Network->Connection, select Manual Prox
 
 Once the settings have been updated, click the "OK" button to save the changes.
 
-<figure><span style="width: 385.50px; height: 455.81px;">![Screen Shot 2015-10-27 at 11.47.16 AM.png](images/image60.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image60.png" width="385.50" height="455.81" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.3.4 iOS Device setup
 
@@ -318,47 +310,47 @@ On an iOS (Apple) device go to Settings->Wifi, and make sure your device is on t
 
 Select the info screen for the network the device is connected to.
 
-<figure><span style="width: 337.00px; height: 162.26px;">![](images/image56.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image56.png" width="337.00" height="162.26" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The proxy settings are at the bottom of the network settings screen. Enable manual proxy settings and enter the network address found in the previous steps, and the port number as shown below (using the address found in step C4.3.1).
 
-<figure><span style="width: 337.00px; height: 183.82px;">![](images/image29.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image29.png" width="337.00" height="183.82" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.3.5 Android device proxy setup
 
 Open the settings menu and select wifi.
 
-<figure><span style="width: 512.00px; height: 205.00px;">![](images/image104.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image104.png" width="512.00" height="205.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Press and hold the name of the network to bring up the network settings menu, and select "Modify network".
 
-<figure><span style="width: 374.00px; height: 99.00px;">![](images/image51.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image51.png" width="374.00" height="99.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select "Show advanced options", and then select "Manual proxy configurations". Use the network address and port number from step C4.3.1, as illustrated below.
 
 Click the "Save" link to save the settings.
 
-<figure><span style="width: 349.00px; height: 395.00px;">![](images/image11.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image11.png" width="349.00" height="395.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 ### C4.4 Installing proxy SSL certificate to browser and mobile devices
 
@@ -368,19 +360,19 @@ Installing the proxy's SSL certificate to browsers and devices will allow the pr
 
 The proxy's SSL certificate can be saved from the ZAP Preferences->Dynamic SSL Certificates menu. Open the dialog and click on 'save'.
 
-<figure><span style="width: 624.00px; height: 505.33px;">![](images/image110.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image110.png" width="624.00" height="505.33" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The file will be saved as "owasp_zap_root_ca.cer" in the directory chosen by the user.
 
-<figure><span style="width: 551.00px; height: 75.00px;">![](images/image37.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image37.png" width="551.00" height="75.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.4.2 Import proxy certificate to browser
 
@@ -388,53 +380,53 @@ In Firefox, certificates can be installed in the Preferences->Advanced->Certific
 
 Within this dialog select "View Certificates"
 
-<figure><span style="width: 624.00px; height: 309.33px;">![](images/image98.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image98.png" width="624.00" height="309.33" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 In the "View Certificates" dialog, select "Import".
 
-<figure><span style="width: 570.00px; height: 323.00px;">![](images/image36.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image36.png" width="570.00" height="323.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Then, select the root certificate (owasp_zap_root_ca.cer) downloaded from the ZAP Proxy, and open it, as shown in the screenshot below.
 
-<figure><span style="width: 624.00px; height: 392.00px;">![save_cert.png](images/image58.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="save_cert.png" src="images/image58.png" width="624.00" height="392.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Then, select the option to "Trust this CA to identify websites", and click the "OK" button.
 
-<figure><span style="width: 540.11px; height: 286.50px;">![](images/image83.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image83.png" width="540.11" height="286.50" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Verify that the certificate has been uploaded by browsing to it. All Certificate Authorities are listed alphabetically. Once you have verified that the certificate has been uploaded, click the "OK" button.
 
-<figure><span style="width: 624.00px; height: 402.67px;">![save_cert_final.png](images/image117.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="save_cert_final.png" src="images/image117.png" width="624.00" height="402.67" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Note: When you are not testing, you might want to remove the certificate from the browser.
 
 To remove the certificate, in Firefox go to the Preferences->Advanced->Certificates->View Certificates menu, select the OWASP Zed Attack Proxy Root CA certificate, and click on "Delete or Distrust".
 
-<figure><span style="width: 554.00px; height: 289.00px;">![](images/image105.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image105.png" width="554.00" height="289.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.4.3 Import proxy certificate to iOS device
 
@@ -446,43 +438,43 @@ It is important to take care when transferring the certificate file to the devic
 
 Once the certificate file has been transferred to the device, open it on the device. Opening the file will bring up the "Install Profile" dialog. (iOS refers to certificates with the broader term "Profile"). Select "Install" from within this dialog.
 
-<figure><span style="width: 482.50px; height: 395.90px;">![](images/image40.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image40.png" width="482.50" height="395.90" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 After a device password check, the "Install Profile" dialog will bring up a second dialog with a warning about installing a certificate to the device. Since the objective is to install the proxy's certificate to allow monitoring of https traffic, it is OK to accept the warning and select "Install".
 
-<figure><span style="width: 446.50px; height: 366.36px;">![](images/image66.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image66.png" width="446.50" height="366.36" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 After the certificate is installed, a screen will confirm that the certificate was successfully installed.
 
-<figure><span style="width: 467.50px; height: 340.89px;">![](images/image07.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image07.png" width="467.50" height="340.89" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Note: to remove the certificate after testing is complete, go to the Settings->General menu and scroll down. The certificate will be listed under "Profile".
 
-<figure><span style="width: 370.00px; height: 563.00px;">![](images/image80.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image80.png" width="370.00" height="563.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select "Profile" to enter a dialog that provides the option to delete the certificate.
 
-<figure><span style="width: 375.00px; height: 305.00px;">![](images/image91.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image91.png" width="375.00" height="305.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 #### C4.4.3 Import proxy certificate to Android device
 
@@ -498,103 +490,103 @@ Android 4.3:
 
 In the Settings->Security dialog, select "Install from SD Card".
 
-<figure><span style="width: 476.00px; height: 782.00px;">![](images/image45.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image45.png" width="476.00" height="782.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 A dialog titled "Name the Certificate" will pop up. Leave the name unchanged and select "OK".
 
-<figure><span style="width: 357.00px; height: 221.00px;">![](images/image02.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image02.png" width="357.00" height="221.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Note: To remove the certificate, go to the Setup->Security->Trusted Credentials->User dialog.
 
-<figure><span style="width: 528.00px; height: 449.00px;">![](images/image75.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image75.png" width="528.00" height="449.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select the OWASP certificate to bring up another menu with an option to remove the certificate.
 
-<figure><span style="width: 363.00px; height: 552.00px;">![](images/image20.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image20.png" width="363.00" height="552.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Android 4.4 and higher:
 
 In the Settings->Security dialog, select "Install from SD Card".
 
-<figure><span style="width: 308.50px; height: 286.14px;">![](images/image47.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image47.png" width="308.50" height="286.14" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 A dialog showing the downloads directory will show up. However, the process usually requires the certificate to be accessed through "Internal Storage" instead, using the following sequence:
 
 Select the menu tab at top left corner.
 
-<figure><span style="width: 455.50px; height: 199.28px;">![](images/image09.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image09.png" width="455.50" height="199.28" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select "Internal Storage" from the following menu.
 
-<figure><span style="width: 323.50px; height: 362.54px;">![](images/image04.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image04.png" width="323.50" height="362.54" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select "Download" from the Internal Storage choices.
 
-<figure><span style="width: 329.50px; height: 354.85px;">![](images/image44.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image44.png" width="329.50" height="354.85" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Select the certificate file.
 
-<figure><span style="width: 299.50px; height: 148.82px;">![](images/image31.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image31.png" width="299.50" height="148.82" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 A dialog titled "Name the Certificate" will pop up. Enter a name, leave "Credential Use" set to "VPN and apps" and select "OK" to install the certificate. NOTE: If the device does not have a screen lock pin or passcode, a window will pop up requiring one to be set.
 
-<figure><span style="width: 324.91px; height: 314.50px;">![](images/image113.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image113.png" width="324.91" height="314.50" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Note: To remove the certificate, go to the Setup->Security->Clear Credentials.
 
-<figure><span style="width: 306.45px; height: 273.50px;">![](images/image62.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image62.png" width="306.45" height="273.50" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 Click "OK" to clear credentials. Only the user-installed credentials are cleared.
 
-<figure><span style="width: 398.50px; height: 193.00px;">![](images/image108.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image108.png" width="398.50" height="193.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 ### C4.5 Observing websockets traffic using ZAP Proxy
 
@@ -602,28 +594,26 @@ Websockets is a communication link separate from HTTP that browsers and applicat
 
 ZAP Proxy supports the viewing of websockets traffic. (Note: Firebug does not support viewing of websockets traffic). By default the websockets pane is not one of the choices shown in the toolbar at the center of the ZAP display.
 
-<figure><span style="width: 458.00px; height: 61.00px;">![](images/image70.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image70.png" width="458.00" height="61.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The websockets pane can be added by clicking the green "+" and selecting it from the dropdown menu.
 
-# 
-
-<figure><span style="width: 592.00px; height: 272.00px;">![](images/image90.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image90.png" width="592.00" height="272.00" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 The pane will also be added automatically to the toolbar by ZAP if a websockets connection is opened through the proxy. A view of the websockets traffic pane is shown below. Clicking on an individual message will show the full payload of the message in the upper pane of ZAP (where HTTP requests and responses are normally shown).
 
 From the websockets view, it is also possible to determine whether the websockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in section E8 Observation of websockets traffic.
 
-<figure><span style="width: 717.98px; height: 107.50px;">![](images/image76.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image76.png" width="717.98" height="107.50" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
