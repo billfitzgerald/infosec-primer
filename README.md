@@ -2,7 +2,7 @@
 
 ## Contents
 
-* [Introduction](blob/master/introduction.md)
+* [Introduction](introduction.md)
 * Responsible Disclosure
 * Setting up the Testing Toolkit
 * Preparing Your Browser
