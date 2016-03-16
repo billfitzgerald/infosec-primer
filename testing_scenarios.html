@@ -17,48 +17,59 @@
 <h1 id="h.x0w34x37470m">E1 Sensitive information in URLs</h1>
 <h2 id="h.hwm0291uwy92">E1.1 Summary</h2><p>It is common practice to include parameters in URLs sent from applications to the network servers hosting the applications. In many cases this is benign but if sensitive information is included in URLs it can pose a security risk for the application's users, because it may be logged in the browser or other servers that receive the URL.</p>
 <h2 id="h.4js8e57p6ig">E1.2 Exploitability and impact</h2><p>Inclusion of non-sensitive information or parameters in URLs does not pose a security risk.  For example, encoding a page ID in a URL is a common practice that does not expose sensitive information.</p>
-<p><figure>
-<span style="width: 390.50px; height: 22.73px;"><img alt="" src="images/image82.png" style="width: 390.50px; height: 22.73px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image82.png" width="390.50" height="22.73" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Timestamps and character encodings are other non-sensitive uses of URL parameters</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 36.00px;"><img alt="" src="images/image85.png" style="width: 624.00px; height: 36.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image85.png" width="624.00" height="36.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>However, including sensitive or personal information in a URL can put this information at risk of unintentional disclosure.  In the example below, a user's username and password has been placed in a URL during a mobile application authentication process.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 44.00px;"><img alt="" src="images/image92.png" style="width: 624.00px; height: 44.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image92.png" width="624.00" height="44.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Here, a user's personal information is part of the URL.</p>
 
-<p><figure>
-<span style="width: 608.55px; height: 38.50px;"><img alt="" src="images/image97.png" style="width: 608.55px; height: 38.50px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image97.png" width="608.55" height="38.50" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and Date of Birth have been captured in the browser history and cache.</p>
-<p><figure>
-<span style="width: 686.40px; height: 38.50px;"><img alt="" src="images/image59.png" style="width: 686.40px; height: 38.50px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>  <img alt="" src="images/image59.png" width="686.40" height="38.50" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
-<p><figure>
-<span style="width: 644.50px; height: 74.99px;"><img alt="" src="images/image12.png" style="width: 644.50px; height: 74.99px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image12.png" width="644.50" height="74.99" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 
 <p>This security issue poses an immediate risk on a shared computer, where another user could access it. Additionally, URLs containing sensitive information may be snooped from unencrypted network traffic or recorded by servers that implement or interact with the application. </p>
@@ -67,19 +78,23 @@
 
 <p>Many applications utilize 3rd-party analytics services to track user activity for the purposes of improving the application and understanding its usage patterns.  Sensitive information in URLs may be sent to analytics or other 3rd-party services in the "Referer" field of messages.  In the image below a URL containing a valid account access code is sent to an analytics service.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 146.67px;"><img alt="" src="images/image43.png" style="width: 624.00px; height: 146.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image43.png" width="624.00" height="146.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Some services that protect users from malicious websites send some of a user's browsed URLs to their servers for analysis.  In the example below, one such service sent a URL containing a user's username and password to its servers.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 105.33px;"><img alt="" src="images/image33.png" style="width: 624.00px; height: 105.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image33.png" width="624.00" height="105.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 
 <h2 id="h.49829xsxl7k2">E1.3 Setup and tests</h2><p>There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information.  The login sequence is an important part to examine closely but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).</p>
@@ -105,42 +120,55 @@
 <h4 id="h.ums2y3iaiipo">E2.3.2.1. Check whether the login form or page is served using https (web applications).</h4><p>Load the login page and examine the transactions in the proxy to check whether or not the login page is loaded via https. Lack of https on login forms can enable man-in-the-middle attacks that tamper with the form.</p>
 
 <p>In the example below the page is loaded without https.</p>
-<p><figure>
-<span style="width: 592.50px; height: 92.10px;"><img alt="" src="images/image71.png" style="width: 592.50px; height: 92.10px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image71.png" width="592.50" height="92.10" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>In this example the page is loaded with https.</p>
-<p><figure>
-<span style="width: 599.50px; height: 108.56px;"><img alt="" src="images/image61.png" style="width: 599.50px; height: 108.56px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image61.png" width="599.50" height="108.56" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 <p>Here a page loaded with http is displayed in Firebug:</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 128.00px;"><img alt="" src="images/image19.png" style="width: 624.00px; height: 128.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image19.png" width="624.00" height="128.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.8h2oa44hb1gb">E2.3.2.2 Check whether login credentials are posted using https (web applications and mobile apps)</h4><p>Submit a login attempt and examine the transaction in the proxy.</p>
 
 <p>In this example the credentials are submitted without https:</p>
-<p><figure>
-<span style="width: 547.50px; height: 207.94px;"><img alt="Screen Shot 2016-02-26 at 12.28.00 AM.png" src="images/image30.png" style="width: 547.50px; height: 210.63px; margin-left: 0.00px; margin-top: -1.34px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image30.png" width="547.50" height="210.63px" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>In the following example the credentials are submitted with https:</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 141.33px;"><img alt="" src="images/image107.png" style="width: 624.00px; height: 141.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image107.png" width="624.00" height="141.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.3ynwconnsi5c">E2.3.2.3. Check whether authenticated sessions continue to use https after login (both web applications and mobile apps)</h4>
 <p>Some applications will use https for the login, but then switch to http after the login is complete, exposing private information and authentication tokens to the risk of network snooping.  After logging into an application, examine the transactions that come after the login to see if they are using https.</p>
@@ -148,27 +176,33 @@
 <p>The examples below use http after login, exposing the user's authentication cookies to the risk of network snooping. This issue can be seen using either ZAP or Firebug.</p>
 
 <p>In ZAP:</p>
-<p><figure>
-<span style="width: 550.50px; height: 222.32px;"><img alt="" src="images/image21.png" style="width: 550.50px; height: 222.32px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image21.png" width="550.50" height="222.32" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>In Firebug:</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 257.33px;"><img alt="" src="images/image55.png" style="width: 624.00px; height: 257.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>  <img alt="" src="images/image55.png" width="624.00" height="257.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>In the next screenshot, we see an example of a service that uses https after login, protecting the user information and authentication cookies included in the responses. Note how the url begins with https.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 86.67px;"><img alt="" src="images/image16.png" style="width: 624.00px; height: 86.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image16.png" width="624.00" height="86.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 
 
@@ -177,18 +211,24 @@
 <p>The examples below show correct use of Strict-Transport-Security headers as displayed in ZAP and Firebug.</p>
 
 <p>In ZAP: </p>
-<p><figure>
-<span style="width: 554.50px; height: 166.82px;"><img alt="" src="images/image95.png" style="width: 554.50px; height: 166.82px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image95.png" width="554.50" height="166.82" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>In Firebug: </p>
-<p><figure>
-<span style="width: 624.00px; height: 350.67px;"><img alt="" src="images/image111.png" style="width: 624.00px; height: 350.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image111.png" width="624.00" height="350.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.oa9sl89xof6l">E2.3.2.4. Check the rigor of the service's SSL configuration</h4>
 <p>The "quality" of an encrypted https connection can vary based on how the server is set up. Fortunately, free services allow server setup to be tested quickly. </p>
@@ -199,28 +239,36 @@
 
 <p>On the "SSL Server Test" page, check the box labeled "Do not show the results on the boards".  This prevents the results from being publicly shared on the SSL Server Test page.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 232.00px;"><img alt="" src="images/image81.png" style="width: 624.00px; height: 232.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image81.png" width="624.00" height="232.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 
 
 <p>Examples of SSL Server Test results are shown below. The first result is a solid review; the second result shows an online service with some serious issues.</p>
-<p><figure>
-<span style="width: 518.50px; height: 275.42px;"><img alt="" src="images/image101.png" style="width: 518.50px; height: 275.42px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image101.png" width="518.50" height="275.42" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Note that the reasons behind each issue are explained, with links to greater detail as needed.</p>
-<p><figure>
-<span style="width: 513.50px; height: 444.38px;"><img alt="" src="images/image03.png" style="width: 513.50px; height: 444.38px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p><hr style="page-break-before:always;display:none;">
-<h1 id="h.3f8gwtp62gc0"></h1>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image03.png" width="513.50" height="444.38" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h1 id="h.25vsmkjogdt8">E3 TLS for email sent by an application to users</h1>
 <h2 id="h.4ps217mycyrw">E3.1 Summary</h2>
 <p>Email Transport Layer Security is referred to as 'TLS' or 'starttls'.  As the name implies, email TLS protects the contents of traffic as it travels between endpoints on the internet by encrypting the content and by verifying the authenticity of the servers at the endpoints.   </p>
@@ -237,29 +285,36 @@
 
 <p>Browsing to checktls.com brings up a form where the email can be entered (no mail will be sent to the recipient address, it's only used to contact the server). Enter the recipient email address as indicated below and click "Try It".</p>
 
-<p><figure>
-<span style="width: 537.50px; height: 297.18px;"><img alt="" src="images/image18.png" style="width: 537.50px; height: 297.18px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image18.png" width="537.50" height="297.18" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>The results will indicate whether the mail server accepts incoming TLS connection requests. Ideally the "Confidence Factor" will be 100.  A sample result is shown below.</p>
 
 
-<p><figure>
-<span style="width: 624.00px; height: 185.33px;"><img alt="" src="images/image68.png" style="width: 624.00px; height: 185.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image68.png" width="624.00" height="185.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Once you have confirmed that your email address accepts TLS for incoming email, you are ready to inspect the headers of incoming messages.  The steps for displaying email headers differs by email client.  The menu item is typically labeled "show original message", "show headers", or similar.</p>
 
 <p>If the mail was sent with TLS, it will be noted in the headers with a description including the letters "TLS".  The syntax will vary but will always include the term "TLS".  An example is below.</p>
-<p><figure>
-<span style="width: 624.00px; height: 126.67px;"><img alt="" src="images/image78.png" style="width: 624.00px; height: 126.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image78.png" width="624.00" height="126.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h3 id="h.9wjy7cj5r8zr">E3.3.2 Google's Safer Email Transparency Report</h3><p>Google's Safer Email Transparency Report site posts daily percentages of mail sent and received using TLS for the domains with the most traffic to and from Google's mail servers. </p>
 <p>http://www.google.com/transparencyreport/saferemail/</p>
@@ -269,26 +324,29 @@
 <p>As an example, the screenshot below shows the results for a particular application.  Google reports that 0% of the mail entering Google from this application's mail servers  is sent with TLS. </p>
 
 
-<p><figure>
-<span style="width: 624.00px; height: 188.00px;"><img alt="" src="images/image100.png" style="width: 624.00px; height: 188.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image100.png" width="624.00" height="188.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>This means that the application's  servers are not requesting TLS when sending email.  Outbound mail is not listed because not enough mail flows from Google to this application's servers to be recorded in this dataset.  However, mail coming in to gmail is of more interest because mail from the app to its users is more likely to contain student information.</p>
 
 <p>The image below shows the results for the same application after they enabled TLS for outgoing email.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 180.00px;"><img alt="" src="images/image23.png" style="width: 624.00px; height: 180.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image23.png" width="624.00" height="180.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h3 id="h.fwm7cp7yqcyi">E3.3.3 checktls.com</h3><p>Checktls.com is discussed above in the context of confirming a tester's email address will accept email TLS connections.  The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail.  Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.</p>
 
-<h1 id="h.bfgcmg2c7m2"></h1><hr style="page-break-before:always;display:none;">
-<h1 id="h.kzr7tcxasrqc"></h1>
+<h1 id="h.bfgcmg2c7m2"></h1>
 <h1 id="h.ad79s4u8zvhc">E4 Caching and history storage of pages with sensitive information</h1>
 <h2 id="h.s6l7mchrhbia">E4.1 Summary</h2><p>In computer systems, the term "caching" refers to the practice of keeping a local copy (or "cache") of information so that it may be accessed again quickly if needed later on.  Browsers improve performance by storing copies of web pages a user views, so that they can displayed again later without the need to fetch them again over the network. </p>
 
@@ -308,27 +366,39 @@
 <h3 id="h.7ps9ful4q6r">E4.3.2 Header response inspection</h3><p>It is possible to examine the headers of the http responses to sensitive page loads to see if the cache controls that prevent cache and history storage are present.  In practice, different browsers handle cache and history related directives differently.  There is some consensus that the combination of directives in the screenshot below will prevent caching or history storage across the major browsers.  Note that "Expires" can be set to '0' or a time in the past.  Also note that GET responses can be cached or stored in history but POST responses are not cached.</p>
 
 <p>Cache headers displayed in ZAP:</p>
-<p><figure>
-<span style="width: 624.00px; height: 170.67px;"><img alt="" src="images/image99.png" style="width: 624.00px; height: 170.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image99.png" width="624.00" height="170.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Cache headers displayed in Firebug:</p>
-<p><figure>
-<span style="width: 624.00px; height: 349.33px;"><img alt="" src="images/image79.png" style="width: 624.00px; height: 349.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
 
-
-<p>An informative discussion of cache parameters and how they are handled by browsers can be found on Stack Overflow: </span><a href="http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers">here</a>.</p>
-<h3 id="h.i8oxvlmno7bx">E4.3.3 Browser-based history test</h3><p>There is a straightforward way to check for history storage of sensitive information directly from the browser.  The steps are as follows:</p><ol><li>Log in to a service and browse to a page with sensitive information.  In the example below a class roster is viewed from a teacher account.</p>
+<div align="center">
 <figure>
-<span style="width: 624.00px; height: 269.33px;"><img alt="" src="images/image116.png" style="width: 624.00px; height: 269.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure><br></li>
+  <img alt="" src="images/image79.png" width="624.00" height="349.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+<p>An informative discussion of cache parameters and how they are handled by browsers can be found on Stack Overflow: <a href="http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers">here</a>.</p>
+
+<h3 id="h.i8oxvlmno7bx">E4.3.3 Browser-based history test</h3><p>There is a straightforward way to check for history storage of sensitive information directly from the browser.  The steps are as follows:</p><ol><li>Log in to a service and browse to a page with sensitive information.  In the example below a class roster is viewed from a teacher account.
+</p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image116.png" width="624.00" height="269.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+<br></li>
 <li>Sign out of the service</li>
 <li>Click on the browser's "Back" button. If the original page, with logged in user information, is displayed without requiring a new login, this indicates that the page was stored in the browser cache.  <br></li></ol><p>This illustrates one way storing history with sensitive information can lead to unintended disclosure. On a shared computer, one user can sign out of the account, and a different user can still access personal information from the first user's account.</p>
 
@@ -337,38 +407,47 @@
 
 <p>To inspect what is stored in the browser's cache, enter "about:cache" in the browser's URL field.  Note that the disk cache is of particular interest since its contents will persist after the browser program has been closed and restarted.  Click on "List Cache Entries" under "disk" to see the disk cache entries </p>
 
-<p><figure>
-<span style="width: 624.00px; height: 352.00px;"><img alt="" src="images/image34.png" style="width: 624.00px; height: 352.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image34.png" width="624.00" height="352.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <p>The URLs of the cached pages will be listed and specific pages of interest can be searched.  The entry for the roster page shown above is present in the browser disk cache.</p>
-<p><figure>
-<span style="width: 391.50px; height: 31.36px;"><img alt="" src="images/image05.png" style="width: 391.50px; height: 31.36px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image05.png" width="391.50" height="31.36" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <p>Clicking on the URL name will load a representation of the raw source of the page.  It is not easily human-readable but it is possible to search on sensitive terms to confirm that they are present in the cached page.  For example, the account information for "Demo Student" is shown below in the cached page contents.</p>
-<p><figure>
-<span style="width: 621.00px; height: 70.00px;"><img alt="" src="images/image01.png" style="width: 621.00px; height: 70.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image01.png" width="621.00" height="70.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Note that the URL shown in the browser when sensitive info is displayed may not correspond to the exact request that loaded the sensitive information itself.  Using a proxy to observe all the requests generated when a page of interest is displayed can be helpful in finding which URLs to look for in the browser's cache storage.</p>
 
 <p>Additionally, if specific pages looks like they might contain sensitive information, you can do additional testing using ZAP Proxy logs cross referenced against the contents of the browser cache. This will allow you to zero in on specific pages. </p>
 
 <h3 id="h.loc23z8234lk">E4.3.5 Recommended test steps</h3><p>Perform the browser-based history test on a representative page containing user information.  Using browsing history, proxy logs and response headers as a guide for pages of interest, inspect the browser's disk cache for stored pages containing sensitive information in the page contents or URL.</p>
-<h1 id="h.x4jmiwl0vza6"></h1><hr style="page-break-before:always;display:none;">
-<h1 id="h.qsjco01x69rn"></h1>
+
 <h1 id="h.jgbj7m6ef85r">E5 Authentication token and cookie handling</h1>
 <h2 id="h.gzsbf5qtrhuw">E5.1 Summary</h2>
 <p>Cookies are small text strings sent by servers to browsers in http responses as the user interacts with a web service.  The browser saves the cookie values and includes them with subsequent http requests to the same domain.  The use of cookies allows web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive.  Cookies are used for many purposes such as setting identifiers for ad networks and analytics services, recording the first page on a site a user visited, and storing authentication tokens that give access to an active login session.  </p>
 
 <p>Authentication cookies are the ones most relevant to assessing the security of an online service.  When a user first logs in, the service responds by setting an authentication cookie that identifies this user session (these cookies are often referred to as "session cookies" for this reason; in this document we will refer to them as "authentication cookies").  When the user sends the next request, the service can look up the session ID in the cookie and associate it with the user's active login session.  Without this the user would need to supply the password each time a new page was loaded.</p>
 
-<p>Protecting authentication cookies is important because if an adversary can get access to it, it can be installed in the adversary's browser or included in specially crafted http requests.  This would give the adversary full access and control to the user's account.  This attack is known as "</span><a href="https://en.wikipedia.org/wiki/Session_hijacking">session hijacking</a>" or "sidejacking".</p>
+<p>Protecting authentication cookies is important because if an adversary can get access to it, it can be installed in the adversary's browser or included in specially crafted http requests.  This would give the adversary full access and control to the user's account.  This attack is known as "<a href="https://en.wikipedia.org/wiki/Session_hijacking">session hijacking</a>" or "sidejacking".</p>
 
 <p>The rest of this section will show how to install and use a cookie editor to examine and modify cookies in a browser.  The Test Procedures section on checking authentication token handling and cookie flags outlines the cookie tests that use the cookie editor.</p>
 
@@ -397,11 +476,15 @@
 <p>To confirm that a cookie is an authentication cookie, or to search for it in case the name is not apparent, log in to the web site.</p>
 
 <p>Then, using the Cookie Manager, delete the candidate cookie and reload the page.  If the page fails to reload in to the login session, the cookie in question is an authentication cookie.  Note that some services have more than one authentication cookie and all must be present for full account access. An illustration of deleting a cookie using the cookie editor is shown below.</p>
-<p><figure>
-<span style="width: 624.00px; height: 356.00px;"><img alt="" src="images/image32.png" style="width: 624.00px; height: 356.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image32.png" width="624.00" height="356.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h3 id="h.lrlgliorty2o">E5.3.2 Flags that protect authentication cookies</h3><p>Cookies have optional flags that the application can set to control how a browser handles them.  Of these, the 'httpOnly' and 'secure' flags are important to protecting authentication cookies from unauthorized access.   </p>
 
 <p>The httpOnly flag prevents scripts from reading a cookie's contents. In a cross-site scripting attack (commonly called "XSS"), an adversary is able to inject a malicious script to run in a user's browser. If such a script can read an authentication cookie, it can send it to the adversary for use in a session hijacking attack. The httpOnly flag cannot prevent a successful cross-site scripting attack but it does prevent the cookie, and the account it protects, against compromise in the event of such an attack.</p>
@@ -409,41 +492,61 @@
 <p>The secure flag prevents the browser from sending a cookie in an http (unencrypted) request.  In an implementation that is using https, this protects against an accidental exposure of the cookie through an unintentional http request.  In some implementations the use of load balancers to even out internal server loading can preclude the use of the secure flag for authentication cookies.  In those cases, HSTS (Hypertext Strict Transport Security) is important to prevent the browser from sending any http requests to this domain.  (See the Encryption and Transport Layer Security section of this document for details of HSTS).</p>
 
 <p>Both of these flags can be checked in the cookie editor by selecting the authentication cookie and examining the flags settings. In the example below, both the httpOnly and secure flags are set.</p>
-<p><figure>
-<span style="width: 624.00px; height: 344.00px;"><img alt="" src="images/image63.png" style="width: 624.00px; height: 344.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image63.png" width="624.00" height="344.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h3 id="h.lxaguwf157fz">E5.3.3 Invalidation of authentication cookies at logout</h3><p>Authentication cookies should be invalidated when a user logs out of an application.  If they remain valid after a logout, then an adversary in possession of an authentication cookie value can continue to access the account.  Put another way, the user cannot limit the scope of a possible attack by logging out of the application.</p>
 
 <p>Using a cookie editor, It is straightforward to check whether authentication tokens are invalidated at logout. The sequence is described and illustrated below</p><ul><li>Log in to the service and go to a page that indicates the user is logged in.</li>
 </ul>
 
-<p><figure>
-<span style="width: 624.00px; height: 208.00px;"><img alt="" src="images/image49.png" style="width: 624.00px; height: 208.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image49.png" width="624.00" height="208.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <ul><li>Using the cookie editor, filter on this domain's cookies and save them to file by clicking the export icon as shown below. Pick a descriptive name for the file.</li>
 </ul>
-<p><figure>
-<span style="width: 624.00px; height: 341.33px;"><img alt="" src="images/image35.png" style="width: 624.00px; height: 341.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image35.png" width="624.00" height="341.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <ul><li>Log out and confirm that the same URL no longer indicates that the user is logged in.</li>
 </ul>
-<p><figure>
-<span style="width: 624.00px; height: 214.67px;"><img alt="" src="images/image00.png" style="width: 624.00px; height: 214.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image00.png" width="624.00" height="214.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <ul><li>Using the cookie editor, restore the cookies from the file saved in the previous steps.</li>
-</ul><p><figure>
-<span style="width: 700.50px; height: 450.47px;"><img alt="" src="images/image22.png" style="width: 700.50px; height: 450.47px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+</ul>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image22.png" width="700.50" height="450.47" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <ul><li>Reload the URL recorded earlier, and check whether the page indicates the user is logged in or not.  If the user is again logged in after restoring the cookie, this indicates that the authentication cookie was not invalidated at logout.  This can be further confirmed by exercising functionality of the application to see if access is allowed.</li>
 </ul>
 <h3 id="h.hz9cbgh9f8dp">E5.3.4 Logout links</h3><p>For users, best practice to protect personal information is to log out when done using an application.  Doing so invalidates authentication tokens from the session, thus limiting the scope of any possible unauthorized use of those tokens.  Applications must support this by providing a logout mechanism and making it easy to access from any page that a user can visit while logged in.</p>
@@ -451,15 +554,19 @@
 <p>The check for this is straightforward.  Exercise the functional areas of the application, making sure that the logout mechanism is available at any page or view that requires authentication to access.</p>
 
 <p>Note that many applications place the logout link in a dropdown menu, as shown below, and make that dropdown menu available on all pages in the application.</p>
-<h3 id="h.7lq1864568l4"><figure>
-<span style="width: 164.66px; height: 296.17px;"><img alt="" src="images/image96.png" style="width: 164.66px; height: 296.17px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></h3>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image96.png" width="164.66" height="296.17" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <p>Frequently, mobile apps on a tablet or phone will keep you logged in longer than web apps or desktop apps. These logins will often persist when an app is powered down and restarted. Because of this tendency, testing the duration of logins on devices is a critical part of the testing process. If you identify an application that keeps a user logged in after a device has been powered down and restarted, that poses a security risk for any user in an environment where devices are shared.</p>
 <h3 id="h.ydp7yshpkmk5"></h3>
-<h1 id="h.rbaoviif8nfx"></h1><hr style="page-break-before:always;display:none;">
-<h1 id="h.jwbdbs6jeus0"></h1>
+<h1 id="h.rbaoviif8nfx"></h1>
+
 <h1 id="h.o0yfi4ju8qc4">E6 Password handling</h1>
 <h2 id="h.p0qyv29uhye">E6.1 Summary</h2><p>Most applications employ usernames and passwords to provide individual access to user accounts.  Because usernames and passwords provide full access to an account, protecting usernames and passwords is essential. Some aspects of password handling cannot be observed by an end user - for example, what hashing scheme has been used for internal password storage. Others can be observed or inferred through end-user tests. This section covers the tests that can be performed by an end user without access to the internals or implementation details of an application.</p>
 <h2 id="h.bycob2ftdmmd">E6.2 Exploitability and impact</h2><p>If an adversary gains access to an account's username and password, it is highly exploitable - the entire account and its contents can be accessed. But, the vulnerabilities described in this section all require first gaining access to a target's email account, network traffic, or the service's internal storage. This moderates the risk that these vulnerabilities can pose.</p>
@@ -488,50 +595,70 @@
 <p>Username enumeration attacks are most relevant for systems that hold highly sensitive data, or in systems where a compromised administrative account can provide access to a larger data set. Username enumeration can be a stepping stone to a larger, more catastrophic compromise.</p>
 <h2 id="h.roihhrjluacf">E7.3 Setup and tests</h2><p>The tests for this section focus on the user login and password recovery interfaces, and can be conducted directly from the browser.</p>
 <h3 id="h.pqjlaodys6pv">E7.3.1 User login</h3><p>Attempt two types of logins. First,  use both an invalid username; then use a valid username but incorrect password. In both cases, the application should not reveal if the username was valid.  The following image is an example of a proper response.  It states that either the username or password was incorrect without identifying which one wasn't recognized.</p>
-<p><figure>
-<span style="width: 624.00px; height: 70.67px;"><img alt="" src="images/image77.png" style="width: 624.00px; height: 70.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure>In contrast, messages like the ones shown below reveal the validity of the username used in the login attempt.</p>
-<p><figure>
-<span style="width: 543.50px; height: 104.52px;"><img alt="" src="images/image67.png" style="width: 543.50px; height: 104.52px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image77.png" width="624.00" height="70.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+In contrast, messages like the ones shown below reveal the validity of the username used in the login attempt.</p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image67.png" width="543.50" height="104.52" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <p>As noted above, username enumeration poses a relatively small risk on its own, but level of protection can be used as a factor in evaluating the security practices of elements that are more difficult to observe.</p>
 <h3 id="h.ft0vj9gi6k2z">E7.3.2 Password recovery</h3><p>Exercise the password recovery interface by requesting password recovery for a valid and invalid username.  Check whether the application gives different responses for valid and invalid usernames.   Apps will often simply state that an email is sent, whether the provided username was valid or not.  This is a proper response as it doesn't reveal the validity of the username. Applications may also respond that "if an account with that username exists, a mail has been sent."  </p>
-<p><figure>
-<span style="width: 468.50px; height: 60.81px;"><img alt="" src="images/image88.png" style="width: 468.50px; height: 60.81px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
 
-<p><figure>
-<span style="width: 358.50px; height: 104.16px;"><img alt="" src="images/image06.png" style="width: 358.50px; height: 104.16px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image88.png" width="468.50" height="60.81" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image06.png" width="358.50" height="104.16" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>Some examples of responses that reveal invalid usernames are shown below.  Responses such as these can be compared to the response for a valid username to determine whether usernames are valid for the application.</p>
-<p><figure>
-<span style="width: 342.69px; height: 33.50px;"><img alt="" src="images/image54.png" style="width: 342.69px; height: 33.50px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
-<p><figure>
-<span style="width: 588.00px; height: 50.00px;"><img alt="" src="images/image64.png" style="width: 588.00px; height: 50.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
 
-<p><figure>
-<span style="width: 624.00px; height: 49.33px;"><img alt="" src="images/image86.png" style="width: 624.00px; height: 49.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image54.png" width="342.69" height="33.50" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
-<hr style="page-break-before:always;display:none;">
-<h1 id="h.20c6a5c1ov40"></h1>
+<div align="center">
+<figure>
+  <img alt="" src="images/image64.png" width="588.00" height="50.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image86.png" width="624.00" height="49.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h1 id="h.84zlnvdl3nqp">E8 Observation of websockets traffic</h1>
 <h2 id="h.vapinpbwcs48">E8.1 Summary</h2><p>Websockets provide a communication link separate from http that browsers and application servers can use to pass information back and forth.  It is normally a secondary form of communication that is connected after the web application loads into the browser.  If an application uses websockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.</p>
 <h2 id="h.61n72nw4mfkk">E8.2 Exploitability and impact</h2><p>The exploitability and impact related to websockets traffic depends on what information the traffic contains, and whether it is encrypted.  Unencrypted websockets traffic could expose sensitive information, but an observer would need access to the network traffic to access the information.  Sensitive information about users other than the account holder could be viewed by anyone with an account, regardless of encryption during transport.</p>
@@ -539,38 +666,50 @@
 
 <p>There is not a specific set of tests to exercise websockets. Rather, the functionality of the application should be explored during testing, and then websockets traffic (if any) observed for its contents and encryption.  Steps for these observations are described below.</p>
 <h3 id="h.3060boikmptv">E8.3.1 Check contents of websockets traffic for sensitive information</h3><p>If an application uses websockets, check the contents of the messages for sensitive information.  Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system.  The image below shows an example of a websockets message containing student personal information for a different student than the logged in account holder (this is also an example of Information Leakage, covered in Section E9 of this document).</p>
-<p><figure>
-<span style="width: 624.00px; height: 116.00px;"><img alt="" src="images/image74.png" style="width: 624.00px; height: 116.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image74.png" width="624.00" height="116.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h3 id="h.pgk5io8rnrmf">E8.3.2 Check whether the websockets connection is encrypted</h3><p>An unencrypted websocket connection is not a concern if the information transferred over the websocket is not sensitive. However, an encrypted connection is always more secure as it will protect traffic that may not be observed during testing or may be added in future releases of the application.  Another consideration is that an unencrypted websocket connection can expose a session cookie if the websocket has the same domain as the main service and the session cookie's 'secure' flag is not set.</p>
 
 <p>From the websockets view of OWASP ZAP, it's possible to determine whether the websockets traffic is sent over an encrypted connection.  First, select the websockets channel of interest:</p>
-<p><figure>
-<span style="width: 465.00px; height: 134.00px;"><img alt="" src="images/image93.png" style="width: 465.00px; height: 134.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image93.png" width="465.00" height="134.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <p>Then, click the button with green arrows to bring up the initial connection transaction for the websocket.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 109.33px;"><img alt="" src="images/image28.png" style="width: 624.00px; height: 109.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image28.png" width="624.00" height="109.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>The details of the connection will be displayed in the upper transaction pane.  Check whether the connection was initiated with https (encrypted) or http (not encrypted).   Note that port 443 is typically reserved for secure connections but the proper check is to look at the connection URL, not the port number.  Ports other than 443 may support a secure connection and port 443 does not guarantee a secure connection. In the example shown below, the connection is encrypted.  The authentication cookie is included in the transaction and protected by the encrypted connection.</p>
 
 
-<h1 id="h.50hp1hjn5z6b"><figure>
-<span style="width: 624.00px; height: 192.00px;"><img alt="" src="images/image94.png" style="width: 624.00px; height: 192.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></h1>
+<div align="center">
+<figure>
+  <img alt="" src="images/image94.png" width="624.00" height="192.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
-<p>Evaluating the potential risks of websockets traffic requires examining what information, if any, is sent via websockets traffic, and whether or not that information is encrypted. As noted above, while encrypting websockets traffic is not always essential, it is a good step, and can also help work as an indicator of the overall level of thought into defensive strategies used by the application.</p><hr style="page-break-before:always;display:none;">
-<h1 id="h.tynmunvkrhcu"></h1>
+<p>Evaluating the potential risks of websockets traffic requires examining what information, if any, is sent via websockets traffic, and whether or not that information is encrypted. As noted above, while encrypting websockets traffic is not always essential, it is a good step, and can also help work as an indicator of the overall level of thought into defensive strategies used by the application.</p>
+
 <h1 id="h.krhp5dinabwe">E9 Information leakage</h1>
 <h2 id="h.608106vxg5v2">E9.1 Summary</h2><p>Information leakage occurs when an application reveals or "leaks" sensitive information about the system or its users.  In this section of this test plan, the focus is on leakage of sensitive information about an application's users.</p>
 <h2 id="h.5akdv6pporg0">E9.2 Exploitability and impact</h2><p>The exploitability and impact of information leakage depends on what information is leaked and how difficult it is to observe the leaked information.  For example if an application embeds a student's date of birth (DOB) and home address in an https (encrypted) response to populate a name on a dashboard page (without displaying DOB or home address on the page), the impact is serious but an adversary must first take control of a user's account to view the information.  If the application does not use https for the transaction, an adversary must then only observe the unencrypted network traffic to access the sensitive information.</p>
@@ -587,52 +726,71 @@
 
 <p>Additionally, information leakage can be used to assess the overall defensive posture of an application. If an application leaks information in places where it shouldn't, it can be an indicator of weak practices in areas that we cannot observe.</p>
 <h4 id="h.21x8s0z82hry">E9.3.1.1 Email leakage</h4><p>In the example shown below, a student password reset request reveals the email address of the student's parent</p>
-<p><figure>
-<span style="width: 548.50px; height: 101.09px;"><img alt="" src="images/image17.png" style="width: 548.50px; height: 101.09px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image17.png" width="548.50" height="101.09" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.56iz4o3483a7">E9.3.1.2 Leaking names and emails</h4><p>In the example shown below, an application has different responses for conditions where an access code has already been used and an attempt is made to reuse the code. Together, the messages reveal a parent's full email address and the parent's first name and last initial.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 78.67px;"><img alt="" src="images/image103.png" style="width: 624.00px; height: 78.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
-<p><figure>
-<span style="width: 624.00px; height: 101.33px;"><img alt="" src="images/image102.png" style="width: 624.00px; height: 101.33px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image103.png" width="624.00" height="78.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image102.png" width="624.00" height="101.33" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.94oxul5fhdmt">E9.3.1.3 Leaking Student Information</h4><p>In the example shown below, a request for student name information to be used in a class roster display also returns the student's userID, password hash and gender.</p>
-<p><figure>
-<span style="width: 531.50px; height: 150.76px;"><img alt="" src="images/image69.png" style="width: 531.50px; height: 150.76px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image69.png" width="531.50" height="150.76" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.rp7yummv8hnm">E9.3.1.4 Leaking full name, school, state, and user ID</h4><p>Here, an application displays the first name, school name and state of a "daily winner", but the data request visible in the proxy also returns the student's last name and numeric userid.</p>
-<p><figure>
-<span style="width: 299.50px; height: 65.87px;"><img alt="" src="images/image84.png" style="width: 299.50px; height: 65.87px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
-<p><figure>
-<span style="width: 577.00px; height: 32.00px;"><img alt="" src="images/image13.png" style="width: 577.00px; height: 32.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image84.png" width="299.50" height="65.87" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image13.png" width="577.00" height="32.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h4 id="h.e2qh0r4gqtn7">E9.3.1.5 Leaking username, activity information, name, and teacher ID</h4><p>As seen in the "Observation of websockets traffic" section, this websockets message reveals information about a different student than the one who is logged in.</p>
-<p><figure>
-<span style="width: 624.00px; height: 116.00px;"><img alt="" src="images/image74.png" style="width: 624.00px; height: 116.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
-<h1 id="h.f3h1kbxtdkob"></h1><hr style="page-break-before:always;display:none;">
-<h1 id="h.8fusgnd4eyl"></h1>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image74.png" width="624.00" height="116.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h1 id="h.rnno329obb2d">E10 API authentication checks</h1>
 <h2 id="h.aghuyfymsb8f">E10.1 Summary</h2><p>Many applications use APIs to retrieve information from the application's servers. API stands for "Application Programming Interface".  In simple terms, an API will typically fetch raw data from the server to be rendered for display by the application, as opposed to fetching pre-formatted HTML pages.  APIs are more common for mobile applications than browser-based applications but are utilized by both.  The URL for an API will commonly include "api" in the URL, and will have parameters in the URL or in the message body.  Examples of APIs will be shown in the "Setup and tests" discussion below.</p>
 
@@ -643,55 +801,75 @@
 <h2 id="h.oayw74esjvsl">E10.3 Setup and tests</h2><p>For browser-based applications, Firebug or OWASP ZAP (external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP.  Refer to the setup section for proxies and mobile devices for more details.</p>
 
 <p>Since each application is different, the first step is to exercise the functionality of the application and examine the network transactions for API requests.  The URL of an API will often include 'api' in the URL.  Regardless of this, the typical characteristics of API calls are requests containing parameters in the URL, which return raw data and not formatted HTML.  This image shows an example of an API request:</p>
-<p><figure>
-<span style="width: 624.00px; height: 146.67px;"><img alt="" src="images/image48.png" style="width: 624.00px; height: 146.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image48.png" width="624.00" height="146.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>The response when logged in is below, returning information about students in the class.</p>
-<p><figure>
-<span style="width: 624.00px; height: 222.67px;"><img alt="" src="images/image109.png" style="width: 624.00px; height: 222.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image109.png" width="624.00" height="222.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>If the API access is a GET request, the browser can be used to test if the same request works without authentication. In a browser that is not logged in to the application, paste the URL into a browser's address bar and load the page into the browser. The response should not include information from the account and will likely indicate that the user is not authenticated.</p>
 
 
-<p><figure>
-<span style="width: 525.50px; height: 87.58px;"><img alt="" src="images/image14.png" style="width: 525.50px; height: 87.58px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image14.png" width="525.50" height="87.58" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>If the API access is not a GET request (most often it will be a POST request if not GET), the proxy's support for resending a request can be used to test API authentication.  To do this, first log out of the application, then locate the API request in the proxy log and select the request.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 242.67px;"><img alt="" src="images/image73.png" style="width: 624.00px; height: 242.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image73.png" width="624.00" height="242.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <h2 id="h.s3sj9ps30tvx"></h2><p>Right-clicking on the selected request will bring up a menu.  Select "Resend" from this menu.</p>
-<h2 id="h.huq2pwydt711"><figure>
-<span style="width: 241.50px; height: 312.12px;"><img alt="" src="images/image72.png" style="width: 241.50px; height: 312.12px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></h2>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image72.png" width="241.50" height="312.12" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
+
 <p>Click "Send" to resend the request.</p>
 
-<p><figure>
-<span style="width: 624.00px; height: 184.00px;"><img alt="" src="images/image15.png" style="width: 624.00px; height: 184.00px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></p>
+<div align="center">
+<figure>
+  <img alt="" src="images/image15.png" width="624.00" height="184.00" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <p>When the response comes back, the proxy will highlight the response tab, and display the response.  The application should not return user information, and will likely indicate that the access is not authorized or authenticated.</p>
-<h1 id="h.313l37seqz2a"><figure>
-<span style="width: 624.00px; height: 178.67px;"><img alt="" src="images/image38.png" style="width: 624.00px; height: 178.67px;" title="">
-<figcaption>Add caption here</figcaption>
-</span>
-</figure></h1>
+
+<div align="center">
+<figure>
+  <img alt="" src="images/image38.png" width="624.00" height="178.67" title="">
+    <br>
+  <figcaption>Add caption here</figcaption>
+</figure>
+</div>
 
 <h1 id="h.i96tfugoo84q">E11 Mobile application testing</h1>
 <h2 id="h.8uim1fdsxml">E11.1 Summary</h2><p>Testing mobile applications is similar to testing browser-based applications in many ways.  Because mobile apps are hosted on devices and have some different characteristics than browser-based apps, the setup is different and some of the browser-based tests are not relevant.  This section reviews the test setup for mobile applications, discusses which of the tests from the web application tests described in this plan are relevant for mobile apps, and highlights some tests and considerations that are unique to mobile applications.</p>
@@ -709,6 +887,7 @@
 <p>The following table summarizes which of the tests from the preceding sections are applicable to mobile applications testing:</p>
 
 <a id="t.eccd9b543822b17376586cb5d2fefe2c2ade4a3e"></a><a id="t.0"></a><table><tbody><tr><td colspan="1" rowspan="1"><p>Section</p></td><td colspan="1" rowspan="1"><p>Test</p></td><td colspan="1" rowspan="1"><p>Applicable?</p></td><td colspan="1" rowspan="1"><p>Notes</p></td></tr><tr><td colspan="1" rowspan="1"><p>Encryption and TLS</p></td><td colspan="1" rowspan="1"><p>Checks for TLS during transport of sensitive information</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p></p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>SSL configurations</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p></p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>HSTS headers</p></td><td colspan="1" rowspan="1"><p>No</p></td><td colspan="1" rowspan="1"><p></p></td></tr><tr><td colspan="1" rowspan="1"><p>Sensitive information in URLs</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p></p></td></tr><tr><td colspan="1" rowspan="1"><p>Caching and history</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>No</p></td><td colspan="1" rowspan="1"><p></p></td></tr><tr><td colspan="1" rowspan="1"><p>Authentication token and cookie handling</p></td><td colspan="1" rowspan="1"><p>TLS for sensitive cookies</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>If app uses cookies</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Invalidation of cookies at logout</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>If app uses cookies</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Can logout from within the app</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p></p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Cookie protection flags</p></td><td colspan="1" rowspan="1"><p>No</p></td><td colspan="1" rowspan="1"><p>These flags are relevant for browsers only</p></td></tr><tr><td colspan="1" rowspan="1"><p>Password handling</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>If app uses passwords</p></td></tr><tr><td colspan="1" rowspan="1"><p>Username enumeration</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>If app uses usernames</p></td></tr><tr><td colspan="1" rowspan="1"><p>Websockets</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>Possible but rarely used by mobile apps</p></td></tr><tr><td colspan="1" rowspan="1"><p>Information leakage</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>Pay particular attention to API responses</p></td></tr><tr><td colspan="1" rowspan="1"><p>API authentication controls</p></td><td colspan="1" rowspan="1"><p>(All tests)</p></td><td colspan="1" rowspan="1"><p>Yes</p></td><td colspan="1" rowspan="1"><p>APIs more common for mobile apps than browser-based apps</p></td></tr></tbody></table>
+
 <h3 id="h.r03vdv9ggz1i">E11.3.2 SSL Certificate Validation (SSL Certificate Spoofing)ests that are specific to mobile applications</h3><p>As described in this section's Exploitability and Impact discussion, a mobile application that accepts an SSL certificate from an untrusted source can expose the user to a man-in-the-middle attack that allows snooping of the encrypted messages sent and received by the application.</p>
 
 <p>This is straightforward to check using the proxy.  If an application's https traffic is visible in the proxy when the device doesn't have the proxy's SSL certificate installed as a trusted certificate, it indicates that the authenticity of the certificate was not checked.</p>
