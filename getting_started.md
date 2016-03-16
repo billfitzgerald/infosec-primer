@@ -45,8 +45,6 @@ As mentioned above, Firebug is a good choice for tests that don't require the ad
 
 The image below shows the Firebug icon in the toolbar, with configuration options that can be set to user preferences.
 
-The Firebug display is shown below. The 'Net' tab shows the network requests and responses; make sure that the 'Persist' and 'All' options are selected.
-
 <div align="center">
 <figure>
   <img alt="" src="images/image53.png" width="446.50" height="207.94" title="">
@@ -54,6 +52,8 @@ The Firebug display is shown below. The 'Net' tab shows the network requests and
   <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
+
+The Firebug display is shown below. The 'Net' tab shows the network requests and responses; make sure that the 'Persist' and 'All' options are selected.
 
 <div align="center">
 <figure>
