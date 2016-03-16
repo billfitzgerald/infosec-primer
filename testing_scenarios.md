@@ -28,7 +28,7 @@ Inclusion of non-sensitive information or parameters in URLs does not pose a sec
 <figure>
   <img alt="" src="images/image82.png" width="390.50" height="22.73" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -38,7 +38,7 @@ Timestamps and character encodings are other non-sensitive uses of URL parameter
 <figure>
   <img alt="" src="images/image85.png" width="624.00" height="36.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -48,7 +48,7 @@ However, including sensitive or personal information in a URL can put this infor
 <figure>
   <img alt="" src="images/image92.png" width="624.00" height="44.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -58,7 +58,7 @@ Here, a user's personal information is part of the URL.
 <figure>
   <img alt="" src="images/image97.png" width="608.55" height="38.50" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -67,7 +67,7 @@ Sensitive information in URLs may be captured by a browser's history and in its 
 <div align="center">
 <figure>  <img alt="" src="images/image59.png" width="686.40" height="38.50" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -75,7 +75,7 @@ Sensitive information in URLs may be captured by a browser's history and in its 
 <figure>
   <img alt="" src="images/image12.png" width="644.50" height="74.99" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -89,7 +89,7 @@ Many applications utilize 3rd-party analytics services to track user activity fo
 <figure>
   <img alt="" src="images/image43.png" width="624.00" height="146.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -99,7 +99,7 @@ Some services that protect users from malicious websites send some of a user's b
 <figure>
   <img alt="" src="images/image33.png" width="624.00" height="105.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -147,7 +147,7 @@ In the example below the page is loaded without https.
 <figure>
   <img alt="" src="images/image71.png" width="592.50" height="92.10" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -157,7 +157,7 @@ In this example the page is loaded with https.
 <figure>
   <img alt="" src="images/image61.png" width="599.50" height="108.56" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -167,7 +167,7 @@ Here a page loaded with http is displayed in Firebug:
 <figure>
   <img alt="" src="images/image19.png" width="624.00" height="128.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -181,7 +181,7 @@ In this example the credentials are submitted without https:
 <figure>
   <img alt="" src="images/image30.png" width="547.50" height="210.63px" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -191,7 +191,7 @@ In the following example the credentials are submitted with https:
 <figure>
   <img alt="" src="images/image107.png" width="624.00" height="141.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -207,7 +207,7 @@ In ZAP:
 <figure>
   <img alt="" src="images/image21.png" width="550.50" height="222.32" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -216,7 +216,7 @@ In Firebug:
 <div align="center">
 <figure>  <img alt="" src="images/image55.png" width="624.00" height="257.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -226,7 +226,7 @@ In the next screenshot, we see an example of a service that uses https after log
 <figure>
   <img alt="" src="images/image16.png" width="624.00" height="86.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -242,7 +242,7 @@ In ZAP:
 <figure>
   <img alt="" src="images/image95.png" width="554.50" height="166.82" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -252,7 +252,7 @@ In Firebug:
 <figure>
   <img alt="" src="images/image111.png" width="624.00" height="350.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -270,7 +270,7 @@ On the "SSL Server Test" page, check the box labeled "Do not show the results on
 <figure>
   <img alt="" src="images/image81.png" width="624.00" height="232.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -280,7 +280,7 @@ Examples of SSL Server Test results are shown below. The first result is a solid
 <figure>
   <img alt="" src="images/image101.png" width="518.50" height="275.42" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -290,7 +290,7 @@ Note that the reasons behind each issue are explained, with links to greater det
 <figure>
   <img alt="" src="images/image03.png" width="513.50" height="444.38" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -323,7 +323,7 @@ Browsing to checktls.com brings up a form where the email can be entered (no mai
 <figure>
   <img alt="" src="images/image18.png" width="537.50" height="297.18" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -333,7 +333,7 @@ The results will indicate whether the mail server accepts incoming TLS connectio
 <figure>
   <img alt="" src="images/image68.png" width="624.00" height="185.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -345,7 +345,7 @@ If the mail was sent with TLS, it will be noted in the headers with a descriptio
 <figure>
   <img alt="" src="images/image78.png" width="624.00" height="126.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -363,7 +363,7 @@ As an example, the screenshot below shows the results for a particular applicati
 <figure>
   <img alt="" src="images/image100.png" width="624.00" height="188.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -375,7 +375,7 @@ The image below shows the results for the same application after they enabled TL
 <figure>
   <img alt="" src="images/image23.png" width="624.00" height="180.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -421,7 +421,7 @@ Cache headers displayed in ZAP:
 <figure>
   <img alt="" src="images/image99.png" width="624.00" height="170.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -431,7 +431,7 @@ Cache headers displayed in Firebug:
 <figure>
   <img alt="" src="images/image79.png" width="624.00" height="349.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -447,7 +447,7 @@ There is a straightforward way to check for history storage of sensitive informa
 <figure>
   <img alt="" src="images/image116.png" width="624.00" height="269.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -466,7 +466,7 @@ To inspect what is stored in the browser's cache, enter "about:cache" in the bro
 <figure>
   <img alt="" src="images/image34.png" width="624.00" height="352.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -476,7 +476,7 @@ The URLs of the cached pages will be listed and specific pages of interest can b
 <figure>
   <img alt="" src="images/image05.png" width="391.50" height="31.36" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -486,7 +486,7 @@ Clicking on the URL name will load a representation of the raw source of the pag
 <figure>
   <img alt="" src="images/image01.png" width="621.00" height="70.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -557,7 +557,7 @@ Then, using the Cookie Manager, delete the candidate cookie and reload the page.
 <figure>
   <img alt="" src="images/image32.png" width="624.00" height="356.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -575,7 +575,7 @@ Both of these flags can be checked in the cookie editor by selecting the authent
 <figure>
   <img alt="" src="images/image63.png" width="624.00" height="344.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -591,7 +591,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 <figure>
   <img alt="" src="images/image49.png" width="624.00" height="208.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -601,7 +601,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 <figure>
   <img alt="" src="images/image35.png" width="624.00" height="341.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -611,7 +611,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 <figure>
   <img alt="" src="images/image00.png" width="624.00" height="214.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -621,7 +621,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 <figure>
   <img alt="" src="images/image22.png" width="700.50" height="450.47" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -639,7 +639,7 @@ Note that many applications place the logout link in a dropdown menu, as shown b
 <figure>
   <img alt="" src="images/image96.png" width="164.66" height="296.17" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -698,7 +698,7 @@ Attempt two types of logins. First, use both an invalid username; then use a val
 <figure>
   <img alt="" src="images/image77.png" width="624.00" height="70.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -708,7 +708,7 @@ In contrast, messages like the ones shown below reveal the validity of the usern
 <figure>
   <img alt="" src="images/image67.png" width="543.50" height="104.52" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -722,7 +722,7 @@ Exercise the password recovery interface by requesting password recovery for a v
 <figure>
   <img alt="" src="images/image88.png" width="468.50" height="60.81" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -730,7 +730,7 @@ Exercise the password recovery interface by requesting password recovery for a v
 <figure>
   <img alt="" src="images/image06.png" width="358.50" height="104.16" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -740,7 +740,7 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 <figure>
   <img alt="" src="images/image54.png" width="342.69" height="33.50" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -748,7 +748,7 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 <figure>
   <img alt="" src="images/image64.png" width="588.00" height="50.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -756,7 +756,7 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 <figure>
   <img alt="" src="images/image86.png" width="624.00" height="49.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -784,7 +784,7 @@ If an application uses websockets, check the contents of the messages for sensit
 <figure>
   <img alt="" src="images/image74.png" width="624.00" height="116.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -798,7 +798,7 @@ From the websockets view of OWASP ZAP, it's possible to determine whether the we
 <figure>
   <img alt="" src="images/image93.png" width="465.00" height="134.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -808,7 +808,7 @@ Then, click the button with green arrows to bring up the initial connection tran
 <figure>
   <img alt="" src="images/image28.png" width="624.00" height="109.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -818,7 +818,7 @@ The details of the connection will be displayed in the upper transaction pane. C
 <figure>
   <img alt="" src="images/image94.png" width="624.00" height="192.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -861,7 +861,7 @@ In the example shown below, a student password reset request reveals the email a
 <figure>
   <img alt="" src="images/image17.png" width="548.50" height="101.09" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -873,7 +873,7 @@ In the example shown below, an application has different responses for condition
 <figure>
   <img alt="" src="images/image103.png" width="624.00" height="78.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -881,7 +881,7 @@ In the example shown below, an application has different responses for condition
 <figure>
   <img alt="" src="images/image102.png" width="624.00" height="101.33" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -893,7 +893,7 @@ In the example shown below, a request for student name information to be used in
 <figure>
   <img alt="" src="images/image69.png" width="531.50" height="150.76" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -905,7 +905,7 @@ Here, an application displays the first name, school name and state of a "daily 
 <figure>
   <img alt="" src="images/image84.png" width="299.50" height="65.87" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -913,7 +913,7 @@ Here, an application displays the first name, school name and state of a "daily 
 <figure>
   <img alt="" src="images/image13.png" width="577.00" height="32.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -925,7 +925,7 @@ As seen in the "Observation of websockets traffic" section, this websockets mess
 <figure>
   <img alt="" src="images/image74.png" width="624.00" height="116.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -954,7 +954,7 @@ Since each application is different, the first step is to exercise the functiona
 <figure>
   <img alt="" src="images/image48.png" width="624.00" height="146.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -964,7 +964,7 @@ The response when logged in is below, returning information about students in th
 <figure>
   <img alt="" src="images/image109.png" width="624.00" height="222.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -974,7 +974,7 @@ If the API access is a GET request, the browser can be used to test if the same 
 <figure>
   <img alt="" src="images/image14.png" width="525.50" height="87.58" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -984,7 +984,7 @@ If the API access is not a GET request (most often it will be a POST request if 
 <figure>
   <img alt="" src="images/image73.png" width="624.00" height="242.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -994,7 +994,7 @@ Right-clicking on the selected request will bring up a menu. Select "Resend" fro
 <figure>
   <img alt="" src="images/image72.png" width="241.50" height="312.12" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -1004,7 +1004,7 @@ Click "Send" to resend the request.
 <figure>
   <img alt="" src="images/image15.png" width="624.00" height="184.00" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
@@ -1014,7 +1014,7 @@ When the response comes back, the proxy will highlight the response tab, and dis
 <figure>
   <img alt="" src="images/image38.png" width="624.00" height="178.67" title="">
     <br>
-  <figcaption>Add caption here</figcaption>
+  <figcaption>Image Caption:</figcaption>
 </figure>
 </div>
 
