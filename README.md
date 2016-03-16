@@ -11,7 +11,7 @@
 
 ## Author Credits
 
-Tony Portfeld and Jim Seigl are the primary authors of this text.
+Tony Portfeld and Jim Siegl are the primary authors of this text.
 
 Bill Fitzgerald, Girard Kelly, and Jeff Graham provided editing support and testing.
 
