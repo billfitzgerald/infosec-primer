@@ -36,9 +36,10 @@ This rest of this section describes setting up the proxy and related testing too
 To install Firebug, go to Tools -->Add ons, search for 'Firebug' and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
 
 <figure>
-<img alt="Firebug Add On" src="images/image57.png" width="624" height="56" title="Firebug Add On">
-
+<span style="width: 624.00px; height: 56.00px;">
+<img alt="Firebug Add On" src="images/image57.png" title="Firebug Add On">
 <figcaption>Firebug Add On</figcaption>
+</span>
 </figure>
 
 As mentioned above, Firebug is a good choice for tests that don't require the advanced functionality of an external proxy such as OWASP ZAP. After Firebug has been installed, it can be viewed by clicking its icon in the Firefox toolbar. In this setup tutorial, we explain how to use some of the tools that come with Firebug, along with screenshots that show them in action.
