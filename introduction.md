@@ -1,0 +1,7 @@
+# A. Introduction: Who Should Read This
+
+This primer is intended as an introduction to information security testing. The primary audience is district staff and education technology vendors, but the usefulness of this information goes far beyond these two primary audiences.
+
+For a district with the necessary resources, the primer provides tools to perform a basic level of security testing as part of your district's application approval process. For educators and vendors who want to learn more about basic information security, the "Summary" and "Exploitability and Impact" descriptions in Section E. Testing Scenarios and Procedures provide an overview of when and how specific vulnerabilities could be exploited.
+
+Testing is an important part of a district's process for evaluating the security, privacy and safety of instructional software, but is is one part in a broader process that may start with a (1) brief check to determine if a tool meets the organization's minimum standards, then (2) understanding how the application collects, uses, shares and protects data. This may include examining the contract and the privacy policy or asking the rendor to respond to specific questions (see the Consortium for School Networks (CoSN) brief "Questions to ask of an Online Serivce Provider" [http://www.cosn.org/sites/default/files/03_SecurityQuestions.pdf](http://www.cosn.org/sites/default/files/03_SecurityQuestions.pdf) and lastly (3) perfoming specific security tests such as those described in this primer.

@@ -1,0 +1,51 @@
+# D. Preparing Firefox for a Test Session
+
+At the start of a test session, the Firefox browser should be cleared of cookies, history and other state left over from previous sessions. There are two required steps, and two optional steps. All steps are covered below.
+
+## D1 Set Firefox Home Page
+
+To prepare to test using Firefox, we need to clear any stored usage data that could potentially affect the results we see when we test.
+
+To start, we will make sure that we are not logged in to Sync, and that our home page is set to a blank page. To access the home page setting, click the "Menu" icon in the top right corner of the Firefox window.
+
+If you are logged out of Sync, you will see that reflected in the message in the "Options" box.
+
+<figure><span style="width: 198.51px; height: 362.50px;">![preferences_01.png](images/image114.png)
+
+<figcaption>Add caption here</figcaption>
+
+</span></figure>
+
+Click the "Preferences" icon to set your home page. When you are at the home page, set the home page to open to a blank page.
+
+<figure><span style="width: 624.00px; height: 346.67px;">![preferences_02.png](images/image39.png)
+
+<figcaption>Add caption here</figcaption>
+
+</span></figure>
+
+By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get accidentally when you open your browser to start testing.
+
+## D2 Clear recent history
+
+In the Firefox menu, select History->Clear recent history. A pop-up menu is presented. Select "Everything" for the time range, tick all of the boxes and click "Clear now".
+
+<figure><span style="width: 309.92px; height: 388.50px;">![](images/image42.png)
+
+<figcaption>Add caption here</figcaption>
+
+</span></figure>
+
+## D3 Verify that cookies are allowed
+
+This needs to be redone to reflect the change in Firefox 45 that removes the about:permissions pane.
+
+<figure><span style="width: 624.00px; height: 576.00px;">![](images/image115.png)
+
+<figcaption>Add caption here</figcaption>
+
+</span></figure>
+
+With our browser set to open to a blank page, old cookies and browsing data removed, and permissions adjusted to allow cookies, we are now set to test.
+
+Additionally, if you are running any adblockers or plugins that require https (examples include HTTPS Everywhere and Privacy Badger), you should disable them on your browser prior to testing.
