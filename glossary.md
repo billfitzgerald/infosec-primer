@@ -2,13 +2,13 @@
 
 Many of the definitions below are taken from the OWASP glossary ([https://www.owasp.org/index.php/Category:Glossary](https://www.owasp.org/index.php/Category:Glossary)), and the NIST Glossary of Key Information Security Terms, NISTIR 7298, revision 2 ([http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)). Definitions taken from these documents contain links to the source document in the title of the glossary term.
 
-Authentication Cookie See Session Token
+**Authentication Cookie** see **Session Token**
 
-API
+**API**
 
 Application Programming Interface. For web and mobile applications, this is a network-facing interface that the application can use to request user-specific information from the application's servers.
 
-[Certificate](https://www.owasp.org/index.php/Category:Glossary%23C)
+[**Certificate**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
 A data object that binds information about a person or some other entity to a public key. The binding is generally done using a digital signature from a trusted third party (a certification authority).
 
@@ -143,25 +143,3 @@ Uniform Resource Locator: another term for a site's "web address", specifying ho
 Vulnerability
 
 A security weakness in a system or application. A vulnerability creates an opportunity for an exploit that can impact an application and its users by compromising the system or its contents.
-
-asp.net_sessionid
-
-aspsessionid
-
-cfid
-
-cftoken
-
-jsessionid
-
-phpsessid
-
-sessid
-
-sid
-
-siteserver
-
-viewstate
-
-zenid
