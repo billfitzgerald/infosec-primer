@@ -36,7 +36,7 @@ This rest of this section describes setting up the proxy and related testing too
 To install Firebug, go to Tools -->Add ons, search for 'Firebug' and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
 
 <figure>
-<span style="width: 624.00px; height: 56.00px;">
+<span width="624" height="56">
 <img alt="Firebug Add On" src="images/image57.png" title="Firebug Add On">
 <figcaption>Firebug Add On</figcaption>
 </span>
