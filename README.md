@@ -19,7 +19,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
     * C4.2 [Basic setup, browser and proxy on same computer](getting_started.md#h.toolkit-zap-proxy-same-box)
     * C4.3 [Mobile device (or browser) on different computer than the proxy](getting_started.md#h.toolkit-zap-proxy-different-box)
     * C4.4 [Installing proxy SSL certificate to browser and mobile devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert)
-    * [C4.5 Observing websockets traffic using ZAP Proxy](getting_started.md#toolkit-zap-proxy-websockets)
+    * C4.5 [Observing websockets traffic using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets)
 * D. [Preparing Your Browser](browser_prep.md)
 * E. [Testing Scenarios](testing_scenarios.md)
 * F. [Glossary](glossary.md)
