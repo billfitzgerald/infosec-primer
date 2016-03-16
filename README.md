@@ -2,7 +2,7 @@
 
 ## Contents
 
-* Introduction
+* [Introduction](infosec-primer/blob/master/introduction.md)
 * Responsible Disclosure
 * Setting up the Testing Toolkit
 * Preparing Your Browser
