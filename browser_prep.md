@@ -10,19 +10,19 @@ To start, we will make sure that we are not logged in to Sync, and that our home
 
 If you are logged out of Sync, you will see that reflected in the message in the "Options" box.
 
-<figure><span style="width: 198.51px; height: 362.50px;">![preferences_01.png](images/image114.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+<img alt="Sync options" src="images/image114.png" style="width: 198px; height: 362px;" title="Sync options">
+  <br>
+<figcaption>Sync options</figcaption>
+</figure></p>
 
 Click the "Preferences" icon to set your home page. When you are at the home page, set the home page to open to a blank page.
 
-<figure><span style="width: 624.00px; height: 346.67px;">![preferences_02.png](images/image39.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="Preferences options" src="images/image39.png" width="624" height="347" title="Preferences options">
+    <br>
+  <figcaption>Image Caption: Preferences options</figcaption>
+</figure>
 
 By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get accidentally when you open your browser to start testing.
 
@@ -30,21 +30,21 @@ By setting your browser to open to a blank page, you ensure that no extraneous c
 
 In the Firefox menu, select History->Clear recent history. A pop-up menu is presented. Select "Everything" for the time range, tick all of the boxes and click "Clear now".
 
-<figure><span style="width: 309.92px; height: 388.50px;">![](images/image42.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="Clear Recent History" src="images/image42.png" width="310" height="389" title="Clear Recent History">
+    <br>
+  <figcaption>Image Caption: Clear Recent History</figcaption>
+</figure>
 
 ## D3 Verify that cookies are allowed
 
 This needs to be redone to reflect the change in Firefox 45 that removes the about:permissions pane.
 
-<figure><span style="width: 624.00px; height: 576.00px;">![](images/image115.png)
-
-<figcaption>Add caption here</figcaption>
-
-</span></figure>
+<figure>
+  <img alt="" src="images/image115.png" width="624" height="576" title="">
+    <br>
+  <figcaption>Image Caption:</figcaption>
+</figure>
 
 With our browser set to open to a blank page, old cookies and browsing data removed, and permissions adjusted to allow cookies, we are now set to test.
 
