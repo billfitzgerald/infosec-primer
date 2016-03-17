@@ -54,7 +54,7 @@ However, to prepare our browser for testing, enter *about:preferences#privacy* a
 <figure>
   <img alt="" src="images/image115.png" width="997" height="456" title="">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: For testing, deselect "Do Not Track", and allow all cookies.</figcaption>
 </figure>
 </div>
 
