@@ -21,7 +21,21 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
     * C4.4 [Installing proxy SSL certificate to browser and mobile devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert)
     * C4.5 [Observing websockets traffic using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets)
 * D. [Preparing Your Browser](browser_prep.md)
+  * D1 Set Firefox Home Page
+  * D2 Clear recent history 
+  * D3 about:permissions
 * E. [Testing Scenarios](testing_scenarios.md)
+  * E1 Sensitive information in URLs
+  * E2. Encryption and Transport Layer Security
+  * E3 TLS for email sent by an application to users
+  * E4 Caching and history storage of pages with sensitive information
+  * E5 Authentication token and cookie handling
+  * E6 Password handling
+  * E7 Username enumeration
+  * E8 Observation of websockets traffic
+  * E9 Information leakage
+  * E10 API authentication checks
+  * E11 Mobile application testing
 * F. [Glossary](glossary.md)
 
 ## Author Credits
@@ -39,6 +53,8 @@ Please contact Bill Fitzgerald (bfitzgerald@commonsense.org) with any questions 
 We will also respond - as time permits - to issues in the issue queue.
 
 ## Get Involved
+
+We will be modifying this document over time to keep the tests current, and to add additional tests. If you would like to contribute, please open an issue in the queue and/or make a pull request. 
 
 ## Licensing
 
