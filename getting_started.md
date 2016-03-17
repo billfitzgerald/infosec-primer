@@ -236,7 +236,7 @@ Within ZAP, the local proxy address should be set up as 'localhost', and port se
 <figure>
   <img alt="Set Local Proxy address" src="images/image10.png" width="569.50" height="419.82" title="Set Local Proxy address">
     <br>
-  <figcaption>Image Caption:Set Local Proxy address.</figcaption>
+  <figcaption>Image Caption: Set Local Proxy address.</figcaption>
 </figure>
 </div>
 
@@ -284,15 +284,15 @@ The first step is to determine the network address of the proxy computer. The pr
 
 The network address can be found under:
 
-Control Panel->Network and Internet->Network and Sharing Center
+**Control Panel** --> **Network and Internet** --> **Network and Sharing Center**
 
 From this dialog, select the active network, which will bring up a status menu to select "Details."
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image52.png" width="338.50" height="368.34" title="">
+  <img alt="Navigating to Details for the active network" src="images/image52.png" width="338.50" height="368.34" title="Navigating to Details for the active network">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Navigating to "Details" for the active network.</figcaption>
 </figure>
 </div>
 
@@ -300,21 +300,21 @@ The "Details" dialog will display the network address of the computer. In almost
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image87.png" width="312.50" height="364.58" title="">
+  <img alt="Finding the correct address in Windows" src="images/image87.png" width="312.50" height="364.58" title="Finding the correct address in Windows">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Finding the correct address in Windows.</figcaption>
 </figure>
 </div>
 
 ##### C4.3.1.2 Apple OSX:
 
-The network address can be found in System Preferences->Network, as shown below.
+The network address can be found in **System Preferences** --> **Network**, as shown below.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image24.png" width="624.00" height="190.67" title="">
+  <img alt="Finding the correct address in OS X" src="images/image24.png" width="624.00" height="190.67" title="Finding the correct address in OS X">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Finding the correct address in OS X.</figcaption>
 </figure>
 </div>
 
@@ -346,9 +346,9 @@ The proxy setup procedure is the same as covered in "C4.2 Proxy and Browser on S
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image118.png" width="523.50" height="338.93" title="">
+  <img alt="Updating the local proxy address in ZAP" src="images/image118.png" width="523.50" height="338.93" title="Updating the local proxy address in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Updating the local proxy address in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -360,9 +360,9 @@ Once the settings have been updated, click the "OK" button to save the changes.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image60.png" width="385.50" height="455.81" title="">
+  <img alt="Updating the Proxy address in Firefox" src="images/image60.png" width="385.50" height="455.81" title="Updating the Proxy address in Firefox">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Updating the Proxy address in Firefox.</figcaption>
 </figure>
 </div>
 
@@ -374,9 +374,9 @@ Select the info screen for the network the device is connected to.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image56.png" width="337.00" height="162.26" title="">
+  <img alt="Verifying network name in iOS" src="images/image56.png" width="337.00" height="162.26" title="Verifying network name in iOS">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Verifying network name in iOS.</figcaption>
 </figure>
 </div>
 
@@ -384,43 +384,45 @@ The proxy settings are at the bottom of the network settings screen. Enable manu
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image29.png" width="337.00" height="183.82" title="">
+  <img alt="Setting the correct address for the proxy in iOS" src="images/image29.png" width="337.00" height="183.82" title="Setting the correct address for the proxy in iOS">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Setting the correct address for the proxy in iOS.</figcaption>
 </figure>
 </div>
 
 #### C4.3.5 Android device proxy setup
 
-Open the settings menu and select wifi.
+Open the **Settings** menu and select **Wi-Fi**.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image104.png" width="512.00" height="205.00" title="">
+  <img alt="Selecting the active wireless network in Android" src="images/image104.png" width="512.00" height="205.00" title="Selecting the active wireless network in Android">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Selecting the active wireless network in Android.</figcaption>
 </figure>
 </div>
 
-Press and hold the name of the network to bring up the network settings menu, and select "Modify network".
+Press and hold the name of the network to bring up the network settings menu, and select **Modify network**.
+
+**NOTE**: You need to give a longer than average "click" on the wireless name, in the range of 1-2 seconds, to bring up the **Modify Network** option.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image51.png" width="374.00" height="99.00" title="">
+  <img alt="Select the Modify Network option" src="images/image51.png" width="374.00" height="99.00" title="Select the Modify Network option">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Select the Modify Network option.</figcaption>
 </figure>
 </div>
 
-Select "Show advanced options", and then select "Manual proxy configurations". Use the network address and port number from step C4.3.1, as illustrated below.
+Select **Show advanced options**, and then select **Manual proxy configurations**. Use the network address and port number from step C4.3.1, as illustrated below.
 
-Click the "Save" link to save the settings.
+Click the **Save** link to save the settings.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image11.png" width="349.00" height="395.00" title="">
+  <img alt="Setting the proxy address in Android" src="images/image11.png" width="349.00" height="395.00" title="Setting the proxy address in Android">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Setting the proxy address in Android.</figcaption>
 </figure>
 </div>
 
