@@ -6,7 +6,7 @@ The tests in this document make extensive use of an intercepting proxy to observ
 
 While the bulk of our tests rely on an intercepting proxy to power more detailed analysis, two other tools - a cookie reader, and a browser extension called "Firebug" are used as well. These two tools can often be used to do a quick, more cursory examination to determine what additional tests might be necessary.
 
-## C1 The Toolkit - A Summary
+## <a name="h.toolkit-summary"></a>C1 The Toolkit - A Summary
 
 All of the tests documented in the primer were run using:
 
@@ -31,7 +31,7 @@ OWASP ZAP is a free, cross-platform and open-source proxy program developed and 
 
 This rest of this section describes setting up the proxy and related testing tools, and how to use these tools to perform the tests in this handbook.
 
-## C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
+## <a name="h.toolkit-firebug"></a>C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
 
 To install Firebug, go to Tools -->Add ons, search for 'Firebug' and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
 
@@ -109,9 +109,7 @@ The transaction's entry can also be expanded by clicking the triangle next to th
 
 The descriptions of individual tests later in this document give more details of how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP, described below).
 
-* * *
-
-## C3 Installing and Using Advanced Cookie Manager
+## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using Advanced Cookie Manager
 
 Cookies are small text strings sent by servers to browsers in HTTP responses as the user interacts with a web service. The browser saves the cookie values and includes them with subsequent HTTP requests to the same application or domain. The use of cookies allows web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for Authentication Token and Cookie Handling (GET SECTION INFO).
 
@@ -139,7 +137,7 @@ During several of the tests outlined below in Section F, the Cookie Manager will
 
 learn more about what information is sent to different services on the internet.
 
-## C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
+## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
 
 As the name implies, an intercepting proxy intercepts and logs the requests and responses between a client (browser or mobile app) and the network resources with which it interacts. This enables observation of the behavior of the application without interfering with its functionality.
 
@@ -179,7 +177,7 @@ If you are going to test mobile apps, then the instructions in C4.3 cover the de
 
 Using the ZAP Proxy requires additional setup steps than other elements of the Toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
-### C4.1 Installation and Initial Setup
+### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup
 
 The remainder of this section will show the basics of setting up ZAP to work with browsers and mobile devices. For complete overview of the full feature set of ZAP, consult the documentation at the ZAP project page.
 
@@ -201,7 +199,7 @@ After installation, modify the 'Display' settings to enable 'process images in H
 
 Select the checkbox for "Process images in HTTP requests/responses." Then, click the "OK" button.
 
-### C4.2 Basic setup, browser and proxy on same computer
+### <a name="h.toolkit-zap-proxy-same-box"></a>C4.2 Basic setup, browser and proxy on same computer
 
 The most straightforward setup is when the browser and proxy are on the same computer.
 
@@ -239,7 +237,7 @@ Then, click the "OK" button.
 
 To complete the setup, skip ahead to the "C4.4 Installing Proxy SSL Certificate to Browser and Mobile Devices" section below.
 
-### C4.3 Mobile device (or browser) on different computer than the proxy
+### <a name="h.toolkit-zap-proxy-different-box"></a>C4.3 Mobile device (or browser) on different computer than the proxy
 
 The steps in this section are only relevant in the following scenarios:
 
@@ -315,10 +313,6 @@ $ ip address
 #### C4.3.2 In ZAP Proxy: Change "Local proxy" address
 
 The proxy setup procedure is the same as covered in "C4.2 Proxy and Browser on Same Computer", except that the network address of the computer (which we discovered in the prior step) should be entered in the address field.
-
-* * *
-
-#### 
 
 <div align="center">
 <figure>
@@ -400,7 +394,7 @@ Click the "Save" link to save the settings.
 </figure>
 </div>
 
-### C4.4 Installing proxy SSL certificate to browser and mobile devices
+### <a name="h.toolkit-zap-proxy-ssl-cert"></a>C4.4 Installing proxy SSL certificate to browser and mobile devices
 
 Installing the proxy's SSL certificate to browsers and devices will allow the proxy to decrypt the https traffic generated by these clients. In this section, we will cover using ZAP to generate a SSL certificate. Then, we will document how to save this certificate to our testing browser, and/or a mobile device.
 
@@ -686,7 +680,7 @@ Click "OK" to clear credentials. Only the user-installed credentials are cleared
 </figure>
 </div>
 
-### C4.5 Observing websockets traffic using ZAP Proxy
+### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing websockets traffic using ZAP Proxy
 
 Websockets is a communication link separate from HTTP that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the web application loads into the browser. If an application uses websockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
