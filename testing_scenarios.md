@@ -14,6 +14,21 @@ Every test scenario uses a common structure:
 
 Most of the descriptions below assume that you are using Firebug or ZAP Proxy to examine traffic sent over the internet between the application being tested and the vendor's servers.
 
+## <a name="h.testing-nav">Navigation: Testing Scenarios and Procedures
+
+* E. [Testing Scenarios](testing_scenarios.md)
+  * E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info)
+  * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
+  * E3 [TLS for email sent by an application to users](testing_scenarios.md#h.testing-email-tls)
+  * E4 [Caching and history storage of pages with sensitive information](testing_scenarios.md#h.testing-cache)
+  * E5 [Authentication token and cookie handling](testing_scenarios.md#testing-auth-token)
+  * E6 [Password handling](testing_scenarios.md#h.testing-password)
+  * E7 [Username enumeration](testing_scenarios.md#h.testing-username)
+  * E8 [Observation of websockets traffic](testing_scenarios.md#h.testing-websockets)
+  * E9 [Information leakage](testing_scenarios.md#h.testing-leakage)
+  * E10 [API authentication checks](testing_scenarios.md#h.testing-api)
+  * E11 [Mobile application testing](testing_scenarios.md#h.testing-mobile)
+
 # <a name="h.testing-url-info"></a>E1 Sensitive information in URLs
 
 ## E1.1 Summary
@@ -106,6 +121,10 @@ Some services that protect users from malicious websites send some of a user's b
 ## E1.3 Setup and tests
 
 There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information. The login sequence is an important part to examine closely but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).
+
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-tls"></a>E2 Encryption and Transport Layer Security
 
@@ -296,6 +315,8 @@ Note that the reasons behind each issue are explained, with links to greater det
 
 * * *
 
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+
 # <a name="h.testing-email-tls"></a>E3 TLS for email sent by an application to users
 
 ## E3.1 Summary
@@ -382,6 +403,10 @@ The image below shows the results for the same application after they enabled TL
 ### E3.3.3 checktls.com
 
 Checktls.com is discussed above in the context of confirming a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
+
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-cache"></a>E4 Caching and history storage of pages with sensitive information
 
@@ -495,6 +520,10 @@ Additionally, if specific pages looks like they might contain sensitive informat
 ### E4.3.5 Recommended test steps
 
 Perform the browser-based history test on a representative page containing user information. Using browsing history, proxy logs and response headers as a guide for pages of interest, inspect the browser's disk cache for stored pages containing sensitive information in the page contents or URL.
+
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-auth-token"></a>E5 Authentication token and cookie handling
 
@@ -634,6 +663,10 @@ Note that many applications place the logout link in a dropdown menu, as shown b
 
 Frequently, mobile apps on a tablet or phone will keep you logged in longer than web apps or desktop apps. These logins will often persist when an app is powered down and restarted. Because of this tendency, testing the duration of logins on devices is a critical part of the testing process. If you identify an application that keeps a user logged in after a device has been powered down and restarted, that poses a security risk for any user in an environment where devices are shared.
 
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+
 # <a name="h.testing-password"></a>E6 Password handling
 
 ## E6.1 Summary
@@ -660,6 +693,10 @@ There is not a uniform standard for secure handling of account recovery from los
 *   Note: some services (generally for early elementary students) store student passwords in plain text so that they can be displayed to teachers for easy recovery in case a student loses a password. When evaluating this practice by a particular application, it's important to consider what information is protected by the student passwords, and what other protections are in place to secure the teacher account that can view the student passwords. It is never appropriate for teacher or parent passwords to be stored in plain text or recoverable format.
 
 *   Security questions: Security questions often rely on fixed information that can be guessed or never changes. As a result, security questions do not provide reliable, consistent protection for end users.
+
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-username"></a>E7 Username enumeration
 
@@ -749,6 +786,10 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 </figure>
 </div>
 
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+
 # <a name="h.testing-websockets"></a>E8 Observation of websockets traffic
 
 ## E8.1 Summary
@@ -812,6 +853,10 @@ The details of the connection will be displayed in the upper transaction pane. C
 </div>
 
 Evaluating the potential risks of websockets traffic requires examining what information, if any, is sent via websockets traffic, and whether or not that information is encrypted. As noted above, while encrypting websockets traffic is not always essential, it is a good step, and can also help work as an indicator of the overall level of thought into defensive strategies used by the application.
+
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-leakage"></a>E9 Information leakage
 
@@ -918,6 +963,10 @@ As seen in the "Observation of websockets traffic" section, this websockets mess
 </figure>
 </div>
 
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+
 # <a name="h.testing-api"></a>E10 API authentication checks
 
 ## E10.1 Summary
@@ -1007,6 +1056,10 @@ When the response comes back, the proxy will highlight the response tab, and dis
 </figure>
 </div>
 
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+
 # <a name="h.testing-mobile"></a>E11 Mobile application testing
 
 ## E11.1 Summary
@@ -1071,3 +1124,7 @@ To check for a potential SSL Certificate Spoofing vulnerability:
 *   If https requests by the application are logged by the proxy, this indicates that the authenticity of the proxy's certificate was not checked by the app;
 *   If no https requests are logged by the proxy this indicates that the proxy's certificate's authenticity was checked and not accepted by the mobile application. The application probably won't work correctly and may display a message that it can't connect to the network.
 *   Note that http requests may be generated by the application, and this does not indicate a problem with the certificate checking (since http requests do not rely on the certificate). However, as noted above, unencrypted requests can also compromise user data.
+
+* * *
+
+**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
