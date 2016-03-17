@@ -44,7 +44,7 @@ Successfully leveraging a security vulnerability to gain unauthorized access to 
 
 The ease with which a given vulnerability can be successfully exploited.
 
-[Hash function](https://www.owasp.org/index.php/Category:Glossary%23H)
+[**Hash function**](https://www.owasp.org/index.php/Category:Glossary%23H)
 
 A function that maps a string of arbitrary length to a fixed size value in a deterministic manner. Such a function may or may not have cryptographic applications.
 
