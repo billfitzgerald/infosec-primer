@@ -27,13 +27,11 @@ All of the tests documented in the primer were run using:
 *   Advanced Cookie Manager plugin and the
 *   OWASP Zed Attack Proxy.
 
-Firefox is a free, open source browser and can be downloaded here:
-
-https://www.mozilla.org/en-US/firefox/new/
+Firefox is a free, open source browser and can be downloaded here: https://www.mozilla.org/en-US/firefox/new/
 
 Firebug is a browser extension that enables observation of the network requests and responses for Firefox browsing sessions. It can monitor both http and https traffic. Because of its straightforward setup and integration with the browser it is a good choice for tests that do not require the extra features of an external proxy such as OWASP ZAP.
 
-More information about Firebug can be found at [http://getfirebug.com/](http://getfirebug.com/)
+More information about Firebug can be found at http://getfirebug.com/
 
 Advanced Cookie Manager plugin is a tool that lets us manipulate, inspect, and delete individual cookies. More information is available at https://addons.mozilla.org/en-US/firefox/addon/cookie-manager/
 
@@ -45,17 +43,17 @@ This rest of this section describes setting up the proxy and related testing too
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 ## <a name="h.toolkit-firebug"></a>C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
 
-To install Firebug, go to Tools -->Add ons, search for 'Firebug' and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
+To install Firebug, go to **Tools** --> **Add ons**, search for 'Firebug' and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image57.png" width="624.00" height="56.00" title="">
+  <img alt="Firebug Add-on" src="images/image57.png" width="624.00" height="56.00" title="Firebug Add-on">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Firebug Add-on</figcaption>
 </figure>
 </div>
 
@@ -65,9 +63,9 @@ The image below shows the Firebug icon in the toolbar, with configuration option
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image53.png" width="446.50" height="207.94" title="">
+  <img alt="Firebug configuration options" src="images/image53.png" width="446.50" height="207.94" title="Firebug configuration options">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Firebug configuration options</figcaption>
 </figure>
 </div>
 
@@ -75,9 +73,9 @@ The Firebug display is shown below. The 'Net' tab shows the network requests and
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image46.png" width="624.00" height="185.33" title="">
+  <img alt="Set the 'Persist' and 'All' options" src="images/image46.png" width="624.00" height="185.33" title="Set the 'Persist' and 'All' options">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Set the 'Persist' and 'All' options.</figcaption>
 </figure>
 </div>
 
@@ -87,9 +85,9 @@ In the example below, the user has logged out of a service, and the browsing ses
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image08.png" width="624.00" height="205.33" title="">
+  <img alt="Viewing session lists in Firebug" src="images/image08.png" width="624.00" height="205.33" title="Viewing session lists in Firebug">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Viewing session lists in Firebug.</figcaption>
 </figure>
 </div>
 
@@ -97,9 +95,9 @@ Clicking the highlighted triangle for that portion of the session will expand th
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image65.png" width="624.00" height="225.33" title="">
+  <img alt="Expanding the session information in Firebug" src="images/image65.png" width="624.00" height="225.33" title="Expanding the session information in Firebug">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Expanding the session information in Firebug</figcaption>
 </figure>
 </div>
 
@@ -107,9 +105,9 @@ Hovering the mouse over the transaction's entry will show the full URL, enabling
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image27.png" width="624.00" height="52.00" title="">
+  <img alt="Getting URL information in Firebug" src="images/image27.png" width="624.00" height="52.00" title="Getting URL information in Firebug">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Getting URL information in Firebug.</figcaption>
 </figure>
 </div>
 
@@ -117,9 +115,9 @@ The transaction's entry can also be expanded by clicking the triangle next to th
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image25.png" width="624.00" height="180.00" title="">
+  <img alt="Using Firebug to get detailed information about a transaction" src="images/image25.png" width="624.00" height="180.00" title="Using Firebug to get detailed information about a transaction">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Using Firebug to get detailed information about a transaction.</figcaption>
 </figure>
 </div>
 
@@ -127,7 +125,7 @@ The descriptions of individual tests later in this document give more details of
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 ## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using Advanced Cookie Manager
 
@@ -135,21 +133,21 @@ Cookies are small text strings sent by servers to browsers in HTTP responses as 
 
 Many cookie managers are available as browser plugins. The examples in this document use the Advanced Cookie Manager plugin for Firefox. To find it, go to Tools->Add ons, search for cookie managers and select Advanced Cookie Manager for installation to Firefox. A screenshot of the plugin's description page is shown below.
 
+<div align="center">
+<figure>
+  <img alt="Advanced Cookie Manager Plugin" src="images/image26.png" width="624.00" height="164.00" title="Advanced Cookie Manager Plugin">
+    <br>
+  <figcaption>Image Caption: Advanced Cookie Manager Plugin</figcaption>
+</figure>
+</div>
+
 Once installed, the cookie manager can be opened by clicking its icon in the browser add-ins toolbar or from the add-ins menu. An annotated view of the Advanced Cookie Manager panel is shown below
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image26.png" width="624.00" height="164.00" title="">
+  <img alt="Viewing details of cookies in the Advanced Cookie Manager" src="images/image112.png" width="624.00" height="362.67" title="Viewing details of cookies in the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption:</figcaption>
-</figure>
-</div>
-
-<div align="center">
-<figure>
-  <img alt="" src="images/image112.png" width="624.00" height="362.67" title="">
-    <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Viewing details of cookies in the Advanced Cookie Manager.</figcaption>
 </figure>
 </div>
 
@@ -157,7 +155,7 @@ During several of the tests outlined below in Section F, the Cookie Manager will
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 ## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
 
@@ -167,9 +165,9 @@ Setting up a proxy on your computer allows the user to review all network traffi
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image50.png" width="624.00" height="113.33" title="">
+  <img alt="Sample log output from ZAP Proxy" src="images/image50.png" width="624.00" height="113.33" title="Sample log output from ZAP Proxy">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Sample log output from ZAP Proxy.</figcaption>
 </figure>
 </div>
 
@@ -179,9 +177,9 @@ The normal operation of https creates an encrypted connection between the web br
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image106.png" width="578.00" height="184.00" title="">
+  <img alt="An overview of OWASP ZAP Proxy" src="images/image106.png" width="578.00" height="184.00" title="An overview of OWASP ZAP Proxy">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An overview of OWASP ZAP Proxy.</figcaption>
 </figure>
 </div>
 
@@ -209,13 +207,13 @@ ZAP is available for download at the ZAP project page:
 
 The download packages and installation instructions are platform-specific for Windows, Apple, and Linux. Choose the Standard package and follow the installation instructions for your desired platform.
 
-After installation, modify the 'Display' settings to enable 'process images in HTTP requests/responses'. This configuration causes image loads that may be of interest during testing to be displayed in the history log, and is recommended for all of the test setups described in the remainder of this section. In ZAP this setting is managed in the Tools -->Options -->Display menu.
+After installation, modify the 'Display' settings to enable 'process images in HTTP requests/responses'. This configuration causes image loads that may be of interest during testing to be displayed in the history log, and is recommended for all of the test setups described in the remainder of this section. In ZAP this setting is managed in the **Tools** --> **Options** --> **Display** menu.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image89.png" width="527.50" height="410.00" title="">
+  <img alt="Set ZAP Proxy to display images in http requests and responses" src="images/image89.png" width="527.50" height="410.00" title="Set ZAP Proxy to display images in http requests and responses">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Set ZAP Proxy to display images in http requests and responses.</figcaption>
 </figure>
 </div>
 
@@ -223,7 +221,7 @@ Select the checkbox for "Process images in HTTP requests/responses." Then, click
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
@@ -233,13 +231,13 @@ The most straightforward setup is when the browser and proxy are on the same com
 
 #### C4.2.1 ZAP
 
-Within ZAP, the local proxy address should be set up as 'localhost', and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the Tools -->Options -->Local proxy menu.
+Within ZAP, the local proxy address should be set up as 'localhost', and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the **Tools** --> **Options** --> **Local proxy** menu.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image10.png" width="569.50" height="419.82" title="">
+  <img alt="Set Local Proxy address" src="images/image10.png" width="569.50" height="419.82" title="Set Local Proxy address">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption:Set Local Proxy address.</figcaption>
 </figure>
 </div>
 
@@ -247,13 +245,13 @@ Within ZAP, the local proxy address should be set up as 'localhost', and port se
 
 The browser should be set up to use a proxy at 'localhost' and port 8080.
 
-Firefox manages this in Preferences -> Advanced -> Network -> Connection, as shown below.
+Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **Connection, as shown below.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image41.png" width="605.50" height="305.66" title="">
+  <img alt="Set proxy address in Firefox" src="images/image41.png" width="605.50" height="305.66" title="Set proxy address in Firefox">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Set proxy address in Firefox.</figcaption>
 </figure>
 </div>
 
@@ -267,7 +265,7 @@ To complete the setup, skip ahead to the "C4.4 Installing Proxy SSL Certificate 
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
@@ -430,7 +428,7 @@ Click the "Save" link to save the settings.
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
@@ -722,7 +720,7 @@ Click "OK" to clear credentials. Only the user-installed credentials are cleared
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
@@ -764,6 +762,6 @@ From the websockets view, it is also possible to determine whether the websocket
 
 * * *
 
-**Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
 **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
