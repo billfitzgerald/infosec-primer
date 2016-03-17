@@ -21,21 +21,21 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
     * C4.4 [Installing proxy SSL certificate to browser and mobile devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert)
     * C4.5 [Observing websockets traffic using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets)
 * D. [Preparing Your Browser](browser_prep.md)
-  * D1 Set Firefox Home Page
-  * D2 Clear recent history 
-  * D3 about:permissions
+  * D1 [Set Firefox Home Page](browser_prep.md#h.browser-homepage)
+  * D2 [Clear history](browser_prep.md#h.browser-history)
+  * D3 [Accept cookies](browser_prep.md#h.browser-cookies)
 * E. [Testing Scenarios](testing_scenarios.md)
-  * E1 Sensitive information in URLs
-  * E2. Encryption and Transport Layer Security
-  * E3 TLS for email sent by an application to users
-  * E4 Caching and history storage of pages with sensitive information
-  * E5 Authentication token and cookie handling
-  * E6 Password handling
-  * E7 Username enumeration
-  * E8 Observation of websockets traffic
-  * E9 Information leakage
-  * E10 API authentication checks
-  * E11 Mobile application testing
+  * E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info)
+  * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
+  * E3 [TLS for email sent by an application to users](testing_scenarios.md#h.testing-email-tls)
+  * E4 [Caching and history storage of pages with sensitive information](testing_scenarios.md#h.testing-cache)
+  * E5 [Authentication token and cookie handling](testing_scenarios.md#testing-auth-token)
+  * E6 [Password handling](testing_scenarios.md#h.testing-password)
+  * E7 [Username enumeration](testing_scenarios.md#h.testing-username)
+  * E8 [Observation of websockets traffic](testing_scenarios.md#h.testing-websockets)
+  * E9 [Information leakage](testing_scenarios.md#h.testing-leakage)
+  * E10 [API authentication checks](testing_scenarios.md#h.testing-api)
+  * E11 [Mobile application testing](testing_scenarios.md#h.testing-mobile)
 * F. [Glossary](glossary.md)
 
 ## Author Credits

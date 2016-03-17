@@ -2,7 +2,7 @@
 
 At the start of a test session, the Firefox browser should be cleared of cookies, history and other state left over from previous sessions. There are two required steps, and two optional steps. All steps are covered below.
 
-## D1 Set Firefox Home Page
+## <a name="h.browser-homepage"></a>D1 Set Firefox Home Page
 
 To prepare to test using Firefox, we need to clear any stored usage data that could potentially affect the results we see when we test.
 
@@ -26,7 +26,7 @@ Click the "Preferences" icon to set your home page. When you are at the home pag
 
 By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get accidentally when you open your browser to start testing.
 
-## D2 Clear recent history
+## <a name="h.browser-history"></a>D2 Clear history
 
 In the Firefox menu, select History->Clear recent history. A pop-up menu is presented. Select "Everything" for the time range, tick all of the boxes and click "Clear now".
 
@@ -36,7 +36,7 @@ In the Firefox menu, select History->Clear recent history. A pop-up menu is pres
   <figcaption>Image Caption: Clear Recent History</figcaption>
 </figure>
 
-## D3 Verify that cookies are allowed
+## <a name="h.browser-cookies"></a>D3 Verify that cookies are allowed
 
 This needs to be redone to reflect the change in Firefox 45 that removes the about:permissions pane.
 

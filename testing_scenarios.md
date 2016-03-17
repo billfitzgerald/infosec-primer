@@ -14,7 +14,7 @@ Every test scenario uses a common structure:
 
 Most of the descriptions below assume that you are using Firebug or ZAP Proxy to examine traffic sent over the internet between the application being tested and the vendor's servers.
 
-# E1 Sensitive information in URLs
+# <a name="h.testing-url-info"></a>E1 Sensitive information in URLs
 
 ## E1.1 Summary
 
@@ -107,7 +107,7 @@ Some services that protect users from malicious websites send some of a user's b
 
 There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information. The login sequence is an important part to examine closely but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).
 
-# E2\. Encryption and Transport Layer Security
+# <a name="h.testing-tls"></a>E2 Encryption and Transport Layer Security
 
 ## E2.1 Summary
 
@@ -137,7 +137,7 @@ The TLS checks for web applications can be performed with a browser and proxy. T
 
 ### E2.3.2 Tests
 
-#### E2.3.2.1\. Check whether the login form or page is served using https (web applications).
+#### E2.3.2.1 Check whether the login form or page is served using https (web applications).
 
 Load the login page and examine the transactions in the proxy to check whether or not the login page is loaded via https. Lack of https on login forms can enable man-in-the-middle attacks that tamper with the form.
 
@@ -296,7 +296,7 @@ Note that the reasons behind each issue are explained, with links to greater det
 
 * * *
 
-# E3 TLS for email sent by an application to users
+# <a name="h.testing-email-tls"></a>E3 TLS for email sent by an application to users
 
 ## E3.1 Summary
 
@@ -383,9 +383,7 @@ The image below shows the results for the same application after they enabled TL
 
 Checktls.com is discussed above in the context of confirming a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
 
-* * *
-
-# E4 Caching and history storage of pages with sensitive information
+# <a name="h.testing-cache"></a>E4 Caching and history storage of pages with sensitive information
 
 ## E4.1 Summary
 
@@ -498,9 +496,7 @@ Additionally, if specific pages looks like they might contain sensitive informat
 
 Perform the browser-based history test on a representative page containing user information. Using browsing history, proxy logs and response headers as a guide for pages of interest, inspect the browser's disk cache for stored pages containing sensitive information in the page contents or URL.
 
-* * *
-
-# E5 Authentication token and cookie handling
+# <a name="h.testing-auth-token"></a>E5 Authentication token and cookie handling
 
 ## E5.1 Summary
 
@@ -529,21 +525,14 @@ Another way that authentication tokens can be accessed without authorization is 
 
 Authentication cookies, commonly also called session cookies, are often easy to spot because they contain "sess" or "session" or "sess_id" in their names. Many popular platforms use standard names for session cookies, and a list of these is included below.
 
-asp.net_sessionid
-
-aspsessionid
-
-cfid
-
-cftoken
-
-jsessionid
-
-phpsessid
-
-sessid
-
-sid
+* asp.net_sessionid
+* aspsessionid
+* cfid
+* cftoken
+* jsessionid
+* phpsessid
+* sessid
+* sid
 
 However, there are no hard and fast rules governing the names of cookies. Many authentication cookie names are unique to the service, and may not be named in a way to make it clear it's a session/authentication cookie.
 
@@ -585,7 +574,7 @@ Authentication cookies should be invalidated when a user logs out of an applicat
 
 Using a cookie editor, It is straightforward to check whether authentication tokens are invalidated at logout. The sequence is described and illustrated below
 
-*   Log in to the service and go to a page that indicates the user is logged in.
+* Log in to the service and go to a page that indicates the user is logged in.
 
 <div align="center">
 <figure>
@@ -595,7 +584,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 </figure>
 </div>
 
-*   Using the cookie editor, filter on this domain's cookies and save them to file by clicking the export icon as shown below. Pick a descriptive name for the file.
+* Using the cookie editor, filter on this domain's cookies and save them to file by clicking the export icon as shown below. Pick a descriptive name for the file.
 
 <div align="center">
 <figure>
@@ -605,7 +594,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 </figure>
 </div>
 
-*   Log out and confirm that the same URL no longer indicates that the user is logged in.
+* Log out and confirm that the same URL no longer indicates that the user is logged in.
 
 <div align="center">
 <figure>
@@ -615,7 +604,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 </figure>
 </div>
 
-*   Using the cookie editor, restore the cookies from the file saved in the previous steps.
+* Using the cookie editor, restore the cookies from the file saved in the previous steps.
 
 <div align="center">
 <figure>
@@ -625,7 +614,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 </figure>
 </div>
 
-*   Reload the URL recorded earlier, and check whether the page indicates the user is logged in or not. If the user is again logged in after restoring the cookie, this indicates that the authentication cookie was not invalidated at logout. This can be further confirmed by exercising functionality of the application to see if access is allowed.
+* Reload the URL recorded earlier, and check whether the page indicates the user is logged in or not. If the user is again logged in after restoring the cookie, this indicates that the authentication cookie was not invalidated at logout. This can be further confirmed by exercising functionality of the application to see if access is allowed.
 
 ### E5.3.4 Logout links
 
@@ -645,7 +634,7 @@ Note that many applications place the logout link in a dropdown menu, as shown b
 
 Frequently, mobile apps on a tablet or phone will keep you logged in longer than web apps or desktop apps. These logins will often persist when an app is powered down and restarted. Because of this tendency, testing the duration of logins on devices is a critical part of the testing process. If you identify an application that keeps a user logged in after a device has been powered down and restarted, that poses a security risk for any user in an environment where devices are shared.
 
-# E6 Password handling
+# <a name="h.testing-password"></a>E6 Password handling
 
 ## E6.1 Summary
 
@@ -672,7 +661,7 @@ There is not a uniform standard for secure handling of account recovery from los
 
 *   Security questions: Security questions often rely on fixed information that can be guessed or never changes. As a result, security questions do not provide reliable, consistent protection for end users.
 
-# E7 Username enumeration
+# <a name="h.testing-username"></a>E7 Username enumeration
 
 ## E7.1 Summary
 
@@ -760,7 +749,7 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 </figure>
 </div>
 
-# E8 Observation of websockets traffic
+# <a name="h.testing-websockets"></a>E8 Observation of websockets traffic
 
 ## E8.1 Summary
 
@@ -824,7 +813,7 @@ The details of the connection will be displayed in the upper transaction pane. C
 
 Evaluating the potential risks of websockets traffic requires examining what information, if any, is sent via websockets traffic, and whether or not that information is encrypted. As noted above, while encrypting websockets traffic is not always essential, it is a good step, and can also help work as an indicator of the overall level of thought into defensive strategies used by the application.
 
-# E9 Information leakage
+# <a name="h.testing-leakage"></a>E9 Information leakage
 
 ## E9.1 Summary
 
@@ -929,7 +918,7 @@ As seen in the "Observation of websockets traffic" section, this websockets mess
 </figure>
 </div>
 
-# E10 API authentication checks
+# <a name="h.testing-api"></a>E10 API authentication checks
 
 ## E10.1 Summary
 
@@ -1018,7 +1007,7 @@ When the response comes back, the proxy will highlight the response tab, and dis
 </figure>
 </div>
 
-# E11 Mobile application testing
+# <a name="h.testing-mobile"></a>E11 Mobile application testing
 
 ## E11.1 Summary
 
