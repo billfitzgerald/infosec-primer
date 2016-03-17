@@ -40,7 +40,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
 
 ## Author Credits
 
-Tony Portfeld and Jim Siegl are the primary authors of this text.
+Tony Porterfield and Jim Siegl are the primary authors of this text.
 
 Bill Fitzgerald, Girard Kelly, and Jeff Graham provided editing support and testing.
 
