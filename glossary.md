@@ -2,49 +2,49 @@
 
 Many of the definitions below are taken from the OWASP glossary ([https://www.owasp.org/index.php/Category:Glossary](https://www.owasp.org/index.php/Category:Glossary)), and the NIST Glossary of Key Information Security Terms, NISTIR 7298, revision 2 ([http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)). Definitions taken from these documents contain links to the source document in the title of the glossary term.
 
-**Authentication Cookie** see **Session Token**
+**<a name="h.glossary-"></a>Authentication Cookie** see **Session Token**
 
-**API**
+**<a name="h.glossary-"></a>API**
 
 Application Programming Interface. For web and mobile applications, this is a network-facing interface that the application can use to request user-specific information from the application's servers.
 
-[**Certificate**](https://www.owasp.org/index.php/Category:Glossary%23C)
+<a name="h.glossary-certificate"></a>[**Certificate**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
 A data object that binds information about a person or some other entity to a public key. The binding is generally done using a digital signature from a trusted third party (a certification authority).
 
-[**Certification Authority**](https://www.owasp.org/index.php/Category:Glossary%23C)
+<a name="h.glossary-ca"></a>[**Certification Authority**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
 An entity that manages digital certificates — i.e., issues and revokes.
 
-[**Ciphertext**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
+<a name="h.glossary-"></a>[**Ciphertext**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
 Data in its encrypted form.
 
-[**Cookies**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
+<a name="h.glossary-"></a>[**Cookies**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
 Data exchanged between an HTTP server and a browser (a client of the server) to store state information on the client side and retrieve it later for server use.
 
-[**Cross-site scripting**](https://www.owasp.org/index.php/Category:Glossary%23C)
+<a name="h.glossary-xss"></a>[**Cross-site scripting**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
 A class of problems resulting from insufficient input validation where one user can add content to a web site that can be malicious when viewed by other users to the web site. For example, one might post to a message board that accepts arbitrary HTML and include a malicious code item.
 
-[**Eavesdropping attack**](https://www.owasp.org/index.php/Category:Glossary%23E)
+<a name="h.glossary-"></a>[**Eavesdropping attack**](https://www.owasp.org/index.php/Category:Glossary%23E)
 
 Any attack on a data connection where one simply records or views data instead of tampering with the connection.
 
-[**Encryption**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
+<a name="h.glossary-"></a>[**Encryption**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
 Conversion of plaintext to ciphertext through the use of a cryptographic algorithm.
 
-**Exploit**
+**<a name="h.glossary-exploit"></a>Exploit**
 
 Successfully leveraging a security vulnerability to gain unauthorized access to a system or its contents.
 
-**Exploitability**
+**<a name="h.glossary-exploitability"></a>Exploitability**
 
 The ease with which a given vulnerability can be successfully exploited.
 
-[**Hash function**](https://www.owasp.org/index.php/Category:Glossary%23H)
+<a name="h.glossary-"></a>[**Hash function**](https://www.owasp.org/index.php/Category:Glossary%23H)
 
 A function that maps a string of arbitrary length to a fixed size value in a deterministic manner. Such a function may or may not have cryptographic applications.
 
