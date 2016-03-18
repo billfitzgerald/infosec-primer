@@ -41,9 +41,9 @@ Inclusion of non-sensitive information or parameters in URLs does not pose a sec
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image82.png" width="390.50" height="22.73" title="">
+  <img alt="A page ID revealed in a URL. This is not a security issue" src="images/image82.png" width="390.50" height="22.73" title="A page ID revealed in a URL. This is not a security issue">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A page ID revealed in a URL. This is not generally a security issue.</figcaption>
 </figure>
 </div>
 
@@ -53,7 +53,7 @@ Timestamps and character encodings are other non-sensitive uses of URL parameter
 <figure>
   <img alt="" src="images/image85.png" width="624.00" height="36.00" title="">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A timestamp and character encoding (UTF-8) included in a URL. This is not generally a security issue.</figcaption>
 </figure>
 </div>
 
@@ -61,9 +61,9 @@ However, including sensitive or personal information in a URL can put this infor
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image92.png" width="624.00" height="44.00" title="">
+  <img alt="A username and password shared in a URL. This creates a security risk" src="images/image92.png" width="624.00" height="44.00" title="A username and password shared in a URL. This creates a security risk">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A username and password shared in a URL. This creates a security risk.</figcaption>
 </figure>
 </div>
 
@@ -71,40 +71,41 @@ Here, a user's personal information is part of the URL.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image97.png" width="608.55" height="38.50" title="">
+  <img alt="Date of birth and Social Security number passed in a URL" src="images/image97.png" width="608.55" height="38.50" title="Date of birth and Social Security number passed in a URL">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Date of birth and Social Security number passed in a URL.</figcaption>
 </figure>
 </div>
 
 Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and Date of Birth have been captured in the browser history and cache.
 
 <div align="center">
-<figure>  <img alt="" src="images/image59.png" width="686.40" height="38.50" title="">
+<figure>
+  <img alt="The same date of birth and Social Security number, stored in the browser history" src="images/image59.png" width="686.40" height="38.50" title="The same date of birth and Social Security number, stored in the browser history">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: The same date of birth and Social Security number, stored in the browser history.</figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image12.png" width="644.50" height="74.99" title="">
+  <img alt="The same date of birth and Social Security number, stored in the local cache" src="images/image12.png" width="644.50" height="74.99" title="The same date of birth and Social Security number, stored in the local cache">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: The same date of birth and Social Security number, stored in the local cache.</figcaption>
 </figure>
 </div>
 
 This security issue poses an immediate risk on a shared computer, where another user could access it. Additionally, URLs containing sensitive information may be snooped from unencrypted network traffic or recorded by servers that implement or interact with the application.
 
-Apps that use https eliminate the snooping vulnerability, but an application's own servers may log URLs received from users of the application. If the connection uses https, intentional misuse of URL information collected for legitimate purposes is not a significant concern, but it does raise the possibility that this information could be lost in a data breach.
+Apps that use https eliminate the snooping vulnerability, but an application's own servers may log URLs received from users. If the connection uses https, intentional misuse of URL information collected for legitimate purposes is not a significant concern, but it does raise the possibility that this information could be lost in a data breach. There are other secure ways to pass sensitive information, so including it in a URL is an unneeded risk.
 
 Many applications utilize 3rd-party analytics services to track user activity for the purposes of improving the application and understanding its usage patterns. Sensitive information in URLs may be sent to analytics or other 3rd-party services in the "Referer" field of messages. In the image below a URL containing a valid account access code is sent to an analytics service.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image43.png" width="624.00" height="146.67" title="">
+  <img alt="Sensitive information in the URL being sent to a third party" src="images/image43.png" width="624.00" height="146.67" title="Sensitive information in the URL being sent to a third party">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Sensitive information in the URL being sent to a third party.</figcaption>
 </figure>
 </div>
 
@@ -112,11 +113,13 @@ Some services that protect users from malicious websites send some of a user's b
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image33.png" width="624.00" height="105.33" title="">
+  <img alt="Sensitive user information being sent to a third party analytics company" src="images/image33.png" width="624.00" height="105.33" title="Sensitive user information being sent to a third party analytics company">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Sensitive user information being sent to a third party analytics company.</figcaption>
 </figure>
 </div>
+
+There are many other secure ways to pass sensitive information, so including any sensitive information in a URL is generally an unneeded risk.
 
 ## E1.3 Setup and tests
 
@@ -164,9 +167,9 @@ In the example below the page is loaded without https.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image71.png" width="592.50" height="92.10" title="">
+  <img alt="Page loaded without https" src="images/image71.png" width="592.50" height="92.10" title="Page loaded without https">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Page loaded without https, displayed in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -174,9 +177,9 @@ In this example the page is loaded with https.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image61.png" width="599.50" height="108.56" title="">
+  <img alt="Page loaded with https" src="images/image61.png" width="599.50" height="108.56" title="Page loaded with https">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Page loaded with https, displayed in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -184,9 +187,9 @@ Here a page loaded with http is displayed in Firebug:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image19.png" width="624.00" height="128.00" title="">
+  <img alt="Page loaded without https, displayed via Firebug" src="images/image19.png" width="624.00" height="128.00" title="Page loaded without https, displayed via Firebug">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Page loaded without https, displayed via Firebug.</figcaption>
 </figure>
 </div>
 
@@ -198,9 +201,9 @@ In this example the credentials are submitted without https:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image30.png" width="547.50" height="210.63px" title="">
+  <img alt="Username and password sent without https" src="images/image30.png" width="547.50" height="210.63px" title="Username and password sent without https">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Username and password sent without https.</figcaption>
 </figure>
 </div>
 
@@ -208,9 +211,9 @@ In the following example the credentials are submitted with https:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image107.png" width="624.00" height="141.33" title="">
+  <img alt="Username and password sent securely, with https" src="images/image107.png" width="624.00" height="141.33" title="Username and password sent securely, with https">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Username and password sent securely, with https.</figcaption>
 </figure>
 </div>
 
@@ -224,18 +227,18 @@ In ZAP:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image21.png" width="550.50" height="222.32" title="">
+  <img alt="A session sent without https that exposes the authentication cookie" src="images/image21.png" width="550.50" height="222.32" title="A session sent without https that exposes the authentication cookie">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A session sent without https that exposes the authentication cookie.</figcaption>
 </figure>
 </div>
 
 In Firebug:
 
 <div align="center">
-<figure>  <img alt="" src="images/image55.png" width="624.00" height="257.33" title="">
+<figure>  <img alt="A session sent without https that exposes the authentication cookie" src="images/image55.png" width="624.00" height="257.33" title="A session sent without https that exposes the authentication cookie">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A session sent without https that exposes the authentication cookie</figcaption>
 </figure>
 </div>
 
@@ -243,9 +246,9 @@ In the next screenshot, we see an example of a service that uses https after log
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image16.png" width="624.00" height="86.67" title="">
+  <img alt="A properly secured application" src="images/image16.png" width="624.00" height="86.67" title="A properly secured application">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example of a properly secured application.</figcaption>
 </figure>
 </div>
 
@@ -259,9 +262,9 @@ In ZAP:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image95.png" width="554.50" height="166.82" title="">
+  <img alt="Proper use of Strict-Transport-Security headers, seen in ZAP" src="images/image95.png" width="554.50" height="166.82" title="Proper use of Strict-Transport-Security headers, seen in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Proper use of Strict-Transport-Security headers, seen in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -269,9 +272,9 @@ In Firebug:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image111.png" width="624.00" height="350.67" title="">
+  <img alt="Proper use of Strict-Transport-Security headers, seen in Firebug" src="images/image111.png" width="624.00" height="350.67" title="Proper use of Strict-Transport-Security headers, seen in Firebug">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Proper use of Strict-Transport-Security headers, seen in Firebug.</figcaption>
 </figure>
 </div>
 
@@ -287,29 +290,29 @@ On the "SSL Server Test" page, check the box labeled "Do not show the results on
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image81.png" width="624.00" height="232.00" title="">
+  <img alt="Using the Qualys SSL Server Test" src="images/image81.png" width="624.00" height="232.00" title="Using the Qualys SSL Server Test">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Using the Qualys SSL Server Test.</figcaption>
 </figure>
 </div>
 
-Examples of SSL Server Test results are shown below. The first result is a solid review; the second result shows an online service with some serious issues.
+Examples of SSL Server Test results are shown below. The first result is a solid review. 
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image101.png" width="518.50" height="275.42" title="">
+  <img alt="A solid result from Qualys" src="images/image101.png" width="518.50" height="275.42" title="A solid result from Qualys">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A solid result from Qualys.</figcaption>
 </figure>
 </div>
 
-Note that the reasons behind each issue are explained, with links to greater detail as needed.
+The second result shows an online service with some serious issues. Note that the reasons behind each issue are explained, with links to greater detail as needed.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image03.png" width="513.50" height="444.38" title="">
+  <img alt="A Qualys evaluation that shows serious issues" src="images/image03.png" width="513.50" height="444.38" title="A Qualys evaluation that shows serious issues">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A Qualys evaluation that shows serious issues.</figcaption>
 </figure>
 </div>
 
@@ -340,11 +343,12 @@ The definitive way to test whether an application's emails use TLS between mail 
 For this test, the recipient email account's servers must be confirmed to accept TLS for incoming mail messages. If this is not known or needs to be verified, the "checktls.com" service can be used to test the recipient email address.
 
 Browsing to checktls.com brings up a form where the email can be entered (no mail will be sent to the recipient address, it's only used to contact the server). Enter the recipient email address as indicated below and click "Try It".
+
 <div align="center">
 <figure>
-  <img alt="" src="images/image18.png" width="537.50" height="297.18" title="">
+  <img alt="Using CheckTLS" src="images/image18.png" width="537.50" height="297.18" title="Using CheckTLS">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Using CheckTLS.</figcaption>
 </figure>
 </div>
 
@@ -352,9 +356,9 @@ The results will indicate whether the mail server accepts incoming TLS connectio
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image68.png" width="624.00" height="185.33" title="">
+  <img alt="A successful test" src="images/image68.png" width="624.00" height="185.33" title="A successful test">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A successful test.</figcaption>
 </figure>
 </div>
 
@@ -364,9 +368,9 @@ If the mail was sent with TLS, it will be noted in the headers with a descriptio
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image78.png" width="624.00" height="126.67" title="">
+  <img alt="A sample email header showing that TLS was used" src="images/image78.png" width="624.00" height="126.67" title="A sample email header showing that TLS was used">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A sample email header showing that TLS was used.</figcaption>
 </figure>
 </div>
 
@@ -382,9 +386,9 @@ As an example, the screenshot below shows the results for a particular applicati
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image100.png" width="624.00" height="188.00" title="">
+  <img alt="A report from Google showing a service that does not use TLS for email" src="images/image100.png" width="624.00" height="188.00" title="A report from Google showing a service that does not use TLS for email">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A report from Google showing a service that does not use TLS for email.</figcaption>
 </figure>
 </div>
 
@@ -442,9 +446,9 @@ Cache headers displayed in ZAP:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image99.png" width="624.00" height="170.67" title="">
+  <img alt="Satisfactory cache directives, displayed in ZAP" src="images/image99.png" width="624.00" height="170.67" title="Satisfactory cache directives, displayed in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Satisfactory cache directives, displayed in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -452,13 +456,13 @@ Cache headers displayed in Firebug:
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image79.png" width="624.00" height="349.33" title="">
+  <img alt="Satisfactory cache directives, displayed in Firebug" src="images/image79.png" width="624.00" height="349.33" title="Satisfactory cache directives, displayed in Firebug">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Satisfactory cache directives, displayed in Firebug.</figcaption>
 </figure>
 </div>
 
-An informative discussion of cache parameters and how they are handled by browsers can be found on Stack Overflow: [here](http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers).
+An informative discussion of cache parameters and how they are handled by browsers can be [found on Stack Overflow](http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers).
 
 ### E4.3.3 Browser-based history test
 
@@ -468,9 +472,9 @@ There is a straightforward way to check for history storage of sensitive informa
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image116.png" width="624.00" height="269.33" title="">
+  <img alt="An example page with sensitive information" src="images/image116.png" width="624.00" height="269.33" title="An example page with sensitive information">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example page with sensitive information.</figcaption>
 </figure>
 </div>
 
@@ -487,9 +491,9 @@ To inspect what is stored in the browser's cache, enter "about:cache" in the bro
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image34.png" width="624.00" height="352.00" title="">
+  <img alt="Accessing the browser cache in Firefox" src="images/image34.png" width="624.00" height="352.00" title="Accessing the browser cache in Firefox">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Accessing the browser cache in Firefox.</figcaption>
 </figure>
 </div>
 
@@ -497,9 +501,9 @@ The URLs of the cached pages will be listed and specific pages of interest can b
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image05.png" width="391.50" height="31.36" title="">
+  <img alt="A cached page showing username and login information" src="images/image05.png" width="391.50" height="31.36" title="A cached page showing username and login information">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A cached page showing username and login information.</figcaption>
 </figure>
 </div>
 
@@ -573,9 +577,9 @@ Then, using the Cookie Manager, delete the candidate cookie and reload the page.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image32.png" width="624.00" height="356.00" title="">
+  <img alt="Deleting a cookie using the Advanced Cookie Manager" src="images/image32.png" width="624.00" height="356.00" title="Deleting a cookie using the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Deleting a cookie using the Advanced Cookie Manager.</figcaption>
 </figure>
 </div>
 
@@ -587,15 +591,15 @@ The httpOnly flag prevents scripts from reading a cookie's contents. In a cross-
 
 The secure flag prevents the browser from sending a cookie in an http (unencrypted) request. In an implementation that is using https, this protects against an accidental exposure of the cookie through an unintentional http request. In some implementations the use of load balancers to even out internal server loading can preclude the use of the secure flag for authentication cookies. In those cases, HSTS (Hypertext Strict Transport Security) is important to prevent the browser from sending any http requests to this domain. (See the Encryption and Transport Layer Security section of this document for details of HSTS).
 
-Both of these flags can be checked in the cookie editor by selecting the authentication cookie and examining the flags settings. In the example below, both the httpOnly and secure flags are set.
-
 <div align="center">
 <figure>
-  <img alt="" src="images/image63.png" width="624.00" height="344.00" title="">
+  <img alt="Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager" src="images/image63.png" width="624.00" height="344.00" title="Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager.</figcaption>
 </figure>
 </div>
+
+Both of these flags can be checked in the cookie editor by selecting the authentication cookie and examining the flags settings. In the example below, both the httpOnly and secure flags are set.
 
 ### E5.3.3 Invalidation of authentication cookies at logout
 
@@ -603,13 +607,13 @@ Authentication cookies should be invalidated when a user logs out of an applicat
 
 Using a cookie editor, It is straightforward to check whether authentication tokens are invalidated at logout. The sequence is described and illustrated below
 
-* Log in to the service and go to a page that indicates the user is logged in.
+* Log in to the service and go to a page that indicates the user is logged in. Make a note of this URL, as you will need it in later steps.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image49.png" width="624.00" height="208.00" title="">
+  <img alt="A sample view of a user logged in to a site" src="images/image49.png" width="624.00" height="208.00" title="A sample view of a user logged in to a site">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A sample view of a user logged in to a site.</figcaption>
 </figure>
 </div>
 
@@ -617,19 +621,19 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image35.png" width="624.00" height="341.33" title="">
+  <img alt="Using the Advanced Cookie Manager to save cookies from a specific domain" src="images/image35.png" width="624.00" height="341.33" title="Using the Advanced Cookie Manager to save cookies from a specific domain">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Using the Advanced Cookie Manager to save cookies from a specific domain.</figcaption>
 </figure>
 </div>
 
-* Log out and confirm that the same URL no longer indicates that the user is logged in.
+* Log out. Return to the URL from the first step, above, and confirm that the user is no longer logged in.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image00.png" width="624.00" height="214.67" title="">
+  <img alt="Confirm that the user is no longer logged in" src="images/image00.png" width="624.00" height="214.67" title="Confirm that the user is no longer logged in">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Confirm that the user is no longer logged in.</figcaption>
 </figure>
 </div>
 
@@ -637,13 +641,13 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image22.png" width="700.50" height="450.47" title="">
+  <img alt="Restore cookies using the Advanced Cookie Manager" src="images/image22.png" width="700.50" height="450.47" title="Restore cookies using the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Restore cookies using the Advanced Cookie Manager.</figcaption>
 </figure>
 </div>
 
-* Reload the URL recorded earlier, and check whether the page indicates the user is logged in or not. If the user is again logged in after restoring the cookie, this indicates that the authentication cookie was not invalidated at logout. This can be further confirmed by exercising functionality of the application to see if access is allowed.
+* Reload the URL recorded in the first step, and check whether the page indicates the user is logged in or not. If the user is again logged in after restoring the cookie, this indicates that the authentication cookie was not invalidated at logout. This can be further confirmed by visiting additional pages in the site to see if the user remains logged in.
 
 ### E5.3.4 Logout links
 
@@ -655,9 +659,9 @@ Note that many applications place the logout link in a dropdown menu, as shown b
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image96.png" width="164.66" height="296.17" title="">
+  <img alt="A sample logout link" src="images/image96.png" width="164.66" height="296.17" title="A sample logout link">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A sample logout link.</figcaption>
 </figure>
 </div>
 
@@ -722,9 +726,9 @@ Attempt two types of logins. First, use both an invalid username; then use a val
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image77.png" width="624.00" height="70.67" title="">
+  <img alt="A good example of a failed login attempt" src="images/image77.png" width="624.00" height="70.67" title="A good example of a failed login attempt">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A good example of a failed login attempt.</figcaption>
 </figure>
 </div>
 
@@ -732,9 +736,9 @@ In contrast, messages like the ones shown below reveal the validity of the usern
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image67.png" width="543.50" height="104.52" title="">
+  <img alt="Messages that reveal information about user accounts" src="images/image67.png" width="543.50" height="104.52" title="Messages that reveal information about user accounts">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Messages that reveal information about user accounts.</figcaption>
 </figure>
 </div>
 
@@ -746,17 +750,9 @@ Exercise the password recovery interface by requesting password recovery for a v
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image88.png" width="468.50" height="60.81" title="">
+  <img alt="An example of a good password recovery message" src="images/image88.png" width="468.50" height="60.81" title="An example of a good password recovery message">
     <br>
-  <figcaption>Image Caption:</figcaption>
-</figure>
-</div>
-
-<div align="center">
-<figure>
-  <img alt="" src="images/image06.png" width="358.50" height="104.16" title="">
-    <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example of a good password recovery message.</figcaption>
 </figure>
 </div>
 
@@ -764,25 +760,25 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image54.png" width="342.69" height="33.50" title="">
+  <img alt="An example of a response that provides indirect information about usernames" src="images/image54.png" width="342.69" height="33.50" title="An example of a response that provides indirect information about usernames">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example of a response that provides indirect information about usernames.</figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image64.png" width="588.00" height="50.00" title="">
+  <img alt="An example of a response that provides indirect information about usernames" src="images/image64.png" width="588.00" height="50.00" title="An example of a response that provides indirect information about usernames">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example of a response that provides indirect information about usernames.</figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image86.png" width="624.00" height="49.33" title="">
+  <img alt="An example of a response that provides indirect information about usernames" src="images/image86.png" width="624.00" height="49.33" title="An example of a response that provides indirect information about usernames">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example of a response that provides indirect information about usernames.</figcaption>
 </figure>
 </div>
 
