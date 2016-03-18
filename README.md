@@ -1,4 +1,4 @@
-# Information Security Primer
+# Information Security Primer for Evaluating Educational Software
 
 The **Information Security Primer for Evaluating Educational Software** is a toolkit for people looking to learn more about evaluating information security practices of educational software. While the primary audience of this document is people interested in running information security tests, our secondary audience includes people who will not be running tests, but who want to learn more about what "information security" means.
 

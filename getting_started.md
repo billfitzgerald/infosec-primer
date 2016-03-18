@@ -260,7 +260,7 @@ Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **C
 
 Then, click the "OK" button.
 
-To complete the setup, skip ahead to the "C4.4 Installing Proxy SSL Certificate to Browser and Mobile Devices" section below.
+To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate to Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert) section below.
 
 * * *
 
@@ -279,6 +279,8 @@ For monitoring mobile device traffic, or if a browser under testing will be on a
 #### C4.3.1 Find the network address of the proxy computer
 
 The first step is to determine the network address of the proxy computer. The procedure is different for Windows, MacOS, and Linux.
+
+When you find the network address of computer running the proxy, write it down and store it in an easily accessible place. This network address needs to be added to other devices that will be used for testing.
 
 ##### C4.3.1.1 Windows:
 
@@ -505,7 +507,7 @@ Verify that the certificate has been uploaded by browsing to it. All Certificate
 
 **Note**: When you are not testing, you should remove the certificate from the browser.
 
-To remove the certificate, in Firefox go to the **Preferences** --> **Advanced** -->Certificates** --> **View Certificates** menu, select the *OWASP Zed Attack Proxy Root CA* certificate, and click on "Delete or Distrust".
+To remove the certificate, in Firefox go to the **Preferences** --> **Advanced** --> **Certificates** --> **View Certificates** menu, select the *OWASP Zed Attack Proxy Root CA* certificate, and click on "Delete or Distrust".
 
 <div align="center">
 <figure>
@@ -575,17 +577,17 @@ Select **Profile** to enter a dialog that provides the option to delete the cert
 </figure>
 </div>
 
-#### C4.4.3 Import proxy certificate to Android device
+#### C4.4.4 Import proxy certificate to Android device
 
 It is important to take care when transferring the certificate file to the device, as anyone who possesses it could potentially use it to decrypt https communications from devices that install the certificate. While this risk is small, and can be mitigated by uninstalling the certificate when not testing, handling the certificate safely is highly recommended.  
 
 For Android devices, many methods of moving the certificate file to the device's storage (browser, secure file sharing service, direct transfer over USB) can be used.
 
-##### C4.4.3.1 Transfer proxy certificate file to the device
+##### C4.4.4.1 Transfer proxy certificate file to the device
 
 Copy the proxy certificate file to the Android's SD card or other internal storage. The tutorial below assumes that certificate has been moved to a SD card. 
 
-#### C4.4.3.2 Install the proxy certificate file to the device
+##### C4.4.4.2 Install the proxy certificate file to the device
 
 This document covers installation for Android versions 4.3 and above. The installation is slightly different for Android 4.3, Android 4.4, and higher. Select the installation that corresponds to your device's Android version.
 
