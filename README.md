@@ -59,3 +59,5 @@ We will be modifying this document over time to keep the tests current, and to a
 ## Licensing
 
 This is released under a Creative Commons Attribution Non-Commercial Share-Alike 4.0 License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Visit the [Licensing and Attribution](licensing_attibution.md) page for complete details.
