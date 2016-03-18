@@ -127,7 +127,7 @@ There is not a specific test for sensitive information in URLs. The tester shoul
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-tls"></a>E2 Encryption and Transport Layer Security
 
@@ -318,7 +318,7 @@ The second result shows an online service with some serious issues. Note that th
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-email-tls"></a>E3 TLS for email sent by an application to users
 
@@ -410,7 +410,7 @@ Checktls.com is discussed above in the context of confirming a tester's email ad
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-cache"></a>E4 Caching and history storage of pages with sensitive information
 
@@ -527,7 +527,7 @@ Perform the browser-based history test on a representative page containing user 
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-auth-token"></a>E5 Authentication token and cookie handling
 
@@ -669,7 +669,7 @@ Frequently, mobile apps on a tablet or phone will keep you logged in longer than
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-password"></a>E6 Password handling
 
@@ -700,7 +700,7 @@ There is not a uniform standard for secure handling of account recovery from los
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-username"></a>E7 Username enumeration
 
@@ -782,9 +782,11 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 </figure>
 </div>
 
+These vulnerabilities do not pose an enormous risk to most end users, but they can be useful if an attacker is targeting a specific user account, such as a site administrator. These types of vulnerabilities are also useful when assessing the overall quality of an applications defensive security practices.
+
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-websockets"></a>E8 Observation of websockets traffic
 
@@ -808,9 +810,9 @@ If an application uses websockets, check the contents of the messages for sensit
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image74.png" width="624.00" height="116.00" title="">
+  <img alt="WebSockets traffic containing personal student information" src="images/image74.png" width="624.00" height="116.00" title="WebSockets traffic containing personal student information">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: WebSockets traffic containing personal student information.</figcaption>
 </figure>
 </div>
 
@@ -822,9 +824,9 @@ From the websockets view of OWASP ZAP, it's possible to determine whether the we
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image93.png" width="465.00" height="134.00" title="">
+  <img alt="Selecting a websockets channel in ZAP" src="images/image93.png" width="465.00" height="134.00" title="Selecting a websockets channel in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Selecting a websockets channel in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -832,9 +834,9 @@ Then, click the button with green arrows to bring up the initial connection tran
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image28.png" width="624.00" height="109.33" title="">
+  <img alt="Reviewing a websockets connection in ZAP" src="images/image28.png" width="624.00" height="109.33" title="Reviewing a websockets connection in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Reviewing a websockets connection in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -842,9 +844,9 @@ The details of the connection will be displayed in the upper transaction pane. C
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image94.png" width="624.00" height="192.00" title="">
+  <img alt="An example of an encrypted connection, with an authentication cookie that is protected by encryption" src="images/image94.png" width="624.00" height="192.00" title="An example of an encrypted connection, with an authentication cookie that is protected by encryption">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An example of an encrypted connection, with an authentication cookie that is protected by encryption.</figcaption>
 </figure>
 </div>
 
@@ -852,7 +854,7 @@ Evaluating the potential risks of websockets traffic requires examining what inf
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-leakage"></a>E9 Information leakage
 
@@ -889,31 +891,33 @@ In the example shown below, a student password reset request reveals the email a
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image17.png" width="548.50" height="101.09" title="">
+  <img alt="Parent contact information needlessly leaked via a password recovery request" src="images/image17.png" width="548.50" height="101.09" title="Parent contact information needlessly leaked via a password recovery request">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Parent contact information needlessly leaked via a password recovery request.</figcaption>
 </figure>
 </div>
 
 #### E9.3.1.2 Leaking names and emails
 
-In the example shown below, an application has different responses for conditions where an access code has already been used and an attempt is made to reuse the code. Together, the messages reveal a parent's full email address and the parent's first name and last initial.
+In the example shown below, an application has different responses for conditions where an access code has already been used and an attempt is made to reuse the code. 
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image103.png" width="624.00" height="78.67" title="">
+  <img alt="Combining multiple messages to get more complete information" src="images/image103.png" width="624.00" height="78.67" title="Combining multiple messages to get more complete information">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Combining multiple messages to get more complete information.</figcaption>
 </figure>
 </div>
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image102.png" width="624.00" height="101.33" title="">
+  <img alt="Combining multiple messages to get more complete information" src="images/image102.png" width="624.00" height="101.33" title="Combining multiple messages to get more complete information">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Combining multiple messages to get more complete information.</figcaption>
 </figure>
 </div>
+
+Together, the messages reveal a parent's full email address and the parent's first name and last initial.
 
 #### E9.3.1.3 Leaking Student Information
 
@@ -921,29 +925,31 @@ In the example shown below, a request for student name information to be used in
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image69.png" width="531.50" height="150.76" title="">
+  <img alt="Returning more information than needed" src="images/image69.png" width="531.50" height="150.76" title="Returning more information than needed">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Returning more information than needed.</figcaption>
 </figure>
 </div>
 
 #### E9.3.1.4 Leaking full name, school, state, and user ID
 
-Here, an application displays the first name, school name and state of a "daily winner", but the data request visible in the proxy also returns the student's last name and numeric userid.
+Here, an application displays the first name, school name and state of a "daily winner".
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image84.png" width="299.50" height="65.87" title="">
+  <img alt="Student name displayed on screen" src="images/image84.png" width="299.50" height="65.87" title="Student name displayed on screen">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Student name displayed on screen.</figcaption>
 </figure>
 </div>
 
+However, the data request visible in the proxy also returns the student's last name and numeric userid.
+
 <div align="center">
 <figure>
-  <img alt="" src="images/image13.png" width="577.00" height="32.00" title="">
+  <img alt="The html source has unneeded personal information about the student" src="images/image13.png" width="577.00" height="32.00" title="The html source has unneeded personal information about the student">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: The html source has unneeded personal information about the student.</figcaption>
 </figure>
 </div>
 
@@ -953,15 +959,15 @@ As seen in the "Observation of websockets traffic" section, this websockets mess
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image74.png" width="624.00" height="116.00" title="">
+  <img alt="Student information leaked via unencrypted websockets traffic" src="images/image74.png" width="624.00" height="116.00" title="Student information leaked via unencrypted websockets traffic">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Student information leaked via unencrypted websockets traffic.</figcaption>
 </figure>
 </div>
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-api"></a>E10 API authentication checks
 
@@ -986,9 +992,9 @@ Since each application is different, the first step is to exercise the functiona
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image48.png" width="624.00" height="146.67" title="">
+  <img alt="A sample API request" src="images/image48.png" width="624.00" height="146.67" title="A sample API request">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A sample API request.</figcaption>
 </figure>
 </div>
 
@@ -996,9 +1002,9 @@ The response when logged in is below, returning information about students in th
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image109.png" width="624.00" height="222.67" title="">
+  <img alt="An API response with information about students in a class" src="images/image109.png" width="624.00" height="222.67" title="An API response with information about students in a class">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An API response with information about students in a class.</figcaption>
 </figure>
 </div>
 
@@ -1006,9 +1012,9 @@ If the API access is a GET request, the browser can be used to test if the same 
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image14.png" width="525.50" height="87.58" title="">
+  <img alt="A response that shows the user is not authenticated, and cannot access information" src="images/image14.png" width="525.50" height="87.58" title="A response that shows the user is not authenticated, and cannot access information">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A response that shows the user is not authenticated, and cannot access information.</figcaption>
 </figure>
 </div>
 
@@ -1016,9 +1022,9 @@ If the API access is not a GET request (most often it will be a POST request if 
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image73.png" width="624.00" height="242.67" title="">
+  <img alt="A POST request to an API, seen in ZAP logs" src="images/image73.png" width="624.00" height="242.67" title="A POST request to an API, seen in ZAP logs">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A POST request to an API, seen in ZAP logs.</figcaption>
 </figure>
 </div>
 
@@ -1026,9 +1032,9 @@ Right-clicking on the selected request will bring up a menu. Select "Resend" fro
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image72.png" width="241.50" height="312.12" title="">
+  <img alt="Resending a request to an API, using ZAP" src="images/image72.png" width="241.50" height="312.12" title="Resending a request to an API, using ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Resending a request to an API, using ZAP.</figcaption>
 </figure>
 </div>
 
@@ -1036,9 +1042,9 @@ Click "Send" to resend the request.
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image15.png" width="624.00" height="184.00" title="">
+  <img alt="Click Send to resend the API request in ZAP" src="images/image15.png" width="624.00" height="184.00" title="Click Send to resend the API request in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Click Send to resend the API request in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -1046,15 +1052,15 @@ When the response comes back, the proxy will highlight the response tab, and dis
 
 <div align="center">
 <figure>
-  <img alt="" src="images/image38.png" width="624.00" height="178.67" title="">
+  <img alt="An access denied message to an API request, seen in ZAP" src="images/image38.png" width="624.00" height="178.67" title="An access denied message to an API request, seen in ZAP">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: An access denied message to an API request, seen in ZAP.</figcaption>
 </figure>
 </div>
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
 # <a name="h.testing-mobile"></a>E11 Mobile application testing
 
@@ -1123,4 +1129,4 @@ To check for a potential SSL Certificate Spoofing vulnerability:
 
 * * *
 
-**Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
