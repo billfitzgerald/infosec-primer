@@ -1,8 +1,8 @@
 # Information Security Primer
 
-The Information Security Primer for Evaluating Educational Software is a toolkit for people looking to learn more about evaluating information security practices of educational software. While the primary audience of this document is people interested in running information security tests, our secondary audience includes people who will not be running tests, but who want to learn more about what "information security" means.
+The **Information Security Primer for Evaluating Educational Software** is a toolkit for people looking to learn more about evaluating information security practices of educational software. While the primary audience of this document is people interested in running information security tests, our secondary audience includes people who will not be running tests, but who want to learn more about what "information security" means.
 
-As the title states, this document is a primer, not a comprehensive guide. We intend for this document to grow and evolve over time. We also want to give people the tools to learn information security testing safely.
+As the title states, this document is a primer, not a comprehensive guide. We intend for this document to grow and evolve over time. Future versions will include more advanced testing scenarios, but for the initial version, we wanted to provide resources to allow people to learn how to do security reviews safely.
 
 This guide was developed as part of the [Common Sense District Privacy Evaluation Initiative](https://www.graphite.org/privacy). If you work at a school district and would like to join the consortium of districts working in the United States to help streamline the process of evaluating privacy policies for EdTech apps, you can [learn more and sign up here](https://www.graphite.org/privacy/about/districts).
 
@@ -42,7 +42,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
 
 Tony Porterfield and Jim Siegl are the primary authors of this text.
 
-Bill Fitzgerald, Girard Kelly, and Jeff Graham provided editing support and testing.
+Bill Fitzgerald, Girard Kelly, Jeff Graham, and Omar Khan provided editing support and testing.
 
 Jenny Pritchett copy edited the initial version.
 
