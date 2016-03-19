@@ -2,11 +2,11 @@
 
 Many of the definitions below are taken from the OWASP glossary ([https://www.owasp.org/index.php/Category:Glossary](https://www.owasp.org/index.php/Category:Glossary)), and the NIST Glossary of Key Information Security Terms, NISTIR 7298, revision 2 ([http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)). Definitions taken from these documents contain links to the source document in the title of the glossary term.
 
-<a name="h.glossary-auth-cookie"></a>**Authentication Cookie** see **Session Token**
-
 <a name="h.glossary-api"></a>**API**
 
 Application Programming Interface. For web and mobile applications, this is a network-facing interface that the application can use to request user-specific information from the application's servers.
+
+<a name="h.glossary-auth-cookie"></a>**Authentication Cookie** see **Session Token**
 
 <a name="h.glossary-certificate"></a>[**Certificate**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
