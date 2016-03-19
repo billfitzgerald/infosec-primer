@@ -885,7 +885,7 @@ All of the examples listed above are real problems that have been observed and f
 
 ### E9.3.1 Examples of Information Leakage
 
-As seen in the example below, information leakage can reveal a broad range of information. When evaluating the potential significance of information leakage, it is necessary to evaluate whether the leak is sufficiently dangerous on its own, or whether the information could be used as the foundation for other, more complex attacks. For example, knowing a user ID isn't necessarily dangerous, but if the application uses user IDs in the URL (as described in E1 Sensitive information in URLs) an ID could potentially be used to craft an attack and compromise a user account.
+As seen in the example below, information leakage can reveal a broad range of information. When evaluating the potential significance of information leakage, it is necessary to evaluate whether the leak is sufficiently dangerous on its own, or whether the information could be used as the foundation for other, more complex attacks. For example, knowing a user ID isn't necessarily dangerous, but if the application uses user IDs in the URL (as described in E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info)) an ID could potentially be used to craft an attack and compromise a user account.
 
 Additionally, information leakage can be used to assess the overall defensive posture of an application. If an application leaks information in places where it shouldn't, it can be an indicator of weak practices in areas that we cannot observe.
 
@@ -957,9 +957,11 @@ However, the data request visible in the proxy also returns the student's last n
 </figure>
 </div>
 
+This example also highlights another place where information can leak: the source of the html page. Both Firefox and Firebug include tools that allow html source to be read.
+
 #### E9.3.1.5 Leaking username, activity information, name, and teacher ID
 
-As seen in the "Observation of websockets traffic" section, this websockets message reveals information about a different student than the one who is logged in.
+As seen in Section E8 [Observation of websockets traffic](testing_scenarios.md#h.testing-websockets), this websockets message reveals information about a different student than the one who is logged in.
 
 <div align="center">
 <figure>
@@ -977,19 +979,19 @@ As seen in the "Observation of websockets traffic" section, this websockets mess
 
 ## E10.1 Summary
 
-Many applications use APIs to retrieve information from the application's servers. API stands for "Application Programming Interface". In simple terms, an API will typically fetch raw data from the server to be rendered for display by the application, as opposed to fetching pre-formatted HTML pages. APIs are more common for mobile applications than browser-based applications but are utilized by both. The URL for an API will commonly include "api" in the URL, and will have parameters in the URL or in the message body. Examples of APIs will be shown in the "Setup and tests" discussion below.
+Many applications use [APIs](glossary.md#h.glossary-api) to retrieve information from the application's servers. API stands for "Application Programming Interface". In simple terms, an API will typically fetch raw data from the server to be rendered for display by the application, as opposed to fetching pre-formatted HTML pages. APIs are more common for mobile applications than browser-based applications but are utilized by both. The URL for an API will often include "api" in the URL, and will have parameters in the URL or in the message body. Examples of APIs will be shown in the "Setup and tests" discussion below.
 
 The tests in this section focus on checking whether information from the tester's account can be accessed through an API without proper authentication.
 
-More advanced tests that attempt to modify API parameters are beyond the scope of this section of the test plan, because they are likely to access other users' information if the application does not implement proper controls.
+More advanced tests that attempt to modify API parameters are beyond the scope of this section of the test plan. Attempts to modify API parameters should be done with extreme caution because they are likely to access other users' information if the application does not implement proper controls.
 
 ## E10.2 Exploitability and impact
 
-Since APIs can be accessed by anyone on the network, security flaws in APIs are highly exploitable and can be used in remote attacks. The impact of these types of exploits is dependent on the kinds of information that can be retrieved from the API, but can be very serious and potentially expose all the information that the application can access to an attacker.
+Since APIs can be accessed by anyone on the network, security flaws in APIs are highly exploitable and can be used in [remote attacks](glossary.md#h.glossary-remote-attack). The impact of these types of exploits is dependent on the kinds of information that can be retrieved from the API, but can be very serious and potentially expose all the information that the application can access to an attacker. Even minimal leakage via an API flaw can be used as a foundation for crafting a more sophisticated attack.
 
 ## E10.3 Setup and tests
 
-For browser-based applications, Firebug or OWASP ZAP (external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to the setup section for proxies and mobile devices for more details.
+For browser-based applications, Firebug or OWASP ZAP (external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to Section C4.3 [Mobile device (or browser) on different computer than the proxy](getting_started.md#h.toolkit-zap-proxy-different-box) for specific instructions.
 
 Since each application is different, the first step is to exercise the functionality of the application and examine the network transactions for API requests. The URL of an API will often include 'api' in the URL. Regardless of this, the typical characteristics of API calls are requests containing parameters in the URL, which return raw data and not formatted HTML. This image shows an example of an API request:
 
@@ -1002,7 +1004,7 @@ Since each application is different, the first step is to exercise the functiona
 </figure>
 </div>
 
-The response when logged in is below, returning information about students in the class.
+The response when logged in is below. This specific example returns information about students in the class.
 
 <div align="center">
 <figure>
@@ -1011,6 +1013,8 @@ The response when logged in is below, returning information about students in th
   <figcaption>Image Caption: An API response with information about students in a class.</figcaption>
 </figure>
 </div>
+
+The response shown above is an example of an application functioning normally. The user initiating the request is logged in, and the request returns data they have permissions to see.
 
 If the API access is a GET request, the browser can be used to test if the same request works without authentication. In a browser that is not logged in to the application, paste the URL into a browser's address bar and load the page into the browser. The response should not include information from the account and will likely indicate that the user is not authenticated.
 
@@ -1078,13 +1082,13 @@ For vulnerabilities that are possible for both mobile and browser based apps, th
 
 Poor authentication controls on network-facing APIs is described in the general vulnerabilities section, but APIs are much more common as interfaces to mobile applications than browser based applications. The reason is that browser based applications will often return an HTML page in response to a request for information, while mobile apps will often query an API for raw data and then render it for the screen within the mobile application.
 
-One vulnerability that is specific to mobile applications is failure to check the authenticity of an SSL [certificates](glossary.md#h.glossary-certificate). SSL Certificates are usually registered with a [Certificate Authority](glossary.md#h.glossary-ca), which acts as a trusted third party to confirm the identity of the server being connected to. If an application fails to check this, an attacker's certificate can be accepted by the application, thereby allowing the attacker to intercept the encrypted messages sent and received by the application. (Note: when a tester's proxy self-signed certificate is added to a mobile device's trusted store, the CA mechanism is bypassed but the device owner marks it as a trusted certificate, allowing the device to accept the proxy's certificate as authentic.) If a mobile application accepts an SSL certificate without verifying that it is from a trusted source, it can enable a man-in-the-middle attack that could allow an adversary to view the contents of the mobile application's encrypted traffic. This type of attack is also sometimes called [SSL Certificate Spoofing](glossary.md#h.glossary-ssl-spoofing).
+One vulnerability that is specific to mobile applications is failure to check the authenticity of an SSL [certificates](glossary.md#h.glossary-certificate). SSL Certificates are usually registered with a [Certificate Authority](glossary.md#h.glossary-ca), which acts as a trusted third party to confirm the identity of the server being connected to. If an application fails to check this, an attacker's certificate can be accepted by the application, thereby allowing the attacker to intercept the encrypted messages sent and received by the application. (Note: when a tester's proxy self-signed certificate is added to a mobile device's trusted store, the CA mechanism is bypassed but the device owner marks it as a trusted certificate, allowing the device to accept the proxy's certificate as authentic.) If a mobile application accepts an SSL certificate without verifying that it is from a trusted source, it can enable a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) that could allow an adversary to view the contents of the mobile application's encrypted traffic. This type of attack is also sometimes called [SSL Certificate Spoofing](glossary.md#h.glossary-ssl-spoofing).
 
-A number of barriers exist to executing a certificate spoofing attack. Access to the vulnerable mobile app's network transactions are required on a network where the attacker can route the app's traffic through a proxy or similar utility, which can present the attacker's untrusted certificate to the device. A rogue wifi hotspot is one way such an attack could be attempted. The impact of a successful attack can be significant, as encrypted transactions containing passwords, authentication tokens, and sensitive information become accessible to the attacker. Another factor that may amplify the impact of an SSL certificate spoofing vulnerability in an app is that after a fix is provided, individual users will not receive the fix unless they update the app on their devices. (For browser-based applications, the SSL certificate checks are handled by the browser and are not specific to individual applications).
+A number of barriers exist to executing a certificate spoofing attack. Access to the vulnerable mobile app's network transactions are required on a network where the attacker can route the app's traffic through a proxy or similar utility, which can present the attacker's untrusted certificate to the device. A rogue wifi hotspot is one way such an attack could be attempted (which is one of many reasons why we all need to be careful when connecting to public wifi). The impact of a successful attack can be significant, as encrypted transactions containing passwords, authentication tokens, and sensitive information become accessible to the attacker. Another factor that may amplify the impact of an SSL certificate spoofing vulnerability in an app is that after a fix is provided, individual users will not receive the fix unless they update the app on their devices. (For browser-based applications, the SSL certificate checks are handled by the browser and are not specific to individual applications).
 
 ## E11.3 Setup and Testing
 
-To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in the "Proxy Basics and setup with Browsers and Devices" section of this document.
+To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in Section C4.3 [Mobile device (or browser) on different computer than the proxy](getting_started.md#h.toolkit-zap-proxy-different-box) and Section C4.4 [Installing proxy SSL certificate to browser and mobile devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
 
 ### E11.3.1 Browser-based tests that remain relevant for mobile apps
 
