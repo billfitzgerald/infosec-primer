@@ -1100,8 +1100,8 @@ The following table summarizes which of the tests from the preceding sections ar
 <tbody>
 <tr><td colspan="1" rowspan="1">Section</td><td colspan="1" rowspan="1">Test</td><td colspan="1" rowspan="1">Applicable?</td><td colspan="1" rowspan="1">Notes</td></tr>
 <tr><td colspan="1" rowspan="1">Encryption and TLS</td><td colspan="1" rowspan="1">Checks for TLS during transport of sensitive information</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1"></td></tr>
-<tr><td colspan="1" rowspan="1">SSL configurations</td><td colspan="1" rowspan="1">Yes</td></tr>
-<tr><td colspan="1" rowspan="1">HSTS headers</td><td colspan="1" rowspan="1">No</td></tr>
+<tr><td colspan="1" rowspan="1">SSL configurations</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr>
+<tr><td colspan="1" rowspan="1">HSTS headers</td><td colspan="1" rowspan="1">No</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr>
 <tr><td colspan="1" rowspan="1">Sensitive information in URLs</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">Yes</td></tr>
 <tr><td colspan="1" rowspan="1">Caching and history</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">No</td></tr>
 <tr><td colspan="1" rowspan="1">Authentication token and cookie handling</td><td colspan="1" rowspan="1">TLS for sensitive cookies</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">If app uses cookies</td></tr>
