@@ -330,11 +330,11 @@ Email Transport Layer Security is referred to as 'TLS' or 'starttls'. As the nam
 
 For example, if an educational application sends a class update to a teacher's email account, TLS can be used to encrypt the email as it travels from the application's email server to the teacher's email server. This is analogous to the protection provided by https between a user's browser and an application's servers.
 
-One more detail of email TLS is that both ends of the connection must support it, and it is up to the server sending the mail to request that it be used for the transfer of information. (This is where 'starttls' comes from, it's the name of the request for TLS from the server sending the mail). From the previous example, if the application wanted to send email to a teacher's email account using TLS, the application's mail server would initiate the connection with the teacher's mail server ask for TLS with a starttls request. The teacher's mail server will reply whether it's supported, and if so the connection encryption would be set up.
+One more detail of email TLS is that both ends of the connection must support it, and it is up to the server sending the mail to request that it be used for the transfer of information. (This is where 'starttls' comes from - it is the name of the request for TLS from the server sending the mail). From the previous example, if the application wanted to send email to a teacher's email account using TLS, the application's mail server would initiate the connection with the teacher's mail server by asking for TLS with a starttls request. The teacher's mail server would reply whether TLS is supported, and if so the connection encryption would be set up.
 
 ## E3.2 Exploitability and impact
 
-Connections between email servers are on the inner (non-public) segments of the network, where few would have access to the network traffic. This makes lack of email TLS a much smaller threat than sending the same content from a mail server to a user's email client without encryption — for example if the user is using an airport wifi to read the message and the email provider does not encrypt the messages between its server and the user's client program. The impact of a successful exploit depends on the sensitivity of the information in the intercepted emails.
+In understanding the potential impact of email TLS, we need to differentiate between communications between email servers, and the final step of delivering email: accessing data on an email server via an email client. Connections between email servers are on the inner (non-public) segments of the network, where few would have access to the network traffic. This makes lack of email TLS a much smaller threat than sending the same content from a mail server to a user's email client without encryption — for example if the user is using an airport wifi to read the message and the email provider does not encrypt the messages between its server and the user's client program. The impact of a successful exploit depends on the sensitivity of the information in the intercepted emails.
 
 ## E3.3 Setup and tests
 
@@ -354,7 +354,7 @@ Browsing to checktls.com brings up a form where the email can be entered (no mai
 </figure>
 </div>
 
-The results will indicate whether the mail server accepts incoming TLS connection requests. Ideally the "Confidence Factor" will be 100\. A sample result is shown below.
+The results will indicate whether the mail server accepts incoming TLS connection requests. Ideally the "Confidence Factor" will be 100. A sample result is shown below.
 
 <div align="center">
 <figure>
@@ -420,23 +420,25 @@ Checktls.com is discussed above in the context of confirming a tester's email ad
 
 In computer systems, the term "caching" refers to the practice of keeping a local copy (or "cache") of information so that it may be accessed again quickly if needed later on. Browsers improve performance by storing copies of web pages a user views, so that they can displayed again later without the need to fetch them again over the network.
 
-Though caching improves the performance of a browser, caching of pages with sensitive information can expose the information to unauthorized access. Because of this, there are directives that a web service can include in message headers to prevent pages from being stored in a browser's cache.
+Though caching improves the performance of a browser, caching of pages with sensitive information can expose the information to unauthorized access. Because of this, a web service can include directives in message headers to prevent pages from being stored in a browser's cache.
 
 The browser's history is subtly different than the cache, but also can be used to show the contents of a page previously loaded by a user. If the page contains sensitive information and the user has signed out of the service since viewing it, it should not be displayed by the "back" button or history mechanism without first requiring a new login by the user. (Note that it is OK for "back" or history to display the page if the user is still logged in to the service).
 
 This section will describe how to do browser-based tests for browser caching of sensitive pages, and how to inspect message headers to look for cache control directives.
 
-NOTE: Make sure that you have cleared your history, cookies, and cache as described in Section D.
+NOTE: Make sure that you have cleared your history, cookies, and cache as described in [Section D](browser_prep.md).
 
 ## E4.2 Exploitability and impact
 
 The risk posed by browser caching of sensitive information is mostly limited to access of that information from the same computer it was originally viewed on. The most common scenario would be a shared-use computer where one user could potentially view information from another user's browsing history. The impact depends on the type of information that is cached and is limited by the scope of the information and the fact that the opportunity to access the data is restricted to the one-time snapshot of the information.
 
+The potential impact also varies widely depending on whose information could be accessed. For example, if a site administrator's information was accessed, that in turn could lead to greater problems. 
+
 ## E4.3 Setup and tests
 
 ### E4.3.1 Overview
 
-Applications can include caching directives in response headers, to instruct the browser how it should store the result in history and cache buffers. In practice, different browsers handle cache and history related directives differently. Because of the complexity of reviewing cache directives on individual responses, the recommended usage is to directly test the history and caching behavior of the application using the "Browser-based history test" and "Browser cache inspection" documented later in this section. Proxy logging of the user session can be used to look for pages of interest that can be searched for in the cache.
+Applications can include caching directives in response headers to instruct the browser how it should store the result in history and cache buffers. In practice, different browsers handle cache and history related directives differently. Because of the complexity of reviewing cache directives on individual responses, the recommended usage is to directly test the history and caching behavior of the application using the "Browser-based history test" and "Browser cache inspection" documented later in this section. Proxy logging of the user session can be used to look for pages of interest that can be searched for in the cache.
 
 The absence of some or all of the recommended cache-related directives in responses can be used as another clue when looking for sensitive data responses that may be stored in the browser disk cache. The following sections describe header response inspection, history checking and browser disk cache inspection.
 
@@ -521,7 +523,7 @@ Clicking on the URL name will load a representation of the raw source of the pag
 
 Note that the URL shown in the browser when sensitive info is displayed may not correspond to the exact request that loaded the sensitive information itself. Using a proxy to observe all the requests generated when a page of interest is displayed can be helpful in finding which URLs to look for in the browser's cache storage.
 
-Additionally, if specific pages looks like they might contain sensitive information, you can do additional testing using ZAP Proxy logs cross referenced against the contents of the browser cache. This will allow you to zero in on specific pages.
+Additionally, if specific pages looks like they might contain sensitive information, you can do additional testing using ZAP Proxy logs cross referenced against the contents of the browser cache. This will allow you to focus more precisely on specific pages.
 
 ### E4.3.5 Recommended test steps
 
@@ -541,7 +543,7 @@ Perform the browser-based history test on a representative page containing user 
 
 Protecting authentication cookies is important because if an adversary can get access to it, it can be installed in the adversary's browser or included in specially crafted http requests. This would give the adversary full access and control to the user's account. This attack is known as [session hijacking](glossary.md#h.glossary-session-hijack) or [sidejacking](glossary.md#h.glossary-sidejack).
 
-The rest of this section will show how to install and use a cookie editor to examine and modify cookies in a browser. The Test Procedures section on checking authentication token handling and cookie flags outlines the cookie tests that use the cookie editor.
+The rest of this section will show how to use a cookie editor to examine and modify cookies in a browser.
 
 More information on authentication cookies can be found at the links below:
 
@@ -575,7 +577,7 @@ To read and search for cookies, use the Advanced Cookie Manager described in Sec
 
 To confirm that a cookie is an authentication cookie, or to search for it in case the name is not apparent, log in to the web site.
 
-Then, using the Cookie Manager, delete the candidate cookie and reload the page. If the page fails to reload in to the login session, the cookie in question is an authentication cookie. Note that some services have more than one authentication cookie and all must be present for full account access. An illustration of deleting a cookie using the cookie editor is shown below.
+Then, using the Cookie Manager, delete the candidate cookie and reload the page. If the page fails to reload in to the logged in session, the cookie in question is an authentication cookie. Note that some services have more than one authentication cookie and all must be present for full account access. An illustration of deleting a cookie using the cookie editor is shown below.
 
 <div align="center">
 <figure>
@@ -589,9 +591,9 @@ Then, using the Cookie Manager, delete the candidate cookie and reload the page.
 
 Cookies have optional flags that the application can set to control how a browser handles them. Of these, the 'httpOnly' and 'secure' flags are important to protecting authentication cookies from unauthorized access.
 
-The httpOnly flag prevents scripts from reading a cookie's contents. In a [cross-site scripting](glossary.md#h.glossary-xss) (commonly called "XSS"), an adversary is able to inject a malicious script to run in a user's browser. If such a script can read an authentication cookie, it can send it to the adversary for use in a session hijacking attack. The httpOnly flag cannot prevent a successful cross-site scripting attack but it does prevent the cookie, and the account it protects, against compromise in the event of such an attack.
+The httpOnly flag prevents scripts from reading a cookie's contents. In a [cross-site scripting](glossary.md#h.glossary-xss) attack (commonly called "XSS"), an adversary is able to inject a malicious script to run in a user's browser. If such a script can read an authentication cookie, it can send it to the adversary for use in a [session hijacking](glossary.md#h.glossary-session-hijack) attack. The httpOnly flag cannot prevent a successful cross-site scripting attack but it does prevent the cookie, and the account it protects, against compromise in the event of such an attack.
 
-The secure flag prevents the browser from sending a cookie in an http (unencrypted) request. In an implementation that is using https, this protects against an accidental exposure of the cookie through an unintentional http request. In some implementations the use of load balancers to even out internal server loading can preclude the use of the secure flag for authentication cookies. In those cases, HSTS (Hypertext Strict Transport Security) is important to prevent the browser from sending any http requests to this domain. (See the Encryption and Transport Layer Security section of this document for details of HSTS).
+The secure flag prevents the browser from sending a cookie in an http (unencrypted) request. In an implementation that is using https, this protects against an accidental exposure of the cookie through an unintentional http request. In some implementations the use of load balancers to even out internal server loading can preclude the use of the secure flag for authentication cookies. In those cases, HSTS (Hypertext Strict Transport Security) is important to prevent the browser from sending any http requests to this domain. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) for details of HSTS).
 
 <div align="center">
 <figure>
@@ -605,9 +607,9 @@ Both of these flags can be checked in the cookie editor by selecting the authent
 
 ### E5.3.3 Invalidation of authentication cookies at logout
 
-Authentication cookies should be invalidated when a user logs out of an application. If they remain valid after a logout, then an adversary in possession of an authentication cookie value can continue to access the account. Put another way, the user cannot limit the scope of a possible attack by logging out of the application.
+Authentication cookies should be invalidated when a user logs out of an application. If they remain valid after a logout, then an adversary in possession of an authentication cookie value can continue to access the account. Put another way, if authentication cookies aren't invalidated when a user logs out, the act of logging out doesn't fully protect a user from unauthorized access of their information.
 
-Using a cookie editor, It is straightforward to check whether authentication tokens are invalidated at logout. The sequence is described and illustrated below
+Using a cookie editor, it is straightforward to check whether authentication tokens are invalidated at logout.
 
 * Log in to the service and go to a page that indicates the user is logged in. Make a note of this URL, as you will need it in later steps.
 
@@ -653,7 +655,7 @@ Using a cookie editor, It is straightforward to check whether authentication tok
 
 ### E5.3.4 Logout links
 
-For users, best practice to protect personal information is to log out when done using an application. Doing so invalidates authentication tokens from the session, thus limiting the scope of any possible unauthorized use of those tokens. Applications must support this by providing a logout mechanism and making it easy to access from any page that a user can visit while logged in.
+For users, best practice to protect personal information is to log out when done using an application. Doing so should invalidate authentication tokens from the session, thus limiting the scope of any possible unauthorized use of those tokens. Applications must support this by providing a logout mechanism and making it easy to access from any page that a user can visit while logged in.
 
 The check for this is straightforward. Exercise the functional areas of the application, making sure that the logout mechanism is available at any page or view that requires authentication to access.
 
@@ -683,22 +685,22 @@ Most applications employ usernames and passwords to provide individual access to
 
 If an adversary gains access to an account's username and password, it is highly exploitable - the entire account and its contents can be accessed. But, the vulnerabilities described in this section all require first gaining access to a target's email account, network traffic, or the service's internal storage. This moderates the risk that these vulnerabilities can pose.
 
+Sending sensitive information in URLs as described in Section E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info) can also contribute to attacks targeting usernames and passwords.
+
 ## E6.3 Setup and tests
 
 ### E6.3.1 Encryption and Transport Layer Security
 
-Perhaps the most important protection for passwords is safeguarding them as they are sent from the browser when the user logs in. See the Encryption and Transport Layer Security section of this document for detailed information on how to test an application's Transport Layer Security Practices. Issues with encryption and transport layer security can pose serious risks to the integrity of an application, which include compromised user passwords.
+Perhaps the most important protection for passwords is safeguarding them as they are sent from the browser when the user logs in. See Section E2 [Encryption and Transport Layer Security](#h.testing-tls) for detailed information on how to test an application's Transport Layer Security Practices. Issues with encryption and transport layer security can pose serious risks to the integrity of an application, which include compromised user passwords. 
 
 ### E6.3.2 Recovering lost passwords
 
 There is not a uniform standard for secure handling of account recovery from lost passwords. However, there are some practices that are widely recognized as security risks.
 
-*   Putting a new password in an email to the user: Email has a long life and may be transported without encryption on some links between the sender and the receiver. It's better to send an (https) password reset link that expires after one use or a short time if not used.
-*   Sending or displaying a user's current password: Best practice for password storage is to perform a one-way hash and store the hash result. This requires the passwords to be "cracked" in the event of a breach of the password files. If an application is able to show or send a user's current password, it indicates that it has been stored in plain text or other recoverable format.
-
-*   Note: some services (generally for early elementary students) store student passwords in plain text so that they can be displayed to teachers for easy recovery in case a student loses a password. When evaluating this practice by a particular application, it's important to consider what information is protected by the student passwords, and what other protections are in place to secure the teacher account that can view the student passwords. It is never appropriate for teacher or parent passwords to be stored in plain text or recoverable format.
-
-*   Security questions: Security questions often rely on fixed information that can be guessed or never changes. As a result, security questions do not provide reliable, consistent protection for end users.
+* Putting a new password in an email to the user: Email has a long life and may be transported without encryption on some links between the sender and the receiver. It's better to send an (https) password reset link that expires after one use or a short time if not used.
+* Sending or displaying a user's current password: Best practice for password storage is to perform a one-way hash and store the hash result. This requires the passwords to be "cracked" in the event of a breach of the password files. If an application is able to show or send a user's current password, it indicates that it has been stored in plain text or other recoverable format.
+  * **Note**: some services (generally for early elementary students) store student passwords in plain text so that they can be displayed to teachers for easy recovery in case a student loses a password. When evaluating this practice by a particular application, it's important to consider what information is protected by the student passwords, and what other protections are in place to secure the teacher account that can view the student passwords. It is never appropriate for teacher or parent passwords to be stored in plain text or recoverable format.
+* Security questions: Security questions often rely on fixed information that can be guessed or never changes. As a result, security questions do not provide reliable, consistent protection for end users.
 
 * * *
 
@@ -724,7 +726,7 @@ The tests for this section focus on the user login and password recovery interfa
 
 ### E7.3.1 User login
 
-Attempt two types of logins. First, use both an invalid username; then use a valid username but incorrect password. In both cases, the application should not reveal if the username was valid. The following image is an example of a proper response. It states that either the username or password was incorrect without identifying which one wasn't recognized.
+Attempt two types of logins. First, use both an invalid username and password; then use a valid username but incorrect password. In both cases, the application should not reveal if the username was valid. The following image is an example of a proper response. It states that either the username or password was incorrect without identifying which one wasn't recognized.
 
 <div align="center">
 <figure>
@@ -784,7 +786,7 @@ Some examples of responses that reveal invalid usernames are shown below. Respon
 </figure>
 </div>
 
-These vulnerabilities do not pose an enormous risk to most end users, but they can be useful if an attacker is targeting a specific user account, such as a site administrator. These types of vulnerabilities are also useful when assessing the overall quality of an applications defensive security practices.
+These vulnerabilities do not pose an enormous risk to most end users, but they can be useful for an attacker targeting a specific user account, such as a site administrator. These types of vulnerabilities are also useful when assessing the overall quality of an application's defensive security practices.
 
 * * *
 
@@ -802,13 +804,13 @@ The exploitability and impact related to websockets traffic depends on what info
 
 ## E8.3 Setup and tests
 
-Refer to the proxy setup section C4.5 Observing websockets using ZAP proxy for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
+Refer to the proxy setup section C4.5 [Observing websockets traffic using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
 
-There is not a specific set of tests to exercise websockets. Rather, the functionality of the application should be explored during testing, and then websockets traffic (if any) observed for its contents and encryption. Steps for these observations are described below.
+There are not a specific set of tests to exercise websockets. Rather, the functionality of the application should be explored during testing, and then websockets traffic (if any) observed for its contents and encryption. Steps for these observations are described below.
 
 ### E8.3.1 Check contents of websockets traffic for sensitive information
 
-If an application uses websockets, check the contents of the messages for sensitive information. Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system. The image below shows an example of a websockets message containing student personal information for a different student than the logged in account holder (this is also an example of Information Leakage, covered in Section E9 of this document).
+If an application uses websockets, check the contents of the messages for sensitive information. Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system. The image below shows an example of a websockets message containing student personal information for a different student than the logged in account holder (this is also an example of [Information leakage](testing_scenarios.md#h.testing-leakage), covered in Section E9).
 
 <div align="center">
 <figure>
@@ -874,10 +876,10 @@ Information that is compromised via information leakage will - in some cases - b
 
 Because applications are implemented in different ways, there is no standardized method to test for information leakage. Testers should perform a full range of user interactions with the application and be watchful for extra information in system responses and transactions. Common ways that information can be leaked include (but are not limited to):
 
-*   Request for user information returns sensitive information beyond what is necessary to display a page. This can be checked by loading a page (like a user profile page) and examining http/https responses for extra information;
-*   Password recovery mechanism reveals user email account (if username is not email), or user's real name;
-*   Teacher account requests for class roster information return sensitive information beyond what is necessary about each of the students in a class;
-*   Websockets or other dynamic content update messages contain information about users beyond the scope of the logged-in account.
+* Request for user information returns sensitive information beyond what is necessary to display a page. This can be checked by loading a page (like a user profile page) and examining http/https responses for extra information;
+* Password recovery mechanism reveals user email account (if username is not email), or user's real name;
+* Teacher account requests for class roster information return sensitive information beyond what is necessary about each of the students in a class;
+* Websockets or other dynamic content update messages contain information about users beyond the scope of the logged-in account.
 
 All of the examples listed above are real problems that have been observed and fixed in educational technology applications.
 
@@ -889,7 +891,7 @@ Additionally, information leakage can be used to assess the overall defensive po
 
 #### E9.3.1.1 Email leakage
 
-In the example shown below, a student password reset request reveals the email address of the student's parent
+In the example shown below, a student password reset request reveals the email address of the student's parent.
 
 <div align="center">
 <figure>
