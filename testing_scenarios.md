@@ -2,9 +2,9 @@
 
 When the testing environment setup is complete, testing can begin on various elements of websites and applications. The testing scenarios described in the rest of this handbook focus on common issues with web and mobile applications.
 
-For people who want to learn more about basic information security but who won't get into running specific tests, the "Summary" and the "Exploitability and Impact" sections provide an overview of when and how a specific vulnerability could be exploited. The "Setup and Tests" section covers the specific steps to identify and potential security holes.
+For people who want to learn more about basic information security but who won't get into running specific tests, the "Summary" and the "Exploitability and Impact" sections provide an overview of when and how a specific vulnerability could be exploited. The "Setup and Tests" section covers the specific steps to identify any potential security holes.
 
-Not all issues are equally serious, and the potential risk of any potential issue needs to be weighed against the specific use of the application. In each test section, there is a discussion of the ease of exploiting the vulnerability, and the potential [impact](glossary.md#h.glossary-impact) of a successful [exploit](glossary.md#h.glossary-exploit). Not every test will be applicable in every situation. Additionally, in some testing scenarios, initial tests will be used to determine if more detailed tests are necessary.
+Not all issues are equally serious, and the possible risk of any issue needs to be weighed against the specific use of the application. In each test section, there is a discussion of the ease of exploiting the vulnerability, and the potential [impact](glossary.md#h.glossary-impact) of a successful [exploit](glossary.md#h.glossary-exploit). Not every test will be applicable in every situation. Additionally, in some testing scenarios, initial tests will be used to determine if more detailed tests are necessary.
 
 Every test scenario uses a common structure:
 
@@ -33,7 +33,7 @@ Most of the descriptions below assume that you are using Firebug or ZAP Proxy to
 
 ## E1.1 Summary
 
-It is common practice to include parameters in URLs sent from applications to the network servers hosting the applications. In many cases this is benign but if sensitive information is included in URLs it can pose a security risk for the application's users, because it may be logged in the browser or other servers that receive the URL.
+It is common practice to include parameters in URLs sent from applications to the network servers hosting the applications. In many cases this is benign but if sensitive information is included in URLs it can pose a security risk for the application's users.
 
 ## E1.2 Exploitability and impact
 
@@ -97,9 +97,9 @@ Sensitive information in URLs may be captured by a browser's history and in its 
 
 This security issue poses an immediate risk on a shared computer, where another user could access it. Additionally, URLs containing sensitive information may be [snooped](glossary.md#h.glossary-snooping) from unencrypted network traffic or recorded by servers that implement or interact with the application.
 
-Apps that use [HTTPS](glossary.md#h.glossary-https) eliminate the snooping vulnerability, but an application's own servers may log URLs received from users. If the connection uses https, intentional misuse of URL information collected for legitimate purposes is not a significant concern, but it does raise the possibility that this information could be lost in a data breach. There are other secure ways to pass sensitive information, so including it in a URL is an unneeded risk.
+Apps that use [https](glossary.md#h.glossary-https) eliminate the snooping vulnerability, but an application's own servers may log URLs received from or accessed by users. If the connection uses https, intentional misuse of URL information collected for legitimate purposes is not a significant concern, but when sensitive information is sent in URLs and logged by servers, it creates a risk that this data could be compromised via human error or a data breach.
 
-Many applications utilize 3rd-party analytics services to track user activity for the purposes of improving the application and understanding its usage patterns. Sensitive information in URLs may be sent to analytics or other 3rd-party services in the "Referer" field of messages. In the image below a URL containing a valid account access code is sent to an analytics service.
+Additionally, many applications utilize 3rd-party analytics services to track user activity for the purposes of improving the application and understanding its usage patterns. Sensitive information in URLs may be sent to analytics or other 3rd-party services in the "Referer" field of messages. In the image below a URL containing a valid account access code is sent to an analytics service.
 
 <div align="center">
 <figure>
@@ -125,6 +125,8 @@ There are many other secure ways to pass sensitive information, so including any
 
 There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information. The login sequence is an important part to examine closely but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).
 
+Often, when performing an initial evaluation for an app, the process of creating an account, updating a profile, creating content, and logging out can highlight areas that could require additional review. Performing these basic actions and reviewing the logs in ZAP or Firebug can indicate areas that are potentially troublesome.
+
 * * *
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
@@ -139,9 +141,9 @@ TLS protects the integrity of internet communications in two important ways: Add
 
 The [certificate](glossary.md#h.glossary-certificate) mechanism creates a registration system that adds trust that the internet service is not being impersonated by someone else. There are also Message Integrity checks that protect against someone tampering with the message between the sender and receiver. (This is known as a [Man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) attack). In most cases these checks are implemented within the browser or mobile app and are not easily observed by end users.
 
-TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared wifi hotspot such as a coffeehouse, airport or public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be snooped by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [Session Hijack](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [Cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication token and cookie handling](testing_scenarios.md#testing-auth-token)).
+TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared wifi hotspot such as a coffeehouse, airport or public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication token and cookie handling](testing_scenarios.md#testing-auth-token)).
 
-In a browser, a user can check whether https is in use by looking at a web page's URL. If the URL starts with *https://*, then the site is using a secure connection, if it begins with *http://* it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
+Using a browser, a user can check whether https is in use by looking at a web page's URL. If the URL starts with *https://*, then the site is using a secure connection, if it begins with *http://* it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
 
 In an educational setting [Transport Layer Security](glossary.md#h.glossary-transport-layer-security) is a necessity in many - but not all - situations. Services that collect a username, a password, or any other potentially sensitive information should always use TLS. However, an application that doesn't require a login - like a publicly available online calculator that collects no personal information - could be used safely without TLS. In general, though, given the ease with which TLS can be implemented, it is a good thing to look for.
 
@@ -149,13 +151,13 @@ In an educational setting [Transport Layer Security](glossary.md#h.glossary-tran
 
 [Snooping](glossary.md#h.glossary-snooping) of unencrypted network traffic can be accomplished with cursory technical knowledge and off-the-shelf computers, or computers with inexpensive specialized network adapters. Programs exist to automate the process of extracting authentication tokens and other unencrypted traffic.
 
-Man-in-the-middle attacks - such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps - require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of Transport Layer Security can be significant - an adversary who can view network traffic may directly snoop sensitive information from the network communications, or may extract passwords or authentication codes that allow access and control of the account itself.
+[Man-in-the-middle](glossary.md#h.glossary-man-in-the-middle) attacks - such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps - require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of Transport Layer Security can be significant - an adversary who can view network traffic may directly snoop sensitive information from the network communications, or may extract passwords or authentication codes that allow access and control of the account itself.
 
 ## E2.3 Setup and tests
 
 ### E2.3.1 Tools
 
-The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section D for information on how to configure the tools.
+The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
 
 ### E2.3.2 Tests
 
