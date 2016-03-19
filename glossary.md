@@ -8,7 +8,9 @@ Many of the definitions below are taken from the OWASP glossary ([https://www.ow
 
 Application Programming Interface. For web and mobile applications, this is a network-facing interface that the application can use to request user-specific information from the application's servers.
 
-<a name="h.glossary-auth-cookie"></a>**Authentication Cookie** see **Session Token**
+<a name="h.glossary-auth-cookie"></a>**Authentication Cookie** 
+
+See [Session Token](glossary.md#h.glossary-session-token)
 
 ## C
 
@@ -68,9 +70,11 @@ Secure HTTP. HTTP sent over a secure link to protect the authenticity, privacy, 
 
 <a name="h.glossary-impact"></a>[**Impact**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
-The magnitude of harm that can be expected to result from the consequences of unauthorized disclosure of information, unauthorized modification of information, unauthorized destruction of information, or loss of information or information system availability..
+The magnitude of harm that can be expected to result from the consequences of unauthorized disclosure of information, unauthorized modification of information, unauthorized destruction of information, or loss of information or information system availability.
 
-<a name="h.glossary-intercepting-proxy"></a>**Intercepting proxy** see **Proxy**
+<a name="h.glossary-intercepting-proxy"></a>**Intercepting proxy** 
+
+See [Proxy](glossary.md#h.glossary-proxy).
 
 <a name="h.glossary-internet-protocol"></a>[**Internet Protocol**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
@@ -86,15 +90,17 @@ A standard name used to define the network name of the host computer to programs
 
 <a name="h.glossary-man-in-the-middle"></a>[**Man-in-the-middle attack**](https://www.owasp.org/index.php/Category:Glossary%23M)
 
-An eavesdropping attack where a client's communication with a server is proxied by an attacker. Generally, the implication is that the client performs a cryptographic key exchange with an entity and fails to authenticate that entity, thus allowing an attacker to look like a valid server
+An eavesdropping attack where a client's communication with a server is proxied by an attacker. Generally, the implication is that the client performs a cryptographic key exchange with an entity and fails to authenticate that entity, thus allowing an attacker to look like a valid server.
 
-<a name="h.glossary-mitm"></a>**MITM** see **Man-in-the-middle attack**
+<a name="h.glossary-mitm"></a>**MITM** 
+
+See [Man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle).
 
 ## P
 
 <a name="h.glossary-phishing"></a>[**Phishing**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
-A digital form of social engineering that uses authentic-looking—but bogus—emails to request information from users or direct them to a fake Web site that requests information
+A digital form of social engineering that uses authentic-looking—but bogus—emails to request information from users or direct them to a fake Web site that requests information.
 
 <a name="h.glossary-plaintext"></a>[**Plaintext**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
@@ -102,7 +108,7 @@ Intelligible data that has meaning and can be understood without the application
 
 <a name="h.glossary-proxy"></a>**Proxy**
 
-A program that acts as an intermediary between a user's applications and the internet. In security testing, a proxy can be used to examine and modify the requests and responses between an application and its servers
+A program that acts as an intermediary between a user's applications and the internet. In security testing, a proxy can be used to examine and modify the requests and responses between an application and its servers.
 
 ## R
 
@@ -128,11 +134,15 @@ A value that represents a user's identity during their session. Typically the us
 
 An attack that takes over a session belonging to another user. This is typically accomplished through acquiring the user's Session Token cookie and installing it in an attacker's browser.
 
-<a name="h.glossary-sidejack"></a>**Sidejack** see **Session Hijack**
+<a name="h.glossary-sidejack"></a>**Sidejack** 
 
-<a name="h.glossary-snooping"></a>[**Snooping**](https://www.owasp.org/index.php/Category:Glossary%23S) See also:Eavesdropping
+See [Session Hijack](glossary.md#h.glossary-session-hijack).
+
+<a name="h.glossary-snooping"></a>[**Snooping**](https://www.owasp.org/index.php/Category:Glossary%23S) 
 
 Attacks where data is read off a network while in transit without modifying or destroying the data.
+
+See also:[Eavesdropping attack](glossary.md#h.glossary-eavesdropping)
 
 <a name="h.glossary-social-engineering"></a>[**Social engineering**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
@@ -142,7 +152,9 @@ A general term for attackers trying to trick people into revealing sensitive inf
 
 The practice of falsifying data to masquerade as a legitimate resource or entity.
 
-<a name="h.glossary-ssl"></a>**SSL** see **Secure Socket Layer**
+<a name="h.glossary-ssl"></a>**SSL** 
+
+See [Secure Socket Layer](glossary.md#h.glossary-secure-socket-layer).
 
 <a name="h.glossary-ssl-spoofing"></a>**SSL Certificate Spoofing**
 
@@ -150,19 +162,21 @@ An attack that provides an SSL Certificate from an untrusted source in an attemp
 
 ## T
 
+<a name="h.glossary-tls"></a>**TLS** 
+
+See [Transport Layer Security](glossary.md#h.glossary-transport-layer-security).
+
 <a name="h.glossary-transport-layer-security"></a>[**Transport Layer Security**](https://www.owasp.org/index.php/Category:Glossary%23T)
 
 The successor to SSL, a protocol for establishing secure channels over a reliable transport, using a standard X.509 Public Key Infrastructure for authenticating machines. The protocol is standardized by the IETF.
 
-See also: **Secure Socket Layer**
-
-<a name="h.glossary-tls"></a>**TLS** see **Transport Layer Security**
+See also: [Secure Socket Layer](glossary.md#h.glossary-secure-socket-layer).
 
 ## U
 
 <a name="h.glossary-url"></a>**URL**
 
-Uniform Resource Locator: another term for a site's "web address", specifying how to find it on the internet. For example: https://www.graphite.org
+Uniform Resource Locator: another term for a site's "web address", specifying how to find it on the internet. For example: https://www.graphite.org.
 
 ## V
 
