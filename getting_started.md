@@ -193,19 +193,21 @@ If you are primarily concerned with testing web applications, you will not need 
 
 If you are going to test mobile apps, then the instructions in C4.3 [Setup for testing mobile devices, and/or web browsers on a different computer than the proxy](#h.toolkit-zap-proxy-different-box) cover the details of preparing this testing environment.
 
-Using the ZAP Proxy requires additional setup steps than other elements of the Toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
+Using the ZAP Proxy requires more setup steps than other elements of the Toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
-### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup
+### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup of OWASP ZAP
 
-The remainder of this section will show the basics of setting up ZAP to work with browsers and mobile devices. For complete overview of the full feature set of ZAP, consult the documentation at the ZAP project page.
+This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarions, which is a small subset of all the features offered in ZAP. For complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
 
 ZAP is available for download at the ZAP project page:
 
 [https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
 
-The download packages and installation instructions are platform-specific for Windows, Apple, and Linux. Choose the Standard package and follow the installation instructions for your desired platform.
+The download packages and installation instructions are platform-specific for Windows, Apple, and Linux. Choose the **Standard** package and follow the installation instructions for your desired platform.
 
-After installation, modify the 'Display' settings to enable 'process images in HTTP requests/responses'. This configuration causes image loads that may be of interest during testing to be displayed in the history log, and is recommended for all of the test setups described in the remainder of this section. In ZAP this setting is managed in the **Tools** --> **Options** --> **Display** menu.
+#### C4.1.1 Modify Display Settings
+
+After installation, modify the **Display** settings to enable **process images in HTTP requests/responses**. This configuration causes image loads that may be of interest during testing to be displayed in the history log. In ZAP this setting is managed in the **Tools** --> **Options** --> **Display** menu.
 
 <div align="center">
 <figure>
@@ -215,7 +217,7 @@ After installation, modify the 'Display' settings to enable 'process images in H
 </figure>
 </div>
 
-Select the checkbox for "Process images in HTTP requests/responses." Then, click the "OK" button.
+Select the checkbox for **Process images in HTTP requests/responses**. Then, click the **OK** button.
 
 * * *
 
@@ -226,9 +228,9 @@ Select the checkbox for "Process images in HTTP requests/responses." Then, click
 
 The most straightforward setup is when the browser and proxy are on the same computer.
 
-#### C4.2.1 ZAP
+#### C4.2.1 ZAP local proxy address
 
-Within ZAP, the local proxy address should be set up as 'localhost', and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the **Tools** --> **Options** --> **Local proxy** menu.
+Within ZAP, the local proxy address should be set up as "localhost", and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the **Tools** --> **Options** --> **Local proxy** menu.
 
 <div align="center">
 <figure>
@@ -238,9 +240,11 @@ Within ZAP, the local proxy address should be set up as 'localhost', and port se
 </figure>
 </div>
 
-#### C4.2.2 Browser
+Once you have verified that the settings in ZAP are correct, you can proceed to set the correct configuration in the browser you will use for testing.
 
-The browser should be set up to use a proxy at 'localhost' and port 8080.
+#### C4.2.2 Browser proxy address
+
+When the browser and the proxy are on the same computer, the proxy address in the browser should be configured to use a proxy at "localhost" and port 8080.
 
 Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **Connection, as shown below.
 
@@ -252,11 +256,11 @@ Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **C
 </figure>
 </div>
 
-*   Select "Manual proxy configuration."
-*   Set "HTTP Proxy" to localhost, and "Port" to 8080.
-*   Select the option to "Use this proxy server for all protocols."
+*   Select **Manual proxy configuration**.
+*   Set **HTTP Proxy** to "localhost", and **Port** to "8080".
+*   Select the option to **Use this proxy server for all protocols**.
 
-Then, click the "OK" button.
+Then, click the **OK** button.
 
 To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate to Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert) section below.
 
@@ -272,11 +276,18 @@ The steps in this section are only relevant in the following scenarios:
 *   Testing traffic coming from a phone or a tablet
 *   Testing traffic coming from multiple computers (for example, if the tests will compare traffic from a Chromebook, an Apple computer, and/or a Windows computer)
 
-For monitoring mobile device traffic, or if a browser under testing will be on a different computer than the proxy, it is required to configure the proxy with the network address of the proxy computer instead of 'localhost' (as set up above).
+If you are not testing mobile devices, and/or if you are running ZAP on the same computer as the web browser you will use for testing, you do not need to follow the steps in this section.
+
+To configure ZAP to support testing with mobile devices, we need to complete two basic steps:
+
+1. Get the address of the computer running ZAP; and
+2. Configure all testing devices to use that address. 
+
+The steps in C4.3 outline this process.
 
 #### C4.3.1 Find the network address of the proxy computer
 
-The first step is to determine the network address of the proxy computer. The procedure is different for Windows, MacOS, and Linux.
+The first step is to determine the network address of the computer running ZAP Proxy. The procedure is different for Windows, MacOS, and Linux.
 
 When you find the network address of computer running the proxy, write it down and store it in an easily accessible place. This network address needs to be added to other devices that will be used for testing.
 
@@ -286,7 +297,7 @@ The network address can be found under:
 
 **Control Panel** --> **Network and Internet** --> **Network and Sharing Center**
 
-From this dialog, select the active network, which will bring up a status menu to select "Details."
+From this dialog, select the active network, which will bring up a status menu. Select **Details** from this menu.
 
 <div align="center">
 <figure>
@@ -296,7 +307,7 @@ From this dialog, select the active network, which will bring up a status menu t
 </figure>
 </div>
 
-The "Details" dialog will display the network address of the computer. In almost all cases, the IPv4 address (not the IPv6 address) is the one that should be used as the proxy's network address, as shown below.
+The **Details** dialog will display the network address of the computer. In almost all cases, the IPv4 address (not the IPv6 address) is the one that should be used as the proxy's network address, as shown below.
 
 <div align="center">
 <figure>
@@ -340,9 +351,11 @@ $ ip address
 </code>
 </pre>
 
+In the example above, **eth0** is the correct interface, and the address is *192.168.251.211*.
+
 #### C4.3.2 In ZAP Proxy: Change "Local proxy" address
 
-The proxy setup procedure is the same as covered in "C4.2 Proxy and Browser on Same Computer", except that the network address of the computer (which we discovered in the prior step) should be entered in the address field.
+The proxy setup procedure is the same as covered in C4.2 [Basic setup, browser and proxy on same computer](#h.toolkit-zap-proxy-same-box), except that the network address of the computer (which we discovered in the prior step) should replace the default addresss setting of **localhost**.
 
 <div align="center">
 <figure>
@@ -354,7 +367,7 @@ The proxy setup procedure is the same as covered in "C4.2 Proxy and Browser on S
 
 #### C4.3.3 In Firefox: Change the "Manual proxy configuration" address
 
-In Firefox, under Preferences->Advanced->Network->Connection, select Manual Proxy and enter the network address found in the steps above.
+In Firefox, under **Preferences** --> **Advanced** --> **Network** --> **Connection**, select **Manual Proxy** and enter the network address found in the steps above.
 
 Once the settings have been updated, click the "OK" button to save the changes.
 
@@ -368,7 +381,7 @@ Once the settings have been updated, click the "OK" button to save the changes.
 
 #### C4.3.4 iOS Device setup
 
-On an iOS (Apple) device go to Settings->Wifi, and make sure your device is on the same network as the proxy computer.
+On an iOS (Apple) device go to **Settings** --> **Wifi**, and make sure your device is on the same network as the proxy computer.
 
 Select the info screen for the network the device is connected to.
 
@@ -380,7 +393,7 @@ Select the info screen for the network the device is connected to.
 </figure>
 </div>
 
-The proxy settings are at the bottom of the network settings screen. Enable manual proxy settings and enter the network address found in the previous steps, and the port number as shown below (using the address found in step C4.3.1).
+The proxy settings are at the bottom of the network settings screen. Enable manual proxy settings and enter the network address found in the previous steps, and the port number as shown below.
 
 <div align="center">
 <figure>
@@ -416,8 +429,6 @@ Press and hold the name of the network to bring up the network settings menu, an
 
 Select **Show advanced options**, and then select **Manual proxy configurations**. Use the network address and port number from step C4.3.1, as illustrated below.
 
-Click the **Save** link to save the settings.
-
 <div align="center">
 <figure>
   <img alt="Setting the proxy address in Android" src="images/image11.png" width="349.00" height="395.00" title="Setting the proxy address in Android">
@@ -425,6 +436,8 @@ Click the **Save** link to save the settings.
   <figcaption>Image Caption: Setting the proxy address in Android.</figcaption>
 </figure>
 </div>
+
+Click the **Save** link to save the settings.
 
 * * *
 
@@ -437,7 +450,7 @@ Installing the proxy's SSL certificate to browsers and devices will allow the pr
 
 #### C4.4.1 Save proxy certificate to file
 
-The proxy's SSL certificate can be saved from the ZAP Preferences->Dynamic SSL Certificates menu. Open the dialog and click on **Save**.
+The proxy's SSL certificate can be saved from the **ZAP Preferences** --> **Dynamic SSL Certificates** menu. Open the dialog and click on **Save**.
 
 <div align="center">
 <figure>
@@ -453,7 +466,7 @@ The file will be saved as "owasp_zap_root_ca.cer" in the directory chosen by the
 
 In Firefox, certificates can be installed in the **Preferences** --> **Advanced** --> **Certificates** dialog.
 
-Within this dialog select "View Certificates"
+Within this dialog select **View Certificates**.
 
 <div align="center">
 <figure>
@@ -463,7 +476,7 @@ Within this dialog select "View Certificates"
 </figure>
 </div>
 
-In the "View Certificates" dialog, select "Import".
+In the **View Certificates** dialog, select **Import**.
 
 <div align="center">
 <figure>
@@ -483,7 +496,7 @@ Then, select the root certificate (owasp_zap_root_ca.cer) downloaded from the ZA
 </figure>
 </div>
 
-Then, select the option to "Trust this CA to identify websites", and click the "OK" button.
+Then, select the option to **Trust this CA to identify websites**, and click the **OK** button.
 
 <div align="center">
 <figure>
@@ -493,7 +506,7 @@ Then, select the option to "Trust this CA to identify websites", and click the "
 </figure>
 </div>
 
-Verify that the certificate has been uploaded by browsing to it. All Certificate Authorities are listed alphabetically. Once you have verified that the certificate has been uploaded, click the "OK" button.
+Verify that the certificate has been uploaded by browsing to it. All Certificate Authorities are listed alphabetically. Once you have verified that the certificate has been uploaded, click the **OK** button.
 
 <div align="center">
 <figure>
@@ -505,7 +518,7 @@ Verify that the certificate has been uploaded by browsing to it. All Certificate
 
 **Note**: When you are not testing, you should remove the certificate from the browser.
 
-To remove the certificate, in Firefox go to the **Preferences** --> **Advanced** --> **Certificates** --> **View Certificates** menu, select the *OWASP Zed Attack Proxy Root CA* certificate, and click on "Delete or Distrust".
+To remove the certificate, in Firefox go to the **Preferences** --> **Advanced** --> **Certificates** --> **View Certificates** menu, select the *OWASP Zed Attack Proxy Root CA* certificate, and click on **Delete or Distrust**.
 
 <div align="center">
 <figure>
@@ -521,11 +534,11 @@ It is important to take care when transferring the certificate file to the devic
 
 ##### C4.4.3.1 Transfer proxy certificate file to the device 
 
-A secure file sharing service is one good way to transfer the file. For iOS devices, the file must be accessed from the file sharing service using the browser, not the sharing service's iOS app. Accessing the file from within the browser interface to the sharing service will bring up the "Install Profile" dialog described in the next step of the setup. 
+A secure file sharing service is one good way to transfer the file. For iOS devices, the file must be accessed from the file sharing service using the browser, not the sharing service's iOS app. Accessing the file from within the browser interface to the sharing service will bring up the **Install Profile** dialog described in the next step of the setup. 
 
 ##### C4.4.3.2 Install proxy certificate file to the device
 
-Once the certificate file has been transferred to the device, open it on the device. Opening the file will bring up the "Install Profile" dialog. (iOS refers to certificates with the broader term "Profile"). Select "Install" from within this dialog.
+Once the certificate file has been transferred to the device, open it on the device. Opening the file will bring up the **Install Profile** dialog. (iOS refers to certificates with the broader term "Profile"). Select **Install** from within this dialog.
 
 <div align="center">
 <figure>
@@ -535,7 +548,7 @@ Once the certificate file has been transferred to the device, open it on the dev
 </figure>
 </div>
 
-After a device password check, the "Install Profile" dialog will bring up a second dialog with a warning about installing a certificate to the device. Since the objective is to install the proxy's certificate to allow monitoring of https traffic, it is OK to accept the warning and select "Install".
+After a device password check, the **Install Profile** dialog will bring up a second dialog with a warning about installing a certificate to the device. Since the objective is to install the proxy's certificate to allow monitoring of https traffic, it is OK to accept the warning and select **Install**.
 
 <div align="center">
 <figure>
@@ -555,7 +568,7 @@ After the certificate is installed, a screen will confirm that the certificate w
 </figure>
 </div>
 
-Note: to remove the certificate after testing is complete, go to the **Settings** --> **General** menu and scroll down. The certificate will be listed under *Profile*.
+Note: to remove the certificate after testing is complete, go to the **Settings** --> **General** menu and scroll down. The certificate will be listed under **Profile**.
 
 <div align="center">
 <figure>
@@ -579,7 +592,7 @@ Select **Profile** to enter a dialog that provides the option to delete the cert
 
 It is important to take care when transferring the certificate file to the device, as anyone who possesses it could potentially use it to decrypt https communications from devices that install the certificate. While this risk is small, and can be mitigated by uninstalling the certificate when not testing, handling the certificate safely is highly recommended.  
 
-For Android devices, many methods of moving the certificate file to the device's storage (browser, secure file sharing service, direct transfer over USB) can be used.
+For Android devices, many methods of moving the certificate file to the device's storage (browser, secure file sharing service, direct transfer over USB or a SD card) can be used.
 
 ##### C4.4.4.1 Transfer proxy certificate file to the device
 
@@ -591,7 +604,7 @@ This document covers installation for Android versions 4.3 and above. The instal
 
 ##### Android 4.3:
 
-In the Settings->Security dialog, select "Install from SD Card".
+In the **Settings** --> **Security** dialog, select **Install from SD Card**.
 
 <div align="center">
 <figure>
@@ -601,7 +614,7 @@ In the Settings->Security dialog, select "Install from SD Card".
 </figure>
 </div>
 
-A dialog titled "Name the Certificate" will pop up. Leave the name unchanged and select "OK".
+A dialog titled **Name the Certificate** will pop up. Leave the name unchanged and select **OK**.
 
 <div align="center">
 <figure>
@@ -645,7 +658,7 @@ In the **Settings** --> **Security** dialog, select **Install from Storage**.
 </figure>
 </div>
 
-A dialog showing the downloads directory will show up. However, the process usually requires the certificate to be accessed through "Internal Storage" instead, using the following sequence:
+A dialog showing the downloads directory will show up. However, the process usually requires the certificate to be accessed through **Internal Storage** instead, using the following sequence:
 
 Select the menu tab at top left corner.
 
@@ -657,7 +670,7 @@ Select the menu tab at top left corner.
 </figure>
 </div>
 
-Select "Internal Storage" from the following menu.
+Select **Internal Storage** from the menu.
 
 <div align="center">
 <figure>
@@ -667,7 +680,7 @@ Select "Internal Storage" from the following menu.
 </figure>
 </div>
 
-Select the "Download" directory from the Internal Storage choices.
+Select the **Download** directory from the **Internal Storage** choices.
 
 <div align="center">
 <figure>
@@ -709,7 +722,7 @@ When you are not using the device to test, remove the certificate. To remove the
 </figure>
 </div>
 
-Click "OK" to clear credentials. Only the user-installed credentials are cleared.
+Click **OK** to clear credentials. Only the user-installed credentials are cleared.
 
 <div align="center">
 <figure>
@@ -742,7 +755,7 @@ The websockets pane can be added by clicking the green "+" and selecting **WebSo
 
 The pane will also be added automatically to the toolbar by ZAP if a websockets connection is opened through the proxy. A view of the websockets traffic pane is shown below. Clicking on an individual message will show the full payload of the message in the upper pane of ZAP (where HTTP requests and responses are normally shown).
 
-From the websockets view, it is also possible to determine whether the websockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in section E8 Observation of websockets traffic.
+From the websockets view, it is also possible to determine whether the websockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in Section E8 [Observation of websockets traffic](testing_scenarios.md#h.testing-websockets).
 
 <div align="center">
 <figure>
