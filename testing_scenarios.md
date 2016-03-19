@@ -1102,12 +1102,12 @@ The following table summarizes which of the tests from the preceding sections ar
 <tr><td colspan="1" rowspan="1">Encryption and TLS</td><td colspan="1" rowspan="1">Checks for TLS during transport of sensitive information</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1"></td></tr>
 <tr><td colspan="1" rowspan="1">SSL configurations</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr>
 <tr><td colspan="1" rowspan="1">HSTS headers</td><td colspan="1" rowspan="1">No</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr>
-<tr><td colspan="1" rowspan="1">Sensitive information in URLs</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">Yes</td></tr>
-<tr><td colspan="1" rowspan="1">Caching and history</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">No</td></tr>
+<tr><td colspan="1" rowspan="1">Sensitive information in URLs</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1"></td></tr>
+<tr><td colspan="1" rowspan="1">Caching and history</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">No</td><td colspan="1" rowspan="1"></td></tr>
 <tr><td colspan="1" rowspan="1">Authentication token and cookie handling</td><td colspan="1" rowspan="1">TLS for sensitive cookies</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">If app uses cookies</td></tr>
-<tr><td colspan="1" rowspan="1">Invalidation of cookies at logout</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">If app uses cookies</td></tr>
-<tr><td colspan="1" rowspan="1">Can logout from within the app</td><td colspan="1" rowspan="1">Yes</td></tr>
-<tr><td colspan="1" rowspan="1">Cookie protection flags</td><td colspan="1" rowspan="1">No</td><td colspan="1" rowspan="1">These flags are relevant for browsers only</td></tr>
+<tr><td colspan="1" rowspan="1">Invalidation of cookies at logout</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">If app uses cookies</td><td colspan="1" rowspan="1"></td></tr>
+<tr><td colspan="1" rowspan="1">Can logout from within the app</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr>
+<tr><td colspan="1" rowspan="1">Cookie protection flags</td><td colspan="1" rowspan="1">No</td><td colspan="1" rowspan="1">These flags are relevant for browsers only</td><td colspan="1" rowspan="1"></td></tr>
 <tr><td colspan="1" rowspan="1">Password handling</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">If app uses passwords</td></tr>
 <tr><td colspan="1" rowspan="1">Username enumeration</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">If app uses usernames</td></tr>
 <tr><td colspan="1" rowspan="1">Websockets</td><td colspan="1" rowspan="1">(All tests)</td><td colspan="1" rowspan="1">Yes</td><td colspan="1" rowspan="1">Possible but rarely used by mobile apps</td></tr>
