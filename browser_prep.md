@@ -1,10 +1,8 @@
 # D. Preparing Firefox for a Test Session
 
-At the start of a test session, the Firefox browser should be cleared of cookies, history and other state left over from previous sessions. There are two required steps, and two optional steps. All steps are covered below.
+To prepare to test using Firefox, we need to clear any stored usage data that could potentially affect the results we see when we test. These preparatory steps include clearing the browser cache, all cookies, and all web history. 
 
 ## <a name="h.browser-homepage"></a>D1 Set Firefox Home Page
-
-To prepare to test using Firefox, we need to clear any stored usage data that could potentially affect the results we see when we test.
 
 To start, we will make sure that we are not logged in to Sync, and that our home page is set to a blank page. To access the home page setting, click the "Menu" icon in the top right corner of the Firefox window.
 
@@ -18,7 +16,7 @@ If you are logged out of Sync, you will see that reflected in the message in the
 </figure>
 </div></p>
 
-Click the "Preferences" icon to set your home page. When you are at the home page, set the home page to open to a blank page.
+Click the **Preferences** icon to set your home page. When you are at the home page, set the home page to open to a blank page.
 
 <div align="center">
 <figure>
@@ -32,7 +30,7 @@ By setting your browser to open to a blank page, you ensure that no extraneous c
 
 ## <a name="h.browser-history"></a>D2 Clear history
 
-In the Firefox menu, select **History** -> **Clear recent history**. A pop-up menu is presented. Select "Everything" for the time range, tick all of the boxes and click "Clear now".
+In the Firefox menu, select **History** -> **Clear recent history**. A pop-up menu is presented. Select **Everything** for the time range, tick all of the boxes and click **Clear now**.
 
 <div align="center">
 <figure>
@@ -44,7 +42,7 @@ In the Firefox menu, select **History** -> **Clear recent history**. A pop-up me
 
 ## <a name="h.browser-cookies"></a>D3 Verify that cookies are allowed, and Do Not Track is off
 
-During testing, we want to make sure that we accept all cookies, and that we are not setting "Do Not Track." 
+During testing, we want to make sure that we accept all cookies, and that we are not setting **Do Not Track**. 
 
 **Note**: during regular browsing, we recommend being more selective about the cookies we accept, and setting Do Not Track. While many vendors do not respect Do Not Track, it offers a some degree of protection.
 
