@@ -2,11 +2,15 @@
 
 Many of the definitions below are taken from the OWASP glossary ([https://www.owasp.org/index.php/Category:Glossary](https://www.owasp.org/index.php/Category:Glossary)), and the NIST Glossary of Key Information Security Terms, NISTIR 7298, revision 2 ([http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)). Definitions taken from these documents contain links to the source document in the title of the glossary term.
 
+## A
+
 <a name="h.glossary-api"></a>**API**
 
 Application Programming Interface. For web and mobile applications, this is a network-facing interface that the application can use to request user-specific information from the application's servers.
 
 <a name="h.glossary-auth-cookie"></a>**Authentication Cookie** see **Session Token**
+
+## C
 
 <a name="h.glossary-certificate"></a>[**Certificate**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
@@ -28,6 +32,8 @@ Data exchanged between an HTTP server and a browser (a client of the server) to 
 
 A class of problems resulting from insufficient input validation where one user can add content to a web site that can be malicious when viewed by other users to the web site. For example, one might post to a message board that accepts arbitrary HTML and include a malicious code item.
 
+## E
+
 <a name="h.glossary-eavesdropping"></a>[**Eavesdropping attack**](https://www.owasp.org/index.php/Category:Glossary%23E)
 
 Any attack on a data connection where one simply records or views data instead of tampering with the connection.
@@ -44,6 +50,8 @@ Successfully leveraging a security vulnerability to gain unauthorized access to 
 
 The ease with which a given vulnerability can be successfully exploited.
 
+## H
+
 <a name="h.glossary-hash-function"></a>[**Hash function**](https://www.owasp.org/index.php/Category:Glossary%23H)
 
 A function that maps a string of arbitrary length to a fixed size value in a deterministic manner. Such a function may or may not have cryptographic applications.
@@ -56,6 +64,8 @@ Hypertext Transport Protocol. The network messaging protocol commonly used for t
 
 Secure HTTP. HTTP sent over a secure link to protect the authenticity, privacy, and security of the information being transmitted.
 
+## I
+
 <a name="h.glossary-impact"></a>[**Impact**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
 The magnitude of harm that can be expected to result from the consequences of unauthorized disclosure of information, unauthorized modification of information, unauthorized destruction of information, or loss of information or information system availability..
@@ -66,15 +76,21 @@ The magnitude of harm that can be expected to result from the consequences of un
 
 Standard protocol for transmission of data from source to destinations in packet-switched communications networks and interconnected systems of such networks.
 
+## L
+
 <a name="h.glossary-localhost"></a>**localhost**
 
 A standard name used to define the network name of the host computer to programs running on that computer. In other words "this computer". For example setting the IP address in a proxy program to localhost tells it to monitor that computer's network interface. This can also be represented with the default address 127.0.0.1.
+
+## M
 
 <a name="h.glossary-man-in-the-middle"></a>[**Man-in-the-middle attack**](https://www.owasp.org/index.php/Category:Glossary%23M)
 
 An eavesdropping attack where a client's communication with a server is proxied by an attacker. Generally, the implication is that the client performs a cryptographic key exchange with an entity and fails to authenticate that entity, thus allowing an attacker to look like a valid server
 
 <a name="h.glossary-mitm"></a>**MITM** see **Man-in-the-middle attack**
+
+## P
 
 <a name="h.glossary-phishing"></a>[**Phishing**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
@@ -88,9 +104,13 @@ Intelligible data that has meaning and can be understood without the application
 
 A program that acts as an intermediary between a user's applications and the internet. In security testing, a proxy can be used to examine and modify the requests and responses between an application and its servers
 
+## R
+
 <a name="h.glossary-remote-attack"></a>**Remote attack**
 
 A remote attack can be exploited without access to a user's network traffic. For example, an API that provides user information without checking that the requestor has access rights for the information makes a remote attack possible.
+
+## S
 
 <a name="h.glossary-salt"></a>[**Salt**](https://www.owasp.org/index.php/Category:Glossary%23S)
 
@@ -128,6 +148,8 @@ The practice of falsifying data to masquerade as a legitimate resource or entity
 
 An attack that provides an SSL Certificate from an untrusted source in an attempt to gain access to encrypted SSL communications. Problems in a mobile application's certificate verification can allow this attack to succeed.
 
+## T
+
 <a name="h.glossary-transport-layer-security"></a>[**Transport Layer Security**](https://www.owasp.org/index.php/Category:Glossary%23T)
 
 The successor to SSL, a protocol for establishing secure channels over a reliable transport, using a standard X.509 Public Key Infrastructure for authenticating machines. The protocol is standardized by the IETF.
@@ -136,9 +158,13 @@ See also: **Secure Socket Layer**
 
 <a name="h.glossary-tls"></a>**TLS** see **Transport Layer Security**
 
+## U
+
 <a name="h.glossary-url"></a>**URL**
 
 Uniform Resource Locator: another term for a site's "web address", specifying how to find it on the internet. For example: https://www.graphite.org
+
+## V
 
 <a name="h.glossary-vulnerability"></a>**Vulnerability**
 
