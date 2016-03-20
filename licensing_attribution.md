@@ -17,7 +17,9 @@ If you use this work in accordance with the permissions granted under the Creati
 
 This sample attribution includes these four required elements:
 
+<pre>
     The <a href="https://www.graphite.org/privacy/security-primer" alt="Information Security Primer for Evaluating Educational Software" title="Information Security Primer for Evaluating Educational Software">Information Security Primer for Evaluating Educational Software</a> was originally published by <a href="https://www.commonsensemedia.org" alt="Common Sense Media" title="Common Sense Media">Common Sense Media</a>, and is used under a <a href="https://github.com/billfitzgerald/infosec-primer/blob/master/licensing_attribution.md" alt="Attribution and licensing information" title="Attribution and licensing information">Creative Commons Attribution Non-Commercial Share-Alike</a> license.
+</pre>
 
 
 This attribution displays as:
