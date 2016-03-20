@@ -20,3 +20,5 @@ A good portion of this text is technical documentation that describes how to set
 Finally, this text is intended as a primer, not as a comprehensive guide. In this primer, we made the decision to leave out subjects like [cross-site scripting](glossary.md#h.glossary-xss) - not because it isn't a real risk, but because testing for cross site scripting vulnerabilities can do serious damage to the applications being tested. 
 
 Over time, the content in this guide will evolve and expand to meet the shifting needs of technology. We anticipate updates throughout the year, with published "official" releases happening one to two times annually. As with all of the work in the [Privacy Evaluation Initiative](https://www.graphite.org/privacy), we welcome input and involvement - so if you want to get involved, please be in touch.
+
+* Proceed to the next chapter: B. [Responsible Disclosure](responsible.md)

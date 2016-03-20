@@ -59,3 +59,5 @@ However, to prepare our browser for testing, enter *about:preferences#privacy* a
 With our browser set to open to a blank page, old cookies and browsing data removed, and permissions adjusted to allow cookies, we are now set to test.
 
 Additionally, if you are running any adblockers or plugins that require https (examples include HTTPS Everywhere and Privacy Badger), you should disable them on your browser prior to testing. While using extensions like this are recommended for safe browsing, they could limit the range of what we encounter while testing.
+
+* Proceed to the next chapter: E. [Testing Scenarios](testing_scenarios.md)

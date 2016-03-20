@@ -1137,3 +1137,4 @@ To check for a potential SSL Certificate Spoofing vulnerability:
 * * *
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* Proceed to the next chapter: F. [Glossary](glossary.md)
