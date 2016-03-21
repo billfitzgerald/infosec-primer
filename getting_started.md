@@ -1,4 +1,4 @@
-# C. Getting Started
+# C. Setting Up the Testing Toolkit
 
 To do basic information security reviews, we first need to get our testing environment set up. This includes preparing our web browser, any mobile devices we will use to test, and installing some additional software on our local computer.
 
