@@ -534,7 +534,7 @@ It is important to take care when transferring the certificate file to the devic
 
 ##### C4.4.3.1 Transfer Proxy Certificate File to the Device 
 
-A secure file-sharing service is one good way to transfer the file. For iOS devices, the file must be accessed from the file-sharing service using the browser, not the sharing service's iOS app. Accessing the file from within the browser interface to the sharing service will bring up the **Install Profile** dialog described in the next step of the setup. 
+A secure file-sharing service is one good way to transfer the file. For iOS devices, the file must be accessed from the file-sharing service using the browser, not the sharing service's iOS app. Accessing the file from within the browser interface for the sharing service will bring up the **Install Profile** dialog described in the next step of the setup. 
 
 ##### C4.4.3.2 Install Proxy Certificate File on the Device
 
