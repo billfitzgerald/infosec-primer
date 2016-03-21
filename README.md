@@ -20,7 +20,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
     * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box)
     * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert)
     * C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets)
-* D. [Preparing Your Browser](browser_prep.md)
+* D. [Preparing Firefox for Testing](browser_prep.md)
   * D1 [Set Firefox Home Page](browser_prep.md#h.browser-homepage)
   * D2 [Clear History](browser_prep.md#h.browser-history)
   * D3 [Verify That Cookies Are Allowed and Do Not Track Is Off](browser_prep.md#h.browser-cookies)
