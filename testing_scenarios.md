@@ -558,7 +558,7 @@ Another way that authentication tokens can be accessed without authorization is 
 
 ## E5.3 Setup and tests
 
-### E5.3.1 How to identify authentication cookies
+### E5.3.1 How to Identify Authentication Cookies
 
 Authentication cookies, commonly also called session cookies, are often easy to spot because they contain "sess" or "session" or "sess_id" in their names. Many popular platforms use standard names for session cookies, and a list of these is included below.
 
@@ -573,7 +573,7 @@ Authentication cookies, commonly also called session cookies, are often easy to 
 
 However, there are no hard and fast rules governing the names of cookies. Many authentication cookie names are unique to the service, and may not be named in a way to make it clear it's a session/authentication cookie.
 
-To read and search for cookies, use the Advanced Cookie Manager described in Section C3 [Installing and Using Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
+To read and search for cookies, use the Advanced Cookie Manager described in Section C3 [Installing and Using an Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
 
 To confirm that a cookie is an authentication cookie, or to search for it in case the name is not apparent, log in to the web site.
 
