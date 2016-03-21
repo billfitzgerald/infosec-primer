@@ -16,7 +16,7 @@ Most of the descriptions below assume that you are using Firebug or ZAP Proxy to
 
 ## <a name="h.testing-nav">Navigation: Testing Scenarios and Procedures
 
-* E. [Testing Scenarios](testing_scenarios.md)
+* E. [Testing Scenarios and Procedures](testing_scenarios.md)
   * E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info)
   * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
   * E3 [TLS for Email Sent by an Application to Users](testing_scenarios.md#h.testing-email-tls)
