@@ -29,11 +29,11 @@ All of the tests documented in the primer are run using:
 
 Firefox is a free, open-source browser and can be downloaded here: https://www.mozilla.org/en-US/firefox/new/.
 
-Firebug is a browser extension that enables observation of the network requests and responses for Firefox browsing sessions. It can monitor both [http](glossary.md#h.glossary-http) and [https](glossary.md#h.glossary-https) traffic. Because of its straightforward setup and integration with the browser it is a good choice for tests that do not require the extra features of an external proxy such as <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project" alt="OWASP Zed Attack Proxy, or ZAP" title="OWASP Zed Attack Proxy, or ZAP">OWASP ZAP</a>.
+Firebug is a browser extension that enables observation of the network requests and responses for Firefox browsing sessions. It can monitor both [http](glossary.md#h.glossary-http) and [https](glossary.md#h.glossary-https) traffic. Because of its straightforward setup and integration with the browser, it is a good choice for tests that do not require the extra features of an external proxy such as <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project" alt="OWASP Zed Attack Proxy, or ZAP" title="OWASP Zed Attack Proxy, or ZAP">OWASP ZAP</a>.
 
-More information about Firebug can be found at http://getfirebug.com/
+More information about Firebug can be found at http://getfirebug.com/.
 
-Advanced Cookie Manager plugin is a tool that lets us manipulate, inspect, and delete individual [cookies](glossary.md#h.glossary-cookies). More information about the Advanced Cookie Manager is available at https://addons.mozilla.org/en-US/firefox/addon/cookie-manager/
+The Advanced Cookie Manager plug-in is a tool that lets us manipulate, inspect, and delete individual [cookies](glossary.md#h.glossary-cookies). More information about the Advanced Cookie Manager is available at https://addons.mozilla.org/en-US/firefox/addon/cookie-manager/.
 
 OWASP Zed Attack Prozy, or ZAP, is a freely available, cross-platform and open-source proxy program developed and maintained by [OWASP](https://www.owasp.org) (Open Web App Security Project). It provides more advanced features than Firebug and can be used to monitor the network traffic of mobile devices, as well as programs or browsers running on any host on the tester's local network. ZAP downloads and documentation are available at [the OWASP ZAP project page](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
 
@@ -45,7 +45,7 @@ This rest of this section describes setting up the proxy and related testing too
 
 ## <a name="h.toolkit-firebug"></a>C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
 
-To install Firebug, go to **Tools** --> **Add ons**, search for "Firebug" and select it for installation to Firefox. A screenshot of the plugin's description page (to ensure you are getting the correct plugin) is shown below.
+To install Firebug, go to **Tools** --> **Add ons**, search for "Firebug," and select it for installation to Firefox. A screenshot of the plug-in's description page (to ensure you are getting the correct plug-in) is shown below.
 
 <div align="center">
 <figure>
@@ -55,7 +55,7 @@ To install Firebug, go to **Tools** --> **Add ons**, search for "Firebug" and se
 </figure>
 </div>
 
-As mentioned above, Firebug is a good choice for tests that don't require the advanced functionality of an external proxy such as OWASP ZAP. After Firebug has been installed, it can be viewed by clicking its icon in the Firefox toolbar. In this setup tutorial, we explain how to use some of the tools that come with Firebug, along with screenshots that show them in action.
+As mentioned above, Firebug is a good choice for tests that don't require the advanced functionality of an external proxy such as OWASP ZAP. After Firebug has been installed, it can be viewed by clicking its icon in the Firefox toolbar. In this setup tutorial, we explain how to use some of the tools that come with Firebug alongside screenshots that show them in action.
 
 The image below shows the Firebug icon in the toolbar, with configuration options that can set user preferences.
 
@@ -73,7 +73,7 @@ The Firebug display is shown below. The **Net** tab shows the network requests a
 <figure>
   <img alt="Set the 'Persist' and 'All' options" src="images/image46.png" width="624.00" height="185.33" title="Set the 'Persist' and 'All' options">
     <br>
-  <figcaption>Image Caption: Set the 'Persist' and 'All' options.</figcaption>
+  <figcaption>Image Caption: Set the "Persist" and "All" options.</figcaption>
 </figure>
 </div>
 
@@ -105,7 +105,7 @@ Hovering the mouse over the transaction's entry will show the full URL, enabling
 <figure>
   <img alt="Getting URL information in Firebug" src="images/image27.png" width="624.00" height="52.00" title="Getting URL information in Firebug">
     <br>
-  <figcaption>Image Caption: Getting URL information in Firebug.</figcaption>
+  <figcaption>Image Caption: Getting URL information in Firebug</figcaption>
 </figure>
 </div>
 
@@ -115,11 +115,11 @@ The transaction's entry can also be expanded by clicking the triangle next to th
 <figure>
   <img alt="Using Firebug to get detailed information about a transaction" src="images/image25.png" width="624.00" height="180.00" title="Using Firebug to get detailed information about a transaction">
     <br>
-  <figcaption>Image Caption: Using Firebug to get detailed information about a transaction.</figcaption>
+  <figcaption>Image Caption: Using Firebug to get detailed information about a transaction</figcaption>
 </figure>
 </div>
 
-The descriptions of individual tests in the [testing scenarios](testing_scenarios.md) give more details of how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP, [described below](#h.toolkit-zap-proxy)).
+The descriptions of individual tests in the [testing scenarios](testing_scenarios.md) give more details on how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of Web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP [described below](#h.toolkit-zap-proxy)).
 
 * * *
 
@@ -127,29 +127,29 @@ The descriptions of individual tests in the [testing scenarios](testing_scenario
 
 ## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using an Advanced Cookie Manager
 
-[Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [HTTP](glossary.md#h.glossary-http) responses as the user interacts with a web service. The browser saves the cookie values and includes them with subsequent HTTP requests to the same application or domain. The use of cookies allows web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookie](glossary.md#h.glossary-auth-cookie) and Cookie Handling, covered in Section E5 [Authentication token and cookie handling](testing_scenarios.md#testing-auth-token).
+[Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [http](glossary.md#h.glossary-http) responses as the user interacts with a Web service. The browser saves the cookie values and includes them with subsequent http requests to the same application or domain. The use of cookies allows Web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookies](glossary.md#h.glossary-auth-cookie) and cookie handling, covered in Section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#testing-auth-token).
 
-Many cookie managers are available as browser plugins. The examples in this document use the **Advanced Cookie Manager** plugin for Firefox. To find it, go to **Tools** --> **Add ons**, search for "cookie managers" and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plugin's description page is shown below.
+Many cookie managers are available as browser plug-ins. The examples in this document use the **Advanced Cookie Manager** plug-in for Firefox. To find it, go to **Tools** --> **Add-ons**, search for "cookie managers," and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plug-in's description page is shown below.
 
 <div align="center">
 <figure>
-  <img alt="Advanced Cookie Manager Plugin" src="images/image26.png" width="624.00" height="164.00" title="Advanced Cookie Manager Plugin">
+  <img alt="Advanced Cookie Manager Plugin" src="images/image26.png" width="624.00" height="164.00" title="Advanced Cookie Manager Plug-in">
     <br>
-  <figcaption>Image Caption: Advanced Cookie Manager Add on</figcaption>
+  <figcaption>Image Caption: Advanced Cookie Manager Add-on</figcaption>
 </figure>
 </div>
 
-Once installed, the cookie manager can be opened by clicking its icon in the browser add ons toolbar or from the add ons menu. An annotated view of the Advanced Cookie Manager panel is shown below
+Once installed, the cookie manager can be opened by clicking its icon in the browser-add-ons toolbar or from the add-ons menu. An annotated view of the Advanced Cookie Manager panel is shown below.
 
 <div align="center">
 <figure>
   <img alt="Viewing details of cookies in the Advanced Cookie Manager" src="images/image112.png" width="624.00" height="362.67" title="Viewing details of cookies in the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Viewing details of cookies in the Advanced Cookie Manager.</figcaption>
+  <figcaption>Image Caption: Viewing details of cookies in the Advanced Cookie Manager</figcaption>
 </figure>
 </div>
 
-During several of the tests outlined in the [testing scenarios](testing_scenarios.md), the Cookie Manager will be used to view cookies and their flags, delete cookies, save cookies to file and restore cookies from file. Inspecting cookies is also helpful to learn more about what information is sent to different services on the internet.
+During several of the tests outlined in the [testing scenarios](testing_scenarios.md), the cookie manager will be used to view cookies and their flags, delete cookies, save cookies to file, and restore cookies from file. Inspecting cookies is also helpful to learn more about which information is sent to different services on the Internet.
 
 * * *
 
@@ -165,19 +165,19 @@ Setting up a proxy on your computer allows the user to review all network traffi
 <figure>
   <img alt="Sample log output from ZAP Proxy" src="images/image50.png" width="624.00" height="113.33" title="Sample log output from ZAP Proxy">
     <br>
-  <figcaption>Image Caption: Sample log output from ZAP Proxy.</figcaption>
+  <figcaption>Image Caption: Sample log output from ZAP proxy</figcaption>
 </figure>
 </div>
 
-Once a browser or mobile device has been configured to send traffic to a proxy, the proxy can observe and capture [http](glossary.md#h.glossary-http) (non-encrypted) traffic without additional setup. However, capturing [https](glossary.md#h.glossary-https) traffic requires additional steps. A detailed technical description of https ([SSL](glossary.md#h.glossary-secure-socket-layer)) and [TLS](glossary.md#h.glossary-transport-layer-security) are beyond the scope of this document. However a general description of how a proxy can observe https traffic, along with basic setup steps, is included below.
+Once a browser or mobile device has been configured to send traffic to a proxy, the proxy can observe and capture [http](glossary.md#h.glossary-http) (non-encrypted) traffic without additional setup. However, capturing [https](glossary.md#h.glossary-https) traffic requires additional steps. A detailed technical description of https ([SSL](glossary.md#h.glossary-secure-socket-layer)) and [TLS](glossary.md#h.glossary-transport-layer-security) are beyond the scope of this document. However, a general description of how a proxy can observe https traffic, along with basic setup steps, is included below.
 
-The normal operation of https creates an [encrypted](glossary.md#h.glossary-encryption) connection between the web browser/app and the resources with which it communicates. Because the traffic is encrypted, the proxy is not able to decipher the encrypted contents of the messages sent or received. To see the encrypted traffic, we must configure the browser or device to "trust" the proxy and allow it to decode the https communication by installing an SSL certificate - generated by the proxy - in the browser or device. This SSL certificate allows the proxy to decrypt the messages as they are received by the user, and then re-encrypt the messages before sending them to the ultimate recipient. The following [diagram from the OWASP ZAP](https://github.com/zaproxy/zap-core-help/blob/master/src/help/zaphelp/contents/images/maninthemiddle.png) [documentation](https://github.com/zaproxy/zap-core-help/blob/master/src/help/zaphelp/contents/images/maninthemiddle.png) (image released under a [CC-SA](http://creativecommons.org/licenses/by-sa/3.0/) license) illustrates the connections between the user, proxy and web resources.
+The normal operation of https creates an [encrypted](glossary.md#h.glossary-encryption) connection between the Web browser/app and the resources with which it communicates. Because the traffic is encrypted, the proxy is not able to decipher the encrypted contents of the messages sent or received. To see the encrypted traffic, we must configure the browser or device to "trust" the proxy and allow it to decode the https communication by installing an SSL certificate -- generated by the proxy -- in the browser or device. This SSL certificate allows the proxy to decrypt the messages as they are received by the user, and then re-encrypt the messages before sending them to the ultimate recipient. The following [diagram from the OWASP ZAP](https://github.com/zaproxy/zap-core-help/blob/master/src/help/zaphelp/contents/images/maninthemiddle.png) [documentation](https://github.com/zaproxy/zap-core-help/blob/master/src/help/zaphelp/contents/images/maninthemiddle.png) (image released under a [CC-SA](http://creativecommons.org/licenses/by-sa/3.0/) license) illustrates the connections among the user, the proxy, and Web resources.
 
 <div align="center">
 <figure>
   <img alt="An overview of OWASP ZAP Proxy" src="images/image106.png" width="578.00" height="184.00" title="An overview of OWASP ZAP Proxy">
     <br>
-  <figcaption>Image Caption: An overview of OWASP ZAP Proxy.</figcaption>
+  <figcaption>Image Caption: An overview of OWASP ZAP Proxy</figcaption>
 </figure>
 </div>
 
@@ -189,15 +189,15 @@ The normal operation of https creates an [encrypted](glossary.md#h.glossary-encr
 * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
 * C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
-If you are primarily concerned with testing web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box).
+If you are primarily concerned with testing Web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box).
 
 If you are going to test mobile apps, then the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box) cover the details of preparing this testing environment.
 
-Using the ZAP Proxy requires more setup steps than other elements of the Toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
+Using the ZAP Proxy requires more setup steps than other elements of the toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
 ### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup of OWASP ZAP
 
-This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarions, which is a small subset of all the features offered in ZAP. For complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
+This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarions, which is a small subset of all the features offered in ZAP. For a complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
 
 ZAP is available for download at the ZAP project page:
 
@@ -230,13 +230,13 @@ The most straightforward setup is when the browser and proxy are on the same com
 
 #### C4.2.1 ZAP Local Proxy Address
 
-Within ZAP, the local proxy address should be set up as "localhost", and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the **Tools** --> **Options** --> **Local proxy** menu.
+Within ZAP, the local proxy address should be set up as "localhost" and the port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the **Tools** --> **Options** --> **Local proxy** menu.
 
 <div align="center">
 <figure>
   <img alt="Set Local Proxy address" src="images/image10.png" width="569.50" height="419.82" title="Set Local Proxy address">
     <br>
-  <figcaption>Image Caption: Set Local Proxy address.</figcaption>
+  <figcaption>Image Caption: Set local proxy address.</figcaption>
 </figure>
 </div>
 
@@ -257,7 +257,7 @@ Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **C
 </div>
 
 *   Select **Manual proxy configuration**.
-*   Set **HTTP Proxy** to "localhost", and **Port** to "8080".
+*   Set **HTTP Proxy** to "localhost" and **Port** to "8080".
 *   Select the option to **Use this proxy server for all protocols**.
 
 Then, click the **OK** button.
@@ -276,20 +276,20 @@ The steps in this section are only relevant in the following scenarios:
 *   Testing traffic coming from a phone or a tablet
 *   Testing traffic coming from multiple computers (for example, if the tests will compare traffic from a Chromebook, an Apple computer, and/or a Windows computer)
 
-If you are not testing mobile devices, and/or if you are running ZAP on the same computer as the web browser you will use for testing, you do not need to follow the steps in this section.
+If you are not testing mobile devices, and/or if you are running ZAP on the same computer as the Web browser you will use for testing, you do not need to follow the steps in this section.
 
 To configure ZAP to support testing with mobile devices, we need to complete two basic steps:
 
-1. Get the address of the computer running ZAP; and
-2. Configure all testing devices to use that address. 
+1. Get the address of the computer running ZAP; 
+2. and configure all testing devices to use that address. 
 
 The steps in C4.3 outline this process.
 
 #### C4.3.1 Find the Network Address of the Proxy Computer
 
-The first step is to determine the network address of the computer running ZAP Proxy. The procedure is different for Windows, MacOS, and Linux.
+The first step is to determine the network address of the computer running ZAP Proxy. The procedure is different for Windows, Mac OS, and Linux.
 
-When you find the network address of computer running the proxy, write it down and store it in an easily accessible place. This network address needs to be added to other devices that will be used for testing.
+When you find the network address of the computer running the proxy, write it down and store it in an easily accessible place. This network address needs to be added to other devices that will be used for testing.
 
 ##### C4.3.1.1 Windows:
 
@@ -303,7 +303,7 @@ From this dialog, select the active network, which will bring up a status menu. 
 <figure>
   <img alt="Navigating to Details for the active network" src="images/image52.png" width="338.50" height="368.34" title="Navigating to Details for the active network">
     <br>
-  <figcaption>Image Caption: Navigating to "Details" for the active network.</figcaption>
+  <figcaption>Image Caption: Navigating to "Details" for the active network</figcaption>
 </figure>
 </div>
 
@@ -313,7 +313,7 @@ The **Details** dialog will display the network address of the computer. In almo
 <figure>
   <img alt="Finding the correct address in Windows" src="images/image87.png" width="312.50" height="364.58" title="Finding the correct address in Windows">
     <br>
-  <figcaption>Image Caption: Finding the correct address in Windows.</figcaption>
+  <figcaption>Image Caption: Finding the correct address in Windows</figcaption>
 </figure>
 </div>
 
@@ -325,13 +325,13 @@ The network address can be found in **System Preferences** --> **Network**, as s
 <figure>
   <img alt="Finding the correct address in OS X" src="images/image24.png" width="624.00" height="190.67" title="Finding the correct address in OS X">
     <br>
-  <figcaption>Image Caption: Finding the correct address in OS X.</figcaption>
+  <figcaption>Image Caption: Finding the correct address in OS X</figcaption>
 </figure>
 </div>
 
 ##### C4.3.1.3 Linux/Unix:
 
-Many distributions include a System Preferences utility that can be used to find the computer's network address. Another option is to use the 'ip address' command from the shell and look for the 'inet' entry on the appropriate interface, as shown below.
+Many distributions include a System Preferences utility that can be used to find the computer's network address. Another option is to use the "ip address" command from the shell and look for the "inet" entry on the appropriate interface, as shown below.
 
 <pre>
 <code>
@@ -361,7 +361,7 @@ The proxy setup procedure is the same as covered in C4.2 [Basic Setup, Browser a
 <figure>
   <img alt="Updating the local proxy address in ZAP" src="images/image118.png" width="523.50" height="338.93" title="Updating the local proxy address in ZAP">
     <br>
-  <figcaption>Image Caption: Updating the local proxy address in ZAP.</figcaption>
+  <figcaption>Image Caption: Updating the local proxy address in ZAP</figcaption>
 </figure>
 </div>
 
@@ -375,13 +375,13 @@ Once the settings have been updated, click the "OK" button to save the changes.
 <figure>
   <img alt="Updating the Proxy address in Firefox" src="images/image60.png" width="385.50" height="455.81" title="Updating the Proxy address in Firefox">
     <br>
-  <figcaption>Image Caption: Updating the Proxy address in Firefox.</figcaption>
+  <figcaption>Image Caption: Updating the proxy address in Firefox</figcaption>
 </figure>
 </div>
 
 #### C4.3.4 iOS Device Setup
 
-On an iOS (Apple) device go to **Settings** --> **Wifi**, and make sure your device is on the same network as the proxy computer.
+On an iOS (Apple) device, go to **Settings** --> **Wifi**, and make sure your device is on the same network as the proxy computer.
 
 Select the info screen for the network the device is connected to.
 
@@ -389,11 +389,11 @@ Select the info screen for the network the device is connected to.
 <figure>
   <img alt="Verifying network name in iOS" src="images/image56.png" width="337.00" height="162.26" title="Verifying network name in iOS">
     <br>
-  <figcaption>Image Caption: Verifying network name in iOS.</figcaption>
+  <figcaption>Image Caption: Verifying network name in iOS</figcaption>
 </figure>
 </div>
 
-The proxy settings are at the bottom of the network settings screen. Enable manual proxy settings and enter the network address found in the previous steps, and the port number as shown below.
+The proxy settings are at the bottom of the network settings screen. Enable manual proxy settings and enter the network address found in the previous steps and the port number as shown below.
 
 <div align="center">
 <figure>
@@ -411,13 +411,13 @@ Open the **Settings** menu and select **Wi-Fi**.
 <figure>
   <img alt="Selecting the active wireless network in Android" src="images/image104.png" width="512.00" height="205.00" title="Selecting the active wireless network in Android">
     <br>
-  <figcaption>Image Caption: Selecting the active wireless network in Android.</figcaption>
+  <figcaption>Image Caption: Selecting the active wireless network in Android</figcaption>
 </figure>
 </div>
 
 Press and hold the name of the network to bring up the network settings menu, and select **Modify network**.
 
-**NOTE**: You need to give a longer than average "click" on the wireless name, in the range of 1-2 seconds, to bring up the **Modify Network** option.
+**Note**: You need to give a longer-than-average "click" on the wireless name, in the range of one to two seconds, to bring up the **Modify Network** option.
 
 <div align="center">
 <figure>
@@ -433,7 +433,7 @@ Select **Show advanced options**, and then select **Manual proxy configurations*
 <figure>
   <img alt="Setting the proxy address in Android" src="images/image11.png" width="349.00" height="395.00" title="Setting the proxy address in Android">
     <br>
-  <figcaption>Image Caption: Setting the proxy address in Android.</figcaption>
+  <figcaption>Image Caption: Setting the proxy address in Android</figcaption>
 </figure>
 </div>
 
@@ -446,7 +446,7 @@ Click the **Save** link to save the settings.
 
 ### <a name="h.toolkit-zap-proxy-ssl-cert"></a>C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices
 
-Installing the proxy's SSL certificate to browsers and devices will allow the proxy to decrypt the https traffic generated by these clients. In this section, we will cover using ZAP to generate a SSL certificate. Then, we will document how to save this certificate to our testing browser, and/or a mobile device.
+Installing the proxy's SSL certificate on browsers and devices will allow the proxy to decrypt the https traffic generated by these clients. In this section, we will cover using ZAP to generate a SSL certificate. Then, we will document how to save this certificate to our testing browser and/or a mobile device.
 
 #### C4.4.1 Save Proxy Certificate to File
 
