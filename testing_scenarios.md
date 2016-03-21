@@ -991,7 +991,7 @@ Since APIs can be accessed by anyone on the network, security flaws in APIs are 
 
 ## E10.3 Setup and tests
 
-For browser-based applications, Firebug or OWASP ZAP (external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to Section C4.3 [Mobile device (or browser) on different computer than the proxy](getting_started.md#h.toolkit-zap-proxy-different-box) for specific instructions.
+For browser-based applications, Firebug or OWASP ZAP (external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box) for specific instructions.
 
 Since each application is different, the first step is to exercise the functionality of the application and examine the network transactions for API requests. The URL of an API will often include 'api' in the URL. Regardless of this, the typical characteristics of API calls are requests containing parameters in the URL, which return raw data and not formatted HTML. This image shows an example of an API request:
 
