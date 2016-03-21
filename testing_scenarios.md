@@ -322,7 +322,7 @@ The second result shows an online service with some serious issues. Note that th
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-email-tls"></a>E3 TLS for email sent by an application to users
+# <a name="h.testing-email-tls"></a>E3 TLS for Email Sent by an Application to Users
 
 ## E3.1 Summary
 
