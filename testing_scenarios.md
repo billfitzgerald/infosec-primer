@@ -975,7 +975,7 @@ As seen in Section E8 [Observation of WebSockets traffic](testing_scenarios.md#h
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-api"></a>E10 API authentication checks
+# <a name="h.testing-api"></a>E10 API Authentication Checks
 
 ## E10.1 Summary
 
