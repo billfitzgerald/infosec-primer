@@ -804,7 +804,7 @@ The exploitability and impact related to websockets traffic depends on what info
 
 ## E8.3 Setup and tests
 
-Refer to the proxy setup section C4.5 [Observing websockets traffic using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
+Refer to the proxy setup section C4.5 [Observing websockets traffic using a ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
 
 There are not a specific set of tests to exercise websockets. Rather, the functionality of the application should be explored during testing, and then websockets traffic (if any) observed for its contents and encryption. Steps for these observations are described below.
 
