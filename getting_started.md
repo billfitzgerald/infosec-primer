@@ -16,7 +16,7 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
   * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
   * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
   * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
-  * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
+  * C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
 ## <a name="h.toolkit-summary"></a>C1 The Toolkit: A Summary
 
@@ -737,7 +737,7 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using ZAP Proxy
+### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using a ZAP Proxy
 
 Websockets is a communication link separate from HTTP that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the web application loads into the browser. If an application uses websockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
