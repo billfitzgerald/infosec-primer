@@ -29,7 +29,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
   * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
   * E3 [TLS for Email Sent by an Application to Users](testing_scenarios.md#h.testing-email-tls)
   * E4 [Caching and History Storage of Pages with Sensitive Information](testing_scenarios.md#h.testing-cache)
-  * E5 [Authentication Token and Cookie Handling](testing_scenarios.md#testing-auth-token)
+  * E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)
   * E6 [Password Handling](testing_scenarios.md#h.testing-password)
   * E7 [Username Enumeration](testing_scenarios.md#h.testing-username)
   * E8 [Observation of WebSockets Traffic](testing_scenarios.md#h.testing-websockets)
