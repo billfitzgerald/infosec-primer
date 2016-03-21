@@ -1088,7 +1088,7 @@ A number of barriers exist to executing a certificate spoofing attack. Access to
 
 ## E11.3 Setup and Testing
 
-To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in Section C4.3 [Mobile device (or browser) on different computer than the proxy](getting_started.md#h.toolkit-zap-proxy-different-box) and Section C4.4 [Installing proxy SSL certificate to browser and mobile devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
+To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box) and Section C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
 
 ### E11.3.1 Browser-based tests that remain relevant for mobile apps
 
