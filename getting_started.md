@@ -18,7 +18,7 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
   * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
   * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
-## <a name="h.toolkit-summary"></a>C1 The Toolkit - A Summary
+## <a name="h.toolkit-summary"></a>C1 The Toolkit: A Summary
 
 All of the tests documented in the primer are run using:
 
@@ -125,7 +125,7 @@ The descriptions of individual tests in the [testing scenarios](testing_scenario
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using Advanced Cookie Manager
+## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using an Advanced Cookie Manager
 
 [Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [HTTP](glossary.md#h.glossary-http) responses as the user interacts with a web service. The browser saves the cookie values and includes them with subsequent HTTP requests to the same application or domain. The use of cookies allows web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookie](glossary.md#h.glossary-auth-cookie) and Cookie Handling, covered in Section E5 [Authentication token and cookie handling](testing_scenarios.md#testing-auth-token).
 
@@ -155,7 +155,7 @@ During several of the tests outlined in the [testing scenarios](testing_scenario
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
+## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic
 
 As the name implies, an [intercepting proxy](glossary.md#h.glossary-intercepting-proxy) intercepts and logs the requests and responses between a client (browser or mobile app) and the network resources with which it interacts. This enables observation of the behavior of the application without interfering with its functionality.
 
@@ -224,11 +224,11 @@ Select the checkbox for **Process images in HTTP requests/responses**. Then, cli
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-same-box"></a>C4.2 Basic setup, browser and proxy on same computer
+### <a name="h.toolkit-zap-proxy-same-box"></a>C4.2 Basic Setup, Browser and Proxy on Same Computer
 
 The most straightforward setup is when the browser and proxy are on the same computer.
 
-#### C4.2.1 ZAP local proxy address
+#### C4.2.1 ZAP Local Proxy Address
 
 Within ZAP, the local proxy address should be set up as "localhost", and port set to 8080 (this is the default setting at install). In ZAP, this setting is managed in the **Tools** --> **Options** --> **Local proxy** menu.
 
@@ -242,7 +242,7 @@ Within ZAP, the local proxy address should be set up as "localhost", and port se
 
 Once you have verified that the settings in ZAP are correct, you can proceed to set the correct configuration in the browser you will use for testing.
 
-#### C4.2.2 Browser proxy address
+#### C4.2.2 Browser Proxy Address
 
 When the browser and the proxy are on the same computer, the proxy address in the browser should be configured to use a proxy at "localhost" and port 8080.
 
@@ -262,14 +262,14 @@ Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **C
 
 Then, click the **OK** button.
 
-To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate to Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert) section below.
+To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert) section below.
 
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-different-box"></a>C4.3 Setup for testing mobile devices, and/or web browsers on a different computer than the proxy
+### <a name="h.toolkit-zap-proxy-different-box"></a>C4.3 Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy
 
 The steps in this section are only relevant in the following scenarios:
 
@@ -285,7 +285,7 @@ To configure ZAP to support testing with mobile devices, we need to complete two
 
 The steps in C4.3 outline this process.
 
-#### C4.3.1 Find the network address of the proxy computer
+#### C4.3.1 Find the Network Address of the Proxy Computer
 
 The first step is to determine the network address of the computer running ZAP Proxy. The procedure is different for Windows, MacOS, and Linux.
 
@@ -317,7 +317,7 @@ The **Details** dialog will display the network address of the computer. In almo
 </figure>
 </div>
 
-##### C4.3.1.2 Apple OSX:
+##### C4.3.1.2 Apple OS X:
 
 The network address can be found in **System Preferences** --> **Network**, as shown below.
 
@@ -353,9 +353,9 @@ $ ip address
 
 In the example above, **eth0** is the correct interface, and the address is *192.168.251.211*.
 
-#### C4.3.2 In ZAP Proxy: Change "Local proxy" address
+#### C4.3.2 In ZAP Proxy: Change "Local proxy" Address
 
-The proxy setup procedure is the same as covered in C4.2 [Basic setup, browser and proxy on same computer](#h.toolkit-zap-proxy-same-box), except that the network address of the computer (which we discovered in the prior step) should replace the default addresss setting of **localhost**.
+The proxy setup procedure is the same as covered in C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box), except that the network address of the computer (which we discovered in the prior step) should replace the default addresss setting of **localhost**.
 
 <div align="center">
 <figure>
@@ -365,7 +365,7 @@ The proxy setup procedure is the same as covered in C4.2 [Basic setup, browser a
 </figure>
 </div>
 
-#### C4.3.3 In Firefox: Change the "Manual proxy configuration" address
+#### C4.3.3 In Firefox: Change the "Manual proxy configuration" Address
 
 In Firefox, under **Preferences** --> **Advanced** --> **Network** --> **Connection**, select **Manual Proxy** and enter the network address found in the steps above.
 
@@ -379,7 +379,7 @@ Once the settings have been updated, click the "OK" button to save the changes.
 </figure>
 </div>
 
-#### C4.3.4 iOS Device setup
+#### C4.3.4 iOS Device Setup
 
 On an iOS (Apple) device go to **Settings** --> **Wifi**, and make sure your device is on the same network as the proxy computer.
 
@@ -403,7 +403,7 @@ The proxy settings are at the bottom of the network settings screen. Enable manu
 </figure>
 </div>
 
-#### C4.3.5 Android device proxy setup
+#### C4.3.5 Android Device Proxy Setup
 
 Open the **Settings** menu and select **Wi-Fi**.
 
@@ -444,11 +444,11 @@ Click the **Save** link to save the settings.
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-ssl-cert"></a>C4.4 Installing proxy SSL certificate to browser and mobile devices
+### <a name="h.toolkit-zap-proxy-ssl-cert"></a>C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices
 
 Installing the proxy's SSL certificate to browsers and devices will allow the proxy to decrypt the https traffic generated by these clients. In this section, we will cover using ZAP to generate a SSL certificate. Then, we will document how to save this certificate to our testing browser, and/or a mobile device.
 
-#### C4.4.1 Save proxy certificate to file
+#### C4.4.1 Save Proxy Certificate to File
 
 The proxy's SSL certificate can be saved from the **ZAP Preferences** --> **Dynamic SSL Certificates** menu. Open the dialog and click on **Save**.
 
@@ -462,7 +462,7 @@ The proxy's SSL certificate can be saved from the **ZAP Preferences** --> **Dyna
 
 The file will be saved as "owasp_zap_root_ca.cer" in the directory chosen by the user.
 
-#### C4.4.2 Import proxy certificate to browser
+#### C4.4.2 Import Proxy Certificate to Browser
 
 In Firefox, certificates can be installed in the **Preferences** --> **Advanced** --> **Certificates** dialog.
 
@@ -528,15 +528,15 @@ To remove the certificate, in Firefox go to the **Preferences** --> **Advanced**
 </figure>
 </div>
 
-#### C4.4.3 Import proxy certificate to iOS device
+#### C4.4.3 Import Proxy Certificate to iOS Device
 
 It is important to take care when transferring the certificate file to the device, as anyone who possesses it could potentially use it to decrypt https communications from devices that install the certificate. While this risk is small, and can be mitigated by uninstalling the certificate when not testing, handling the certificate safely is highly recommended.
 
-##### C4.4.3.1 Transfer proxy certificate file to the device 
+##### C4.4.3.1 Transfer Proxy Certificate File to the Device 
 
 A secure file sharing service is one good way to transfer the file. For iOS devices, the file must be accessed from the file sharing service using the browser, not the sharing service's iOS app. Accessing the file from within the browser interface to the sharing service will bring up the **Install Profile** dialog described in the next step of the setup. 
 
-##### C4.4.3.2 Install proxy certificate file to the device
+##### C4.4.3.2 Install Proxy Certificate File on the Device
 
 Once the certificate file has been transferred to the device, open it on the device. Opening the file will bring up the **Install Profile** dialog. (iOS refers to certificates with the broader term "Profile"). Select **Install** from within this dialog.
 
@@ -588,17 +588,17 @@ Select **Profile** to enter a dialog that provides the option to delete the cert
 </figure>
 </div>
 
-#### C4.4.4 Import proxy certificate to Android device
+#### C4.4.4 Import Proxy Certificate to Android Device
 
 It is important to take care when transferring the certificate file to the device, as anyone who possesses it could potentially use it to decrypt https communications from devices that install the certificate. While this risk is small, and can be mitigated by uninstalling the certificate when not testing, handling the certificate safely is highly recommended.  
 
 For Android devices, many methods of moving the certificate file to the device's storage (browser, secure file sharing service, direct transfer over USB or a SD card) can be used.
 
-##### C4.4.4.1 Transfer proxy certificate file to the device
+##### C4.4.4.1 Transfer Proxy Certificate File to the Device
 
 Copy the proxy certificate file to the Android's SD card or other internal storage. The tutorial below assumes that certificate has been moved to a SD card. 
 
-##### C4.4.4.2 Install the proxy certificate file to the device
+##### C4.4.4.2 Install Proxy Certificate File to the Device
 
 This document covers installation for Android versions 4.3 and above. The installation is slightly different for Android 4.3, Android 4.4, and higher. Select the installation that corresponds to your device's Android version.
 
@@ -737,7 +737,7 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing websockets traffic using ZAP Proxy
+### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using ZAP Proxy
 
 Websockets is a communication link separate from HTTP that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the web application loads into the browser. If an application uses websockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
