@@ -60,4 +60,4 @@ With our browser set to open to a blank page, old cookies and browsing data remo
 
 Additionally, if you are running any adblockers or plugins that require https (examples include HTTPS Everywhere and Privacy Badger), you should disable them on your browser prior to testing. While using extensions like this are recommended for safe browsing, they could limit the range of what we encounter while testing.
 
-* Proceed to the next chapter: E. [Testing Scenarios](testing_scenarios.md)
+* Proceed to the next chapter: E. [Testing Scenarios and Procedures](testing_scenarios.md)
