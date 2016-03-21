@@ -280,7 +280,7 @@ In Firebug:
 </figure>
 </div>
 
-#### E2.3.2.4 Check the Rigor of the Service's SSL Configuration
+#### E2.3.2.5 Check the Rigor of the Service's SSL Configuration
 
 The "quality" of an encrypted https connection can vary based on how the server is set up. Fortunately, free services allow server setup to be tested quickly.
 
