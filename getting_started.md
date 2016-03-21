@@ -708,7 +708,7 @@ A dialog titled **Name the Certificate** will pop up. Enter a name, leave **Cred
 <figure>
   <img alt="" src="images/image113.png" width="324.91" height="314.50" title="">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Name the certificate.</figcaption>
 </figure>
 </div>
 
