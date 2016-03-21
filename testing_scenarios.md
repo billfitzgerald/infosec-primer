@@ -533,7 +533,7 @@ Perform the browser-based history test on a representative page containing user 
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-auth-token"></a>E5 Authentication token and cookie handling
+# <a name="h.testing-auth-token"></a>E5 Authentication Token and Cookie Handling
 
 ## E5.1 Summary
 
