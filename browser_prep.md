@@ -1,4 +1,4 @@
-# D. Preparing Firefox for a Test Session
+# D. Preparing Firefox for Testing
 
 To prepare to test using Firefox, we need to clear any stored usage data that could potentially affect the results we see when we test. These preparatory steps include clearing the browser cache, all cookies, and all web history. 
 
