@@ -8,7 +8,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
 
 ## Contents
 
-* A. [Introduction](introduction.md)
+* A. [Introduction: Who Should Read This](introduction.md)
 * B. [Responsible Disclosure](responsible.md)
 * C. [Setting Up the Testing Toolkit](getting_started.md)
   * C1 [The Toolkit: A Summary](getting_started.md#h.toolkit-summary)
