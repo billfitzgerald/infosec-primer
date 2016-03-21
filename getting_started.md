@@ -12,7 +12,7 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#h.toolkit-firebug)
 * C3 [Installing and Using an Advanced Cookie Manager](#h.toolkit-adv-cookie-manager)
 * C4 [Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.toolkit-zap-proxy)
-  * C4.1 [Installation and Initial Setup](#h.toolkit-zap-proxy-install)
+  * C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
   * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
   * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
   * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
