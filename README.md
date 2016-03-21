@@ -15,7 +15,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
   * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-firebug)
   * C3 [Installing and Using an Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager)
   * C4 [Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy)
-    * C4.1 [Installation and Initial Setup](getting_started.md#h.toolkit-zap-proxy-install)
+    * C4.1 [Installation and Initial Setup of OWASP ZAP](getting_started.md#h.toolkit-zap-proxy-install)
     * C4.2 [Basic Setup, Browser and Proxy on Same Computer](getting_started.md#h.toolkit-zap-proxy-same-box)
     * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box)
     * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert)
