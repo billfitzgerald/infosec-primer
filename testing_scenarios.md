@@ -157,7 +157,7 @@ In an educational setting [Transport Layer Security](glossary.md#h.glossary-tran
 
 ### E2.3.1 Tools
 
-The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
+The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
 
 ### E2.3.2 Tests
 
