@@ -28,7 +28,7 @@ Click the **Preferences** icon to set your home page. When you are at the home p
 
 By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get accidentally when you open your browser to start testing.
 
-## <a name="h.browser-history"></a>D2 Clear history
+## <a name="h.browser-history"></a>D2 Clear History
 
 In the Firefox menu, select **History** -> **Clear recent history**. A pop-up menu is presented. Select **Everything** for the time range, tick all of the boxes and click **Clear now**.
 
@@ -40,7 +40,7 @@ In the Firefox menu, select **History** -> **Clear recent history**. A pop-up me
 </figure>
 </div>
 
-## <a name="h.browser-cookies"></a>D3 Verify that cookies are allowed, and Do Not Track is off
+## <a name="h.browser-cookies"></a>D3 Verify That Cookies Are Allowed and Do Not Track Is Off
 
 During testing, we want to make sure that we accept all cookies, and that we are not setting **Do Not Track**. 
 
