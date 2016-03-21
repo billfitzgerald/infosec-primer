@@ -860,7 +860,7 @@ Evaluating the potential risks of WebSockets traffic requires examining what inf
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-leakage"></a>E9 Information leakage
+# <a name="h.testing-leakage"></a>E9 Information Leakage
 
 ## E9.1 Summary
 
@@ -935,7 +935,7 @@ In the example shown below, a request for student name information to be used in
 </figure>
 </div>
 
-#### E9.3.1.4 Leaking full name, school, state, and user ID
+#### E9.3.1.4 Leaking Full Name, School, State, and User ID
 
 Here, an application displays the first name, school name and state of a "daily winner".
 
