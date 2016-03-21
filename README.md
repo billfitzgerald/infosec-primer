@@ -24,7 +24,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
   * D1 [Set Firefox Home Page](browser_prep.md#h.browser-homepage)
   * D2 [Clear History](browser_prep.md#h.browser-history)
   * D3 [Verify That Cookies Are Allowed and Do Not Track Is Off](browser_prep.md#h.browser-cookies)
-* E. [Testing Scenarios](testing_scenarios.md)
+* E. [Testing Scenarios and Procedures](testing_scenarios.md)
   * E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info)
   * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
   * E3 [TLS for Email Sent by an Application to Users](testing_scenarios.md#h.testing-email-tls)
