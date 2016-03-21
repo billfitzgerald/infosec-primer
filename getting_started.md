@@ -189,9 +189,9 @@ The normal operation of https creates an [encrypted](glossary.md#h.glossary-encr
 * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
 * C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
-If you are primarily concerned with testing web applications, you will not need to use any of the instructions in C4.3 [Setup for testing mobile devices, and/or web browsers on a different computer than the proxy](#h.toolkit-zap-proxy-different-box).
+If you are primarily concerned with testing web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box).
 
-If you are going to test mobile apps, then the instructions in C4.3 [Setup for testing mobile devices, and/or web browsers on a different computer than the proxy](#h.toolkit-zap-proxy-different-box) cover the details of preparing this testing environment.
+If you are going to test mobile apps, then the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box) cover the details of preparing this testing environment.
 
 Using the ZAP Proxy requires more setup steps than other elements of the Toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
