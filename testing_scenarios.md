@@ -1,6 +1,6 @@
 # E. Testing Scenarios and Procedures
 
-When the testing environment setup is complete, testing can begin on various elements of websites and applications. The testing scenarios described in the rest of this handbook focus on common issues with web and mobile applications.
+When the testing environment setup is complete, testing can begin on various elements of websites and applications. The testing scenarios described in the rest of this handbook focus on common issues with Web and mobile applications.
 
 For people who want to learn more about basic information security but who won't get into running specific tests, the "Summary" and the "Exploitability and Impact" sections provide an overview of when and how a specific vulnerability could be exploited. The "Setup and Tests" section covers the specific steps to identify any potential security holes.
 
@@ -17,25 +17,25 @@ Most of the descriptions below assume that you are using Firebug or ZAP Proxy to
 ## <a name="h.testing-nav">Navigation: Testing Scenarios and Procedures
 
 * E. [Testing Scenarios](testing_scenarios.md)
-  * E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info)
+  * E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info)
   * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
-  * E3 [TLS for email sent by an application to users](testing_scenarios.md#h.testing-email-tls)
-  * E4 [Caching and history storage of pages with sensitive information](testing_scenarios.md#h.testing-cache)
-  * E5 [Authentication token and cookie handling](testing_scenarios.md#h.testing-auth-token)
-  * E6 [Password handling](testing_scenarios.md#h.testing-password)
-  * E7 [Username enumeration](testing_scenarios.md#h.testing-username)
-  * E8 [Observation of websockets traffic](testing_scenarios.md#h.testing-websockets)
-  * E9 [Information leakage](testing_scenarios.md#h.testing-leakage)
-  * E10 [API authentication checks](testing_scenarios.md#h.testing-api)
-  * E11 [Mobile application testing](testing_scenarios.md#h.testing-mobile)
+  * E3 [TLS for Email Sent by an Application to Users](testing_scenarios.md#h.testing-email-tls)
+  * E4 [Caching and History Storage of Pages with Sensitive Information](testing_scenarios.md#h.testing-cache)
+  * E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)
+  * E6 [Password Handling](testing_scenarios.md#h.testing-password)
+  * E7 [Username Enumeration](testing_scenarios.md#h.testing-username)
+  * E8 [Observation of WebSockets Traffic](testing_scenarios.md#h.testing-websockets)
+  * E9 [Information Leakage](testing_scenarios.md#h.testing-leakage)
+  * E10 [API Authentication Checks](testing_scenarios.md#h.testing-api)
+  * E11 [Mobile Application Testing](testing_scenarios.md#h.testing-mobile)
 
-# <a name="h.testing-url-info"></a>E1 Sensitive information in URLs
+# <a name="h.testing-url-info"></a>E1 Sensitive Information in URLs
 
 ## E1.1 Summary
 
 It is common practice to include parameters in URLs sent from applications to the network servers hosting the applications. In many cases this is benign but if sensitive information is included in URLs it can pose a security risk for the application's users.
 
-## E1.2 Exploitability and impact
+## E1.2 Exploitability and Impact
 
 Inclusion of non-sensitive information or parameters in URLs does not pose a security risk. For example, encoding a page ID in a URL is a common practice that does not expose sensitive information.
 
@@ -77,7 +77,7 @@ Here, a user's personal information is part of the URL.
 </figure>
 </div>
 
-Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered in [Caching and history storage of pages with sensitive information](#h.testing-cache) later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and Date of Birth have been captured in the browser history and cache.
+Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered in [Caching and History Storage of Pages with Sensitive Information](#h.testing-cache) later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and Date of Birth have been captured in the browser history and cache.
 
 <div align="center">
 <figure>
@@ -121,7 +121,7 @@ Some services that protect users from malicious websites send some of a user's b
 
 There are many other secure ways to pass sensitive information, so including any sensitive information in a URL is generally an unneeded risk.
 
-## E1.3 Setup and tests
+## E1.3 Setup and Tests
 
 There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information. The login sequence is an important part to examine closely but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).
 
@@ -139,9 +139,9 @@ Often, when performing an initial evaluation for an app, the process of creating
 
 TLS protects the integrity of internet communications in two important ways: Adding trust that the messages are coming from the authentic source and have not been tampered with, and protecting the privacy of the message contents from others who may access network traffic.
 
-The [certificate](glossary.md#h.glossary-certificate) mechanism creates a registration system that adds trust that the internet service is not being impersonated by someone else. There are also Message Integrity checks that protect against someone tampering with the message between the sender and receiver. (This is known as a [Man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) attack). In most cases these checks are implemented within the browser or mobile app and are not easily observed by end users.
+The [certificate](glossary.md#h.glossary-certificate) mechanism creates a registration system that adds trust that the internet service is not being impersonated by someone else. There are also Message Integrity checks that protect against someone tampering with the message between the sender and receiver. (This is known as a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) attack). In most cases these checks are implemented within the browser or mobile app and are not easily observed by end users.
 
-TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared wifi hotspot such as a coffeehouse, airport or public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication token and cookie handling](testing_scenarios.md#h.testing-auth-token)).
+TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared wifi hotspot such as a coffeehouse, airport or public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)).
 
 Using a browser, a user can check whether https is in use by looking at a web page's URL. If the URL starts with *https://*, then the site is using a secure connection, if it begins with *http://* it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
 
@@ -153,7 +153,7 @@ In an educational setting [Transport Layer Security](glossary.md#h.glossary-tran
 
 [Man-in-the-middle](glossary.md#h.glossary-man-in-the-middle) attacks - such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps - require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of Transport Layer Security can be significant - an adversary who can view network traffic may directly snoop sensitive information from the network communications, or may extract passwords or authentication codes that allow access and control of the account itself.
 
-## E2.3 Setup and tests
+## E2.3 Setup and Tests
 
 ### E2.3.1 Tools
 
@@ -161,7 +161,7 @@ The TLS checks for web applications can be performed with a browser and proxy. T
 
 ### E2.3.2 Tests
 
-#### E2.3.2.1 Check whether the login form or page is served using https (web applications).
+#### E2.3.2.1 Check Whether the Login Form or Page Is Served Using HTTPS (Web Applications)
 
 Load the login page and examine the transactions in the proxy to check whether or not the login page is loaded via https. Lack of https on login forms can enable man-in-the-middle attacks that tamper with the form.
 
@@ -195,7 +195,7 @@ Here a page loaded with http is displayed in Firebug:
 </figure>
 </div>
 
-#### E2.3.2.2 Check whether login credentials are posted using https (web applications and mobile apps)
+#### E2.3.2.2 Check Whether Login Credentials Are Posted Using HTTPS (Web Applications and Mobile Apps)
 
 Submit a login attempt and examine the transaction in the proxy.
 
@@ -219,7 +219,7 @@ In the following example the credentials are submitted with https:
 </figure>
 </div>
 
-#### E2.3.2.3 Check whether authenticated sessions continue to use https after login (both web applications and mobile apps)
+#### E2.3.2.3 Check Whether Authenticated Sessions Continue to Use HTTPS After Login (Both Web Applications and Mobile Apps)
 
 Some applications will use https for the login, but then switch to http after the login is complete, exposing private information and authentication tokens to the risk of network snooping. After logging into an application, examine the transactions that come after the login to see if they are using https.
 
@@ -254,7 +254,7 @@ In the next screenshot, we see an example of a service that uses https after log
 </figure>
 </div>
 
-#### E2.3.2.4 Check whether the application uses Strict-Transport-Security headers (web applications)
+#### E2.3.2.4 Check Whether the Application Uses Strict-Transport-Security Headers (Web Applications)
 
 Strict-Transport-Security headers (also called HSTS for Hypertext Strict Transport Security) tell the browser to always use https when communicating with a web site or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
 
@@ -280,7 +280,7 @@ In Firebug:
 </figure>
 </div>
 
-#### E2.3.2.4 Check the rigor of the service's SSL configuration
+#### E2.3.2.4 Check the Rigor of the Service's SSL Configuration
 
 The "quality" of an encrypted https connection can vary based on how the server is set up. Fortunately, free services allow server setup to be tested quickly.
 
@@ -332,13 +332,13 @@ For example, if an educational application sends a class update to a teacher's e
 
 One more detail of email TLS is that both ends of the connection must support it, and it is up to the server sending the mail to request that it be used for the transfer of information. (This is where 'starttls' comes from - it is the name of the request for TLS from the server sending the mail). From the previous example, if the application wanted to send email to a teacher's email account using TLS, the application's mail server would initiate the connection with the teacher's mail server by asking for TLS with a starttls request. The teacher's mail server would reply whether TLS is supported, and if so the connection encryption would be set up.
 
-## E3.2 Exploitability and impact
+## E3.2 Exploitability and Impact
 
 In understanding the potential impact of email TLS, we need to differentiate between communications between email servers, and the final step of delivering email: accessing data on an email server via an email client. Connections between email servers are on the inner (non-public) segments of the network, where few would have access to the network traffic. This makes lack of email TLS a much smaller threat than sending the same content from a mail server to a user's email client without encryption — for example if the user is using an airport wifi to read the message and the email provider does not encrypt the messages between its server and the user's client program. The impact of a successful exploit depends on the sensitivity of the information in the intercepted emails.
 
-## E3.3 Setup and tests
+## E3.3 Setup and Tests
 
-### E3.3.1 Email header inspection
+### E3.3.1 Email Header Inspection
 
 The definitive way to test whether an application's emails use TLS between mail servers is to directly examine the email headers of a mail sent from the application to one of its users, where the presence of TLS will be noted if it was used.
 
@@ -406,7 +406,7 @@ The image below shows the results for the same application after they enabled TL
 </figure>
 </div>
 
-### E3.3.3 checktls.com
+### E3.3.3 Checktls.com
 
 Checktls.com is discussed above in the context of confirming a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
 
@@ -414,7 +414,7 @@ Checktls.com is discussed above in the context of confirming a tester's email ad
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-cache"></a>E4 Caching and history storage of pages with sensitive information
+# <a name="h.testing-cache"></a>E4 Caching and History Storage of Pages with Sensitive Information
 
 ## E4.1 Summary
 
@@ -428,13 +428,13 @@ This section will describe how to do browser-based tests for browser caching of 
 
 NOTE: Make sure that you have cleared your history, cookies, and cache as described in [Section D](browser_prep.md).
 
-## E4.2 Exploitability and impact
+## E4.2 Exploitability and Impact
 
 The risk posed by browser caching of sensitive information is mostly limited to access of that information from the same computer it was originally viewed on. The most common scenario would be a shared-use computer where one user could potentially view information from another user's browsing history. The impact depends on the type of information that is cached and is limited by the scope of the information and the fact that the opportunity to access the data is restricted to the one-time snapshot of the information.
 
 The potential impact also varies widely depending on whose information could be accessed. For example, if a site administrator's information was accessed, that in turn could lead to greater problems. 
 
-## E4.3 Setup and tests
+## E4.3 Setup and Tests
 
 ### E4.3.1 Overview
 
@@ -442,7 +442,7 @@ Applications can include caching directives in response headers to instruct the 
 
 The absence of some or all of the recommended cache-related directives in responses can be used as another clue when looking for sensitive data responses that may be stored in the browser disk cache. The following sections describe header response inspection, history checking and browser disk cache inspection.
 
-### E4.3.2 Header response inspection
+### E4.3.2 Header Response Inspection
 
 It is possible to examine the headers of the http responses to sensitive page loads to see if the cache controls that prevent cache and history storage are present. In practice, different browsers handle cache and history related directives differently. There is some consensus that the combination of directives in the screenshot below will prevent caching or history storage across the major browsers. Note that "Expires" can be set to '0' or a time in the past. Also note that GET responses can be cached or stored in history but POST responses are not cached.
 
@@ -468,7 +468,7 @@ Cache headers displayed in Firebug:
 
 An informative discussion of cache parameters and how they are handled by browsers can be [found on Stack Overflow](http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers).
 
-### E4.3.3 Browser-based history test
+### E4.3.3 Browser-Based History Test
 
 There is a straightforward way to check for history storage of sensitive information directly from the browser. The steps are as follows:
 
@@ -487,7 +487,7 @@ There is a straightforward way to check for history storage of sensitive informa
 
 This illustrates one way storing history with sensitive information can lead to unintended disclosure. On a shared computer, one user can sign out of the account, and a different user can still access personal information from the first user's account.
 
-### E4.3.4 Browser cache inspection
+### E4.3.4 Browser Cache Inspection
 
 In most cases, if an application passes the Header response inspection and the Browser-based history test, it will not be necessary to inspect the content of a browser's cache. However, inspecting the content of a browser's cache can provide additional detail about how an application functions, and what data it caches on your computer.
 
@@ -525,7 +525,7 @@ Note that the URL shown in the browser when sensitive info is displayed may not 
 
 Additionally, if specific pages looks like they might contain sensitive information, you can do additional testing using ZAP Proxy logs cross referenced against the contents of the browser cache. This will allow you to focus more precisely on specific pages.
 
-### E4.3.5 Recommended test steps
+### E4.3.5 Recommended Test Steps
 
 Perform the browser-based history test on a representative page containing user information. Using browsing history, proxy logs and response headers as a guide for pages of interest, inspect the browser's disk cache for stored pages containing sensitive information in the page contents or URL.
 
@@ -548,15 +548,15 @@ The rest of this section will show how to use a cookie editor to examine and mod
 More information on authentication cookies can be found at the links below:
 
 *   [Edtechinfosec: Session Cookies](http://edtechinfosec.org/2014/11/25/session-cookies/)
-*   [Troy Hunt:C is for Cookie, H is for Hacker](http://www.troyhunt.com/2013/03/c-is-for-cookie-h-is-for-hacker.html)
+*   [Troy Hunt: C is for Cookie, H is for Hacker](http://www.troyhunt.com/2013/03/c-is-for-cookie-h-is-for-hacker.html)
 
-## E5.2 Exploitability and impact
+## E5.2 Exploitability and Impact
 
-An adversary in possession of a user's authentication cookie or token can easily exploit them to access and control most or all of the target's account through a Session Hijacking attack. The primary protection against this is the use of Transport Layer Security (TLS / https) to prevent snooping of the cookie or token values from network traffic. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) in this document for background and verification tests for TLS). As discussed in Section E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info), authentication tokens placed in URLs can be susceptible to unauthorized access. The tests in this section focus on mitigating these risks by preventing the access or limiting the scope of their usefulness in attacks.
+An adversary in possession of a user's authentication cookie or token can easily exploit them to access and control most or all of the target's account through a Session Hijacking attack. The primary protection against this is the use of Transport Layer Security (TLS/https) to prevent snooping of the cookie or token values from network traffic. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) in this document for background and verification tests for TLS). As discussed in Section E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info), authentication tokens placed in URLs can be susceptible to unauthorized access. The tests in this section focus on mitigating these risks by preventing the access or limiting the scope of their usefulness in attacks.
 
 Another way that authentication tokens can be accessed without authorization is through [cross-site scripting](glossary.md#h.glossary-xss) (XSS) attacks that inject malicious scripts to a user's browser to read and collect authentication cookie values. However, testing for XSS vulnerabilities is beyond the scope of this information security primer.
 
-## E5.3 Setup and tests
+## E5.3 Setup and Tests
 
 ### E5.3.1 How to Identify Authentication Cookies
 
@@ -587,7 +587,7 @@ Then, using the Cookie Manager, delete the candidate cookie and reload the page.
 </figure>
 </div>
 
-### E5.3.2 Flags that protect authentication cookies
+### E5.3.2 Flags That Protect Authentication Cookies
 
 Cookies have optional flags that the application can set to control how a browser handles them. Of these, the 'httpOnly' and 'secure' flags are important to protecting authentication cookies from unauthorized access.
 
@@ -605,7 +605,7 @@ The secure flag prevents the browser from sending a cookie in an http (unencrypt
 
 Both of these flags can be checked in the cookie editor by selecting the authentication cookie and examining the flags settings. In the example below, both the httpOnly and secure flags are set.
 
-### E5.3.3 Invalidation of authentication cookies at logout
+### E5.3.3 Invalidation of Authentication Cookies at Logout
 
 Authentication cookies should be invalidated when a user logs out of an application. If they remain valid after a logout, then an adversary in possession of an authentication cookie value can continue to access the account. Put another way, if authentication cookies aren't invalidated when a user logs out, the act of logging out doesn't fully protect a user from unauthorized access of their information.
 
@@ -653,7 +653,7 @@ Using a cookie editor, it is straightforward to check whether authentication tok
 
 * Reload the URL recorded in the first step, and check whether the page indicates the user is logged in or not. If the user is again logged in after restoring the cookie, this indicates that the authentication cookie was not invalidated at logout. This can be further confirmed by visiting additional pages in the site to see if the user remains logged in.
 
-### E5.3.4 Logout links
+### E5.3.4 Logout Links
 
 For users, best practice to protect personal information is to log out when done using an application. Doing so should invalidate authentication tokens from the session, thus limiting the scope of any possible unauthorized use of those tokens. Applications must support this by providing a logout mechanism and making it easy to access from any page that a user can visit while logged in.
 
@@ -675,25 +675,25 @@ Frequently, mobile apps on a tablet or phone will keep you logged in longer than
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-password"></a>E6 Password handling
+# <a name="h.testing-password"></a>E6 Password Handling
 
 ## E6.1 Summary
 
 Most applications employ usernames and passwords to provide individual access to user accounts. Because usernames and passwords provide full access to an account, protecting usernames and passwords is essential. Some aspects of password handling cannot be observed by an end user - for example, what [hashing](glossary.md#h.glossary-hash-function) scheme has been used for internal password storage. Others can be observed or inferred through end-user tests. This section covers the tests that can be performed by an end user without access to the internals or implementation details of an application.
 
-## E6.2 Exploitability and impact
+## E6.2 Exploitability and Impact
 
 If an adversary gains access to an account's username and password, it is highly exploitable - the entire account and its contents can be accessed. But, the vulnerabilities described in this section all require first gaining access to a target's email account, network traffic, or the service's internal storage. This moderates the risk that these vulnerabilities can pose.
 
-Sending sensitive information in URLs as described in Section E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info) can also contribute to attacks targeting usernames and passwords.
+Sending sensitive information in URLs as described in Section E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info) can also contribute to attacks targeting usernames and passwords.
 
-## E6.3 Setup and tests
+## E6.3 Setup and Tests
 
 ### E6.3.1 Encryption and Transport Layer Security
 
 Perhaps the most important protection for passwords is safeguarding them as they are sent from the browser when the user logs in. See Section E2 [Encryption and Transport Layer Security](#h.testing-tls) for detailed information on how to test an application's Transport Layer Security Practices. Issues with encryption and transport layer security can pose serious risks to the integrity of an application, which include compromised user passwords. 
 
-### E6.3.2 Recovering lost passwords
+### E6.3.2 Recovering Lost Passwords
 
 There is not a uniform standard for secure handling of account recovery from lost passwords. However, there are some practices that are widely recognized as security risks.
 
@@ -706,7 +706,7 @@ There is not a uniform standard for secure handling of account recovery from los
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-username"></a>E7 Username enumeration
+# <a name="h.testing-username"></a>E7 Username Enumeration
 
 ## E7.1 Summary
 
@@ -714,17 +714,17 @@ If an application reveals or confirms which usernames are valid within its syste
 
 It's important to note that apps that allow users to choose their usernames must necessarily indicate if a username is already taken. Because of this, this check is most relevant for services that do not allow users to set their own usernames. A service where a district administrator assigns usernames for students is a good example of an application that should be careful not to expose or confirm valid usernames. Services that allow users to choose their usernames should still limit the confirmation of valid usernames to the account creation activity.
 
-## E7.2 Exploitability and impact
+## E7.2 Exploitability and Impact
 
 The most common place for usernames to be enumerated is at the public-facing login and password recovery interfaces, making a vulnerability easy to exploit. However in most cases a valid username is only part of the information needed to attempt a larger exploit or attack. So, it is a significant but low-severity problem. But it is also an indicator of the overall defensive posture of the application. Another consideration for impact is how the username could be used in another attack. Exposing valid accounts based on names, email addresses or student ID numbers poses more risk than exposing account names that are unique to a given application.
 
 Username enumeration attacks are most relevant for systems that hold highly sensitive data, or in systems where a compromised administrative account can provide access to a larger data set. Username enumeration can be a stepping stone to a larger, more catastrophic compromise.
 
-## E7.3 Setup and tests
+## E7.3 Setup and Tests
 
 The tests for this section focus on the user login and password recovery interfaces, and can be conducted directly from the browser.
 
-### E7.3.1 User login
+### E7.3.1 User Login
 
 Attempt two types of logins. First, use both an invalid username and password; then use a valid username but incorrect password. In both cases, the application should not reveal if the username was valid. The following image is an example of a proper response. It states that either the username or password was incorrect without identifying which one wasn't recognized.
 
@@ -748,7 +748,7 @@ In contrast, messages like the ones shown below reveal the validity of the usern
 
 As noted above, username enumeration poses a relatively small risk on its own, but level of protection can be used as a factor in evaluating the security practices of elements that are more difficult to observe.
 
-### E7.3.2 Password recovery
+### E7.3.2 Password Recovery
 
 Exercise the password recovery interface by requesting password recovery for a valid and invalid username. Check whether the application gives different responses for valid and invalid usernames. Apps will often simply state that an email is sent, whether the provided username was valid or not. This is a proper response as it doesn't reveal the validity of the username. Applications may also respond that "if an account with that username exists, a mail has been sent."
 
@@ -792,25 +792,25 @@ These vulnerabilities do not pose an enormous risk to most end users, but they c
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-websockets"></a>E8 Observation of websockets traffic
+# <a name="h.testing-websockets"></a>E8 Observation of WebSockets Traffic
 
 ## E8.1 Summary
 
 Websockets provide a communication link separate from http that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the web application loads into the browser. If an application uses websockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
-## E8.2 Exploitability and impact
+## E8.2 Exploitability and Impact
 
 The exploitability and impact related to websockets traffic depends on what information the traffic contains, and whether it is encrypted. Unencrypted websockets traffic could expose sensitive information, but an observer would need access to the network traffic to access the information. Sensitive information about users other than the account holder could be viewed by anyone with an account, regardless of encryption during transport.
 
-## E8.3 Setup and tests
+## E8.3 Setup and Tests
 
-Refer to the proxy setup section C4.5 [Observing websockets traffic using a ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
+Refer to the proxy setup section C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
 
 There are not a specific set of tests to exercise websockets. Rather, the functionality of the application should be explored during testing, and then websockets traffic (if any) observed for its contents and encryption. Steps for these observations are described below.
 
-### E8.3.1 Check contents of websockets traffic for sensitive information
+### E8.3.1 Check Contents of WebSockets Traffic for Sensitive Information
 
-If an application uses websockets, check the contents of the messages for sensitive information. Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system. The image below shows an example of a websockets message containing student personal information for a different student than the logged in account holder (this is also an example of [Information leakage](testing_scenarios.md#h.testing-leakage), covered in Section E9).
+If an application uses websockets, check the contents of the messages for sensitive information. Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system. The image below shows an example of a websockets message containing student personal information for a different student than the logged in account holder (this is also an example of [information leakage](testing_scenarios.md#h.testing-leakage), covered in Section E9).
 
 <div align="center">
 <figure>
@@ -820,7 +820,7 @@ If an application uses websockets, check the contents of the messages for sensit
 </figure>
 </div>
 
-### E8.3.2 Check whether the websockets connection is encrypted
+### E8.3.2 Check Whether the WebSockets Connection Is Encrypted
 
 An unencrypted websocket connection is not a concern if the information transferred over the websocket is not sensitive. However, an encrypted connection is always more secure as it will protect traffic that may not be observed during testing or may be added in future releases of the application. Another consideration is that an unencrypted websocket connection can expose a session cookie if the websocket has the same domain as the main service and the session cookie's 'secure' flag is not set.
 
@@ -830,7 +830,7 @@ From the websockets view of OWASP ZAP, it's possible to determine whether the we
 <figure>
   <img alt="Selecting a websockets channel in ZAP" src="images/image93.png" width="465.00" height="134.00" title="Selecting a websockets channel in ZAP">
     <br>
-  <figcaption>Image Caption: Selecting a websockets channel in ZAP.</figcaption>
+  <figcaption>Image Caption: Selecting a WebSockets channel in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -840,7 +840,7 @@ Then, click the button with green arrows to bring up the initial connection tran
 <figure>
   <img alt="Reviewing a websockets connection in ZAP" src="images/image28.png" width="624.00" height="109.33" title="Reviewing a websockets connection in ZAP">
     <br>
-  <figcaption>Image Caption: Reviewing a websockets connection in ZAP.</figcaption>
+  <figcaption>Image Caption: Reviewing a WebSockets connection in ZAP.</figcaption>
 </figure>
 </div>
 
@@ -854,7 +854,7 @@ The details of the connection will be displayed in the upper transaction pane. C
 </figure>
 </div>
 
-Evaluating the potential risks of websockets traffic requires examining what information, if any, is sent via websockets traffic, and whether or not that information is encrypted. As noted above, while encrypting websockets traffic is not always essential, it is a good step, and can also help work as an indicator of the overall level of thought into defensive strategies used by the application.
+Evaluating the potential risks of WebSockets traffic requires examining what information, if any, is sent via websockets traffic, and whether or not that information is encrypted. As noted above, while encrypting websockets traffic is not always essential, it is a good step, and can also help work as an indicator of the overall level of thought into defensive strategies used by the application.
 
 * * *
 
@@ -866,17 +866,17 @@ Evaluating the potential risks of websockets traffic requires examining what inf
 
 Information leakage occurs when an application reveals or "leaks" sensitive information about the system or its users. In this section of this test plan, the focus is on leakage of sensitive information about an application's users.
 
-## E9.2 Exploitability and impact
+## E9.2 Exploitability and Impact
 
 The exploitability and impact of information leakage depends on what information is leaked and how difficult it is to observe the leaked information. For example if an application embeds a student's date of birth (DOB) and home address in an https (encrypted) response to populate a name on a dashboard page (without displaying DOB or home address on the page), the impact is serious but an adversary must first take control of a user's account to view the information. If the application does not use https for the transaction, an adversary must then only observe the unencrypted network traffic to access the sensitive information.
 
 Information that is compromised via information leakage will - in some cases - be damaging in its own right. In other cases, it can be used as a foundation for other more sophisticated attacks. As a result, it is important to track when information leaks out, and then think about other ways that information could be used to structure other attacks.
 
-## E9.3 Setup and tests
+## E9.3 Setup and Tests
 
 Because applications are implemented in different ways, there is no standardized method to test for information leakage. Testers should perform a full range of user interactions with the application and be watchful for extra information in system responses and transactions. Common ways that information can be leaked include (but are not limited to):
 
-* Request for user information returns sensitive information beyond what is necessary to display a page. This can be checked by loading a page (like a user profile page) and examining http/https responses for extra information;
+* Request for user information returns sensitive information beyond what is necessary to display a page. This can be checked by loading a page (like a user profile page) and examining HTTP/HTTPS responses for extra information;
 * Password recovery mechanism reveals user email account (if username is not email), or user's real name;
 * Teacher account requests for class roster information return sensitive information beyond what is necessary about each of the students in a class;
 * Websockets or other dynamic content update messages contain information about users beyond the scope of the logged-in account.
@@ -885,11 +885,11 @@ All of the examples listed above are real problems that have been observed and f
 
 ### E9.3.1 Examples of Information Leakage
 
-As seen in the example below, information leakage can reveal a broad range of information. When evaluating the potential significance of information leakage, it is necessary to evaluate whether the leak is sufficiently dangerous on its own, or whether the information could be used as the foundation for other, more complex attacks. For example, knowing a user ID isn't necessarily dangerous, but if the application uses user IDs in the URL (as described in E1 [Sensitive information in URLs](testing_scenarios.md#h.testing-url-info)) an ID could potentially be used to craft an attack and compromise a user account.
+As seen in the example below, information leakage can reveal a broad range of information. When evaluating the potential significance of information leakage, it is necessary to evaluate whether the leak is sufficiently dangerous on its own, or whether the information could be used as the foundation for other, more complex attacks. For example, knowing a user ID isn't necessarily dangerous, but if the application uses user IDs in the URL (as described in E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info)) an ID could potentially be used to craft an attack and compromise a user account.
 
 Additionally, information leakage can be used to assess the overall defensive posture of an application. If an application leaks information in places where it shouldn't, it can be an indicator of weak practices in areas that we cannot observe.
 
-#### E9.3.1.1 Email leakage
+#### E9.3.1.1 Email Leakage
 
 In the example shown below, a student password reset request reveals the email address of the student's parent.
 
@@ -901,7 +901,7 @@ In the example shown below, a student password reset request reveals the email a
 </figure>
 </div>
 
-#### E9.3.1.2 Leaking names and emails
+#### E9.3.1.2 Leaking Names and Emails
 
 In the example shown below, an application has different responses for conditions where an access code has already been used and an attempt is made to reuse the code. 
 
@@ -953,15 +953,15 @@ However, the data request visible in the proxy also returns the student's last n
 <figure>
   <img alt="The html source has unneeded personal information about the student" src="images/image13.png" width="577.00" height="32.00" title="The html source has unneeded personal information about the student">
     <br>
-  <figcaption>Image Caption: The html source has unneeded personal information about the student.</figcaption>
+  <figcaption>Image Caption: The HTML source has unneeded personal information about the student.</figcaption>
 </figure>
 </div>
 
 This example also highlights another place where information can leak: the source of the html page. Both Firefox and Firebug include tools that allow html source to be read.
 
-#### E9.3.1.5 Leaking username, activity information, name, and teacher ID
+#### E9.3.1.5 Leaking Username, Activity Information, Name, and Teacher ID
 
-As seen in Section E8 [Observation of websockets traffic](testing_scenarios.md#h.testing-websockets), this websockets message reveals information about a different student than the one who is logged in.
+As seen in Section E8 [Observation of WebSockets traffic](testing_scenarios.md#h.testing-websockets), this WebSockets message reveals information about a different student from the one who is logged in.
 
 <div align="center">
 <figure>
@@ -985,11 +985,11 @@ The tests in this section focus on checking whether information from the tester'
 
 More advanced tests that attempt to modify API parameters are beyond the scope of this section of the test plan. Attempts to modify API parameters should be done with extreme caution because they are likely to access other users' information if the application does not implement proper controls.
 
-## E10.2 Exploitability and impact
+## E10.2 Exploitability and Impact
 
 Since APIs can be accessed by anyone on the network, security flaws in APIs are highly exploitable and can be used in [remote attacks](glossary.md#h.glossary-remote-attack). The impact of these types of exploits is dependent on the kinds of information that can be retrieved from the API, but can be very serious and potentially expose all the information that the application can access to an attacker. Even minimal leakage via an API flaw can be used as a foundation for crafting a more sophisticated attack.
 
-## E10.3 Setup and tests
+## E10.3 Setup and Tests
 
 For browser-based applications, Firebug or OWASP ZAP (external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box) for specific instructions.
 
@@ -1070,19 +1070,19 @@ When the response comes back, the proxy will highlight the response tab, and dis
 
 * **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
 
-# <a name="h.testing-mobile"></a>E11 Mobile application testing
+# <a name="h.testing-mobile"></a>E11 Mobile Application Testing
 
 ## E11.1 Summary
 
 Testing mobile applications is similar to testing browser-based applications in many ways. Because mobile apps are hosted on devices and have some different characteristics than browser-based apps, the setup is different and some of the browser-based tests are not relevant. This section reviews the test setup for mobile applications, discusses which of the tests from the web application tests described in this plan are relevant for mobile apps, and highlights some tests and considerations that are unique to mobile applications.
 
-## E11.2 Exploitability and impact
+## E11.2 Exploitability and Impact
 
 For vulnerabilities that are possible for both mobile and browser based apps, the exploitability and impact are similar, regardless of the platform. Refer to the discussions of exploitability and impact for the individual vulnerability types in the preceding sections of this document.
 
 Poor authentication controls on network-facing APIs is described in the general vulnerabilities section, but APIs are much more common as interfaces to mobile applications than browser based applications. The reason is that browser based applications will often return an HTML page in response to a request for information, while mobile apps will often query an API for raw data and then render it for the screen within the mobile application.
 
-One vulnerability that is specific to mobile applications is failure to check the authenticity of an SSL [certificates](glossary.md#h.glossary-certificate). SSL Certificates are usually registered with a [Certificate Authority](glossary.md#h.glossary-ca), which acts as a trusted third party to confirm the identity of the server being connected to. If an application fails to check this, an attacker's certificate can be accepted by the application, thereby allowing the attacker to intercept the encrypted messages sent and received by the application. (Note: when a tester's proxy self-signed certificate is added to a mobile device's trusted store, the CA mechanism is bypassed but the device owner marks it as a trusted certificate, allowing the device to accept the proxy's certificate as authentic.) If a mobile application accepts an SSL certificate without verifying that it is from a trusted source, it can enable a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) that could allow an adversary to view the contents of the mobile application's encrypted traffic. This type of attack is also sometimes called [SSL Certificate Spoofing](glossary.md#h.glossary-ssl-spoofing).
+One vulnerability that is specific to mobile applications is failure to check the authenticity of an SSL [certificates](glossary.md#h.glossary-certificate). SSL Certificates are usually registered with a [certificate authority](glossary.md#h.glossary-ca), which acts as a trusted third party to confirm the identity of the server being connected to. If an application fails to check this, an attacker's certificate can be accepted by the application, thereby allowing the attacker to intercept the encrypted messages sent and received by the application. (Note: when a tester's proxy self-signed certificate is added to a mobile device's trusted store, the CA mechanism is bypassed but the device owner marks it as a trusted certificate, allowing the device to accept the proxy's certificate as authentic.) If a mobile application accepts an SSL certificate without verifying that it is from a trusted source, it can enable a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) that could allow an adversary to view the contents of the mobile application's encrypted traffic. This type of attack is also sometimes called [SSL certificate spoofing](glossary.md#h.glossary-ssl-spoofing).
 
 A number of barriers exist to executing a certificate spoofing attack. Access to the vulnerable mobile app's network transactions are required on a network where the attacker can route the app's traffic through a proxy or similar utility, which can present the attacker's untrusted certificate to the device. A rogue wifi hotspot is one way such an attack could be attempted (which is one of many reasons why we all need to be careful when connecting to public wifi). The impact of a successful attack can be significant, as encrypted transactions containing passwords, authentication tokens, and sensitive information become accessible to the attacker. Another factor that may amplify the impact of an SSL certificate spoofing vulnerability in an app is that after a fix is provided, individual users will not receive the fix unless they update the app on their devices. (For browser-based applications, the SSL certificate checks are handled by the browser and are not specific to individual applications).
 
@@ -1090,7 +1090,7 @@ A number of barriers exist to executing a certificate spoofing attack. Access to
 
 To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box) and Section C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
 
-### E11.3.1 Browser-based tests that remain relevant for mobile apps
+### E11.3.1 Browser-Based Tests That Remain Relevant for Mobile Apps
 
 Mobile applications differ from browser-based apps in that they implement their own interfaces to the network and and their own functionality to process inputs and information. (Browser-based apps rely on the browser to implement the network interfaces and mechanisms such as cookie handling). Nonetheless, many of the practices that are important for securing applications and the information they hold are the same or similar to those employed by browser-based applications.
 
@@ -1117,7 +1117,7 @@ API authentication controls</td><td colspan="1" rowspan="1">(All tests)</td><td 
 </tbody>
 </table>
 
-### E11.3.2 SSL Certificate Validation (SSL Certificate Spoofing)ests that are specific to mobile applications
+### E11.3.2 SSL Certificate Validation (SSL Certificate Spoofing) Tests That Are Specific to Mobile Applications
 
 As described in this section's Exploitability and Impact discussion, a mobile application that accepts an SSL certificate from an untrusted source can expose the user to a man-in-the-middle attack that allows snooping of the encrypted messages sent and received by the application.
 
