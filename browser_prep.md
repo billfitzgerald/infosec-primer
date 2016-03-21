@@ -26,7 +26,7 @@ Click the **Preferences** icon to set your home page. When you are at the home p
 </figure>
 </div>
 
-By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get accidentally when you open your browser to start testing.
+By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get set accidentally when you open your browser to start testing.
 
 ## <a name="h.browser-history"></a>D2 Clear History
 
