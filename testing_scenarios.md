@@ -517,7 +517,7 @@ Clicking on the URL name will load a representation of the raw source of the pag
 <figure>
   <img alt="" src="images/image01.png" width="621.00" height="70.00" title="">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Searching for sensitive information stored in the cache</figcaption>
 </figure>
 </div>
 
