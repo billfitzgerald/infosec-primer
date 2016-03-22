@@ -12,7 +12,7 @@ Every test scenario uses a common structure:
 *   Exploitability and Impact
 *   Setup and Tests
 
-Most of the descriptions below assume that you are using Firebug or ZAP Proxy to examine traffic sent over the internet between the application being tested and the vendor's servers.
+Most of the descriptions below assume that you are using Firebug or ZAP Proxy to examine traffic sent over the Internet between the application being tested and the vendor's servers.
 
 ## <a name="h.testing-nav">Navigation: Testing Scenarios and Procedures
 
@@ -33,7 +33,7 @@ Most of the descriptions below assume that you are using Firebug or ZAP Proxy to
 
 ## E1.1 Summary
 
-It is common practice to include parameters in URLs sent from applications to the network servers hosting the applications. In many cases this is benign but if sensitive information is included in URLs it can pose a security risk for the application's users.
+It is common practice to include parameters in URLs sent from applications to the network servers hosting the applications. In many cases this is benign, but if sensitive information is included in URLs, it can pose a security risk for the application's users.
 
 ## E1.2 Exploitability and Impact
 
@@ -47,7 +47,7 @@ Inclusion of non-sensitive information or parameters in URLs does not pose a sec
 </figure>
 </div>
 
-Timestamps and character encodings are other non-sensitive uses of URL parameters
+Timestamps and character encodings are other non-sensitive uses of URL parameters.
 
 <div align="center">
 <figure>
@@ -73,17 +73,17 @@ Here, a user's personal information is part of the URL.
 <figure>
   <img alt="Date of birth and Social Security number passed in a URL" src="images/image97.png" width="608.55" height="38.50" title="Date of birth and Social Security number passed in a URL">
     <br>
-  <figcaption>Image Caption: Date of birth and Social Security number passed in a URL.</figcaption>
+  <figcaption>Image Caption: Date of birth and Social Security number in a URL</figcaption>
 </figure>
 </div>
 
-Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered in [Caching and History Storage of Pages with Sensitive Information](#h.testing-cache) later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and Date of Birth have been captured in the browser history and cache.
+Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered in [Caching and History Storage of Pages with Sensitive Information](#h.testing-cache) later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and date of birth have been captured in the browser history and cache.
 
 <div align="center">
 <figure>
   <img alt="The same date of birth and Social Security number, stored in the browser history" src="images/image59.png" width="686.40" height="38.50" title="The same date of birth and Social Security number, stored in the browser history">
     <br>
-  <figcaption>Image Caption: The same date of birth and Social Security number, stored in the browser history.</figcaption>
+  <figcaption>Image Caption: The same date of birth and Social Security number, stored in the browser history</figcaption>
 </figure>
 </div>
 
@@ -91,7 +91,7 @@ Sensitive information in URLs may be captured by a browser's history and in its 
 <figure>
   <img alt="The same date of birth and Social Security number, stored in the local cache" src="images/image12.png" width="644.50" height="74.99" title="The same date of birth and Social Security number, stored in the local cache">
     <br>
-  <figcaption>Image Caption: The same date of birth and Social Security number, stored in the local cache.</figcaption>
+  <figcaption>Image Caption: The same date of birth and Social Security number, stored in the local cache</figcaption>
 </figure>
 </div>
 
@@ -99,13 +99,13 @@ This security issue poses an immediate risk on a shared computer, where another 
 
 Apps that use [https](glossary.md#h.glossary-https) eliminate the snooping vulnerability, but an application's own servers may log URLs received from or accessed by users. If the connection uses https, intentional misuse of URL information collected for legitimate purposes is not a significant concern, but when sensitive information is sent in URLs and logged by servers, it creates a risk that this data could be compromised via human error or a data breach.
 
-Additionally, many applications utilize 3rd-party analytics services to track user activity for the purposes of improving the application and understanding its usage patterns. Sensitive information in URLs may be sent to analytics or other 3rd-party services in the "Referer" field of messages. In the image below a URL containing a valid account access code is sent to an analytics service.
+Additionally, many applications utilize third-party analytics services to track user activity for the purposes of improving the application and understanding its usage patterns. Sensitive information in URLs may be sent to analytics or other third-party services in the "Referer" field of messages. In the image below, a URL containing a valid account access code is sent to an analytics service.
 
 <div align="center">
 <figure>
   <img alt="Sensitive information in the URL being sent to a third party" src="images/image43.png" width="624.00" height="146.67" title="Sensitive information in the URL being sent to a third party">
     <br>
-  <figcaption>Image Caption: Sensitive information in the URL being sent to a third party.</figcaption>
+  <figcaption>Image Caption: Sensitive information in the URL being sent to a third party</figcaption>
 </figure>
 </div>
 
@@ -115,17 +115,17 @@ Some services that protect users from malicious websites send some of a user's b
 <figure>
   <img alt="Sensitive user information being sent to a third party analytics company" src="images/image33.png" width="624.00" height="105.33" title="Sensitive user information being sent to a third party analytics company">
     <br>
-  <figcaption>Image Caption: Sensitive user information being sent to a third party analytics company.</figcaption>
+  <figcaption>Image Caption: Sensitive user information being sent to a third-party analytics company.</figcaption>
 </figure>
 </div>
 
-There are many other secure ways to pass sensitive information, so including any sensitive information in a URL is generally an unneeded risk.
+There are many other secure ways to pass on sensitive information, so including any sensitive information in a URL is generally an unneeded risk.
 
 ## E1.3 Setup and Tests
 
-There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information. The login sequence is an important part to examine closely but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).
+There is not a specific test for sensitive information in URLs. The tester should use the application in a typical fashion and examine proxy logs for any sensitive information. The login sequence is an important part to examine closely, but other transactions may contain sensitive information in URLs. Examine the traffic using either Firebug (for quick examinations and evaluations) or ZAP Proxy (for more detailed analysis).
 
-Often, when performing an initial evaluation for an app, the process of creating an account, updating a profile, creating content, and logging out can highlight areas that could require additional review. Performing these basic actions and reviewing the logs in ZAP or Firebug can indicate areas that are potentially troublesome.
+Often, when performing an initial evaluation of an app, the process of creating an account, updating a profile, creating content, and logging out can highlight areas that could require additional review. Performing these basic actions and reviewing the logs in ZAP or Firebug can indicate areas that are potentially troublesome.
 
 * * *
 
@@ -135,29 +135,29 @@ Often, when performing an initial evaluation for an app, the process of creating
 
 ## E2.1 Summary
 
-[Encryption](glossary.md#h.glossary-encryption) and [Transport Layer Security](glossary.md#h.glossary-transport-layer-security) are among the fundamental components of securing applications and the information they transmit and store. Encryption converts information into an unintelligible form that can only be decoded (or "decrypted") by a recipient who holds the code required to reverse the encryption. "Transport Layer" is a technical term for the mechanisms and pathways used to transmit information between a user and an internet service. "Transport Layer Security (TLS)", as the name implies, refers to the suite of protocols and techniques used to protect the security, privacy, and integrity of internet communications. TLS is often also called "SSL" ([Secure Socket Layer](glossary.md#h.glossary-secure-socket-layer)), particularly when used with browser and application communications. Strictly speaking, SSL is a precursor of TLS but the terms are commonly used interchangeably. To be consistent with other documentation and discussion, this document uses "SSL" in contexts where it is typically called SSL (such as browser traffic with a server), and "TLS" elsewhere.
+[Encryption](glossary.md#h.glossary-encryption) and [transport layer security](glossary.md#h.glossary-transport-layer-security) are among the fundamental components of securing applications and the information they transmit and store. Encryption converts information into an unintelligible form that can only be decoded (or "decrypted") by a recipient who holds the code required to reverse the encryption. "Transport layer" is a technical term for the mechanisms and pathways used to transmit information between a user and an Internet service. "Transport layer security" (or TLS), as the name implies, refers to the suite of protocols and techniques used to protect the security, privacy, and integrity of Internet communications. TLS is often also called "SSL" ([secure socket layer](glossary.md#h.glossary-secure-socket-layer)), particularly when used with browser and application communications. Strictly speaking, SSL is a precursor of TLS, but the terms are commonly used interchangeably. To be consistent with other documentation and discussion, this document uses "SSL" in contexts where it is typically called SSL (such as browser traffic with a server), and "TLS" elsewhere.
 
-TLS protects the integrity of internet communications in two important ways: Adding trust that the messages are coming from the authentic source and have not been tampered with, and protecting the privacy of the message contents from others who may access network traffic.
+TLS protects the integrity of Internet communications in two important ways: Adding trust that the messages are coming from the authentic source and have not been tampered with, and protecting the privacy of the message contents from others who may access network traffic.
 
-The [certificate](glossary.md#h.glossary-certificate) mechanism creates a registration system that adds trust that the internet service is not being impersonated by someone else. There are also Message Integrity checks that protect against someone tampering with the message between the sender and receiver. (This is known as a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) attack). In most cases these checks are implemented within the browser or mobile app and are not easily observed by end users.
+The [certificate](glossary.md#h.glossary-certificate) mechanism creates a registration system that adds trust that the Internet service is not being impersonated by someone else. There are also message integrity checks that protect against someone tampering with the message between the sender and receiver. (This is known as a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) attack). In most cases these checks are implemented within the browser or mobile app and are not easily observed by end users.
 
-TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared wifi hotspot such as a coffeehouse, airport or public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)).
+TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared Wi-Fi hotspot such as a coffeehouse, an airport, or a public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session-hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)).
 
-Using a browser, a user can check whether https is in use by looking at a web page's URL. If the URL starts with *https://*, then the site is using a secure connection, if it begins with *http://* it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
+Using a browser, a user can check whether https is in use by looking at a Web page's URL. If the URL starts with *https://*, then the site is using a secure connection; if it begins with *http://*, it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
 
-In an educational setting [Transport Layer Security](glossary.md#h.glossary-transport-layer-security) is a necessity in many - but not all - situations. Services that collect a username, a password, or any other potentially sensitive information should always use TLS. However, an application that doesn't require a login - like a publicly available online calculator that collects no personal information - could be used safely without TLS. In general, though, given the ease with which TLS can be implemented, it is a good thing to look for.
+In an educational setting, [transport layer security](glossary.md#h.glossary-transport-layer-security) is a necessity in many -- but not all -- situations. Services that collect a username, a password, or any other potentially sensitive information should always use TLS. However, an application that doesn't require a login -- such as a publicly available online calculator that collects no personal information -- could be used safely without TLS. In general, though, given the ease with which TLS can be implemented, it is a good thing to look for.
 
-## E2.2 Exploitability and impact
+## E2.2 Exploitability and Impact
 
-[Snooping](glossary.md#h.glossary-snooping) of unencrypted network traffic can be accomplished with cursory technical knowledge and off-the-shelf computers, or computers with inexpensive specialized network adapters. Programs exist to automate the process of extracting authentication tokens and other unencrypted traffic.
+[Snooping](glossary.md#h.glossary-snooping) of unencrypted network traffic can be accomplished with cursory technical knowledge and off-the-shelf computers or with computers with inexpensive specialized network adapters. Programs exist to automate the process of extracting authentication tokens and other unencrypted traffic.
 
-[Man-in-the-middle](glossary.md#h.glossary-man-in-the-middle) attacks - such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps - require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of Transport Layer Security can be significant - an adversary who can view network traffic may directly snoop sensitive information from the network communications, or may extract passwords or authentication codes that allow access and control of the account itself.
+[Man-in-the-middle](glossary.md#h.glossary-man-in-the-middle) attacks -- such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps -- require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of transport layer security can be significant; an adversary who can view network traffic may directly snoop sensitive information from the network communications or may extract passwords or authentication codes that allow access and control of the account itself.
 
 ## E2.3 Setup and Tests
 
 ### E2.3.1 Tools
 
-The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
+The TLS checks for Web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
 
 ### E2.3.2 Tests
 
@@ -165,23 +165,23 @@ The TLS checks for web applications can be performed with a browser and proxy. T
 
 Load the login page and examine the transactions in the proxy to check whether or not the login page is loaded via https. Lack of https on login forms can enable man-in-the-middle attacks that tamper with the form.
 
-In the example below the page is loaded without https.
+In the example below, the page is loaded without https:
 
 <div align="center">
 <figure>
   <img alt="Page loaded without https" src="images/image71.png" width="592.50" height="92.10" title="Page loaded without https">
     <br>
-  <figcaption>Image Caption: Page loaded without https, displayed in ZAP.</figcaption>
+  <figcaption>Image Caption: Page loaded without https, displayed in ZAP</figcaption>
 </figure>
 </div>
 
-In this example the page is loaded with https.
+In this example, the page is loaded with https:
 
 <div align="center">
 <figure>
   <img alt="Page loaded with https" src="images/image61.png" width="599.50" height="108.56" title="Page loaded with https">
     <br>
-  <figcaption>Image Caption: Page loaded with https, displayed in ZAP.</figcaption>
+  <figcaption>Image Caption: Page loaded with https, displayed in ZAP</figcaption>
 </figure>
 </div>
 
@@ -191,7 +191,7 @@ Here a page loaded with http is displayed in Firebug:
 <figure>
   <img alt="Page loaded without https, displayed via Firebug" src="images/image19.png" width="624.00" height="128.00" title="Page loaded without https, displayed via Firebug">
     <br>
-  <figcaption>Image Caption: Page loaded without https, displayed via Firebug.</figcaption>
+  <figcaption>Image Caption: Page loaded without https, displayed via Firebug</figcaption>
 </figure>
 </div>
 
@@ -205,23 +205,23 @@ In this example the credentials are submitted without https:
 <figure>
   <img alt="Username and password sent without https" src="images/image30.png" width="547.50" height="210.63px" title="Username and password sent without https">
     <br>
-  <figcaption>Image Caption: Username and password sent without https.</figcaption>
+  <figcaption>Image Caption: Username and password sent without https</figcaption>
 </figure>
 </div>
 
-In the following example the credentials are submitted with https:
+In the following example, the credentials are submitted with https:
 
 <div align="center">
 <figure>
   <img alt="Username and password sent securely, with https" src="images/image107.png" width="624.00" height="141.33" title="Username and password sent securely, with https">
     <br>
-  <figcaption>Image Caption: Username and password sent securely, with https.</figcaption>
+  <figcaption>Image Caption: Username and password sent securely, with https</figcaption>
 </figure>
 </div>
 
 #### E2.3.2.3 Check Whether Authenticated Sessions Continue to Use HTTPS After Login (Both Web Applications and Mobile Apps)
 
-Some applications will use https for the login, but then switch to http after the login is complete, exposing private information and authentication tokens to the risk of network snooping. After logging into an application, examine the transactions that come after the login to see if they are using https.
+Some applications will use https for the login but then switch to http after the login is complete, exposing private information and authentication tokens to the risk of network snooping. After logging into an application, examine the transactions that come after the login to see if they are using https.
 
 The examples below use http after login, exposing the user's authentication cookies to the risk of network snooping. This issue can be seen using either ZAP or Firebug.
 
@@ -231,7 +231,7 @@ In ZAP:
 <figure>
   <img alt="A session sent without https that exposes the authentication cookie" src="images/image21.png" width="550.50" height="222.32" title="A session sent without https that exposes the authentication cookie">
     <br>
-  <figcaption>Image Caption: A session sent without https that exposes the authentication cookie.</figcaption>
+  <figcaption>Image Caption: A session sent without https that exposes the authentication cookie</figcaption>
 </figure>
 </div>
 
@@ -244,21 +244,21 @@ In Firebug:
 </figure>
 </div>
 
-In the next screenshot, we see an example of a service that uses https after login, protecting the user information and authentication cookies included in the responses. Note how the url begins with https.
+In the next screenshot, we see an example of a service that uses https after login, protecting the user information and authentication cookies included in the responses. Note how the URL begins with "https."
 
 <div align="center">
 <figure>
   <img alt="A properly secured application" src="images/image16.png" width="624.00" height="86.67" title="A properly secured application">
     <br>
-  <figcaption>Image Caption: An example of a properly secured application.</figcaption>
+  <figcaption>Image Caption: An example of a properly secured application</figcaption>
 </figure>
 </div>
 
 #### E2.3.2.4 Check Whether the Application Uses Strict-Transport-Security Headers (Web Applications)
 
-Strict-Transport-Security headers (also called HSTS for Hypertext Strict Transport Security) tell the browser to always use https when communicating with a web site or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
+Strict-transport-security headers (also called HSTS for hypertext strict transport security) tell the browser to always use https when communicating with a website or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
 
-The examples below show correct use of Strict-Transport-Security headers as displayed in ZAP and Firebug.
+The examples below show correct use of strict-transport-security headers as displayed in ZAP and Firebug.
 
 In ZAP:
 
@@ -266,7 +266,7 @@ In ZAP:
 <figure>
   <img alt="Proper use of Strict-Transport-Security headers, seen in ZAP" src="images/image95.png" width="554.50" height="166.82" title="Proper use of Strict-Transport-Security headers, seen in ZAP">
     <br>
-  <figcaption>Image Caption: Proper use of Strict-Transport-Security headers, seen in ZAP.</figcaption>
+  <figcaption>Image Caption: Proper use of strict-transport-security headers, seen in ZAP</figcaption>
 </figure>
 </div>
 
@@ -276,7 +276,7 @@ In Firebug:
 <figure>
   <img alt="Proper use of Strict-Transport-Security headers, seen in Firebug" src="images/image111.png" width="624.00" height="350.67" title="Proper use of Strict-Transport-Security headers, seen in Firebug">
     <br>
-  <figcaption>Image Caption: Proper use of Strict-Transport-Security headers, seen in Firebug.</figcaption>
+  <figcaption>Image Caption: Proper use of strict-transport-security headers, seen in Firebug</figcaption>
 </figure>
 </div>
 
@@ -286,15 +286,15 @@ The "quality" of an encrypted https connection can vary based on how the server 
 
 Submit the service's domain name to the Qualys SSL Server Test website and record the results ([https://www.ssllabs.com/ssltest/](https://www.ssllabs.com/ssltest/)).
 
-NOTE: Take care to use the domain name that the app is actually hosted from. Some services will have a main page that provides information about the service but will host the application at a different domain or subdomain.
+Note: Take care to use the domain name that the app is actually hosted from. Some services will have a main page that provides information about the service but will host the application at a different domain or subdomain.
 
-On the "SSL Server Test" page, check the box labeled "Do not show the results on the boards". This prevents the results from being publicly shared on the SSL Server Test page.
+On the SSL Server Test page, check the box labeled "Do not show the results on the boards." This prevents the results from being publicly shared on the SSL Server Test page.
 
 <div align="center">
 <figure>
   <img alt="Using the Qualys SSL Server Test" src="images/image81.png" width="624.00" height="232.00" title="Using the Qualys SSL Server Test">
     <br>
-  <figcaption>Image Caption: Using the Qualys SSL Server Test.</figcaption>
+  <figcaption>Image Caption: Using the Qualys SSL Server Test</figcaption>
 </figure>
 </div>
 
@@ -304,7 +304,7 @@ Examples of SSL Server Test results are shown below. The first result is a solid
 <figure>
   <img alt="A solid result from Qualys" src="images/image101.png" width="518.50" height="275.42" title="A solid result from Qualys">
     <br>
-  <figcaption>Image Caption: A solid result from Qualys.</figcaption>
+  <figcaption>Image Caption: A solid result from Qualys</figcaption>
 </figure>
 </div>
 
@@ -314,7 +314,7 @@ The second result shows an online service with some serious issues. Note that th
 <figure>
   <img alt="A Qualys evaluation that shows serious issues" src="images/image03.png" width="513.50" height="444.38" title="A Qualys evaluation that shows serious issues">
     <br>
-  <figcaption>Image Caption: A Qualys evaluation that shows serious issues.</figcaption>
+  <figcaption>Image Caption: A Qualys evaluation that shows serious issues</figcaption>
 </figure>
 </div>
 
@@ -326,31 +326,31 @@ The second result shows an online service with some serious issues. Note that th
 
 ## E3.1 Summary
 
-Email Transport Layer Security is referred to as 'TLS' or 'starttls'. As the name implies, email TLS protects the contents of traffic as it travels between endpoints on the internet by encrypting the content and by verifying the authenticity of the servers at the endpoints.
+Email transport layer security is referred to as "TLS" or "starttls." As the name implies, email TLS protects the contents of traffic as it travels between endpoints on the Internet by encrypting the content and by verifying the authenticity of the servers at the endpoints.
 
 For example, if an educational application sends a class update to a teacher's email account, TLS can be used to encrypt the email as it travels from the application's email server to the teacher's email server. This is analogous to the protection provided by https between a user's browser and an application's servers.
 
-One more detail of email TLS is that both ends of the connection must support it, and it is up to the server sending the mail to request that it be used for the transfer of information. (This is where 'starttls' comes from - it is the name of the request for TLS from the server sending the mail). From the previous example, if the application wanted to send email to a teacher's email account using TLS, the application's mail server would initiate the connection with the teacher's mail server by asking for TLS with a starttls request. The teacher's mail server would reply whether TLS is supported, and if so the connection encryption would be set up.
+One more detail of email TLS is that both ends of the connection must support it, and it is up to the server sending the mail to request that it be used for the transfer of information. (This is where "starttls" comes from -- it's the name of the request for TLS from the server sending the mail.) From the previous example, if the application wanted to send email to a teacher's email account using TLS, the application's mail server would initiate the connection with the teacher's mail server by asking for TLS with a starttls request. The teacher's mail server would reply as to whether TLS is supported, and, if so, the connection encryption would be set up.
 
 ## E3.2 Exploitability and Impact
 
-In understanding the potential impact of email TLS, we need to differentiate between communications between email servers, and the final step of delivering email: accessing data on an email server via an email client. Connections between email servers are on the inner (non-public) segments of the network, where few would have access to the network traffic. This makes lack of email TLS a much smaller threat than sending the same content from a mail server to a user's email client without encryption — for example if the user is using an airport wifi to read the message and the email provider does not encrypt the messages between its server and the user's client program. The impact of a successful exploit depends on the sensitivity of the information in the intercepted emails.
+In understanding the potential impact of email TLS, we need to differentiate between communications between email servers and the final step of delivering email: accessing data on an email server via an email client. Connections between email servers are on the inner (non-public) segments of the network, where few would have access to the network traffic. This makes lack of email TLS a much smaller threat than sending the same content from a mail server to a user's email client without encryption -- for example, if the user is using an airport Wi-Fi to read the message and the email provider does not encrypt the messages between its server and the user's client program. The impact of a successful exploit depends on the sensitivity of the information in the intercepted emails.
 
 ## E3.3 Setup and Tests
 
 ### E3.3.1 Email Header Inspection
 
-The definitive way to test whether an application's emails use TLS between mail servers is to directly examine the email headers of a mail sent from the application to one of its users, where the presence of TLS will be noted if it was used.
+The definitive way to test whether an application's emails use TLS between mail servers is to directly examine the email headers of an email sent from the application to one of its users, where the presence of TLS will be noted if it was used.
 
 For this test, the recipient email account's servers must be confirmed to accept TLS for incoming mail messages. If this is not known or needs to be verified, the "checktls.com" service can be used to test the recipient email address.
 
-Browsing to checktls.com brings up a form where the email can be entered (no mail will be sent to the recipient address, it's only used to contact the server). Enter the recipient email address as indicated below and click "Try It".
+Browsing to checktls.com brings up a form where the email can be entered (no mail will be sent to the recipient address; it's only used to contact the server). Enter the recipient email address as indicated below and click "Try It."
 
 <div align="center">
 <figure>
   <img alt="Using CheckTLS" src="images/image18.png" width="537.50" height="297.18" title="Using CheckTLS">
     <br>
-  <figcaption>Image Caption: Using CheckTLS.</figcaption>
+  <figcaption>Image Caption: Using CheckTLS</figcaption>
 </figure>
 </div>
 
@@ -360,19 +360,19 @@ The results will indicate whether the mail server accepts incoming TLS connectio
 <figure>
   <img alt="A successful test" src="images/image68.png" width="624.00" height="185.33" title="A successful test">
     <br>
-  <figcaption>Image Caption: A successful test.</figcaption>
+  <figcaption>Image Caption: A successful test</figcaption>
 </figure>
 </div>
 
-Once you have confirmed that your email address accepts TLS for incoming email, you are ready to inspect the headers of incoming messages. The steps for displaying email headers differs by email client. The menu item is typically labeled "show original message", "show headers", or similar.
+Once you have confirmed that your email address accepts TLS for incoming email, you are ready to inspect the headers of incoming messages. The steps for displaying email headers differs by email client. The menu item is typically labeled "show original message," "show headers," or similar.
 
-If the mail was sent with TLS, it will be noted in the headers with a description including the letters "TLS". The syntax will vary but will always include the term "TLS". An example is below.
+If the mail was sent with TLS, it will be noted in the headers with a description including the letters "TLS." The syntax will vary but will always include the term "TLS." An example is below.
 
 <div align="center">
 <figure>
   <img alt="A sample email header showing that TLS was used" src="images/image78.png" width="624.00" height="126.67" title="A sample email header showing that TLS was used">
     <br>
-  <figcaption>Image Caption: A sample email header showing that TLS was used.</figcaption>
+  <figcaption>Image Caption: A sample email header showing that TLS was used</figcaption>
 </figure>
 </div>
 
@@ -382,33 +382,33 @@ Google's Safer Email Transparency Report site posts daily percentages of mail se
 
 http://www.google.com/transparencyreport/saferemail/
 
-For mail coming in to gmail, the mail will only be sent with TLS if the sending side requests it. Google always requests TLS for email connections, so for mail leaving Google it will only be sent with TLS if the receiving domain supports TLS. The Safer Email website allows searches by domain name. If the application being tested sends enough mail to gmail users that it shows up on this list, it's a good way to check whether the app is sending mails with TLS.
+For mail coming in to Gmail, the mail will only be sent with TLS if the sending side requests it. Google always requests TLS for email connections, so for email leaving Google it will only be sent with TLS if the receiving domain supports TLS. The Safer Email website allows searches by domain name. If the application being tested sends enough mail to Gmail users that it shows up on this list, it's a good way to check whether the app is sending emails with TLS.
 
-As an example, the screenshot below shows the results for a particular application. Google reports that 0% of the mail entering Google from this application's mail servers is sent with TLS.
+As an example, the screenshot below shows the results for a particular application. Google reports that 0 percent of the email entering Google from this application's mail servers is sent with TLS.
 
 <div align="center">
 <figure>
   <img alt="A report from Google showing a service that does not use TLS for email" src="images/image100.png" width="624.00" height="188.00" title="A report from Google showing a service that does not use TLS for email">
     <br>
-  <figcaption>Image Caption: A report from Google showing a service that does not use TLS for email.</figcaption>
+  <figcaption>Image Caption: A report from Google showing a service that does not use TLS for email</figcaption>
 </figure>
 </div>
 
-This means that the application's servers are not requesting TLS when sending email. Outbound mail is not listed because not enough mail flows from Google to this application's servers to be recorded in this dataset. However, mail coming in to gmail is of more interest because mail from the app to its users is more likely to contain student information.
+This means that the application's servers are not requesting TLS when sending email. Outbound email is not listed because not enough email flows from Google to this application's servers to be recorded in this data set. However, mail coming in to Gmail is of more interest because email from the app to its users is more likely to contain student information.
 
-The image below shows the results for the same application after they enabled TLS for outgoing email.
+The image below shows the results for the same application after TLS was enabled for outgoing email.
 
 <div align="center">
 <figure>
   <img alt="" src="images/image23.png" width="624.00" height="180.00" title="">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: A report from Google showing a service that uses TLS for email.</figcaption>
 </figure>
 </div>
 
 ### E3.3.3 Checktls.com
 
-Checktls.com is discussed above in the context of confirming a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
+Checktls.com is discussed above in the context of confirming that a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
 
 * * *
 
@@ -418,15 +418,15 @@ Checktls.com is discussed above in the context of confirming a tester's email ad
 
 ## E4.1 Summary
 
-In computer systems, the term "caching" refers to the practice of keeping a local copy (or "cache") of information so that it may be accessed again quickly if needed later on. Browsers improve performance by storing copies of web pages a user views, so that they can displayed again later without the need to fetch them again over the network.
+In computer systems, the term "caching" refers to the practice of keeping a local copy (or "cache") of information so that it may be accessed again quickly if needed later on. Browsers improve performance by storing copies of Web pages that a user views, so that they can displayed again later without the need to fetch them again over the network.
 
-Though caching improves the performance of a browser, caching of pages with sensitive information can expose the information to unauthorized access. Because of this, a web service can include directives in message headers to prevent pages from being stored in a browser's cache.
+Though caching improves the performance of a browser, caching of pages with sensitive information can expose the information to unauthorized access. Because of this, a Web service can include directives in message headers to prevent pages from being stored in a browser's cache.
 
-The browser's history is subtly different than the cache, but also can be used to show the contents of a page previously loaded by a user. If the page contains sensitive information and the user has signed out of the service since viewing it, it should not be displayed by the "back" button or history mechanism without first requiring a new login by the user. (Note that it is OK for "back" or history to display the page if the user is still logged in to the service).
+The browser's history is subtly different from the cache but also can be used to show the contents of a page previously loaded by a user. If the page contains sensitive information and the user has signed out of the service since viewing it, it should not be displayed by the "back" button or history mechanism without first requiring a new login by the user. (Note that it is OK for "back" or history to display the page if the user is still logged in to the service.)
 
 This section will describe how to do browser-based tests for browser caching of sensitive pages, and how to inspect message headers to look for cache control directives.
 
-NOTE: Make sure that you have cleared your history, cookies, and cache as described in [Section D](browser_prep.md).
+Note: Make sure that you have cleared your history, cookies, and cache as described in [Section D](browser_prep.md).
 
 ## E4.2 Exploitability and Impact
 
@@ -438,13 +438,13 @@ The potential impact also varies widely depending on whose information could be 
 
 ### E4.3.1 Overview
 
-Applications can include caching directives in response headers to instruct the browser how it should store the result in history and cache buffers. In practice, different browsers handle cache and history related directives differently. Because of the complexity of reviewing cache directives on individual responses, the recommended usage is to directly test the history and caching behavior of the application using the "Browser-based history test" and "Browser cache inspection" documented later in this section. Proxy logging of the user session can be used to look for pages of interest that can be searched for in the cache.
+Applications can include caching directives in response headers to instruct the browser how it should store the result in history and cache buffers. In practice, different browsers handle cache- and history-related directives differently. Because of the complexity of reviewing cache directives on individual responses, the recommended usage is to directly test the history and caching behavior of the application using the "browser-based history test" and "browser cache inspection" documented later in this section. Proxy logging of the user session can be used to look for pages of interest that can be searched for in the cache.
 
-The absence of some or all of the recommended cache-related directives in responses can be used as another clue when looking for sensitive data responses that may be stored in the browser disk cache. The following sections describe header response inspection, history checking and browser disk cache inspection.
+The absence of some or all of the recommended cache-related directives in responses can be used as another clue when looking for sensitive data responses that may be stored in the browser disk cache. The following sections describe header response inspection, history checking, and browser disk cache inspection.
 
 ### E4.3.2 Header Response Inspection
 
-It is possible to examine the headers of the http responses to sensitive page loads to see if the cache controls that prevent cache and history storage are present. In practice, different browsers handle cache and history related directives differently. There is some consensus that the combination of directives in the screenshot below will prevent caching or history storage across the major browsers. Note that "Expires" can be set to '0' or a time in the past. Also note that GET responses can be cached or stored in history but POST responses are not cached.
+It is possible to examine the headers of the http responses to sensitive page loads to see if the cache controls that prevent cache and history storage are present. In practice, different browsers handle cache- and history-related directives differently. There is some consensus that the combination of directives in the screenshot below will prevent caching or history storage across the major browsers. Note that "Expires" can be set to "0" or a time in the past. Also note that GET responses can be cached or stored in history, but POST responses are not cached.
 
 Cache headers displayed in ZAP:
 
@@ -452,7 +452,7 @@ Cache headers displayed in ZAP:
 <figure>
   <img alt="Satisfactory cache directives, displayed in ZAP" src="images/image99.png" width="624.00" height="170.67" title="Satisfactory cache directives, displayed in ZAP">
     <br>
-  <figcaption>Image Caption: Satisfactory cache directives, displayed in ZAP.</figcaption>
+  <figcaption>Image Caption: Satisfactory cache directives, displayed in ZAP</figcaption>
 </figure>
 </div>
 
@@ -462,56 +462,56 @@ Cache headers displayed in Firebug:
 <figure>
   <img alt="Satisfactory cache directives, displayed in Firebug" src="images/image79.png" width="624.00" height="349.33" title="Satisfactory cache directives, displayed in Firebug">
     <br>
-  <figcaption>Image Caption: Satisfactory cache directives, displayed in Firebug.</figcaption>
+  <figcaption>Image Caption: Satisfactory cache directives, displayed in Firebug</figcaption>
 </figure>
 </div>
 
-An informative discussion of cache parameters and how they are handled by browsers can be [found on Stack Overflow](http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers).
+An informative discussion of cache parameters and how they are handled by browsers can be found on [Stack Overflow](http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers).
 
 ### E4.3.3 Browser-Based History Test
 
 There is a straightforward way to check for history storage of sensitive information directly from the browser. The steps are as follows:
 
-1.  Log in to a service and browse to a page with sensitive information. In the example below a class roster is viewed from a teacher account.
+1.  Log in to a service and browse to a page with sensitive information. In the example below, a class roster is viewed from a teacher account.
 
 <div align="center">
 <figure>
   <img alt="An example page with sensitive information" src="images/image116.png" width="624.00" height="269.33" title="An example page with sensitive information">
     <br>
-  <figcaption>Image Caption: An example page with sensitive information.</figcaption>
+  <figcaption>Image Caption: An example page with sensitive information</figcaption>
 </figure>
 </div>
 
-2.  Sign out of the service
-3.  Click on the browser's "Back" button. If the original page, with logged in user information, is displayed without requiring a new login, this indicates that the page was stored in the browser cache.
+2.  Sign out of the service.
+3.  Click on the browser's "Back" button. If the original page, with logged-in user information, is displayed without requiring a new login, this indicates that the page was stored in the browser cache.
 
 This illustrates one way storing history with sensitive information can lead to unintended disclosure. On a shared computer, one user can sign out of the account, and a different user can still access personal information from the first user's account.
 
 ### E4.3.4 Browser Cache Inspection
 
-In most cases, if an application passes the Header response inspection and the Browser-based history test, it will not be necessary to inspect the content of a browser's cache. However, inspecting the content of a browser's cache can provide additional detail about how an application functions, and what data it caches on your computer.
+In most cases, if an application passes the header response inspection and the browser-based history test, it will not be necessary to inspect the content of a browser's cache. However, inspecting the content of a browser's cache can provide additional detail about how an application functions and what data it caches on your computer.
 
-To inspect what is stored in the browser's cache, enter "about:cache" in the browser's URL field. Note that the disk cache is of particular interest since its contents will persist after the browser program has been closed and restarted. Click on "List Cache Entries" under "disk" to see the disk cache entries
+To inspect what is stored in the browser's cache, enter "about:cache" in the browser's URL field. Note that the disk cache is of particular interest since its contents will persist after the browser program has been closed and restarted. Click on "List Cache Entries" under "disk" to see the disk cache entries.
 
 <div align="center">
 <figure>
   <img alt="Accessing the browser cache in Firefox" src="images/image34.png" width="624.00" height="352.00" title="Accessing the browser cache in Firefox">
     <br>
-  <figcaption>Image Caption: Accessing the browser cache in Firefox.</figcaption>
+  <figcaption>Image Caption: Accessing the browser cache in Firefox</figcaption>
 </figure>
 </div>
 
-The URLs of the cached pages will be listed and specific pages of interest can be searched. The entry for the roster page shown above is present in the browser disk cache.
+The URLs of the cached pages will be listed, and specific pages of interest can be searched. The entry for the roster page shown above is present in the browser disk cache.
 
 <div align="center">
 <figure>
   <img alt="A cached page showing username and login information" src="images/image05.png" width="391.50" height="31.36" title="A cached page showing username and login information">
     <br>
-  <figcaption>Image Caption: A cached page showing username and login information.</figcaption>
+  <figcaption>Image Caption: A cached page showing username and login information</figcaption>
 </figure>
 </div>
 
-Clicking on the URL name will load a representation of the raw source of the page. It is not easily human-readable but it is possible to search on sensitive terms to confirm that they are present in the cached page. For example, the account information for "Demo Student" is shown below in the cached page contents.
+Clicking on the URL name will load a representation of the raw source of the page. It is not easily human-readable, but it is possible to search on sensitive terms to confirm that they are present in the cached page. For example, the account information for "Demo Student" is shown below in the cached page contents.
 
 <div align="center">
 <figure>
@@ -521,13 +521,13 @@ Clicking on the URL name will load a representation of the raw source of the pag
 </figure>
 </div>
 
-Note that the URL shown in the browser when sensitive info is displayed may not correspond to the exact request that loaded the sensitive information itself. Using a proxy to observe all the requests generated when a page of interest is displayed can be helpful in finding which URLs to look for in the browser's cache storage.
+Note that the URL shown in the browser when sensitive information is displayed may not correspond to the exact request that loaded the sensitive information itself. Using a proxy to observe all the requests generated when a page of interest is displayed can be helpful in finding which URLs to look for in the browser's cache storage.
 
-Additionally, if specific pages looks like they might contain sensitive information, you can do additional testing using ZAP Proxy logs cross referenced against the contents of the browser cache. This will allow you to focus more precisely on specific pages.
+Additionally, if specific pages look like they might contain sensitive information, you can do additional testing using ZAP Proxy logs cross-referenced with the contents of the browser cache. This will allow you to focus more precisely on specific pages.
 
 ### E4.3.5 Recommended Test Steps
 
-Perform the browser-based history test on a representative page containing user information. Using browsing history, proxy logs and response headers as a guide for pages of interest, inspect the browser's disk cache for stored pages containing sensitive information in the page contents or URL.
+Perform the browser-based history test on a representative page containing user information. Using browsing history, proxy logs, and response headers as a guide for pages of interest, inspect the browser's disk cache for stored pages containing sensitive information in the page contents or URL.
 
 * * *
 
