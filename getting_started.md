@@ -769,4 +769,4 @@ From the WebSockets view, it is also possible to determine whether the WebSocket
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
-* Proceed to the next chapter: D. [Preparing Your Browser](browser_prep.md)
+* Proceed to the next chapter: D. [Preparing Firefox for Testing](browser_prep.md)
