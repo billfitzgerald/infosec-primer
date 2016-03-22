@@ -11,12 +11,12 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
 * C1 [The Toolkit: A Summary](#h.toolkit-summary)
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#h.toolkit-firebug)
 * C3 [Installing and Using an Advanced Cookie Manager](#h.toolkit-adv-cookie-manager)
-* C4 [Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.toolkit-zap-proxy)
+* C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.toolkit-zap-proxy)
   * C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
   * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
   * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
   * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
-  * C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](#h.toolkit-zap-proxy-websockets)
+  * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
 ## <a name="h.toolkit-summary"></a>C1 The Toolkit: A Summary
 
@@ -35,7 +35,7 @@ More information about Firebug can be found at http://getfirebug.com/.
 
 The Advanced Cookie Manager plug-in is a tool that lets us manipulate, inspect, and delete individual [cookies](glossary.md#h.glossary-cookies). More information about the Advanced Cookie Manager is available at https://addons.mozilla.org/en-US/firefox/addon/cookie-manager/.
 
-OWASP Zed Attack Prozy, or ZAP, is a freely available, cross-platform and open-source proxy program developed and maintained by [OWASP](https://www.owasp.org) (Open Web App Security Project). It provides more advanced features than Firebug and can be used to monitor the network traffic of mobile devices, as well as programs or browsers running on any host on the tester's local network. ZAP downloads and documentation are available at [the OWASP ZAP project page](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
+OWASP Zed Attack Proxy, or ZAP, is a freely available, cross-platform and open-source proxy program developed and maintained by [OWASP](https://www.owasp.org) (Open Web App Security Project). It provides more advanced features than Firebug and can be used to monitor the network traffic of mobile devices, as well as programs or browsers running on any host on the tester's local network. ZAP downloads and documentation are available at [the OWASP ZAP project page](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
 
 This rest of this section describes setting up the proxy and related testing tools, and how to use these tools to perform the tests in this handbook.
 
@@ -155,7 +155,7 @@ During several of the tests outlined in the [testing scenarios](testing_scenario
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic
+## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
 
 As the name implies, an [intercepting proxy](glossary.md#h.glossary-intercepting-proxy) intercepts and logs the requests and responses between a client (browser or mobile app) and the network resources with which it interacts. This enables observation of the behavior of the application without interfering with its functionality.
 
@@ -187,13 +187,13 @@ The normal operation of https creates an [encrypted](glossary.md#h.glossary-encr
 * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
 * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
 * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
-* C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](#h.toolkit-zap-proxy-websockets)
+* C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
 If you are primarily concerned with testing Web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box).
 
 If you are going to test mobile apps, then the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box) cover the details of preparing this testing environment.
 
-Using the ZAP Proxy requires more setup steps than other elements of the toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
+Using ZAP Proxy requires more setup steps than other elements of the toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
 ### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup of OWASP ZAP
 
@@ -737,7 +737,7 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using a ZAP Proxy
+### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using ZAP Proxy
 
 WebSockets is a communication link separate from http that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the Web application loads into the browser. If an application uses Websockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
