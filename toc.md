@@ -12,7 +12,7 @@
 
 [C3 Installing and Using an Advanced Cookie Manager](#h.ykszsnquvupn)
 
-[C4 Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.mwfpqjd3xlon)
+[C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.mwfpqjd3xlon)
 
 [C4.1 Installation and Initial Setup of OWASP ZAP](#h.7fymp72b8omo)
 
@@ -58,7 +58,7 @@
 
 [C4.4.4.2 Install Proxy Certificate File to the Device](#h.tr59wlfhqrl3)
 
-[C4.5 Observing WebSockets Traffic Using a ZAP Proxy](#h.w3vwwdi4lrrz)
+[C4.5 Observing WebSockets Traffic Using ZAP Proxy](#h.w3vwwdi4lrrz)
 
 [D. Preparing Firefox for Testing](#h.ntcxwqbe2jar)
 
