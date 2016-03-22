@@ -157,7 +157,7 @@ In an educational setting [Transport Layer Security](glossary.md#h.glossary-tran
 
 ### E2.3.1 Tools
 
-The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using a ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
+The TLS checks for web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
 
 ### E2.3.2 Tests
 
@@ -804,7 +804,7 @@ The exploitability and impact related to websockets traffic depends on what info
 
 ## E8.3 Setup and Tests
 
-Refer to the proxy setup section C4.5 [Observing WebSockets Traffic Using a ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
+Refer to the proxy setup section C4.5 [Observing WebSockets Traffic Using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view websockets in OWASP ZAP, and how to check whether the websockets link is encrypted.
 
 There are not a specific set of tests to exercise websockets. Rather, the functionality of the application should be explored during testing, and then websockets traffic (if any) observed for its contents and encryption. Steps for these observations are described below.
 
