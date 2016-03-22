@@ -2,9 +2,9 @@
 
 When the testing environment setup is complete, testing can begin on various elements of websites and applications. The testing scenarios described in the rest of this handbook focus on common issues with Web and mobile applications.
 
-For people who want to learn more about basic information security but who won't get into running specific tests, the "Summary" and the "Exploitability and Impact" sections provide an overview of when and how a specific vulnerability could be exploited. The "Setup and Tests" section covers the specific steps to identify any potential security holes.
+For people who want to learn more about basic information security but who won't get into running specific tests, the "Summary" and "Exploitability and Impact" sections provide an overview of when and how a specific vulnerability could be exploited. The "Setup and Tests" section covers the specific steps to identify any potential security holes.
 
-Not all issues are equally serious, and the possible risk of any issue needs to be weighed against the specific use of the application. In each test section, there is a discussion of the ease of exploiting the vulnerability, and the potential [impact](glossary.md#h.glossary-impact) of a successful [exploit](glossary.md#h.glossary-exploit). Not every test will be applicable in every situation. Additionally, in some testing scenarios, initial tests will be used to determine if more detailed tests are necessary.
+Not all issues are equally serious, and the possible risk of any issue needs to be weighed against the specific use of the application. In each test section, there is a discussion of the ease of exploiting the vulnerability and the potential [impact](glossary.md#h.glossary-impact) of a successful [exploit](glossary.md#h.glossary-exploit). Not every test will be applicable in every situation. Additionally, in some testing scenarios, initial tests will be used to determine whether more detailed tests are necessary.
 
 Every test scenario uses a common structure:
 
