@@ -594,7 +594,7 @@ For Android devices, many methods of moving the certificate file to the device's
 
 ##### C4.4.4.1 Transfer Proxy Certificate File to the Device
 
-Copy the proxy certificate file to the Android's SD card or other internal storage. The tutorial below assumes that certificate has been moved to an SD card. 
+Copy the proxy certificate file to the Android's SD card or other internal storage. The tutorial below assumes that the certificate has been moved to an SD card. 
 
 ##### C4.4.4.2 Install Proxy Certificate File to the Device
 
