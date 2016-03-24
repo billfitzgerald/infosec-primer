@@ -739,7 +739,7 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 
 WebSockets is a communication link separate from http that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the Web application loads into the browser. If an application uses WebSockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
-ZAP Proxy supports the viewing of WebSockets traffic. (**Note**: Firebug does not support viewing of WebSockets traffic). By default the WebSockets pane is not one of the choices shown in the toolbar at the center of the ZAP display.
+ZAP Proxy supports the viewing of WebSockets traffic. (**Note**: Firebug does not support viewing of WebSockets traffic.) By default the WebSockets pane is not one of the choices shown in the toolbar at the center of the ZAP display.
 
 The WebSockets pane can be added by clicking the green "+" and selecting **WebSockets** from the drop-down menu.
 
