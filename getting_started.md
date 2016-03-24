@@ -622,7 +622,7 @@ A dialog titled **Name the certificate** will pop up. Leave the name unchanged a
 </figure>
 </div>
 
-When you are not using the device to test, remove the certificate. To remove the certificate, go to the **Setup** --> **Security** --> **Trusted Credentials** --> **User** dialog.
+When you are not using the device to test, remove the certificate. To remove the certificate, go to the **Settings** --> **Security** --> **Trusted credentials** --> **User** dialog.
 
 <div align="center">
 <figure>
