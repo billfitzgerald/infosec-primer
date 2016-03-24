@@ -628,7 +628,7 @@ When you are not using the device to test, remove the certificate. To remove the
 <figure>
   <img alt="" src="images/image75.png" width="528.00" height="449.00" title="">
     <br>
-  <figcaption>Image Caption:</figcaption>
+  <figcaption>Image Caption: Navigating to the certificate</figcaption>
 </figure>
 </div>
 
