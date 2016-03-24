@@ -256,7 +256,7 @@ In the next screenshot, we see an example of a service that uses https after log
 
 #### E2.3.2.4 Check Whether the Application Uses Strict-Transport-Security Headers (Web Applications)
 
-Strict-transport-security headers (also called HSTS for HTTP strict transport security) tell the browser to always use https when communicating with a website or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
+Strict-transport-security headers (also called HSTS for HTTP Strict Transport Security) tell the browser to always use https when communicating with a website or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
 
 The examples below show correct use of strict-transport-security headers as displayed in ZAP and Firebug.
 
@@ -593,7 +593,7 @@ Cookies have optional flags that the application can set to control how a browse
 
 The httpOnly flag prevents scripts from reading a cookie's contents. In a [cross-site scripting](glossary.md#h.glossary-xss) attack (commonly called "XSS"), an adversary is able to inject a malicious script to run in a user's browser. If such a script can read an authentication cookie, it can send it to the adversary for use in a [session-hijacking](glossary.md#h.glossary-session-hijack) attack. The httpOnly flag cannot prevent a successful cross-site scripting attack, but it does prevent the cookie, and the account it protects, against compromise in the event of such an attack.
 
-The secure flag prevents the browser from sending a cookie in an http (unencrypted) request. In an implementation that is using https, this protects against an accidental exposure of the cookie through an unintentional http request. In some implementations the use of load balancers to even out internal server loading can preclude the use of the secure flag for authentication cookies. In those cases, HSTS (HTTP strict transport security) is important to prevent the browser from sending any http requests to this domain. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) for details of HSTS.)
+The secure flag prevents the browser from sending a cookie in an http (unencrypted) request. In an implementation that is using https, this protects against an accidental exposure of the cookie through an unintentional http request. In some implementations the use of load balancers to even out internal server loading can preclude the use of the secure flag for authentication cookies. In those cases, HSTS (HTTP Strict Transport Security) is important to prevent the browser from sending any http requests to this domain. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) for details of HSTS.)
 
 <div align="center">
 <figure>
