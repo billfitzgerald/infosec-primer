@@ -2,17 +2,17 @@
 
 The Information Security Primer for Evaluating Educational Software is licensed under a 4.0 License.
 
-The summary of this license is available here: https://creativecommons.org/licenses/by-nc-sa/4.0/
+The summary of this license is available here: https://creativecommons.org/licenses/by-nc-sa/4.0/.
 
-The full text of this license is available here: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+The full text of this license is available here: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.
 
 ## Attribution
 
 If you use this work in accordance with the permissions granted under the Creative Commons Attribution Non-Commercial Share-Alike 4.0 License, please attribute this work as follows:
 
-* Use the correct name of the work: **Information Security Primer for Evaluating Educational Software**
+* Use the correct name of the work: **Information Security Primer for Evaluating Educational Software**.
 * Link to https://www.graphite.org/privacy/security-primer.
-* Link to this attribution page: https://github.com/billfitzgerald/infosec-primer/blob/master/licensing_attribution.md
+* Link to this attribution page: https://github.com/billfitzgerald/infosec-primer/blob/master/licensing_attribution.md.
 * Credit Common Sense Media (with a link to https://www.commonsensemedia.org) as the lead organization supporting the work.
 
 This sample attribution includes these four required elements:
