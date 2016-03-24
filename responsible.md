@@ -1,6 +1,6 @@
 # B. Responsible Disclosure
 
-When you perform information security tests, you are looking to find ways that systems break. The tests outlined in this guide highlight common issues in software and mobile applications. These issues have persisted for years, and, unfortunately, will almost certainly persist for many more years to come.
+When you perform information security tests, you are looking to find ways that systems break. The tests outlined in this guide highlight common issues in software and mobile applications. These issues have persisted for years and, unfortunately, will almost certainly persist for many more years to come.
 
 This is all a long way of saying that when you perform information security testing and reviews, you will -- at some point -- discover problems. In many cases, these problems will reveal issues that compromise user data. Because of this, testing requires discretion and ethics. You are looking for issues, which can lead to accessing sensitive information. If you uncover a security issue, you have an ethical (and, in some cases, a legal) obligation to not make things worse.
 
