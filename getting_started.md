@@ -119,7 +119,7 @@ The transaction's entry can also be expanded by clicking the triangle next to th
 </figure>
 </div>
 
-The descriptions of individual tests in the [testing scenarios](testing_scenarios.md) give more details on how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of Web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP [described below](#h.toolkit-zap-proxy)).
+The descriptions of individual tests in the [testing scenarios](testing_scenarios.md) give more details on how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of Web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP, [described below](#h.toolkit-zap-proxy)).
 
 * * *
 
