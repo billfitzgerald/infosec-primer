@@ -183,7 +183,7 @@ The normal operation of https creates an [encrypted](glossary.md#h.glossary-encr
 
 <a name="h.toolkit-zap-nav"></a>The instructions for setting up OWASP ZAP are broken into five distinct sections:
 
-* C4.1 [Installation and Initial Setup](#h.toolkit-zap-proxy-install)
+* C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
 * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
 * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
 * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
