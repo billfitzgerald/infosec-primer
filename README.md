@@ -48,7 +48,7 @@ Jenny Pritchett copyedited the initial version.
 
 ## Contact Information
 
-Please contact Bill Fitzgerald (bfitzgerald@commonsense.org) with any questions or comments on this handbook.
+Please contact Bill Fitzgerald (bfitzgerald@commonsense.org) with any questions or comments on this primer.
 
 We will also respond -- as time permits -- to issues in the issue queue.
 
