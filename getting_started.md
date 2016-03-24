@@ -710,7 +710,7 @@ A dialog titled **Name the certificate** will pop up. Enter a name, leave **Cred
 </figure>
 </div>
 
-When you are not using the device to test, remove the certificate. To remove the certificate, go to **Setup** --> **Security** --> **Clear Credentials**.
+When you are not using the device to test, remove the certificate. To remove the certificate, go to **Setup** --> **Security** --> **Clear credentials**.
 
 <div align="center">
 <figure>
