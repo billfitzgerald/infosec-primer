@@ -45,7 +45,7 @@ This rest of this section describes setting up the proxy and related testing too
 
 ## <a name="h.toolkit-firebug"></a>C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
 
-To install Firebug, go to **Tools** --> **Add ons**, search for "Firebug," and select it for installation to Firefox. A screenshot of the plug-in's description page (to ensure you are getting the correct plug-in) is shown below.
+To install Firebug, go to **Tools** --> **Add-ons**, search for "Firebug," and select it for installation to Firefox. A screenshot of the plug-in's description page (to ensure you are getting the correct plug-in) is shown below.
 
 <div align="center">
 <figure>
