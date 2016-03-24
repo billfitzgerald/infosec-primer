@@ -255,7 +255,7 @@ Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **C
 </div>
 
 *   Select **Manual proxy configuration**.
-*   Set **HTTP Proxy** to "localhost" and **Port** to "8080".
+*   Set **HTTP Proxy** to "localhost" and **Port** to "8080."
 *   Select the option to **Use this proxy server for all protocols**.
 
 Then, click the **OK** button.
