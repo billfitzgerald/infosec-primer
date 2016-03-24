@@ -440,7 +440,7 @@ Click the **Save** link to save the settings.
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
 ### <a name="h.toolkit-zap-proxy-ssl-cert"></a>C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices
 
@@ -733,7 +733,7 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
 ### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using ZAP Proxy
 
@@ -766,5 +766,5 @@ From the WebSockets view, it is also possible to determine whether the WebSocket
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 * Proceed to the next chapter: D. [Preparing Firefox for Testing](browser_prep.md)
