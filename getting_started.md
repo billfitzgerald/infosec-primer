@@ -753,7 +753,7 @@ The WebSockets pane can be added by clicking the green "+" and selecting **WebSo
 
 The pane will also be added automatically to the toolbar by ZAP if a WebSockets connection is opened through the proxy. A view of the WebSockets traffic pane is shown below. Clicking on an individual message will show the full payload of the message in the upper pane of ZAP (where http requests and responses are normally shown).
 
-From the WebSockets view, it is also possible to determine whether the WebSockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in Section E8 [Observation of WebSockets traffic](testing_scenarios.md#h.testing-websockets).
+From the WebSockets view, it is also possible to determine whether the WebSockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in Section E8 [Observation of WebSockets Traffic](testing_scenarios.md#h.testing-websockets).
 
 <div align="center">
 <figure>
