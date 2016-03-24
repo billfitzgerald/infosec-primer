@@ -51,7 +51,7 @@ To install Firebug, go to **Tools** --> **Add-ons**, search for "Firebug," and s
 <figure>
   <img alt="Firebug Add-on" src="images/image57.png" width="624.00" height="56.00" title="Firebug Add-on">
     <br>
-  <figcaption>Image Caption: Firebug Add-on</figcaption>
+  <figcaption>Image Caption: Firebug add-on</figcaption>
 </figure>
 </div>
 
