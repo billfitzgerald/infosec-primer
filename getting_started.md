@@ -379,7 +379,7 @@ Once the settings have been updated, click the "OK" button to save the changes.
 
 #### C4.3.4 iOS Device Setup
 
-On an iOS (Apple) device, go to **Settings** --> **Wifi**, and make sure your device is on the same network as the proxy computer.
+On an iOS (Apple) device, go to **Settings** --> **Wi-Fi**, and make sure your device is on the same network as the proxy computer.
 
 Select the info screen for the network the device is connected to.
 
