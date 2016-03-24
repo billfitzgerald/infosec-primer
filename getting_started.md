@@ -220,7 +220,7 @@ Select the check box for **Process images in HTTP requests/responses**. Then, cl
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
 ### <a name="h.toolkit-zap-proxy-same-box"></a>C4.2 Basic Setup, Browser and Proxy on Same Computer
 
