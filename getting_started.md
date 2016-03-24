@@ -135,7 +135,7 @@ Many cookie managers are available as browser plug-ins. The examples in this doc
 <figure>
   <img alt="Advanced Cookie Manager Plugin" src="images/image26.png" width="624.00" height="164.00" title="Advanced Cookie Manager Plug-in">
     <br>
-  <figcaption>Image Caption: Advanced Cookie Manager Add-on</figcaption>
+  <figcaption>Image Caption: Advanced Cookie Manager plug-in</figcaption>
 </figure>
 </div>
 
