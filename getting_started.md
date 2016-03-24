@@ -478,7 +478,7 @@ In the **View Certificates** dialog, select **Import**.
 
 <div align="center">
 <figure>
-  <img alt="Importing a certificate in Firefox" src="images/image36.png" width="570.00" height="323.00" title="Importing a certificate in Firefox">
+  <img alt="Importing a certificate in Firefox" src="images/image36.png" width="570.00" height="323.00" title="Importing a certificate to Firefox">
     <br>
   <figcaption>Image Caption: Importing a certificate in Firefox</figcaption>
 </figure>
