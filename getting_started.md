@@ -10,7 +10,7 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
 
 * C1 [The Toolkit: A Summary](#h.toolkit-summary)
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#h.toolkit-firebug)
-* C3 [Installing and Using an Advanced Cookie Manager](#h.toolkit-adv-cookie-manager)
+* C3 [Installing and Using Advanced Cookie Manager](#h.toolkit-adv-cookie-manager)
 * C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.toolkit-zap-proxy)
   * C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
   * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
@@ -24,7 +24,7 @@ All of the tests documented in the primer are run using:
 
 *   the Firefox browser,
 *   with the Firebug extension,
-*   and the Advanced Cookie Manager plug-in,
+*   the Advanced Cookie Manager plug-in,
 *   and the OWASP Zed Attack Proxy.
 
 Firefox is a free, open-source browser and can be downloaded here: https://www.mozilla.org/en-US/firefox/new/.
@@ -125,7 +125,7 @@ The descriptions of individual tests in the [testing scenarios](testing_scenario
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using an Advanced Cookie Manager
+## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using Advanced Cookie Manager
 
 [Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [http](glossary.md#h.glossary-http) responses as the user interacts with a Web service. The browser saves the cookie values and includes them with subsequent http requests to the same application or domain. The use of cookies allows Web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookies](glossary.md#h.glossary-auth-cookie) and cookie handling, covered in Section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#testing-auth-token).
 
