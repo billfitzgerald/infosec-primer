@@ -573,7 +573,7 @@ Authentication cookies, commonly called session cookies, are often easy to spot 
 
 However, there are no hard and fast rules governing the names of cookies. Many authentication cookie names are unique to the service and may not be named in a way to make it clear it's a session/authentication cookie.
 
-To read and search for cookies, use the advanced cookie manager described in Section C3 [Installing and Using an Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
+To read and search for cookies, use the Advanced Cookie Manager described in Section C3 [Installing and Using Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
 
 To confirm that a cookie is an authentication cookie, or to search for it in case the name is not apparent, log in to the website.
 
@@ -583,7 +583,7 @@ Then, using the cookie manager, delete the candidate cookie and reload the page.
 <figure>
   <img alt="Deleting a cookie using the Advanced Cookie Manager" src="images/image32.png" width="624.00" height="356.00" title="Deleting a cookie using the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Deleting a cookie using the advanced cookie manager</figcaption>
+  <figcaption>Image Caption: Deleting a cookie using the Advanced Cookie Manager</figcaption>
 </figure>
 </div>
 
@@ -599,7 +599,7 @@ The secure flag prevents the browser from sending a cookie in an http (unencrypt
 <figure>
   <img alt="Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager" src="images/image63.png" width="624.00" height="344.00" title="Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Checking for the httpOnly and isSecure flags with the advanced cookie manager</figcaption>
+  <figcaption>Image Caption: Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager</figcaption>
 </figure>
 </div>
 
@@ -627,7 +627,7 @@ A cookie editor makes it straightforward to check whether authentication tokens 
 <figure>
   <img alt="Using the Advanced Cookie Manager to save cookies from a specific domain" src="images/image35.png" width="624.00" height="341.33" title="Using the Advanced Cookie Manager to save cookies from a specific domain">
     <br>
-  <figcaption>Image Caption: Using the advanced cookie manager to save cookies from a specific domain</figcaption>
+  <figcaption>Image Caption: Using the Advanced Cookie Manager to save cookies from a specific domain</figcaption>
 </figure>
 </div>
 
@@ -647,7 +647,7 @@ A cookie editor makes it straightforward to check whether authentication tokens 
 <figure>
   <img alt="Restore cookies using the Advanced Cookie Manager" src="images/image22.png" width="700.50" height="450.47" title="Restore cookies using the Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Restore cookies using the advanced cookie manager.</figcaption>
+  <figcaption>Image Caption: Restore cookies using the Advanced Cookie Manager.</figcaption>
 </figure>
 </div>
 
