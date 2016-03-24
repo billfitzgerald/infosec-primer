@@ -421,7 +421,7 @@ Press and hold the name of the network to bring up the network settings menu, an
 <figure>
   <img alt="Select the Modify Network option" src="images/image51.png" width="374.00" height="99.00" title="Select the Modify Network option">
     <br>
-  <figcaption>Image Caption: Select the Modify Network option.</figcaption>
+  <figcaption>Image Caption: Select the Modify network option.</figcaption>
 </figure>
 </div>
 
