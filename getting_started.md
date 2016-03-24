@@ -349,7 +349,7 @@ $ ip address
 </code>
 </pre>
 
-In the example above, **eth0** is the correct interface, and the address is *192.168.251.211*.
+In the example above, **eth0** is the correct interface, and the address is **192.168.251.211**.
 
 #### C4.3.2 In ZAP Proxy: Change "Local proxy" Address
 
