@@ -674,7 +674,7 @@ Select **Internal storage** from the menu.
 <figure>
   <img alt="Select internal storage" src="images/image04.png" width="323.50" height="362.54" title="Select internal storage">
     <br>
-  <figcaption>Image Caption: Select internal storage.</figcaption>
+  <figcaption>Image Caption: Select **Internal storage**.</figcaption>
 </figure>
 </div>
 
