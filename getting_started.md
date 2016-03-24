@@ -215,7 +215,7 @@ After installation, modify the **Display** settings to enable **process images i
 </figure>
 </div>
 
-Select the checkbox for **Process images in HTTP requests/responses**. Then, click the **OK** button.
+Select the check box for **Process images in HTTP requests/responses**. Then, click the **OK** button.
 
 * * *
 
