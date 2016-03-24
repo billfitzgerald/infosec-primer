@@ -157,7 +157,7 @@ During several of the tests outlined in the [testing scenarios](testing_scenario
 
 ## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
 
-As the name implies, an [intercepting proxy](glossary.md#h.glossary-intercepting-proxy) intercepts and logs the requests and responses between a client (browser or mobile app) and the network resources with which it interacts. This enables observation of the behavior of the application without interfering with its functionality.
+As the name implies, an [intercepting proxy](glossary.md#h.glossary-intercepting-proxy) intercepts and logs the requests and responses between a client (a browser or mobile app) and the network resources with which it interacts. This enables observation of the behavior of the application without interfering with its functionality.
 
 Setting up a proxy on your computer allows the user to review all network traffic on that computer in greater detail. While Firebug allows the user to see some transactions, an intercepting proxy provides a more comprehensive picture. For example, a portion of a proxy log from loading "graphite.org" in a browser is shown below:
 
