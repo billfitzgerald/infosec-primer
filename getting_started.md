@@ -656,7 +656,7 @@ In the **Settings** --> **Security** dialog, select **Install from Storage**.
 </figure>
 </div>
 
-A dialog showing the downloads directory will show up. However, the process usually requires the certificate to be accessed through **Internal Storage** instead, using the following sequence:
+A dialog showing the downloads directory will show up. However, the process usually requires the certificate to be accessed through **Internal storage** instead, using the following sequence:
 
 Select the menu tab at the top-left corner.
 
@@ -664,11 +664,11 @@ Select the menu tab at the top-left corner.
 <figure>
   <img alt="Access internal storage" src="images/image09.png" width="487" height="77" title="Access internal storage">
     <br>
-  <figcaption>Image Caption: Access internal storage.</figcaption>
+  <figcaption>Image Caption: Access Internal storage.</figcaption>
 </figure>
 </div>
 
-Select **Internal Storage** from the menu.
+Select **Internal storage** from the menu.
 
 <div align="center">
 <figure>
