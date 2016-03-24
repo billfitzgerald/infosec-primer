@@ -197,7 +197,7 @@ Using ZAP Proxy requires more setup steps than other elements of the toolkit. Fo
 
 ### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup of OWASP ZAP
 
-This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarions, which is a small subset of all the features offered in ZAP. For a complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
+This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarios, which is a small subset of all the features offered in ZAP. For a complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
 
 ZAP is available for download at the ZAP project page:
 
