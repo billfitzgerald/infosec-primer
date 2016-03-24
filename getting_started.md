@@ -244,7 +244,7 @@ Once you have verified that the settings in ZAP are correct, you can proceed to 
 
 When the browser and the proxy are on the same computer, the proxy address in the browser should be configured to use a proxy at "localhost" and port 8080.
 
-Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **Connection, as shown below.
+Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **Connection Settings**, as shown below.
 
 <div align="center">
 <figure>
