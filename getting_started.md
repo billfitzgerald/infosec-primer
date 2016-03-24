@@ -365,7 +365,7 @@ The proxy setup procedure is the same as covered in C4.2 [Basic Setup, Browser a
 
 #### C4.3.3 In Firefox: Change the "Manual proxy configuration" Address
 
-In Firefox, under **Preferences** --> **Advanced** --> **Network** --> **Connection**, select **Manual Proxy** and enter the network address found in the steps above.
+In Firefox, under **Preferences** --> **Advanced** --> **Network** --> **Connection**, select **Manual proxy configuration** and enter the network address found in the steps above.
 
 Once the settings have been updated, click the "OK" button to save the changes.
 
