@@ -271,8 +271,8 @@ To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate 
 
 The steps in this section are only relevant in the following scenarios:
 
-*   Testing traffic coming from a phone or a tablet
-*   Testing traffic coming from multiple computers (for example, if the tests will compare traffic from a Chromebook, an Apple computer, and/or a Windows computer)
+*   testing traffic coming from a phone or a tablet;
+*   and testing traffic coming from multiple computers (for example, if the tests will compare traffic from a Chromebook, an Apple computer, and/or a Windows computer).
 
 If you are not testing mobile devices, and/or if you are running ZAP on the same computer as the Web browser you will use for testing, you do not need to follow the steps in this section.
 
