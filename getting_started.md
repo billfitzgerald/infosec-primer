@@ -6,7 +6,7 @@ The tests in this document make extensive use of an [intercepting proxy](glossar
 
 While the bulk of our tests rely on an intercepting proxy to power more detailed analysis, two other tools -- a cookie reader and a browser extension called **Firebug** -- are used as well. These two tools can often be used to do a quick, more cursory examination to determine which additional tests might be necessary.
 
-## <a name="h.toolkit-nav"></a>Navigation
+## <a name="h.toolkit-nav"></a>Navigation: Getting Started
 
 * C1 [The Toolkit: A Summary](#h.toolkit-summary)
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#h.toolkit-firebug)
