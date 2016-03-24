@@ -205,7 +205,7 @@ The download packages and installation instructions are platform-specific for Wi
 
 #### C4.1.1 Modify Display Settings
 
-After installation, modify the **Display** settings to enable **process images in HTTP requests/responses**. This configuration causes image loads that may be of interest during testing to be displayed in the history log. In ZAP this setting is managed in the **Tools** --> **Options** --> **Display** menu.
+After installation, modify the **Display** settings to enable **process images in http requests/responses**. This configuration causes image loads that may be of interest during testing to be displayed in the history log. In ZAP this setting is managed in the **Tools** --> **Options** --> **Display** menu.
 
 <div align="center">
 <figure>
