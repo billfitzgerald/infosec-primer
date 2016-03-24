@@ -415,7 +415,7 @@ Open the **Settings** menu and select **Wi-Fi**.
 
 Press and hold the name of the network to bring up the network settings menu, and select **Modify network**.
 
-**Note**: You need to give a longer-than-average "click" on the wireless name, in the range of one to two seconds, to bring up the **Modify Network** option.
+**Note**: You need to give a longer-than-average "click" on the wireless name, in the range of one to two seconds, to bring up the **Modify network** option.
 
 <div align="center">
 <figure>
