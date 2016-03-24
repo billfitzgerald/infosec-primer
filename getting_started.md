@@ -612,7 +612,7 @@ In the **Settings** --> **Security** dialog, select **Install from SD Card**.
 </figure>
 </div>
 
-A dialog titled **Name the Certificate** will pop up. Leave the name unchanged and select **OK**.
+A dialog titled **Name the certificate** will pop up. Leave the name unchanged and select **OK**.
 
 <div align="center">
 <figure>
