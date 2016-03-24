@@ -286,7 +286,7 @@ The "quality" of an encrypted https connection can vary based on how the server 
 
 Submit the service's domain name to the Qualys SSL Server Test website and record the results ([https://www.ssllabs.com/ssltest/](https://www.ssllabs.com/ssltest/)).
 
-Note: Take care to use the domain name that the app is actually hosted from. Some services will have a main page that provides information about the service but will host the application at a different domain or subdomain.
+**Note**: Take care to use the domain name that the app is actually hosted from. Some services will have a main page that provides information about the service but will host the application at a different domain or subdomain.
 
 On the SSL Server Test page, check the box labeled "Do not show the results on the boards." This prevents the results from being publicly shared on the SSL Server Test page.
 
@@ -426,7 +426,7 @@ The browser's history is subtly different from the cache but also can be used to
 
 This section will describe how to do browser-based tests for browser caching of sensitive pages, and how to inspect message headers to look for cache control directives.
 
-Note: Make sure that you have cleared your history, cookies, and cache as described in [Section D](browser_prep.md).
+**Note**: Make sure that you have cleared your history, cookies, and cache as described in [Section D](browser_prep.md).
 
 ## E4.2 Exploitability and Impact
 
@@ -1082,7 +1082,7 @@ For vulnerabilities that are possible for both mobile and browser-based apps, th
 
 Poor authentication controls on network-facing APIs are described in the general vulnerabilities section, but APIs are much more common as interfaces on mobile applications than browser-based applications. The reason is that a browser-based application will often return an HTML page in response to a request for information, while a mobile app will often query an API for raw data and then render it for the screen within the mobile application.
 
-One vulnerability that is specific to mobile applications is failure to check the authenticity of an SSL [certificate](glossary.md#h.glossary-certificate). SSL certificates are usually registered with a [certificate authority](glossary.md#h.glossary-ca), which acts as a trusted third party to confirm the identity of the server being connected to. If an application fails to check this, an attacker's certificate can be accepted by the application, thereby allowing the attacker to intercept the encrypted messages sent and received by the application. (Note: When a tester's proxy self-signed certificate is added to a mobile device's trusted store, the CA mechanism is bypassed, but the device owner marks it as a trusted certificate, allowing the device to accept the proxy's certificate as authentic.) If a mobile application accepts an SSL certificate without verifying that it's from a trusted source, it can enable a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) that could allow an adversary to view the contents of the mobile application's encrypted traffic. This type of attack is also sometimes called [SSL certificate spoofing](glossary.md#h.glossary-ssl-spoofing).
+One vulnerability that is specific to mobile applications is failure to check the authenticity of an SSL [certificate](glossary.md#h.glossary-certificate). SSL certificates are usually registered with a [certificate authority](glossary.md#h.glossary-ca), which acts as a trusted third party to confirm the identity of the server being connected to. If an application fails to check this, an attacker's certificate can be accepted by the application, thereby allowing the attacker to intercept the encrypted messages sent and received by the application. (**Note**: When a tester's proxy self-signed certificate is added to a mobile device's trusted store, the CA mechanism is bypassed, but the device owner marks it as a trusted certificate, allowing the device to accept the proxy's certificate as authentic.) If a mobile application accepts an SSL certificate without verifying that it's from a trusted source, it can enable a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle) that could allow an adversary to view the contents of the mobile application's encrypted traffic. This type of attack is also sometimes called [SSL certificate spoofing](glossary.md#h.glossary-ssl-spoofing).
 
 There are a number of barriers to executing a certificate spoofing attack. Access to the vulnerable mobile app's network transactions are required on a network where the attacker can route the app's traffic through a proxy or similar utility, which can present the attacker's untrusted certificate to the device. A rogue Wi-Fi hot spot is one way such an attack could be attempted (which is one of many reasons why we all need to be careful when connecting to public Wi-Fi). The impact of a successful attack can be significant, as encrypted transactions containing passwords, authentication tokens, and sensitive information become accessible to the attacker. Another factor that may amplify the impact of an SSL certificate spoofing vulnerability in an app is that, after a fix is provided, individual users will not receive the fix unless they update the app on their devices. (For browser-based applications, the SSL certificate checks are handled by the browser and are not specific to individual applications.)
 
@@ -1128,7 +1128,7 @@ The tests for this require a familiarity with installing and uninstalling SSL ce
 To check for a potential SSL certificate spoofing vulnerability:
 
 1.  Use the proxy to verify that the application generates https requests, using a device that has the proxy's SSL certificate installed. This is likely to have already been done during earlier testing. Remove the proxy's certificate from the mobile device being used to test the application, or load the application to a device that has not had the proxy's SSL certificate installed as a trusted certificate.
-    Note: If the application does not generate https requests, that indicates that the application does not use encryption, which is potentially a separate issue covered in E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls).
+    **Note**: If the application does not generate https requests, that indicates that the application does not use encryption, which is potentially a separate issue covered in E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls).
 2.  Exercise the functions of the application under test on the mobile device that does not have the proxy's SSL certificate installed.
  *   If https requests by the application are logged by the proxy, this indicates that the authenticity of the proxy's certificate was not checked by the app;
  *   and if no https requests are logged by the proxy, this indicates that the proxy's certificate's authenticity was checked and not accepted by the mobile application. The application probably won't work correctly and may display a message that it can't connect to the network.
