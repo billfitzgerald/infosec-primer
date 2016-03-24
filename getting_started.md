@@ -516,7 +516,7 @@ Verify that the certificate has been uploaded by browsing to it. All certificate
 
 **Note**: When you are not testing, you should remove the certificate from the browser.
 
-To remove the certificate, in Firefox go to the **Preferences** --> **Advanced** --> **Certificates** --> **View Certificates** menu, select the *OWASP Zed Attack Proxy Root CA* certificate, and click on **Delete or Distrust**.
+To remove the certificate, in Firefox go to the **Preferences** --> **Advanced** --> **Certificates** --> **View Certificates** menu, select the "OWASP Zed Attack Proxy Root CA" certificate, and click on **Delete or Distrust**.
 
 <div align="center">
 <figure>
