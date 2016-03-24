@@ -265,7 +265,7 @@ To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate 
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
 ### <a name="h.toolkit-zap-proxy-different-box"></a>C4.3 Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy
 
