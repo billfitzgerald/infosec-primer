@@ -425,7 +425,7 @@ Press and hold the name of the network to bring up the network settings menu, an
 </figure>
 </div>
 
-Select **Show advanced options**, and then select **Proxy settings --> Manual proxy**. Use the network address and port number from step C4.3.1, as illustrated below.
+Select **Show advanced options**, and then select **Proxy settings --> Manual**. Use the network address and port number from step C4.3.1, as illustrated below.
 
 <div align="center">
 <figure>
