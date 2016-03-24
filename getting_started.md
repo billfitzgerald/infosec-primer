@@ -85,7 +85,7 @@ In the example below, the user has logged out of a service, and the browsing ses
 <figure>
   <img alt="Viewing session lists in Firebug" src="images/image08.png" width="624.00" height="205.33" title="Viewing session lists in Firebug">
     <br>
-  <figcaption>Image Caption: Viewing session lists in Firebug.</figcaption>
+  <figcaption>Image Caption: Viewing session lists in Firebug</figcaption>
 </figure>
 </div>
 
@@ -399,7 +399,7 @@ The proxy settings are at the bottom of the network settings screen. Enable manu
 <figure>
   <img alt="Setting the correct address for the proxy in iOS" src="images/image29.png" width="337.00" height="183.82" title="Setting the correct address for the proxy in iOS">
     <br>
-  <figcaption>Image Caption: Setting the correct address for the proxy in iOS.</figcaption>
+  <figcaption>Image Caption: Setting the correct address for the proxy in iOS</figcaption>
 </figure>
 </div>
 
