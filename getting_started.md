@@ -448,7 +448,7 @@ Installing the proxy's SSL certificate on browsers and devices will allow the pr
 
 #### C4.4.1 Save Proxy Certificate to File
 
-The proxy's SSL certificate can be saved from the **ZAP Preferences** --> **Dynamic SSL Certificates** menu. Open the dialog and click on **Save**.
+The proxy's SSL certificate can be saved from the **ZAP Preferences** --> **Options** --> **Dynamic SSL Certificates** menu. Open the dialog and click on **Save**.
 
 <div align="center">
 <figure>
