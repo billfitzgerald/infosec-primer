@@ -35,9 +35,9 @@ More information about Firebug can be found at http://getfirebug.com/.
 
 The Advanced Cookie Manager plug-in is a tool that lets us manipulate, inspect, and delete individual [cookies](glossary.md#h.glossary-cookies). More information about the Advanced Cookie Manager is available at https://addons.mozilla.org/en-US/firefox/addon/cookie-manager/.
 
-OWASP Zed Attack Proxy, or ZAP, is a freely available, cross-platform and open-source proxy program developed and maintained by [OWASP](https://www.owasp.org) (Open Web App Security Project). It provides more advanced features than Firebug and can be used to monitor the network traffic of mobile devices, as well as programs or browsers running on any host on the tester's local network. ZAP downloads and documentation are available at [the OWASP ZAP project page](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
+OWASP Zed Attack Proxy, or ZAP, is a freely available, cross-platform, and open-source proxy program developed and maintained by [OWASP](https://www.owasp.org) (Open Web App Security Project). It provides more advanced features than Firebug and can be used to monitor the network traffic of mobile devices, as well as programs or browsers running on any host on the tester's local network. ZAP downloads and documentation are available at [the OWASP ZAP project page](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
 
-This rest of this section describes setting up the proxy and related testing tools, and how to use these tools to perform the tests in this primer.
+This rest of this section describes setting up the proxy and related testing tools and how to use these tools to perform the tests in this primer.
 
 * * *
 
