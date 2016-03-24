@@ -698,7 +698,7 @@ Select the certificate file.
 </figure>
 </div>
 
-A dialog titled **Name the Certificate** will pop up. Enter a name, leave **Credential Use** set to *VPN and apps*, and select **OK** to install the certificate. 
+A dialog titled **Name the certificate** will pop up. Enter a name, leave **Credential use** set to "VPN and apps," and select **OK** to install the certificate. 
 
 **Note**: If the device does not have a screen lock pin or passcode, a window will pop up requiring one to be set.
 
