@@ -8,7 +8,7 @@ For a school or district with the necessary resources, the primer provides tools
 
 Depending on the application, these evaluation steps can include:
 *  understanding how the application collects, uses, shares, and protects data, which could involve reading the terms of service and privacy policies for the application; 
-*  and asking the vendor to explain its data-handling practices. This list of questions prepared by the Consortium for School Networks (CoSN) [Consortium for School Networks (CoSN)](http://www.cosn.org/sites/default/files/03_SecurityQuestions.pdf) (PDF download) provides a good list of questions for application vendors.
+*  and asking the vendor to explain their data-handling practices. This list of questions prepared by the Consortium for School Networks (CoSN) [Consortium for School Networks (CoSN)](http://www.cosn.org/sites/default/files/03_SecurityQuestions.pdf) (PDF download) provides a good list of questions for application vendors.
 
 We highlight these other, less technical means of evaluating software because it is necessary to show that, with educational technology, information security practice is one piece of a larger puzzle. Evaluating educational technology requires that we begin with the learning goals met by the application and then expand to ensure that the application meets all of the requirements for online safety, privacy, security, and legal compliance. A "good" decision around educational technology requires insight into all of these areas, with the needs of learners guiding the evaluation process.
 
