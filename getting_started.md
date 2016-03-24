@@ -139,7 +139,7 @@ Many cookie managers are available as browser plug-ins. The examples in this doc
 </figure>
 </div>
 
-Once installed, the cookie manager can be opened by clicking its icon in the browser-add-ons toolbar or from the add-ons menu. An annotated view of the Advanced Cookie Manager panel is shown below.
+Once installed, the cookie manager can be opened by clicking its icon in the browser add-ons toolbar or from the add-ons menu. An annotated view of the Advanced Cookie Manager panel is shown below.
 
 <div align="center">
 <figure>
