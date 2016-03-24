@@ -199,9 +199,7 @@ Using ZAP Proxy requires more setup steps than other elements of the toolkit. Fo
 
 This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarios, which is a small subset of all the features offered in ZAP. For a complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
 
-ZAP is available for download at the ZAP project page:
-
-[https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
+ZAP is available for download at the ZAP project page: [https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project).
 
 The download packages and installation instructions are platform-specific for Windows, Apple, and Linux. Choose the **Standard** package and follow the installation instructions for your desired platform.
 
