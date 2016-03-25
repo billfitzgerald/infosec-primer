@@ -42,9 +42,9 @@ In the Firefox menu, select **History** --> **Clear recent history**. A pop-up m
 
 ## <a name="h.browser-cookies"></a>D3 Verify That Cookies Are Allowed and Do Not Track Is Off
 
-During testing, we want to make sure that we accept all cookies and that we are not setting **Do Not Track**. 
+During testing, we want to make sure that we accept all cookies and that we are not setting the "do not track" option, phrased here as **Request that sites not track you**.
 
-**Note**: During regular browsing, we recommend being more selective about the cookies we accept and setting Do Not Track. While many vendors do not respect Do Not Track, it offers a degree of protection.
+**Note**: During regular browsing, we recommend being more selective about the cookies we accept and setting the "do not track" option. While many vendors do not respect this option, it offers a degree of protection.
 
 However, to prepare our browser for testing, enter "about:preferences#privacy" as the URL. 
 
@@ -52,7 +52,7 @@ However, to prepare our browser for testing, enter "about:preferences#privacy" a
 <figure>
   <img alt="" src="images/image115.png" width="997" height="456" title="">
     <br>
-  <figcaption>Image Caption: For testing, deselect "Do Not Track," and allow all cookies.</figcaption>
+  <figcaption>Image Caption: For testing, deselect "Request that sites not track you," and allow all cookies.</figcaption>
 </figure>
 </div>
 
