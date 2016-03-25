@@ -142,7 +142,7 @@ See [session hijack](glossary.md#h.glossary-session-hijack).
 
 Attacks where data is read off a network while in transit without modifying or destroying the data.
 
-See also: [eavesdropping attack](glossary.md#h.glossary-eavesdropping).
+See also [eavesdropping attack](glossary.md#h.glossary-eavesdropping).
 
 <a name="h.glossary-social-engineering"></a>[**Social engineering**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
