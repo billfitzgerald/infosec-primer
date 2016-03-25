@@ -30,7 +30,7 @@ By setting your browser to open to a blank page, you ensure that no extraneous c
 
 ## <a name="h.browser-history"></a>D2 Clear History
 
-In the Firefox menu, select **History** --> **Clear recent history**. A pop-up menu appears. Select **Everything** for the time range, tick all the boxes, and click **Clear Now**.
+In the Firefox menu, select **History** --> **Clear Recent History**. A pop-up menu appears. Select **Everything** for the time range, tick all the boxes, and click **Clear Now**.
 
 <div align="center">
 <figure>
