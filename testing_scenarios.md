@@ -581,9 +581,9 @@ Then, using the cookie manager, delete the candidate cookie and reload the page.
 
 <div align="center">
 <figure>
-  <img alt="Deleting a cookie using the Advanced Cookie Manager" src="images/image32.png" width="624.00" height="356.00" title="Deleting a cookie using the Advanced Cookie Manager">
+  <img alt="Deleting a cookie using Advanced Cookie Manager" src="images/image32.png" width="624.00" height="356.00" title="Deleting a cookie using Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Deleting a cookie using the Advanced Cookie Manager</figcaption>
+  <figcaption>Image Caption: Deleting a cookie using Advanced Cookie Manager</figcaption>
 </figure>
 </div>
 
