@@ -47,13 +47,13 @@ Inclusion of non-sensitive information or parameters in URLs does not pose a sec
 </figure>
 </div>
 
-Timestamps and character encodings are other non-sensitive uses of URL parameters.
+Time stamps and character encodings are other non-sensitive uses of URL parameters.
 
 <div align="center">
 <figure>
   <img alt="" src="images/image85.png" width="624.00" height="36.00" title="">
     <br>
-  <figcaption>Image Caption: A timestamp and character encoding (UTF-8) included in a URL. This is not generally a security issue.</figcaption>
+  <figcaption>Image Caption: A time stamp and character encoding (UTF-8) included in a URL. This is not generally a security issue.</figcaption>
 </figure>
 </div>
 
@@ -135,7 +135,7 @@ Often, when performing an initial evaluation of an app, the process of creating 
 
 ## E2.1 Summary
 
-[Encryption](glossary.md#h.glossary-encryption) and [transport layer security](glossary.md#h.glossary-transport-layer-security) are among the fundamental components of securing applications and the information they transmit and store. Encryption converts information into an unintelligible form that can only be decoded (or "decrypted") by a recipient who holds the code required to reverse the encryption. "Transport layer" is a technical term for the mechanisms and pathways used to transmit information between a user and an Internet service. "Transport layer security" (or TLS), as the name implies, refers to the suite of protocols and techniques used to protect the security, privacy, and integrity of Internet communications. TLS is often also called "SSL" ([secure socket layer](glossary.md#h.glossary-secure-socket-layer)), particularly when used with browser and application communications. Strictly speaking, SSL is a precursor of TLS, but the terms are commonly used interchangeably. To be consistent with other documentation and discussion, this document uses "SSL" in contexts where it is typically called SSL (such as browser traffic with a server), and "TLS" elsewhere.
+[Encryption](glossary.md#h.glossary-encryption) and [Transport Layer Security](glossary.md#h.glossary-transport-layer-security) are among the fundamental components of securing applications and the information they transmit and store. Encryption converts information into an unintelligible form that can only be decoded (or "decrypted") by a recipient who holds the code required to reverse the encryption. "Transport layer" is a technical term for the mechanisms and pathways used to transmit information between a user and an Internet service. "Transport Layer Security" (or TLS), as the name implies, refers to the suite of protocols and techniques used to protect the security, privacy, and integrity of Internet communications. TLS is often also called "SSL" ([Secure Socket Layer](glossary.md#h.glossary-secure-socket-layer)), particularly when used with browser and application communications. Strictly speaking, SSL is a precursor of TLS, but the terms are commonly used interchangeably. To be consistent with other documentation and discussion, this document uses "SSL" in contexts where it is typically called SSL (such as browser traffic with a server), and "TLS" elsewhere.
 
 TLS protects the integrity of Internet communications in two important ways: Adding trust that the messages are coming from the authentic source and have not been tampered with, and protecting the privacy of the message contents from others who may access network traffic.
 
@@ -145,7 +145,7 @@ TLS uses encryption to protect sensitive data from unauthorized viewing by those
 
 Using a browser, a user can check whether https is in use by looking at a Web page's URL. If the URL starts with *https://*, then the site is using a secure connection; if it begins with *http://*, it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
 
-In an educational setting, [transport layer security](glossary.md#h.glossary-transport-layer-security) is a necessity in many -- but not all -- situations. Services that collect a username, a password, or any other potentially sensitive information should always use TLS. However, an application that doesn't require a login -- such as a publicly available online calculator that collects no personal information -- could be used safely without TLS. In general, though, given the ease with which TLS can be implemented, it is a good thing to look for.
+In an educational setting, [Transport Layer Security](glossary.md#h.glossary-transport-layer-security) is a necessity in many -- but not all -- situations. Services that collect a username, a password, or any other potentially sensitive information should always use TLS. However, an application that doesn't require a login -- such as a publicly available online calculator that collects no personal information -- could be used safely without TLS. In general, though, given the ease with which TLS can be implemented, it is a good thing to look for.
 
 ## E2.2 Exploitability and Impact
 
@@ -326,7 +326,7 @@ The second result shows an online service with some serious issues. Note that th
 
 ## E3.1 Summary
 
-Email transport layer security is referred to as "TLS" or "starttls." As the name implies, email TLS protects the contents of traffic as it travels between endpoints on the Internet by encrypting the content and by verifying the authenticity of the servers at the endpoints.
+Email Transport Layer Security is referred to as "TLS" or "starttls." As the name implies, email TLS protects the contents of traffic as it travels between endpoints on the Internet by encrypting the content and by verifying the authenticity of the servers at the endpoints.
 
 For example, if an educational application sends a class update to a teacher's email account, TLS can be used to encrypt the email as it travels from the application's email server to the teacher's email server. This is analogous to the protection provided by https between a user's browser and an application's servers.
 
@@ -552,7 +552,7 @@ More information on authentication cookies can be found by following the links b
 
 ## E5.2 Exploitability and Impact
 
-An adversary in possession of a user's authentication cookie or token can easily exploit it to access and control most or all of the target's account through a session-hijacking attack. The primary protection against this is the use of transport layer security (TLS/https) to prevent snooping of the cookie or token values from network traffic. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) in this document for background and verification tests for TLS.) As discussed in Section E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info), authentication tokens placed in URLs can be susceptible to unauthorized access. The tests in this section focus on mitigating these risks by preventing the access to or limiting the scope of their usefulness in attacks.
+An adversary in possession of a user's authentication cookie or token can easily exploit it to access and control most or all of the target's account through a session-hijacking attack. The primary protection against this is the use of Transport Layer Security (TLS/https) to prevent snooping of the cookie or token values from network traffic. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) in this document for background and verification tests for TLS.) As discussed in Section E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info), authentication tokens placed in URLs can be susceptible to unauthorized access. The tests in this section focus on mitigating these risks by preventing the access to or limiting the scope of their usefulness in attacks.
 
 Another way that authentication tokens can be accessed without authorization is through [cross-site scripting](glossary.md#h.glossary-xss) (XSS) attacks that inject malicious scripts into a user's browser to read and collect authentication cookie values. However, testing for XSS vulnerabilities is beyond the scope of this information security primer.
 
@@ -691,7 +691,7 @@ Sending sensitive information in URLs as described in Section E1 [Sensitive Info
 
 ### E6.3.1 Encryption and Transport Layer Security
 
-Perhaps the most important protection for passwords is safeguarding them as they are sent from the browser when the user logs in. See Section E2 [Encryption and Transport Layer Security](#h.testing-tls) for detailed information on how to test an application's transport layer security practices. Issues with encryption and transport layer security can pose serious risks to the integrity of an application, which include compromised user passwords. 
+Perhaps the most important protection for passwords is safeguarding them as they are sent from the browser when the user logs in. See Section E2 [Encryption and Transport Layer Security](#h.testing-tls) for detailed information on how to test an application's Transport Layer Security practices. Issues with encryption and Transport Layer Security can pose serious risks to the integrity of an application, which include compromised user passwords. 
 
 ### E6.3.2 Recovering Lost Passwords
 
