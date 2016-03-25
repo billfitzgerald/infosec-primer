@@ -124,7 +124,7 @@ Data that can be public but is used to prevent precomputation attacks.
 
 <a name="h.glossary-secure-socket-layer"></a>[**Secure Socket Layer**](https://www.owasp.org/index.php/Category:Glossary%23S)
 
-A popular protocol for establishing secure channels over a reliable transport, utilizing a standard X.509 public key infrastructure for authenticating machines. This protocol has evolved into the TLS protocol, but the term SSL is often used to generically refer to both.
+A popular protocol for establishing secure channels over a reliable transport, utilizing a standard X.509 public key infrastructure for authenticating machines. This protocol has evolved into the TLS protocol, but the term "SSL" is often used to generically refer to both.
 
 <a name="h.glossary-session-token"></a>[**Session token**](https://www.owasp.org/index.php/Category:Glossary%23S)
 
