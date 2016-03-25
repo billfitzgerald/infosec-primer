@@ -573,7 +573,7 @@ Authentication cookies, commonly called session cookies, are often easy to spot 
 
 However, there are no hard and fast rules governing the names of cookies. Many authentication cookie names are unique to the service and may not be named in a way to make it clear it's a session/authentication cookie.
 
-To read and search for cookies, use the Advanced Cookie Manager described in Section C3 [Installing and Using Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
+To read and search for cookies, use the Advanced Cookie Manager plug-in described in Section C3 [Installing and Using Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
 
 To confirm that a cookie is an authentication cookie, or to search for it in case the name is not apparent, log in to the website.
 
