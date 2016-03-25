@@ -77,7 +77,7 @@ Here, a user's personal information is part of the URL.
 </figure>
 </div>
 
-Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered in [Caching and History Storage of Pages with Sensitive Information](#h.testing-cache) later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and date of birth have been captured in the browser history and cache.
+Sensitive information in URLs may be captured by a browser's history and in its cache (examining your browser cache is covered in E4 [Caching and History Storage of Pages with Sensitive Information](#h.testing-cache) later in this document). Sensitive information can also be captured in server logs or other access logs. The screen captures below show that the example above with SSN and date of birth have been captured in the browser history and cache.
 
 <div align="center">
 <figure>
