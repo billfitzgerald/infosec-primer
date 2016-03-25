@@ -50,7 +50,7 @@ To successfully leverage a security vulnerability to gain unauthorized access to
 
 <a name="h.glossary-exploitability"></a>**Exploitability**
 
-The ease with which a given vulnerability can be successfully exploited.
+The ease with which a given vulnerability can successfully be exploited.
 
 ## H
 
