@@ -726,7 +726,7 @@ The tests for this section focus on the user-login and password-recovery interfa
 
 ### E7.3.1 User Login
 
-Attempt two types of logins. First, use both an invalid username and password; then use a valid username but incorrect password. In both cases, the application should not reveal whether the username was valid. The following image is an example of a proper response. It states that either the username or password was incorrect without identifying which one wasn't recognized.
+Attempt two types of login. First, use both an invalid username and password; then use a valid username but incorrect password. In both cases, the application should not reveal whether the username was valid. The following image is an example of a proper response. It states that either the username or password was incorrect without identifying which one wasn't recognized.
 
 <div align="center">
 <figure>
