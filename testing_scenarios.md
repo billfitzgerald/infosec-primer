@@ -822,7 +822,7 @@ If an application uses WebSockets, check the contents of the messages for sensit
 
 ### E8.3.2 Check Whether the WebSockets Connection Is Encrypted
 
-An unencrypted WebSocket connection is not a concern if the information transferred over the WebSocket is not sensitive. However, an encrypted connection is always more secure, as it will protect traffic that may not be observed during testing or may be added in future releases of the application. Another consideration is that an unencrypted WebSocket connection can expose a session cookie if the WebSocket has the same domain as the main service and the session cookie's "secure" flag is not set.
+An unencrypted WebSockets connection is not a concern if the information transferred over the WebSocket is not sensitive. However, an encrypted connection is always more secure, as it will protect traffic that may not be observed during testing or may be added in future releases of the application. Another consideration is that an unencrypted WebSockets connection can expose a session cookie if the WebSocket has the same domain as the main service and the session cookie's "secure" flag is not set.
 
 From the WebSockets view of OWASP ZAP, it's possible to determine whether the WebSockets traffic is sent over an encrypted connection. First, select the WebSockets channel of interest:
 
