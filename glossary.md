@@ -10,7 +10,7 @@ Application programming interface. For Web and mobile applications, this is a ne
 
 <a name="h.glossary-auth-cookie"></a>**Authentication cookie** 
 
-See [Session Token](glossary.md#h.glossary-session-token).
+See [session token](glossary.md#h.glossary-session-token).
 
 ## C
 
@@ -74,7 +74,7 @@ The magnitude of harm that can be expected to result from the consequences of un
 
 <a name="h.glossary-intercepting-proxy"></a>**Intercepting proxy** 
 
-See [Proxy](glossary.md#h.glossary-proxy).
+See [proxy](glossary.md#h.glossary-proxy).
 
 <a name="h.glossary-internet-protocol"></a>[**Internet protocol**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
@@ -94,7 +94,7 @@ An eavesdropping attack wherein a client's communication with a server is proxie
 
 <a name="h.glossary-mitm"></a>**MITM** 
 
-See [Man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle).
+See [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle).
 
 ## P
 
@@ -136,13 +136,13 @@ An attack that takes over a session belonging to another user. This is typically
 
 <a name="h.glossary-sidejack"></a>**Sidejack** 
 
-See [Session hijack](glossary.md#h.glossary-session-hijack).
+See [session hijack](glossary.md#h.glossary-session-hijack).
 
 <a name="h.glossary-snooping"></a>[**Snooping**](https://www.owasp.org/index.php/Category:Glossary%23S) 
 
 Attacks where data is read off a network while in transit without modifying or destroying the data.
 
-See also: [Eavesdropping attack](glossary.md#h.glossary-eavesdropping).
+See also: [eavesdropping attack](glossary.md#h.glossary-eavesdropping).
 
 <a name="h.glossary-social-engineering"></a>[**Social engineering**](http://nvlpubs.nist.gov/nistpubs/ir/2013/NIST.IR.7298r2.pdf)
 
