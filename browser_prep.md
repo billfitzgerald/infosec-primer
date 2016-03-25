@@ -36,7 +36,7 @@ In the Firefox menu, select **History** -> **Clear recent history**. A pop-up me
 <figure>
   <img alt="Clear Recent History" src="images/image42.png" width="310" height="389" title="Clear Recent History">
     <br>
-  <figcaption>Image Caption: Clear Recent History</figcaption>
+  <figcaption>Image Caption: Clear recent history.</figcaption>
 </figure>
 </div>
 
