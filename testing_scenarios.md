@@ -1010,13 +1010,13 @@ The response when logged in is below. This specific example returns information 
 <figure>
   <img alt="An API response with information about students in a class" src="images/image109.png" width="624.00" height="222.67" title="An API response with information about students in a class">
     <br>
-  <figcaption>Image Caption: An API response with information about students in a class.</figcaption>
+  <figcaption>Image Caption: An API response with information about students in a class</figcaption>
 </figure>
 </div>
 
 The response shown above is an example of an application functioning normally. The user initiating the request is logged in, and the request returns data they have permissions to see.
 
-If the API access is a GET request, the browser can be used to test if the same request works without authentication. In a browser that is not logged in to the application, paste the URL into a browser's address bar and load the page into the browser. The response should not include information from the account and will likely indicate that the user is not authenticated.
+If the API access is a GET request, the browser can be used to test whether the same request works without authentication. In a browser that is not logged in to the application, paste the URL into a browser's address bar and load the page into the browser. The response should not include information from the account and will likely indicate that the user is not authenticated.
 
 <div align="center">
 <figure>
