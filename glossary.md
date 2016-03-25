@@ -16,7 +16,7 @@ See [session token](glossary.md#h.glossary-session-token).
 
 <a name="h.glossary-certificate"></a>[**Certificate**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
-A data object that binds information about a person or some other entity to a public key. The binding is generally done using a digital signature from a trusted third party (a [**certification authority**](glossary.md#h.glossary-certification-authority)).
+A data object that binds information about a person or some other entity to a public key. The binding is generally done using a digital signature from a trusted third party (a certification authority).
 
 <a name="h.glossary-ca"></a>[**Certification authority**](https://www.owasp.org/index.php/Category:Glossary%23C)
 
