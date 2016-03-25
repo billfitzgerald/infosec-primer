@@ -1123,7 +1123,7 @@ As described in this section's Exploitability and Impact discussion, a mobile ap
 
 This is straightforward to check using the proxy. If an application's https traffic is visible in the proxy when the device doesn't have the proxy's SSL certificate installed as a trusted certificate, it indicates that the authenticity of the certificate was not checked.
 
-The tests for this require a familiarity with installing and uninstalling SSL certificates, as described in C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices.
+The tests for this require a familiarity with installing and uninstalling SSL certificates, as described in C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
 
 To check for a potential SSL certificate spoofing vulnerability:
 
