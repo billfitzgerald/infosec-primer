@@ -254,19 +254,19 @@ In the next screenshot, we see an example of a service that uses https after log
 </figure>
 </div>
 
-#### E2.3.2.4 Check Whether the Application Uses "Strict Transport Security" Headers (Web Applications)
+#### E2.3.2.4 Check Whether the Application Uses Strict Transport Security Headers (Web Applications)
 
-"Strict transport security" headers (also called HSTS for HTTP Strict Transport Security) tell the browser to always use https when communicating with a website or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
+Strict Transport Security headers (also called HSTS for HTTP Strict Transport Security) tell the browser to always use https when communicating with a website or service. This serves as a secondary protection against an accidental http transaction due to a coding or configuration error in the application.
 
-The examples below show correct use of "strict transport security" headers as displayed in ZAP and Firebug.
+The examples below show correct use of Strict Transport Security headers as displayed in ZAP and Firebug.
 
 In ZAP:
 
 <div align="center">
 <figure>
-  <img alt="Proper use of Strict-Transport-Security headers, seen in ZAP" src="images/image95.png" width="554.50" height="166.82" title="Proper use of Strict-Transport-Security headers, seen in ZAP">
+  <img alt="Proper use of Strict Transport Security headers, seen in ZAP" src="images/image95.png" width="554.50" height="166.82" title="Proper use of Strict Transport Security headers, seen in ZAP">
     <br>
-  <figcaption>Image Caption: Proper use of "strict transport security" headers, seen in ZAP</figcaption>
+  <figcaption>Image Caption: Proper use of Strict Transport Security headers, seen in ZAP</figcaption>
 </figure>
 </div>
 
@@ -274,9 +274,9 @@ In Firebug:
 
 <div align="center">
 <figure>
-  <img alt="Proper use of Strict-Transport-Security headers, seen in Firebug" src="images/image111.png" width="624.00" height="350.67" title="Proper use of Strict-Transport-Security headers, seen in Firebug">
+  <img alt="Proper use of Strict Transport Security headers, seen in Firebug" src="images/image111.png" width="624.00" height="350.67" title="Proper use of Strict Transport Security headers, seen in Firebug">
     <br>
-  <figcaption>Image Caption: Proper use of "strict transport security" headers, seen in Firebug</figcaption>
+  <figcaption>Image Caption: Proper use of Strict Transport Security headers, seen in Firebug</figcaption>
 </figure>
 </div>
 
