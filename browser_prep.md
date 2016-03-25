@@ -40,7 +40,7 @@ In the Firefox menu, select **History** --> **Clear recent history**. A pop-up m
 </figure>
 </div>
 
-## <a name="h.browser-cookies"></a>D3 Verify That Cookies Are Allowed and Do Not Track Is Off
+## <a name="h.browser-cookies"></a>D3 Verify That Cookies Are Allowed and "Do Not Track" Is Off
 
 During testing, we want to make sure that we accept all cookies and that we are not setting the "do not track" option, phrased here as **Request that sites not track you**.
 
@@ -58,6 +58,6 @@ However, to prepare our browser for testing, enter "about:preferences#privacy" a
 
 With our browser set to open to a blank page, old cookies and browsing data removed, and permissions adjusted to allow cookies, we are now set to test.
 
-Additionally, if you are running any adblockers or plug-ins that require HTTPS (examples include HTTPS Everywhere and Privacy Badger), you should disable them on your browser prior to testing. While using extensions like this is recommended for safe browsing, they could limit the range of what we encounter while testing.
+Additionally, if you are running any ad blockers or plug-ins that require https (examples include HTTPS Everywhere and Privacy Badger), you should disable them on your browser prior to testing. While using extensions like this is recommended for safe browsing, they could limit the range of what we encounter while testing.
 
 * Proceed to the next chapter: E. [Testing Scenarios and Procedures](testing_scenarios.md)
