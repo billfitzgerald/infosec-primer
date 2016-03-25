@@ -151,7 +151,7 @@ In an educational setting, [Transport Layer Security](glossary.md#h.glossary-tra
 
 [Snooping](glossary.md#h.glossary-snooping) of unencrypted network traffic can be accomplished with cursory technical knowledge and off-the-shelf computers or with computers with inexpensive specialized network adapters. Programs exist to automate the process of extracting authentication tokens and other unencrypted traffic.
 
-[Man-in-the-middle](glossary.md#h.glossary-man-in-the-middle) attacks -- such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps -- require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of transport layer security can be significant; an adversary who can view network traffic may directly snoop sensitive information from the network communications or may extract passwords or authentication codes that allow access and control of the account itself.
+[Man-in-the-middle attacks](glossary.md#h.glossary-man-in-the-middle) -- such as tampering with unencrypted login forms or presenting false SSL certificates to mobile apps -- require much more skill and effort on the part of the attacker. The impact of data exposure from a successful exploit of Transport Layer Security can be significant; an adversary who can view network traffic may directly snoop sensitive information from the network communications or may extract passwords or authentication codes that allow access and control of the account itself.
 
 ## E2.3 Setup and Tests
 
