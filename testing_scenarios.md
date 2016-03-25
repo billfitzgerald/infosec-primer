@@ -418,7 +418,7 @@ CheckTLS.com is discussed above in the context of confirming that a tester's ema
 
 ## E4.1 Summary
 
-In computer systems, the term "caching" refers to the practice of keeping a local copy (or "cache") of information so that it may be accessed again quickly if needed later on. Browsers improve performance by storing copies of Web pages that a user views, so that they can displayed again later without the need to fetch them again over the network.
+In computer systems, the term "caching" refers to the practice of keeping a local copy (or "cache") of information so that it may be accessed again quickly if needed later on. Browsers improve performance by storing copies of Web pages that a user views, so that they can be displayed again later without the need to fetch them again over the network.
 
 Though caching improves the performance of a browser, caching of pages with sensitive information can expose the information to unauthorized access. Because of this, a Web service can include directives in message headers to prevent pages from being stored in a browser's cache.
 
