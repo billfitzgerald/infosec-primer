@@ -64,7 +64,7 @@ Hypertext Transport Protocol, the network-messaging protocol commonly used for t
 
 <a name="h.glossary-https"></a>**HTTPS**
 
-Secure HTTP, or HTTP sent over a secure link to protect the authenticity, privacy, and security of the information being transmitted.
+Secure http, or http sent over a secure link to protect the authenticity, privacy, and security of the information being transmitted.
 
 ## I
 
