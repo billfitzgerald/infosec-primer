@@ -342,15 +342,15 @@ In understanding the potential impact of email TLS, we need to differentiate bet
 
 The definitive way to test whether an application's emails use TLS between mail servers is to directly examine the email headers of an email sent from the application to one of its users, where the presence of TLS will be noted if it was used.
 
-For this test, the recipient email account's servers must be confirmed to accept TLS for incoming mail messages. If this is not known or needs to be verified, the "checktls.com" service can be used to test the recipient email address.
+For this test, the recipient email account's servers must be confirmed to accept TLS for incoming mail messages. If this is not known or needs to be verified, the CheckTLS.com service can be used to test the recipient email address.
 
-Browsing to checktls.com brings up a form where the email can be entered (no mail will be sent to the recipient address; it's only used to contact the server). Enter the recipient email address as indicated below and click "Try It."
+Browsing to CheckTLS.com brings up a form where the email can be entered (no mail will be sent to the recipient address; it's only used to contact the server). Enter the recipient email address as indicated below and click "Try It."
 
 <div align="center">
 <figure>
   <img alt="Using CheckTLS" src="images/image18.png" width="537.50" height="297.18" title="Using CheckTLS">
     <br>
-  <figcaption>Image Caption: Using CheckTLS</figcaption>
+  <figcaption>Image Caption: Using CheckTLS.com</figcaption>
 </figure>
 </div>
 
