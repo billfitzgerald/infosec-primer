@@ -876,12 +876,12 @@ Information that is compromised via information leakage will -- in some cases --
 
 Because applications are implemented in different ways, there is no standardized method to test for information leakage. Testers should perform a full range of user interactions with the application and be watchful for extra information in system responses and transactions. Common ways that information can be leaked include (but are not limited to):
 
-* request for user information returns sensitive information beyond what is necessary to display a page. This can be checked by loading a page (such as a user profile page) and examining http/https responses for extra information;
-* password-recovery mechanism reveals user email account (if username is not email) or user's real name;
+* A request for user information returns sensitive information beyond what is necessary to display a page -- this can be checked by loading a page (such as a user profile page) and examining http/https responses for extra information;
+* a password-recovery mechanism reveals a user's email account (if the username is not the user's email address) or a user's real name;
 * teacher account requests for class roster information return sensitive information beyond what is necessary about each of the students in a class;
-* WebSockets or other dynamic content update messages contain information about users beyond the scope of the logged-in account.
+* and WebSockets or other dynamic content update messages contain information about users beyond the scope of the logged-in account.
 
-All of the examples listed above are real problems that have been observed and fixed in educational technology applications.
+All the examples listed above are real problems that have been observed and fixed in educational technology applications.
 
 ### E9.3.1 Examples of Information Leakage
 
