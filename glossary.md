@@ -132,7 +132,7 @@ A value that represents a user's identity during his or her session. Typically t
 
 <a name="h.glossary-session-hijack"></a>**Session hijack**
 
-An attack that takes over a session belonging to another user. This is typically accomplished through acquiring the user's session token cookie and installing it in an attacker's browser.
+An attack that takes over a session belonging to another user. This is typically accomplished through acquiring the user's session-token cookie and installing it in an attacker's browser. Also known as a sidejack.
 
 <a name="h.glossary-sidejack"></a>**Sidejack** 
 
