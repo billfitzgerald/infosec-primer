@@ -406,9 +406,9 @@ The image below shows the results for the same application after TLS was enabled
 </figure>
 </div>
 
-### E3.3.3 Checktls.com
+### E3.3.3 CheckTLS.com
 
-Checktls.com is discussed above in the context of confirming that a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the checktls.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
+CheckTLS.com is discussed above in the context of confirming that a tester's email address will accept email TLS connections. The same test can be performed on an application's mail servers, but in practice many servers accept TLS but do not request TLS for outgoing mail. Because of this, the CheckTLS.com test is not sufficient to confirm that an application requests TLS for outgoing mail.
 
 * * *
 
