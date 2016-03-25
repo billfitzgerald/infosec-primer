@@ -46,7 +46,7 @@ During testing, we want to make sure that we accept all cookies and that we are 
 
 **Note**: During regular browsing, we recommend being more selective about the cookies we accept and setting Do Not Track. While many vendors do not respect Do Not Track, it offers a degree of protection.
 
-However, to prepare our browser for testing, enter *about:preferences#privacy* as the URL. 
+However, to prepare our browser for testing, enter "about:preferences#privacy" as the URL. 
 
 <div align="center">
 <figure>
