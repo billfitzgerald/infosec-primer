@@ -597,9 +597,9 @@ The secure flag prevents the browser from sending a cookie in an http (unencrypt
 
 <div align="center">
 <figure>
-  <img alt="Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager" src="images/image63.png" width="624.00" height="344.00" title="Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager">
+  <img alt="Checking for the httpOnly and isSecure flags with Advanced Cookie Manager" src="images/image63.png" width="624.00" height="344.00" title="Checking for the httpOnly and isSecure flags with Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Checking for the httpOnly and isSecure flags with the Advanced Cookie Manager</figcaption>
+  <figcaption>Image Caption: Checking for the httpOnly and isSecure flags with Advanced Cookie Manager</figcaption>
 </figure>
 </div>
 
@@ -625,9 +625,9 @@ A cookie editor makes it straightforward to check whether authentication tokens 
 
 <div align="center">
 <figure>
-  <img alt="Using the Advanced Cookie Manager to save cookies from a specific domain" src="images/image35.png" width="624.00" height="341.33" title="Using the Advanced Cookie Manager to save cookies from a specific domain">
+  <img alt="Using Advanced Cookie Manager to save cookies from a specific domain" src="images/image35.png" width="624.00" height="341.33" title="Using Advanced Cookie Manager to save cookies from a specific domain">
     <br>
-  <figcaption>Image Caption: Using the Advanced Cookie Manager to save cookies from a specific domain</figcaption>
+  <figcaption>Image Caption: Using Advanced Cookie Manager to save cookies from a specific domain</figcaption>
 </figure>
 </div>
 
@@ -645,9 +645,9 @@ A cookie editor makes it straightforward to check whether authentication tokens 
 
 <div align="center">
 <figure>
-  <img alt="Restore cookies using the Advanced Cookie Manager" src="images/image22.png" width="700.50" height="450.47" title="Restore cookies using the Advanced Cookie Manager">
+  <img alt="Restore cookies using Advanced Cookie Manager" src="images/image22.png" width="700.50" height="450.47" title="Restore cookies using Advanced Cookie Manager">
     <br>
-  <figcaption>Image Caption: Restore cookies using the Advanced Cookie Manager.</figcaption>
+  <figcaption>Image Caption: Restore cookies using Advanced Cookie Manager.</figcaption>
 </figure>
 </div>
 
