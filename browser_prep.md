@@ -4,7 +4,7 @@ To prepare to test using Firefox, we need to clear any stored usage data that co
 
 ## <a name="h.browser-homepage"></a>D1 Set Firefox Home Page
 
-To start, we will make sure that we are not logged in to Sync, and that our home page is set to a blank page. To access the home page setting, click the "Menu" icon in the top-right corner of the Firefox window.
+To start, we will make sure that we are not logged in to Sync and that our home page is set to a blank page. To access the home page setting, click the menu icon in the top-right corner of the Firefox window.
 
 If you are logged out of Sync, you will see this reflected in the message in the "Options" box.
 
