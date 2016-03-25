@@ -122,7 +122,7 @@ A remote attack can be exploited without access to a user's network traffic. For
 
 Data that can be public but is used to prevent precomputation attacks.
 
-<a name="h.glossary-secure-socket-layer"></a>[**Secure socket layer**](https://www.owasp.org/index.php/Category:Glossary%23S)
+<a name="h.glossary-secure-socket-layer"></a>[**Secure Socket Layer**](https://www.owasp.org/index.php/Category:Glossary%23S)
 
 A popular protocol for establishing secure channels over a reliable transport, utilizing a standard X.509 public key infrastructure for authenticating machines. This protocol has evolved into the TLS protocol, but the term SSL is often used to generically refer to both.
 
@@ -154,7 +154,7 @@ The practice of falsifying data to masquerade as a legitimate resource or entity
 
 <a name="h.glossary-ssl"></a>**SSL** 
 
-See [Secure socket layer](glossary.md#h.glossary-secure-socket-layer).
+See [Secure Socket Layer](glossary.md#h.glossary-secure-socket-layer).
 
 <a name="h.glossary-ssl-spoofing"></a>**SSL certificate spoofing**
 
@@ -164,13 +164,13 @@ An attack that provides an SSL certificate from an untrusted source in an attemp
 
 <a name="h.glossary-tls"></a>**TLS** 
 
-See [Transport layer security](glossary.md#h.glossary-transport-layer-security).
+See [Transport Layer Security](glossary.md#h.glossary-transport-layer-security).
 
-<a name="h.glossary-transport-layer-security"></a>[**Transport layer security**](https://www.owasp.org/index.php/Category:Glossary%23T)
+<a name="h.glossary-transport-layer-security"></a>[**Transport Layer Security**](https://www.owasp.org/index.php/Category:Glossary%23T)
 
 The successor to SSL, a protocol for establishing secure channels over a reliable transport, using a standard X.509 public key infrastructure for authenticating machines. The protocol is standardized by the Internet Engineering Task Force (IETF).
 
-See also [Secure socket layer](glossary.md#h.glossary-secure-socket-layer).
+See also [Secure Socket Layer](glossary.md#h.glossary-secure-socket-layer).
 
 ## U
 
