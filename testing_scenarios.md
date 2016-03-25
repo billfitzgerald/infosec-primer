@@ -716,7 +716,7 @@ It's important to note that apps that allow users to choose their usernames must
 
 ## E7.2 Exploitability and Impact
 
-The most common place for usernames to be enumerated is at the public-facing login and password-recovery interfaces, making a vulnerability easy to exploit. However, in most cases a valid username is only part of the information needed to attempt a larger exploit or attack. So, it is a significant but low-severity problem. But it is also an indicator of the overall defensive posture of the application. Another consideration for impact is how the username could be used in another attack. Exposing valid accounts based on names, email addresses, or student ID numbers poses more risk than exposing account names that are unique to a given application.
+The most common places for usernames to be enumerated are at the public-facing login and password-recovery interfaces, making a vulnerability easy to exploit. However, in most cases a valid username is only part of the information needed to attempt a larger exploit or attack. So, it is a significant but low-severity problem. But it is also an indicator of the overall defensive posture of the application. Another consideration for impact is how the username could be used in another attack. Exposing valid accounts based on names, email addresses, or student ID numbers poses more risk than exposing account names that are unique to a given application.
 
 Username enumeration attacks are most relevant for systems that hold highly sensitive data or in systems where a compromised administrative account can provide access to a larger data set. Username enumeration can be a stepping stone to a larger, more catastrophic compromise.
 
