@@ -14,7 +14,7 @@ If you are logged out of Sync, you will see this reflected in the message in the
   <br>
 <figcaption>Image Caption: Sync options</figcaption>
 </figure>
-</div></p>
+</div>
 
 Click the **Preferences** icon to set your home page. When you are at the home page, set the home page to open to a blank page.
 
