@@ -6,7 +6,7 @@ The tests in this document make extensive use of an [intercepting proxy](glossar
 
 While the bulk of our tests rely on an intercepting proxy to power more detailed analysis, two other tools -- a cookie reader and a browser extension called **Firebug** -- are used as well. These two tools can often be used to do a quick, more cursory examination to determine which additional tests might be necessary.
 
-## <a name="h.toolkit-nav"></a>Navigation: Getting Started
+## Navigation: Getting Started
 
 * C1 [The Toolkit: A Summary](#h.toolkit-summary)
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#h.toolkit-firebug)
@@ -18,7 +18,7 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
   * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
   * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
-## <a name="h.toolkit-summary"></a>C1 The Toolkit: A Summary
+## C1 The Toolkit: A Summary
 
 All of the tests documented in the primer are run using:
 
@@ -43,7 +43,7 @@ This rest of this section describes setting up the proxy and related testing too
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-firebug"></a>C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
+## C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
 
 To install Firebug, go to **Tools** --> **Add-ons**, search for "Firebug," and select it for installation to Firefox. A screenshot of the plug-in's description page (to ensure you are getting the correct plug-in) is shown below.
 
@@ -125,15 +125,11 @@ The descriptions of individual tests in the [testing scenarios](testing_scenario
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-adv-cookie-manager"></a>C3 Installing and Using Advanced Cookie Manager
+## C3 Installing and Using Advanced Cookie Manager
 
 [Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [http](glossary.md#h.glossary-http) responses as the user interacts with a Web service. The browser saves the cookie values and includes them with subsequent http requests to the same application or domain. The use of cookies allows Web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookies](glossary.md#h.glossary-auth-cookie) and cookie handling, covered in Section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token).
 
-The examples in this document use the **Advanced Cookie Manager** plug-in for Firefox. To find it, go to **Tools** --> **Add-ons**, search for "cookie managers," and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plug-in's description page is shown below.
-
-The Advanced Cookie Manager is the only component of our testing toolkit that is not open source, and it has one significant drawback, which we will highlight in this paragraph. We opted to include it for use in this primer because after evaluating the other cookie managers available, Advanced Cookie Manager worked better. With that said, we are actively working on an open source option that will replace the Advanced Cookie Manager in future versions. 
-
-The main drawback of the Advanced Cookie Manager is that it includes a Facebook "like" button in its user interface. As a result, every time the Cookie Manager is loaded (by clicking on the icon), it calls to Facebook. This drawback is mitigated to an extent by the fact that, as part of [preparing to run tests](browser_prep.md#d2-clear-history), we clear all cookies from the browser, which limits the information available to Facebook to little more than an IP address. However, even that is less than ideal, and future versions will remove this issue. 
+The examples in this document use the **Advanced Cookie Manager** plug-in for Firefox. To find it, go to **Tools** --> **Add-ons**, search for "cookie managers," and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plug-in's description page is shown below. 
 
 <div align="center">
 <figure>
@@ -155,11 +151,15 @@ Once installed, the cookie manager can be opened by clicking its icon in the bro
 
 During several of the tests outlined in the [testing scenarios](testing_scenarios.md), the cookie manager will be used to view cookies and their flags, delete cookies, save cookies to file, and restore cookies from file. Inspecting cookies is also helpful to learn more about which information is sent to different services on the Internet.
 
+The Advanced Cookie Manager is the only component of our testing toolkit that is not open source, and it has one significant drawback, which we highlight below. We opted to include the Advanced Cookie Manager for use in this primer because after evaluating the other cookie managers available, Advanced Cookie Manager worked better. With that said, we are actively working on an open source option that will replace the Advanced Cookie Manager in future versions. 
+
+The main drawback of the Advanced Cookie Manager is that it includes a Facebook "like" button in its user interface. As a result, every time the Cookie Manager is loaded (by clicking on the icon), it calls to Facebook. This drawback is mitigated to an extent by the fact that, as part of [preparing to run tests](browser_prep.md#d2-clear-history), we clear all cookies from the browser, which limits the information available to Facebook to little more than an IP address. However, even that is less than ideal, and future versions will remove this issue.
+
 * * *
 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 
-## <a name="h.toolkit-zap-proxy"></a>C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
+## C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
 
 As the name implies, an [intercepting proxy](glossary.md#h.glossary-intercepting-proxy) intercepts and logs the requests and responses between a client (a browser or mobile app) and the network resources with which it interacts. This enables observation of the behavior of the application without interfering with its functionality.
 
@@ -185,7 +185,9 @@ The normal operation of https creates an [encrypted](glossary.md#h.glossary-encr
 </figure>
 </div>
 
-<a name="h.toolkit-zap-nav"></a>The instructions for setting up OWASP ZAP are broken into five distinct sections:
+### ZAP Setup Instructions
+
+The instructions for setting up OWASP ZAP are broken into five distinct sections:
 
 * C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
 * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
@@ -199,7 +201,7 @@ If you are going to test mobile apps, then the instructions in C4.3 [Setup for T
 
 Using ZAP Proxy requires more setup steps than other elements of the toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
-### <a name="h.toolkit-zap-proxy-install"></a>C4.1 Installation and Initial Setup of OWASP ZAP
+### C4.1 Installation and Initial Setup of OWASP ZAP
 
 This primer focuses specifically on the features or ZAP we use for the tests covered in the testing scenarios, which is a small subset of all the features offered in ZAP. For a complete overview of the full feature set of ZAP, consult the <a href="https://github.com/zaproxy/zap-core-help/wiki" alt="full ZAP documentation" title="full ZAP documentation">full ZAP documentation</a>.
 
@@ -226,7 +228,7 @@ Select the check box for **Process images in HTTP requests/responses**. Then, cl
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-same-box"></a>C4.2 Basic Setup, Browser and Proxy on Same Computer
+### C4.2 Basic Setup, Browser and Proxy on Same Computer
 
 The most straightforward setup is when the browser and proxy are on the same computer.
 
@@ -271,7 +273,7 @@ To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate 
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-different-box"></a>C4.3 Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy
+### C4.3 Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy
 
 The steps in this section are only relevant in the following scenarios:
 
@@ -446,7 +448,7 @@ Click the **Save** link to save the settings.
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-ssl-cert"></a>C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices
+### C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices
 
 Installing the proxy's SSL certificate on browsers and devices will allow the proxy to decrypt the https traffic generated by these clients. In this section, we will cover using ZAP to generate an SSL certificate. Then, we will document how to save this certificate to our testing browser and/or a mobile device.
 
@@ -739,7 +741,7 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 * **Return to** [Navigation: Getting Started](#h.toolkit-nav)
 * **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
 
-### <a name="h.toolkit-zap-proxy-websockets"></a>C4.5 Observing WebSockets Traffic Using ZAP Proxy
+### C4.5 Observing WebSockets Traffic Using ZAP Proxy
 
 WebSockets is a communication link separate from http that browsers and application servers can use to pass information back and forth. It is normally a secondary form of communication that is connected after the Web application loads into the browser. If an application uses WebSockets, the traffic is of interest for security testing because it may contain personal information of the account holder or other users of the system.
 
