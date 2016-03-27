@@ -11,12 +11,12 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
 * C1 [The Toolkit: A Summary](#c1-the-toolkit-a-summary)
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#c2-installing-and-using-firebug-to-observe-http-and-https-traffic)
 * C3 [Installing and Using Advanced Cookie Manager](#c3-installing-and-using-an-advanced-cookie-manager)
-* C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.toolkit-zap-proxy)
+* C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#c4-installing-and-using-zap-proxy-to-observe-http-and-https-traffic)
   * C4.1 [Installation and Initial Setup of OWASP ZAP](#c41-installation-and-initial-setup-of-owasp-zap)
   * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#c42-basic-setup-browser-and-proxy-on-same-computer)
   * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy)
   * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices)
-  * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
+  * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#c45-observing-websockets-traffic-using-zap-proxy)
 
 ## C1 The Toolkit: A Summary
 
@@ -41,7 +41,7 @@ This rest of this section describes setting up the proxy and related testing too
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
 
 ## C2 Installing and Using Firebug to Observe HTTP and HTTPS Traffic
 
@@ -119,15 +119,15 @@ The transaction's entry can also be expanded by clicking the triangle next to th
 </figure>
 </div>
 
-The descriptions of individual tests in the [testing scenarios](testing_scenarios.md) give more details on how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of Web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP, [described below](#h.toolkit-zap-proxy)).
+The descriptions of individual tests in the [testing scenarios](testing_scenarios.md) give more details on how to find the important parts of the request and response in the Firebug display for the test in question. Firebug is a useful tool for initial examinations of Web pages, as it can be used to detect basic issues that merit additional testing. If an application opens new browser tabs or views as the user interacts with it, it may be necessary or more straightforward to observe the traffic in an external proxy (such as ZAP, [described below](#c4-installing-and-using-zap-proxy-to-observe-http-and-https-traffic)).
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
 
 ## C3 Installing and Using Advanced Cookie Manager
 
-[Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [http](glossary.md#h.glossary-http) responses as the user interacts with a Web service. The browser saves the cookie values and includes them with subsequent http requests to the same application or domain. The use of cookies allows Web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookies](glossary.md#h.glossary-auth-cookie) and cookie handling, covered in Section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token).
+[Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [http](glossary.md#h.glossary-http) responses as the user interacts with a Web service. The browser saves the cookie values and includes them with subsequent http requests to the same application or domain. The use of cookies allows Web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookies](glossary.md#h.glossary-auth-cookie) and cookie handling, covered in Section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#e5-authentication-token-and-cookie-handling).
 
 The examples in this document use the **Advanced Cookie Manager** plug-in for Firefox. To find it, go to **Tools** --> **Add-ons**, search for "cookie managers," and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plug-in's description page is shown below. 
 
@@ -157,7 +157,7 @@ The main drawback of the Advanced Cookie Manager is that it includes a Facebook 
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
 
 ## C4 Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic
 
@@ -193,7 +193,7 @@ The instructions for setting up OWASP ZAP are broken into five distinct sections
 * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#c42-basic-setup-browser-and-proxy-on-same-computer)
 * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy)
 * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices)
-* C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
+* C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#c45-observing-websockets-traffic-using-zap-proxy)
 
 If you are primarily concerned with testing Web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy).
 
@@ -225,8 +225,8 @@ Select the check box for **Process images in HTTP requests/responses**. Then, cl
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#zap-setup-instructions)
 
 ### C4.2 Basic Setup, Browser and Proxy on Same Computer
 
@@ -270,8 +270,8 @@ To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate 
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#zap-setup-instructions)
 
 ### C4.3 Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy
 
@@ -445,8 +445,8 @@ Click the **Save** link to save the settings.
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#zap-setup-instructions)
 
 ### C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices
 
@@ -738,8 +738,8 @@ Click **OK** to clear credentials. Only the user-installed credentials are clear
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#zap-setup-instructions)
 
 ### C4.5 Observing WebSockets Traffic Using ZAP Proxy
 
@@ -759,7 +759,7 @@ The WebSockets pane can be added by clicking the green "+" and selecting **WebSo
 
 The pane will also be added automatically to the toolbar by ZAP if a WebSockets connection is opened through the proxy. A view of the WebSockets traffic pane is shown below. Clicking on an individual message will show the full payload of the message in the upper pane of ZAP (where http requests and responses are normally shown).
 
-From the WebSockets view, it is also possible to determine whether the WebSockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in Section E8 [Observation of WebSockets Traffic](testing_scenarios.md#h.testing-websockets).
+From the WebSockets view, it is also possible to determine whether the WebSockets traffic is sent over an encrypted connection. The steps for checking whether the traffic is encrypted are detailed in Section E8 [Observation of WebSockets Traffic](testing_scenarios.md#e8-observation-of-websockets-traffic).
 
 <div align="center">
 <figure>
@@ -771,6 +771,6 @@ From the WebSockets view, it is also possible to determine whether the WebSocket
 
 * * *
 
-* **Return to** [Navigation: Getting Started](#h.toolkit-nav)
-* **Return to** [Navigation: OWASP ZAP Proxy Setup](#h.toolkit-zap-nav)
+* **Return to** [Navigation: Getting Started](#navigation-getting-started)
+* **Return to** [Navigation: OWASP ZAP Proxy Setup](#zap-setup-instructions)
 * Proceed to the next chapter: D. [Preparing Firefox for Testing](browser_prep.md)

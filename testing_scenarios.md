@@ -14,22 +14,22 @@ Every test scenario uses a common structure:
 
 Most of the descriptions below assume that you are using Firebug or ZAP Proxy to examine traffic sent over the Internet between the application being tested and the vendor's servers.
 
-## <a name="h.testing-nav">Navigation: Testing Scenarios and Procedures
+## Navigation: Testing Scenarios and Procedures
 
 * E. [Testing Scenarios and Procedures](testing_scenarios.md)
-  * E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info)
+  * E1 [Sensitive Information in URLs](testing_scenarios.md#e1-sensitive-information-in-urls)
   * E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls)
-  * E3 [TLS for Email Sent by an Application to Users](testing_scenarios.md#h.testing-email-tls)
-  * E4 [Caching and History Storage of Pages with Sensitive Information](testing_scenarios.md#h.testing-cache)
-  * E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)
-  * E6 [Password Handling](testing_scenarios.md#h.testing-password)
-  * E7 [Username Enumeration](testing_scenarios.md#h.testing-username)
-  * E8 [Observation of WebSockets Traffic](testing_scenarios.md#h.testing-websockets)
-  * E9 [Information Leakage](testing_scenarios.md#h.testing-leakage)
-  * E10 [API Authentication Checks](testing_scenarios.md#h.testing-api)
-  * E11 [Mobile Application Testing](testing_scenarios.md#h.testing-mobile)
+  * E3 [TLS for Email Sent by an Application to Users](testing_scenarios.md#e3-tls-for-email-sent-by-an-application-to-users)
+  * E4 [Caching and History Storage of Pages with Sensitive Information](testing_scenarios.md#e4-caching-and-history-storage-of-pages-with-sensitive-information)
+  * E5 [Authentication Token and Cookie Handling](testing_scenarios.md#e5-authentication-token-and-cookie-handling)
+  * E6 [Password Handling](testing_scenarios.md#e6-password-handling)
+  * E7 [Username Enumeration](testing_scenarios.md#e7-username-enumeration)
+  * E8 [Observation of WebSockets Traffic](testing_scenarios.md#e8-observation-of-websockets-traffic)
+  * E9 [Information Leakage](testing_scenarios.md#e9-information-leakage)
+  * E10 [API Authentication Checks](testing_scenarios.md#e10-api-authentication-checks)
+  * E11 [Mobile Application Testing](testing_scenarios.md#e11-mobile-application-testing)
 
-# <a name="h.testing-url-info"></a>E1 Sensitive Information in URLs
+# E1 Sensitive Information in URLs
 
 ## E1.1 Summary
 
@@ -129,9 +129,9 @@ Often, when performing an initial evaluation of an app, the process of creating 
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-tls"></a>E2 Encryption and Transport Layer Security
+# E2 Encryption and Transport Layer Security
 
 ## E2.1 Summary
 
@@ -141,7 +141,7 @@ TLS protects the integrity of Internet communications in two important ways: add
 
 The [certificate](glossary.md#h.glossary-certificate) mechanism creates a registration system that adds trust that the Internet service is not being impersonated by someone else. There are also message integrity checks that protect against someone tampering with the message between the sender and receiver. (This is known as a [man-in-the-middle attack](glossary.md#h.glossary-man-in-the-middle)). In most cases these checks are implemented within the browser or mobile app and are not easily observed by end users.
 
-TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared Wi-Fi hotspot such as a coffeehouse, an airport, or a public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session-hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token)).
+TLS uses encryption to protect sensitive data from unauthorized viewing by those who can observe network traffic. A common situation where encryption is important is a shared Wi-Fi hotspot such as a coffeehouse, an airport, or a public library. Communications sent without encryption can be captured and freely read by others who are on the same network. For example, without TLS, a user's login ID and password could be [snooped](glossary.md#h.glossary-snooping) by someone on the network, or a user's [authentication cookie](glossary.md#h.glossary-auth-cookie) could be stolen and used in a [session-hijacking](glossary.md#h.glossary-session-hijack) attack that allows an adversary to take control of someone's account (more information on authentication and [cookies](glossary.md#h.glossary-cookies) is included in section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#e5-authentication-token-and-cookie-handling)).
 
 Using a browser, a user can check whether https is in use by looking at a Web page's URL. If the URL starts with "https://", then the site is using a secure connection; if it begins with "http://", it is not. This is a good basic check, but proxy logs of all of the application's requests must be examined (as described in this section) to get the full measure of https usage by an application.
 
@@ -157,7 +157,7 @@ In an educational setting, [Transport Layer Security](glossary.md#h.glossary-tra
 
 ### E2.3.1 Tools
 
-The TLS checks for Web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#h.toolkit-zap-proxy) for information on how to configure the tools.
+The TLS checks for Web applications can be performed with a browser and proxy. The TLS checks for mobile apps can be performed with the mobile app and proxy. Refer to the setup instructions in Section C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](getting_started.md#c4-installing-and-using-zap-proxy-to-observe-http-and-https-traffic) for information on how to configure the tools.
 
 ### E2.3.2 Tests
 
@@ -320,9 +320,9 @@ The second result shows an online service with some serious issues. Note that th
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-email-tls"></a>E3 TLS for Email Sent by an Application to Users
+# E3 TLS for Email Sent by an Application to Users
 
 ## E3.1 Summary
 
@@ -412,9 +412,9 @@ CheckTLS.com is discussed above in the context of confirming that a tester's ema
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-cache"></a>E4 Caching and History Storage of Pages with Sensitive Information
+# E4 Caching and History Storage of Pages with Sensitive Information
 
 ## E4.1 Summary
 
@@ -531,9 +531,9 @@ Perform the browser-based history test on a representative page containing user 
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-auth-token"></a>E5 Authentication Token and Cookie Handling
+# E5 Authentication Token and Cookie Handling
 
 ## E5.1 Summary
 
@@ -552,7 +552,7 @@ More information on authentication cookies can be found by following the links b
 
 ## E5.2 Exploitability and Impact
 
-An adversary in possession of a user's authentication cookie or token can easily exploit it to access and control most or all of the target's account through a session-hijacking attack. The primary protection against this is the use of Transport Layer Security (TLS/https) to prevent snooping of the cookie or token values from network traffic. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) in this document for background and verification tests for TLS.) As discussed in Section E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info), authentication tokens placed in URLs can be susceptible to unauthorized access. The tests in this section focus on mitigating these risks by preventing the access to or limiting the scope of their usefulness in attacks.
+An adversary in possession of a user's authentication cookie or token can easily exploit it to access and control most or all of the target's account through a session-hijacking attack. The primary protection against this is the use of Transport Layer Security (TLS/https) to prevent snooping of the cookie or token values from network traffic. (See Section E2 [Encryption and Transport Layer Security](testing_scenarios.md#h.testing-tls) in this document for background and verification tests for TLS.) As discussed in Section E1 [Sensitive Information in URLs](testing_scenarios.md#e1-sensitive-information-in-urls), authentication tokens placed in URLs can be susceptible to unauthorized access. The tests in this section focus on mitigating these risks by preventing the access to or limiting the scope of their usefulness in attacks.
 
 Another way that authentication tokens can be accessed without authorization is through [cross-site scripting](glossary.md#h.glossary-xss) (XSS) attacks that inject malicious scripts into a user's browser to read and collect authentication cookie values. However, testing for XSS vulnerabilities is beyond the scope of this information security primer.
 
@@ -673,9 +673,9 @@ Frequently, mobile apps on a tablet or phone will keep you logged in longer than
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-password"></a>E6 Password Handling
+# E6 Password Handling
 
 ## E6.1 Summary
 
@@ -685,7 +685,7 @@ Most applications employ usernames and passwords to provide individual access to
 
 If an adversary gains access to an account's username and password, it is highly exploitable -- the entire account and its contents can be accessed. But the vulnerabilities described in this section all require first gaining access to a target's email account, network traffic, or the service's internal storage. This moderates the risk that these vulnerabilities can pose.
 
-Sending sensitive information in URLs as described in Section E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info) can also contribute to attacks targeting usernames and passwords.
+Sending sensitive information in URLs as described in Section E1 [Sensitive Information in URLs](testing_scenarios.md#e1-sensitive-information-in-urls) can also contribute to attacks targeting usernames and passwords.
 
 ## E6.3 Setup and Tests
 
@@ -704,9 +704,9 @@ There is not a uniform standard for secure handling of account recovery from los
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-username"></a>E7 Username Enumeration
+# E7 Username Enumeration
 
 ## E7.1 Summary
 
@@ -790,9 +790,9 @@ These vulnerabilities do not pose an enormous risk to most end users, but they c
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-websockets"></a>E8 Observation of WebSockets Traffic
+# E8 Observation of WebSockets Traffic
 
 ## E8.1 Summary
 
@@ -804,13 +804,13 @@ The exploitability and impact related to WebSockets traffic depends on which inf
 
 ## E8.3 Setup and Tests
 
-Refer to the proxy setup section C4.5 [Observing WebSockets Traffic Using ZAP Proxy](getting_started.md#h.toolkit-zap-proxy-websockets) for details of how to view WebSockets in OWASP ZAP and how to check whether the WebSockets link is encrypted.
+Refer to the proxy setup section C4.5 [Observing WebSockets Traffic Using ZAP Proxy](getting_started.md#c45-observing-websockets-traffic-using-zap-proxy) for details of how to view WebSockets in OWASP ZAP and how to check whether the WebSockets link is encrypted.
 
 There are not a specific set of tests to exercise WebSockets. Rather, the functionality of the application should be explored during testing, and then WebSockets traffic (if any) should be observed for its contents and encryption. Steps for these observations are described below.
 
 ### E8.3.1 Check Contents of WebSockets Traffic for Sensitive Information
 
-If an application uses WebSockets, check the contents of the messages for sensitive information. Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system. The image below shows an example of a WebSockets message containing the personal information of a  student different from the logged-in account holder (this is also an example of [information leakage](testing_scenarios.md#h.testing-leakage), covered in Section E9).
+If an application uses WebSockets, check the contents of the messages for sensitive information. Note that sensitive information about the account holder is not a security concern if it is sent over an encrypted connection. It is a concern if the information is related to other users of the system. The image below shows an example of a WebSockets message containing the personal information of a  student different from the logged-in account holder (this is also an example of [information leakage](testing_scenarios.md#e9-information-leakage), covered in Section E9).
 
 <div align="center">
 <figure>
@@ -858,9 +858,9 @@ Evaluating the potential risks of WebSockets traffic requires examining what inf
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-leakage"></a>E9 Information Leakage
+# E9 Information Leakage
 
 ## E9.1 Summary
 
@@ -885,7 +885,7 @@ All the examples listed above are real problems that have been observed and fixe
 
 ### E9.3.1 Examples of Information Leakage
 
-As seen in the example below, information leakage can reveal a broad range of information. When evaluating the potential significance of information leakage, it is necessary to evaluate whether the leak is sufficiently dangerous on its own or whether the information could be used as the foundation for other, more complex attacks. For example, knowing a user ID isn't necessarily dangerous, but if the application uses user IDs in the URL (as described in E1 [Sensitive Information in URLs](testing_scenarios.md#h.testing-url-info)), an ID could potentially be used to craft an attack and compromise a user account.
+As seen in the example below, information leakage can reveal a broad range of information. When evaluating the potential significance of information leakage, it is necessary to evaluate whether the leak is sufficiently dangerous on its own or whether the information could be used as the foundation for other, more complex attacks. For example, knowing a user ID isn't necessarily dangerous, but if the application uses user IDs in the URL (as described in E1 [Sensitive Information in URLs](testing_scenarios.md#e1-sensitive-information-in-urls)), an ID could potentially be used to craft an attack and compromise a user account.
 
 Additionally, information leakage can be used to assess the overall defensive posture of an application. If an application leaks information in places where it shouldn't, it can be an indicator of weak practices in areas that we cannot observe.
 
@@ -961,7 +961,7 @@ This example also highlights another place where information can leak: the sourc
 
 #### E9.3.1.5 Leaking Username, Activity Information, Name, and Teacher ID
 
-As seen in Section E8 [Observation of WebSockets Traffic](testing_scenarios.md#h.testing-websockets), this WebSockets message reveals information about a student different from the one who is logged in.
+As seen in Section E8 [Observation of WebSockets Traffic](testing_scenarios.md#e8-observation-of-websockets-traffic), this WebSockets message reveals information about a student different from the one who is logged in.
 
 <div align="center">
 <figure>
@@ -973,9 +973,9 @@ As seen in Section E8 [Observation of WebSockets Traffic](testing_scenarios.md#h
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-api"></a>E10 API Authentication Checks
+# E10 API Authentication Checks
 
 ## E10.1 Summary
 
@@ -1068,9 +1068,9 @@ When the response comes back, the proxy will highlight the response tab and disp
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 
-# <a name="h.testing-mobile"></a>E11 Mobile Application Testing
+# E11 Mobile Application Testing
 
 ## E11.1 Summary
 
@@ -1136,5 +1136,5 @@ To check for a potential SSL certificate spoofing vulnerability:
 
 * * *
 
-* **Return to** [Navigation: Testing Scenarios and Procedures](#h.testing-nav)
+* **Return to** [Navigation: Testing Scenarios and Procedures](#navigation-testing-scenarios-and-procedures)
 * Proceed to the next chapter: F. [Glossary](glossary.md)
