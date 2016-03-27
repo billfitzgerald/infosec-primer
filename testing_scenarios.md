@@ -573,7 +573,7 @@ Authentication cookies, commonly called session cookies, are often easy to spot 
 
 However, there are no hard and fast rules governing the names of cookies. Many authentication cookie names are unique to the service and may not be named in a way to make it clear it's a session/authentication cookie.
 
-To read and search for cookies, use the Advanced Cookie Manager plug-in described in Section C3 [Installing and Using Advanced Cookie Manager](getting_started.md#h.toolkit-adv-cookie-manager).
+To read and search for cookies, use the Advanced Cookie Manager plug-in described in Section C3 [Installing and Using Advanced Cookie Manager](getting_started.md#c3-installing-and-using-an-advanced-cookie-manager).
 
 To confirm that a cookie is an authentication cookie, or to search for it in case the name is not apparent, log in to the website.
 
@@ -991,7 +991,7 @@ Since APIs can be accessed by anyone on the network, security flaws in APIs are 
 
 ## E10.3 Setup and Tests
 
-For browser-based applications, Firebug or OWASP ZAP (an external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box) for specific instructions.
+For browser-based applications, Firebug or OWASP ZAP (an external proxy) can be used to examine the application's network transactions. For mobile applications, the mobile device must be configured to send its network transactions through OWASP ZAP. Refer to Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy) for specific instructions.
 
 Since each application is different, the first step is to exercise the functionality of the application and examine the network transactions for API requests. The URL of an API will often include "api" in the URL. Regardless of this, the typical characteristics of API calls are requests containing parameters in the URL, which return raw data and not formatted HTML. This image shows an example of an API request:
 
@@ -1088,7 +1088,7 @@ There are a number of barriers to executing a certificate spoofing attack. Acces
 
 ## E11.3 Setup and Testing
 
-To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#h.toolkit-zap-proxy-different-box) and Section C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
+To test mobile applications, a mobile device must be configured to send its network transactions to a proxy running on a test computer, and the proxy's self-signed SSL certificate must be installed as a trusted certificate on the device. Detailed instructions for these setup steps can be found in Section C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](getting_started.md#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy) and Section C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices).
 
 ### E11.3.1 Browser-Based Tests That Remain Relevant for Mobile Apps
 
@@ -1123,7 +1123,7 @@ As described in this section's Exploitability and Impact discussion, a mobile ap
 
 This is straightforward to check using the proxy. If an application's https traffic is visible in the proxy when the device doesn't have the proxy's SSL certificate installed as a trusted certificate, it indicates that the authenticity of the certificate was not checked.
 
-The tests for this require a familiarity with installing and uninstalling SSL certificates, as described in C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#h.toolkit-zap-proxy-ssl-cert).
+The tests for this require a familiarity with installing and uninstalling SSL certificates, as described in C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](getting_started.md#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices).
 
 To check for a potential SSL certificate spoofing vulnerability:
 

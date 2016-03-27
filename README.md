@@ -42,9 +42,7 @@ This guide was developed as part of the [Common Sense District Privacy Evaluatio
 
 Tony Porterfield, Jim Siegl, and Bill Fitzgerald are the primary authors of this text.
 
-Girard Kelly, Jeff Graham, and Omar Khan provided editing support and testing.
-
-Jenny Pritchett copyedited the initial version.
+Girard Kelly, Jeff Graham, Jenny Pritchett, and Omar Khan provided editing support and testing.
 
 ## Contact Information
 

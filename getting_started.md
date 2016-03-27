@@ -8,14 +8,14 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
 
 ## Navigation: Getting Started
 
-* C1 [The Toolkit: A Summary](#h.toolkit-summary)
-* C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#h.toolkit-firebug)
-* C3 [Installing and Using Advanced Cookie Manager](#h.toolkit-adv-cookie-manager)
+* C1 [The Toolkit: A Summary](#c1-the-toolkit-a-summary)
+* C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#c2-installing-and-using-firebug-to-observe-http-and-https-traffic)
+* C3 [Installing and Using Advanced Cookie Manager](#c3-installing-and-using-an-advanced-cookie-manager)
 * C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#h.toolkit-zap-proxy)
-  * C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
-  * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
-  * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
-  * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
+  * C4.1 [Installation and Initial Setup of OWASP ZAP](#c41-installation-and-initial-setup-of-owasp-zap)
+  * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#c42-basic-setup-browser-and-proxy-on-same-computer)
+  * C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy)
+  * C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices)
   * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
 ## C1 The Toolkit: A Summary
@@ -189,15 +189,15 @@ The normal operation of https creates an [encrypted](glossary.md#h.glossary-encr
 
 The instructions for setting up OWASP ZAP are broken into five distinct sections:
 
-* C4.1 [Installation and Initial Setup of OWASP ZAP](#h.toolkit-zap-proxy-install)
-* C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box)
-* C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box)
-* C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert)
+* C4.1 [Installation and Initial Setup of OWASP ZAP](#c41-installation-and-initial-setup-of-owasp-zap)
+* C4.2 [Basic Setup, Browser and Proxy on Same Computer](#c42-basic-setup-browser-and-proxy-on-same-computer)
+* C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy)
+* C4.4 [Installing Proxy SSL Certificate on Browser and Mobile Devices](#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices)
 * C4.5 [Observing WebSockets Traffic Using ZAP Proxy](#h.toolkit-zap-proxy-websockets)
 
-If you are primarily concerned with testing Web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box).
+If you are primarily concerned with testing Web applications, you will not need to use any of the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy).
 
-If you are going to test mobile apps, then the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#h.toolkit-zap-proxy-different-box) cover the details of preparing this testing environment.
+If you are going to test mobile apps, then the instructions in C4.3 [Setup for Testing Mobile Devices and/or Web Browsers on a Different Computer from the Proxy](#c43-setup-for-testing-mobile-devices-andor-web-browsers-on-a-different-computer-from-the-proxy) cover the details of preparing this testing environment.
 
 Using ZAP Proxy requires more setup steps than other elements of the toolkit. Fortunately, these steps only need to be completed once. Additionally, in many cases, Firebug can be used to perform initial reviews that can determine whether a more detailed examination via an intercepting proxy is necessary.
 
@@ -266,7 +266,7 @@ Firefox manages this in **Preferences** --> **Advanced** --> **Network** --> **C
 
 Then, click the **OK** button.
 
-To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices](#h.toolkit-zap-proxy-ssl-cert) section below.
+To complete the setup, skip ahead to the [C4.4 Installing Proxy SSL Certificate on Browser and Mobile Devices](#c44-installing-proxy-ssl-certificate-on-browser-and-mobile-devices) section below.
 
 * * *
 
@@ -359,7 +359,7 @@ In the example above, **eth0** is the correct interface, and the address is **19
 
 #### C4.3.2 In ZAP Proxy: Change "Local proxy" Address
 
-The proxy setup procedure is the same as covered in C4.2 [Basic Setup, Browser and Proxy on Same Computer](#h.toolkit-zap-proxy-same-box), except that the network address of the computer (which we discovered in the prior step) should replace the default addresss setting of **localhost**.
+The proxy setup procedure is the same as covered in C4.2 [Basic Setup, Browser and Proxy on Same Computer](#c42-basic-setup-browser-and-proxy-on-same-computer), except that the network address of the computer (which we discovered in the prior step) should replace the default addresss setting of **localhost**.
 
 <div align="center">
 <figure>
