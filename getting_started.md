@@ -10,7 +10,7 @@ While the bulk of our tests rely on an intercepting proxy to power more detailed
 
 * C1 [The Toolkit: A Summary](#c1-the-toolkit-a-summary)
 * C2 [Installing and Using Firebug to Observe HTTP and HTTPS Traffic](#c2-installing-and-using-firebug-to-observe-http-and-https-traffic)
-* C3 [Installing and Using Advanced Cookie Manager](#c3-installing-and-using-an-advanced-cookie-manager)
+* C3 [Installing and Using Advanced Cookie Manager](#c3-installing-and-using-advanced-cookie-manager)
 * C4 [Installing and Using ZAP Proxy to Observe HTTP and HTTPS Traffic](#c4-installing-and-using-zap-proxy-to-observe-http-and-https-traffic)
   * C4.1 [Installation and Initial Setup of OWASP ZAP](#c41-installation-and-initial-setup-of-owasp-zap)
   * C4.2 [Basic Setup, Browser and Proxy on Same Computer](#c42-basic-setup-browser-and-proxy-on-same-computer)
