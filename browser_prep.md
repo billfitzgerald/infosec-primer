@@ -2,7 +2,7 @@
 
 To prepare to test using Firefox, we need to clear any stored usage data that could potentially affect the results we see when we test. These preparatory steps include clearing the browser cache, all cookies, and all Web history. 
 
-## <a name="h.browser-homepage"></a>D1 Set Firefox Home Page
+## D1 Set Firefox Home Page
 
 To start, we will make sure that we are not logged in to Sync and that our home page is set to a blank page. To access the home page setting, click the menu icon in the top-right corner of the Firefox window.
 
@@ -28,7 +28,7 @@ Click the **Preferences** icon to set your home page. When you are at the home p
 
 By setting your browser to open to a blank page, you ensure that no extraneous cookies or trackers get set accidentally when you open your browser to start testing.
 
-## <a name="h.browser-history"></a>D2 Clear History
+## D2 Clear History
 
 In the Firefox menu, select **History** --> **Clear Recent History**. A pop-up menu appears. Select **Everything** for the time range, tick all the boxes, and click **Clear Now**.
 
@@ -40,7 +40,7 @@ In the Firefox menu, select **History** --> **Clear Recent History**. A pop-up m
 </figure>
 </div>
 
-## <a name="h.browser-cookies"></a>D3 Verify That Cookies Are Allowed and "Do Not Track" Is Off
+## D3 Verify That Cookies Are Allowed and "Do Not Track" Is Off
 
 During testing, we want to make sure that we accept all cookies and that we are not setting the "do not track" option, phrased here as **Request that sites not track you**.
 

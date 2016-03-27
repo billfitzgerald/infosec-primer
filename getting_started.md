@@ -129,7 +129,11 @@ The descriptions of individual tests in the [testing scenarios](testing_scenario
 
 [Cookies](glossary.md#h.glossary-cookies) are small text strings sent by servers to browsers in [http](glossary.md#h.glossary-http) responses as the user interacts with a Web service. The browser saves the cookie values and includes them with subsequent http requests to the same application or domain. The use of cookies allows Web services to maintain the "state" of a session so that previous interactions can be taken into account when new requests arrive. A cookie editor can be used to examine and modify an application's cookies, and these capabilities are utilized by the test procedures for [authentication cookies](glossary.md#h.glossary-auth-cookie) and cookie handling, covered in Section E5 [Authentication Token and Cookie Handling](testing_scenarios.md#h.testing-auth-token).
 
-Many cookie managers are available as browser plug-ins. The examples in this document use the **Advanced Cookie Manager** plug-in for Firefox. To find it, go to **Tools** --> **Add-ons**, search for "cookie managers," and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plug-in's description page is shown below.
+The examples in this document use the **Advanced Cookie Manager** plug-in for Firefox. To find it, go to **Tools** --> **Add-ons**, search for "cookie managers," and select **Advanced Cookie Manager** for installation to Firefox. A screenshot of the plug-in's description page is shown below.
+
+The Advanced Cookie Manager is the only component of our testing toolkit that is not open source, and it has one significant drawback, which we will highlight in this paragraph. We opted to include it for use in this primer because after evaluating the other cookie managers available, Advanced Cookie Manager worked better. With that said, we are actively working on an open source option that will replace the Advanced Cookie Manager in future versions. 
+
+The main drawback of the Advanced Cookie Manager is that it includes a Facebook "like" button in its user interface. As a result, every time the Cookie Manager is loaded (by clicking on the icon), it calls to Facebook. This drawback is mitigated to an extent by the fact that, as part of [preparing to run tests](browser_prep.md#d2-clear-history), we clear all cookies from the browser, which limits the information available to Facebook to little more than an IP address. However, even that is less than ideal, and future versions will remove this issue. 
 
 <div align="center">
 <figure>
