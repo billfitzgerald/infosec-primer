@@ -473,7 +473,6 @@ An informative discussion of cache parameters and how they are handled by browse
 There is a straightforward way to check for history storage of sensitive information directly from the browser. The steps are as follows:
 
 1.  Log in to a service and browse to a page with sensitive information. In the example below, a class roster is viewed from a teacher account.
-
 <div align="center">
 <figure>
   <img alt="An example page with sensitive information" src="images/image116.png" width="624.00" height="269.33" title="An example page with sensitive information">
@@ -481,7 +480,6 @@ There is a straightforward way to check for history storage of sensitive informa
   <figcaption>Image Caption: An example page with sensitive information</figcaption>
 </figure>
 </div>
-
 2.  Sign out of the service.
 3.  Click on the browser's "Back" button. If the original page, with logged-in user information, is displayed without requiring a new login, this indicates that the page was stored in the browser cache.
 
